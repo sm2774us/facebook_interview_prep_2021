@@ -1,11 +1,11 @@
 # facebook_interview_prep_2021
-[Facebook Phone Interview Questions](https://leetcode.com/discuss/interview-question/790428/Facebook-Phone-Interview-Questions)
-[Facebook interview experiences - All Combined from LC - Till Date 07-Jun-2020](https://leetcode.com/discuss/general-discussion/675445/facebook-interview-experiences-all-combined-from-lc-till-date-07-jun-2020)
-[Facebook Interviews](https://leetcode.com/list/xyvbjku7/)
-[FB-Phone-Interview-List](https://leetcode.com/list/5h1lvmem/)
-[Cracking the top 40 Facebook coding interview questions](https://www.educative.io/blog/cracking-top-facebook-coding-interview-questions)
-[Facebook Interview Questions and Answers](https://hackr.io/blog/facebook-interview-questions)
-[Import and Useful Links from all over the LeetCode](https://leetcode.com/discuss/general-discussion/665604/important-and-useful-links-from-all-over-the-leetcode)
+* [Facebook Phone Interview Questions](https://leetcode.com/discuss/interview-question/790428/Facebook-Phone-Interview-Questions)
+* [Facebook interview experiences - All Combined from LC - Till Date 07-Jun-2020](https://leetcode.com/discuss/general-discussion/675445/facebook-interview-experiences-all-combined-from-lc-till-date-07-jun-2020)
+* [Facebook Interviews](https://leetcode.com/list/xyvbjku7/)
+* [FB-Phone-Interview-List](https://leetcode.com/list/5h1lvmem/)
+* [Cracking the top 40 Facebook coding interview questions](https://www.educative.io/blog/cracking-top-facebook-coding-interview-questions)
+* [Facebook Interview Questions and Answers](https://hackr.io/blog/facebook-interview-questions)
+* [Import and Useful Links from all over the LeetCode](https://leetcode.com/discuss/general-discussion/665604/important-and-useful-links-from-all-over-the-leetcode)
 
 ## 1. Phone Screen:
 | No. | LC-#     | Title	                                                                                                 | url                                                                                        | Time                                                       | Space                 | Difficulty | Data_Structure | Algorithm                    | Premium    |
