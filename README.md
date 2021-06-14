@@ -1,4 +1,36 @@
 # facebook_interview_prep_2021
+## Facebook Interview Process Explained
+* [Hacking the Facebook Interview Process](https://candor.co/articles/interview-prep/hacking-the-facebook-interview-process)
+* [Preparing for your Software Engineering Interview at Facebook](https://www.facebook.com/careers/life/preparing-for-your-software-engineering-interview-at-facebook/)
+
+## Facebook - Interview Stages
+* Stage 1 - Initial Technical Screen
+1. Introductions
+2. Discussion of Career Aspirations
+3. Coding
+4. Questions
+![Image_1](Facebook_Interview_Stages.PNG)
+![Image_2](Nailing_The_Technical_Phone_Screen.PNG)
+* Stage 2 - Onsite Interview
+1. Coding Interview
+2. Design Interview
+3. Behavioral Interview
+4. Questions
+![Image_3](Onsite_Interview.PNG)
+
+## Facebook - 5 Core Values
+1. Be Bold
+2. Focus on Impact
+3. Move Fast
+4. Be Open
+5. Build Social Value
+
+## Tips for the Interview
+* Familiarize yourself with our 5 core values (move fast, be bold, focus on impact, be open, and build social value). This is how we work together to make the world more open and connected. We look for people who believe in these values and practice them daily.
+* Be yourself! Be open and honest about your successes and failures.
+* Be humble and focus on team work, leadership and mentorship qualities.
+
+## Important Resources
 * [Facebook Phone Interview Questions](https://leetcode.com/discuss/interview-question/790428/Facebook-Phone-Interview-Questions)
 * [Facebook interview experiences - All Combined from LC - Till Date 07-Jun-2020](https://leetcode.com/discuss/general-discussion/675445/facebook-interview-experiences-all-combined-from-lc-till-date-07-jun-2020)
 * [Facebook Interviews](https://leetcode.com/list/xyvbjku7/)
