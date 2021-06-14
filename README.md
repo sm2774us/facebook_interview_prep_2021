@@ -586,9 +586,9 @@ class Solution_3:
 
 ####  [Leftmost Column Index of 1]
 ##### Solution Explanation:
-[Refer to LC-1428:Leftmost Column with at Least a One - Complexity Analysis](https://github.com/sm2774us/facebook_interview_prep_2021#solution-explanation-2)
+[Refer to LC-1428:Leftmost Column with at Least a One - Complexity Analysis](https://github.com/sm2774us/facebook_interview_prep_2021#solution-explanation-1)
 ##### Complexity Analysis:
-[Refer to LC-1428:Leftmost Column with at Least a One - Complexity Analysis](https://github.com/sm2774us/facebook_interview_prep_2021#complexity-analysis-2)
+[Refer to LC-1428:Leftmost Column with at Least a One - Complexity Analysis](https://github.com/sm2774us/facebook_interview_prep_2021#complexity-analysis-1)
 ```python
 #=================================================================================================================================================================
 # Approach-1 ( Binary Search Each Row )
@@ -736,16 +736,6 @@ if __name__ == "__main__":
     #-1
     #1	
 
-```
-
-####  [Leftmost Column Index of 1](#leftmost-column-index-of-1) { Similar to LC-1428 ]
-##### Solution Explanation:
-```
-```
-##### Complexity Analysis:
-```
-```
-```python
 ```
 
 <br/>
