@@ -22,10 +22,13 @@
 | 2   | 1428     | [Leftmost Column with at Least a One](#lc-1428leftmost-column-with-at-least-a-one)                        | https://leetcode.com/problems/leftmost-column-with-at-least-a-one/                         | _O(R+C)_ or _O(N+M)_ [ RxC matrix or N*M matrix ]          | _O(1)_                | Medium     | Array/Matrix   | Binary Search                | 🔒         |
 | 3   |          | [Leftmost Column Index of 1](#leftmost-column-index-of-1) { Similar to LC-1428 }                          | https://leetcode.com/discuss/interview-question/341247/facebook-leftmost-column-index-of-1 | _O(R*log(C)_ or _O(N*log(M))_ [ RxC matrix or N*M matrix ] | _O(1)_                | Medium     | Array/Matrix   | Binary Search                |            |
 | 4   | 240      | [Search a 2D Matrix II](#lc-240search-a-2d-matrix-ii)                                                     | https://leetcode.com/problems/search-a-2d-matrix-ii                                        | _O(M+N)_                                                   | _O(1)_                | Medium     | Array          |                              |            |
-| 5   | 759      | [Employee Free Time](#lc-759employee-free-time)                                                           | https://leetcode.com/problems/employee-free-time/                                          | _O(m * log(n))_                                            | _O(n)_                | Hard       | Heap           |                              | 🔒         |
+| 5   | 759      | [Employee Free Time](#lc-759employee-free-time)                                                           | https://leetcode.com/problems/employee-free-time/                                          | _O(m * log(n))_                                            | _O(n)_                | Hard       | Heap/Priority Queue | Greedy                  | 🔒         |
 | 6   |          | [Lowest Common Ancestor When Root Node Is Not Known](#lowest-common-ancestor-when-root-node-is-not-known) | https://www.geeksforgeeks.org/lowest-common-ancestor-in-a-binary-tree-set-2-using-parent-pointer/ | _O(h)_                                              | _O(1)_                | Medium     | Binary Tree    |                              |            |
-| 7   | 560      | [Subarray Sum Equals K](#lc-560subarray-sum-equals-k)                                                     | https://leetcode.com/problems/subarray-sum-equals-k/                                       | _O(n)_                                                     | _O(n)_                | Medium     |                |                              |            |
-| 8   | 138      | [Copy List with Random Pointer](#lc-138copy-list-with-random-pointer)                                     | https://leetcode.com/problems/copy-list-with-random-pointer/                               | _O(n)_                                                     | _O(1)_                | Medium     |                |                              |            |
+| 7   | 560      | [Subarray Sum Equals K](#lc-560subarray-sum-equals-k)                                                     | https://leetcode.com/problems/subarray-sum-equals-k/                                       | _O(n)_                                                     | _O(n)_                | Medium     | Array          | DP ; Prefix Sum              |            |
+| 8   | 138      | [Copy List with Random Pointer](#lc-138copy-list-with-random-pointer)                                     | https://leetcode.com/problems/copy-list-with-random-pointer/                               | _O(n)_                                                     | _O(1)_                | Medium     | Linked List    |                              |            |
+| 9   | 297      | [Serialize and Deserialize Binary Tree](#lc-297serialize-and-deserialize-binary-tree)                     | https://leetcode.com/problems/serialize-and-deserialize-binary-tree/                       | _O(n)_                                                     | _O(n)_                | Hard       | Tree           | Level Order Traversal ; DFS ; BFS |            |
+| 10  | 428      | [Serialize and Deserialize N-ary Tree](#lc-428serialize-and-deserialize-n-ary-tree)                       | https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree/                       | _O(n)_                                                      | _O(h)_                | Hard       | Tree           | Binary Serailzation ; DFS-Recursive ; BFS | 🔒  |
+| 11  | 140      | [Word Break II](#lc-140word-break-ii)                                                                     | https://leetcode.com/problems/word-break-ii/                                               | _O(n * l^2 + n * r)_                                       | _O(n^2)_              | Hard       |                |                              |            |
 
 #### [LC-238:Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
 ##### Solution Explanation
@@ -1465,8 +1468,414 @@ class Solution:
 </div>
 <br/>
 
-https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
-https://leetcode.com/problems/word-break-ii/
+####  [LC-297:Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
+##### Solution Explanation:
+```
+# --------------------------------------
+# Approach 1 ( Level Order for encoding )
+#              BFS
+#              DFS ( Iterative and Recursive )
+# --------------------------------------
+Use level-order traversal to encode ( to match LeetCode's serialization format ).
+
+Time complexity for both serialize and deserialize are O(n), where n is the number of nodes in the binary tree.
+
+# --------------------------------------
+# Approach 2 ( Using Native Serialization )
+# --------------------------------------
+Efficient for large integers which can be packed into 4 bytes.
+
+Serializes the tree in to following format:
+
+<val><size_of_left_tree><size_of_right_tree><left_data><right_data>
+
+So constant 12 bytes (4 + 4 + 4) followed by arbiatry sized byte sequences one each for left and right subtree.
+
+Time complexity for both serialize and deserialize are O(n), where n is the number of nodes in the binary tree.
+```
+##### Complexity Analysis:
+```
+N = the number of nodes in the binary tree.
+
+For both solutions:
+
+TC : O(N)
+SC : O(N)
+```
+```python
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+# --------------------------------------
+# Approach 1 ( Level Order for encoding )
+#              BFS
+#              DFS ( Iterative and Recursive )
+# --------------------------------------
+# N = the number of nodes in the binary tree.
+# --------------------------------------
+# TC : O(N)
+# SC : O(N)
+#
+# BFS
+class Codec:
+    def serialize(self, root):
+        """Encodes a tree to a single string.
+        
+        :type root: TreeNode
+        :rtype: str
+        """
+        if not root:
+            return "#"
+        queue = [root]
+        res = [str(root.val)]
+        while queue:
+            res += [str(node.val) if node else "#" for root in queue for node in (root.left,root.right)]
+            queue = [node for root in queue for node in (root.left, root.right) if node]
+        return ",".join(res)
+
+    def deserialize(self, data):
+        if data == "#":
+            return None
+        d = iter(data.split(","))
+        root = TreeNode(int(next(d)))
+        queue = [root]
+        while queue:
+            for node in queue:
+                left = next(d)
+                node.left = TreeNode(int(left)) if left!="#" else None
+                right = next(d)
+                node.right = TreeNode(int(right)) if right!="#" else None
+            queue = [node for root in queue for node in (root.left, root.right) if node]
+        return root
+
+# Recursive DFS
+class Codec:   
+    def serialize(self, root):
+        """Encodes a tree to a single string.
+        
+        :type root: TreeNode
+        :rtype: str
+        """
+        if not root:
+            return "#"
+        s = "{},{},{}".format(root.val, self.serialize(root.left), self.serialize(root.right))
+        return s
+
+    def deserialize(self, data):
+        """Decodes your encoded data to tree.
+        
+        :type data: str
+        :rtype: TreeNode
+        """
+        d = iter(data.split(','))
+        def helper(d):
+            root = next(d)
+            if root == "#":
+                return None
+            root = TreeNode(root)
+            root.left = helper(d)
+            root.right = helper(d)
+            return root
+        return helper(d) 
+		
+# Iterative DFS
+class Codec:
+    def serialize(self, root):
+        """Encodes a tree to a single string.
+        
+        :type root: TreeNode
+        :rtype: str
+        """
+        if not root:
+            return "#"
+        s = "{},{},{}".format(root.val, self.serialize(root.left), self.serialize(root.right))
+        return s
+
+    def deserialize(self, data):
+        """Decodes your encoded data to tree.
+        
+        :type data: str
+        :rtype: TreeNode
+        """
+        if data == "#":
+            return None
+        
+        root = TreeNode(int(d[0]))
+        stack = [[root,0]]
+        for i in d[1:]:
+            t = TreeNode(int(i)) if i !="#" else None
+            if stack:
+                last, status = stack[-1]
+                if status == 0:
+                    last.left = t
+                    stack[-1][1] += 1
+                else:
+                    last.right = t
+                    stack.pop()
+            if t:
+                stack.append([t,0])
+        return root
+
+# --------------------------------------
+# Approach 2 ( Using Native Serialization )
+# --------------------------------------
+# N = the number of nodes in the binary tree.
+# --------------------------------------
+# TC : O(N)
+# SC : O(N)
+import struct
+
+class Codec:
+    def serialize(self, root):
+        if not root:
+            return ''
+        left = self.serialize(root.left)
+        right = self.serialize(root.right)
+        return struct.pack('iii{0}s{1}s'.format(len(left), len(right)),
+                           root.val, len(left), len(right), left, right)
+
+    def deserialize(self, data):
+        if not data:
+            return None
+        val, left_size, right_size = struct.unpack('iii', data[:12])
+        left_data, right_data = struct.unpack(
+            '{0}s{1}s'.format(
+                left_size,
+                right_size,
+            ), data[12:])
+        root = TreeNode(val)
+        root.left, root.right = self.deserialize(left_data), self.deserialize(right_data)
+        return root
+
+# --------------------------------------
+# --------------------------------------
+# Your Codec object will be instantiated and called as such:
+# ser = Codec()
+# deser = Codec()
+# ans = deser.deserialize(ser.serialize(root))
+```
+
+<br/>
+<div align="right">
+    <b><a href="#algorithms">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+####  [LC-428:Serialize and Deserialize N-ary Tree](https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree/)
+##### Solution Explanation:
+```
+# --------------------------------------
+# Approach 1 ( Level Order for encoding )
+#              BFS           ( Queue )
+#              DFS-Recursive ( Stack )
+# --------------------------------------
+Use level-order traversal to encode ( to match LeetCode's serialization format ).
+
+Time complexity for both serialize and deserialize are O(n), where n is the number of nodes in the n-ary tree.
+Space complexity = O(h), where h is the height of the n-ary tree.
+
+# --------------------------------------
+# Approach 2 ( Using Native Serialization )
+# --------------------------------------
+Efficient for large integers which can be packed into 4 bytes.
+
+Serializes the tree in to following format:
+
+<val><size_of_children><children_data>
+
+So constant 12 bytes (4 + 4 + 4) followed by arbiatry sized byte sequences one each for left and right subtree.
+
+Time complexity for both serialize and deserialize are O(n), where n is the number of nodes in the n-ary tree.
+Space complexity = O(h), where h is the height of the n-ary tree.
+```
+##### Complexity Analysis:
+```
+N = the number of nodes in the binary tree.
+H = height of the binary tree.
+
+For both solutions:
+
+TC: O(N)
+SC: O(H)
+```
+```python
+"""
+# Definition for a Node.
+class Node(object):
+    def __init__(self, val, children):
+        self.val = val
+        self.children = children
+"""
+
+# --------------------------------------
+# Approach 1 ( Level Order for encoding )
+#              BFS           ( Queue )
+#              DFS-Recursive ( Stack )
+# --------------------------------------
+# BFS
+class Codec:
+    def serialize(self, root):
+        if root is None:
+            return ""
+        res = [root.val, "#"]
+        q = collections.deque([root])
+        while q:
+            node = q.popleft()
+            for child in node.children:
+                res.append(child.val)
+                q.append(child)
+            res.append("#")
+        return ",".join(res)
+
+    def deserialize(self, s):
+        if len(s) == 0:
+            return
+        vals = s.split(",")
+        q = collections.deque()
+        root = Node(vals[0])
+        q.append(root)
+        i = 1
+        while q:
+            node = q.popleft()
+            i += 1
+            while vals[i] != "#":
+                child = Node(vals[i])
+                node.children.append(child)
+                q.append(child)
+                i += 1
+        return root
+
+# Recursive DFS
+class Codec:
+
+    def serialize(self, root):
+        """Encodes a tree to a single string.
+        
+        :type root: Node
+        :rtype: str
+        """
+        def dfs(node, vals):
+            if not node:
+                return
+            vals.append(str(node.val))
+            for child in node.children:
+                dfs(child, vals)
+            vals.append("#")
+        
+        vals = []
+        dfs(root, vals)
+        return " ".join(vals)
+
+
+    def deserialize(self, data):
+        """Decodes your encoded data to tree.
+        
+        :type data: str
+        :rtype: Node
+        """
+        def isplit(source, sep):
+            sepsize = len(sep)
+            start = 0
+            while True:
+                idx = source.find(sep, start)
+                if idx == -1:
+                    yield source[start:]
+                    return
+                yield source[start:idx]
+                start = idx + sepsize
+                
+        def dfs(vals):
+            val = next(vals)
+            if val == "#":
+                return None
+            root = Node(int(val), [])
+            child = dfs(vals)
+            while child:
+                root.children.append(child)
+                child = dfs(vals)
+            return root
+
+        if not data:
+            return None
+    
+        return dfs(iter(isplit(data, ' ')))
+		
+
+# --------------------------------------
+# Approach 2 ( Using Native Serialization )
+# --------------------------------------
+import struct
+
+class Codec:
+    def _serialize(self, node):
+        self.data += struct.pack('i', node.val)
+        self.data += struct.pack('i', len(node.children))
+        for child in node.children:
+            self._serialize(child)
+        return
+        
+    def serialize(self, root):
+        """Encodes a tree to a single string.
+        :type root: Node
+        :rtype: str
+        """
+        if root == None: return ""
+        self.data = ""
+        self._serialize(root)
+        return self.data
+        
+    def _deserialize(self, data):
+        val = struct.unpack('i', data[self.idx:self.idx+4])[0]
+        childrenNum = struct.unpack('i', data[self.idx+4:self.idx+8])[0]
+        self.idx += 8
+        children = []
+        for i in range(childrenNum):
+            children.append(self._deserialize(data))
+        return Node(val, children)
+        
+    def deserialize(self, data):
+        """Decodes your encoded data to tree.
+        :type data: str
+        :rtype: Node
+        """
+        if data == "": return None
+        self.idx = 0
+        return self._deserialize(data)
+
+#
+#
+# Your Codec object will be instantiated and called as such:
+# codec = Codec()
+# codec.deserialize(codec.serialize(root))
+```
+
+<br/>
+<div align="right">
+    <b><a href="#algorithms">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+####  [LC-140:Word Break II](https://leetcode.com/problems/word-break-ii/)
+##### Solution Explanation:
+```
+
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#algorithms">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
 Validate Single Binary Tree
 https://leetcode.com/discuss/interview-question/347374/
 Task Scheduler
