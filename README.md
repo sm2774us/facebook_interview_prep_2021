@@ -586,11 +586,9 @@ class Solution_3:
 
 ####  [Leftmost Column Index of 1]
 ##### Solution Explanation:
-```
-```
+[Refer to LC-1428:Leftmost Column with at Least a One - Complexity Analysis](https://github.com/sm2774us/facebook_interview_prep_2021#solution-explanation-2)
 ##### Complexity Analysis:
-```
-```
+[Refer to LC-1428:Leftmost Column with at Least a One - Complexity Analysis](https://github.com/sm2774us/facebook_interview_prep_2021#complexity-analysis-2)
 ```python
 #=================================================================================================================================================================
 # Approach-1 ( Binary Search Each Row )
