@@ -59,8 +59,9 @@
 | 7   | 560      | [Subarray Sum Equals K](#lc-560subarray-sum-equals-k)                                                     | https://leetcode.com/problems/subarray-sum-equals-k/                                       | _O(n)_                                                     | _O(n)_                | Medium     | Array          | DP ; Prefix Sum              |            |
 | 8   | 138      | [Copy List with Random Pointer](#lc-138copy-list-with-random-pointer)                                     | https://leetcode.com/problems/copy-list-with-random-pointer/                               | _O(n)_                                                     | _O(1)_                | Medium     | Linked List    |                              |            |
 | 9   | 297      | [Serialize and Deserialize Binary Tree](#lc-297serialize-and-deserialize-binary-tree)                     | https://leetcode.com/problems/serialize-and-deserialize-binary-tree/                       | _O(n)_                                                     | _O(n)_                | Hard       | Tree           | Level Order Traversal ; DFS ; BFS |            |
-| 10  | 428      | [Serialize and Deserialize N-ary Tree](#lc-428serialize-and-deserialize-n-ary-tree)                       | https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree/                       | _O(n)_                                                      | _O(h)_                | Hard       | Tree           | Binary Serailzation ; DFS-Recursive ; BFS | 🔒  |
-| 11  | 140      | [Word Break II](#lc-140word-break-ii)                                                                     | https://leetcode.com/problems/word-break-ii/                                               | _O(n * l^2 + n * r)_                                       | _O(n^2)_              | Hard       |                |                              |            |
+| 10  | 428      | [Serialize and Deserialize N-ary Tree](#lc-428serialize-and-deserialize-n-ary-tree)                       | https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree/                        | _O(n)_                                                      | _O(h)_                | Hard       | Tree           | Binary Serailzation ; DFS-Recursive ; BFS | 🔒  |
+| 11  | 139      | [Word Break](#lc-139word-break)                                                                           | https://leetcode.com/problems/word-break/                                                  | _O(n^2)_                                                   | _O(n)_                | Medium     |                | DP                           |            |
+| 12  | 140      | [Word Break II](#lc-140word-break-ii)                                                                     | https://leetcode.com/problems/word-break-ii/                                               | _O(n^2)_                                                   | _O(n^2)_              | Hard       |                | DP ; DFS                     |            |
 
 #### [LC-238:Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
 ##### Solution Explanation
@@ -1891,15 +1892,262 @@ class Codec:
 </div>
 <br/>
 
-####  [LC-140:Word Break II](https://leetcode.com/problems/word-break-ii/)
+####  [LC-139:Word Break](https://leetcode.com/problems/word-break/)
 ##### Solution Explanation:
 ```
+Let dp[i] = whether s[:i] can be segmented into a space-separated sequence of words, i=0,1,2,..., len(s).
+Base case: dp[0] = True.
+Recursive relationship: dp[i] = any([dp[j] and s[j:i] in wordDict for j = i-1, i-2, ..., 0]).
 
+# --------------------------------------
+# Approach 1 ( DP - Top Down - Memoization & Recursion )
+# --------------------------------------
+
+Solution 1: top-down approach with time O(n^2) and space O(n) (36ms, beat 95.64%)
+(dp[i] will be calculated only if it is necessary).
+
+# --------------------------------------
+# Approach 2 ( DP - Bottom Up - Iterative )
+# --------------------------------------
+
+Solution 2: bottom-up approach with time O(n^2) and space O(n) (36ms, beat 95.64%)
 ```
 ##### Complexity Analysis:
 ```
+For both solutions:
+
+TC: O(N^2)
+SC: O(N^2)
 ```
 ```python
+# --------------------------------------
+# Approach 1 ( DP - Top Down - Memoization & Recursion )
+# --------------------------------------
+# TC: O(N^2)
+# SC: O(N^2)
+from typing import List
+
+class Solution:
+    # dp[i] will be calculated only if it is necessary
+    def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+        def recursive(i):
+            if i in dp:
+                return dp[i]
+            j = i - 1
+            while j >= 0:
+                if s[j:i] in word_set and recursive(j):
+                    dp[i] = True
+                    return dp[i]
+                j -= 1
+            dp[i] = False
+            return dp[i]
+            
+        word_set = set(wordDict)
+        dp = {0: True}
+        return recursive(len(s))
+
+# --------------------------------------
+# Approach 2 ( DP - Bottom Up - Iterative )
+# --------------------------------------
+# TC: O(N^2)
+# SC: O(N^2)
+from typing import List
+
+class Solution:
+    def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+        word_set = set(wordDict)
+        n = len(s)
+        dp = (n + 1) * [False]
+        dp[0] = True
+        for i in range(1, n + 1):
+            j = i - 1
+            while j >= 0:
+                if s[j:i] in word_set and dp[j]:
+                    dp[i] = True
+                    break
+                j -= 1
+        return dp[n]
+```
+
+<br/>
+<div align="right">
+    <b><a href="#algorithms">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+####  [LC-140:Word Break II](https://leetcode.com/problems/word-break-ii/)
+##### Solution Explanation:
+```
+# --------------------------------------
+# Approach 1 ( standard DP )
+# --------------------------------------
+Algorithm
+# --------------------------------------
+Let dp[i] = a list of all possible segmentations of s[:i], i=0,1,2,...,len(s).
+Initially set dp = [[] for _ in range(len(s) + 1)].
+Base case: dp[0] = [''].
+Recursive relationship for dp[i]:
+for j = i-1, i-2, ..., 0,
+     if dp[j] != [] and s[j:i] in wordDict: 
+	     for each s_break in dp[j]: append s_break + ' ' + s[j:i] to dp[i].
+
+# --------------------------------------
+# Approach 2 ( standard DP + DFS reconstruction )
+# --------------------------------------
+Algorithm
+# --------------------------------------
+Let dp[i] = a list of all possible last positions of segmentations of s[:i], i=0,1,2,...,len(s).
+Initially set dp = [[] for _ in range(len(s) + 1)].
+Base case: dp[0] = [0].
+Recursive relationship for dp[i]:
+for j = i -1, i-2, ..., 0,
+     if dp[j] != [] and s[j:i] in wordDict: 
+	     dp[i].append(j)
+Use DFS to reconstruct all possible segmentations from the end to the start.
+```
+##### Interview Notes
+```
+Approach 1 is for comparison purposes only.
+Use Approach 2 in an interview situation.
+
+Also not that for this problem traditional DP (i.e., Approach 1) is a BFS,
+it will save substring for each levels until it finds the word is not breakable.
+So it will cause "Memory Limit Exceeded".
+```
+##### Complexity Analysis:
+```
+# --------------------------------------
+# Approach 1 ( standard DP )
+# --------------------------------------
+TC: O(N^2)
+SC: O(N^3)
+
+# --------------------------------------
+# Approach 2 ( standard DP + DFS reconstruction )
+# --------------------------------------
+TC: O(N^2)
+SC: O(N^2)
+```
+```python
+# --------------------------------------
+# Approach 1 ( standard DP )
+# --------------------------------------
+#TC: O(N^2)
+#SC: O(N^3)
+#
+# Top Down DP ( Memoization + Recursion )
+from typing import List
+
+class Solution:
+    # dp[i] will be calculated only if it is necessary. In some test cases, not all d[i] are calculated	
+    def wordBreak(self, s: str, wordDict: List[str]) -> List[str]:
+        def recursive(i):
+            if i in dp:
+                return dp[i]
+            dp[i] = []
+            j = i - 1
+            while j >= 0:
+                if s[j:i] in word_set and recursive(j) != []:
+                    for s_break in dp[j]:
+                        dp[i].append(s_break + (' ' if s_break != '' else '') + s[j:i])
+                j -= 1
+            return dp[i]
+            
+        word_set = set(wordDict)
+        dp = {0: ['']}
+        return recursive(len(s))	
+
+# Bottom Up DP ( Iterative )
+from typing import List
+
+class Solution:
+    # space complexity: dp: O(n), each dp[i]: O(n), each word in dp[i]: O(n)
+    def wordBreak(self, s: str, wordDict: List[str]) -> List[str]:
+        word_set = set(wordDict)
+        n = len(s)
+        dp = [[] for _ in range(n + 1)]
+        dp[0] = ['']
+        for i in range(1, n + 1):
+            j = i - 1
+            while j >= 0:
+                if s[j:i] in word_set and dp[j] != []:
+                    for s_break in dp[j]:
+                        dp[i].append(s_break + (' ' if s_break != '' else '') + s[j:i])
+                j -= 1
+        return dp[n]
+
+# --------------------------------------
+# Approach 2 ( standard DP + DFS reconstruction )
+# --------------------------------------
+#TC: O(N^2)
+#SC: O(N^2)
+#
+# Top Down DP ( Memoization + Recursion )
+from typing import List
+
+class Solution:
+    # dp[i] will be calculated only if it is necessary. In some test cases, not all d[i] are calculated	
+    def wordBreak(self, s: str, wordDict: List[str]) -> List[str]:
+        def dfs(i, path):
+            if i == 0:
+                path.append(0)
+                paths.append(path[::-1])
+            else:
+                for j in dp[i]:
+                    dfs(j, path + [i])
+        
+        def recursive(i):
+            if i in dp:
+                return dp[i]
+            dp[i] = []
+            j = i - 1
+            while j >= 0:
+                if s[j:i] in word_set and recursive(j) != []:
+                    dp[i].append(j)
+                j -= 1
+            return dp[i]
+            
+        word_set = set(wordDict)
+        dp = {0: 0}
+        recursive(len(s))
+        paths = []
+        dfs(len(s), [])
+        res = []
+        for path in paths:
+            s_break = ' '.join([s[path[k]:path[k+1]] for k in range(len(path) - 1)])
+            res.append(s_break)
+        return res
+
+# Bottom Up DP ( Iterative )
+from typing import List
+
+class Solution:
+    def wordBreak(self, s: str, wordDict: List[str]) -> List[str]:
+        def dfs(i, path):
+            if i == 0:
+                path.append(0)
+                paths.append(path[::-1])
+            else:
+                for j in dp[i]:
+                    dfs(j, path + [i])
+                
+        word_set = set(wordDict)
+        n = len(s)
+        dp = [[] for _ in range(n + 1)]
+        dp[0] = [0]
+        for i in range(1, n + 1):
+            j = i - 1
+            while j >= 0:
+                if s[j:i] in word_set and dp[j] != []:
+                    dp[i].append(j)
+                j -= 1
+        paths = []
+        dfs(n, [])
+        res = []
+        for path in paths:
+            s_break = ' '.join([s[path[k]:path[k+1]] for k in range(len(path) - 1)])
+            res.append(s_break)
+        return res
 ```
 
 <br/>
