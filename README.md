@@ -39,6 +39,10 @@
 * [Facebook Interview Questions and Answers](https://hackr.io/blog/facebook-interview-questions)
 * [Import and Useful Links from all over the LeetCode](https://leetcode.com/discuss/general-discussion/665604/important-and-useful-links-from-all-over-the-leetcode)
 
+## Study Links
+* [DP - Idea of Dynamic Programming](https://afteracademy.com/blog/idea-of-dynamic-programming)
+* [DP - Optimal Substructure and Overlapping Subproblems](https://afteracademy.com/blog/optimal-substructure-and-overlapping-subproblems)
+
 ## Data_Structure Deep-Dives
 * [Heap](https://leetcode.com/discuss/general-discussion/1127238/master-heap-by-solving-23-questions-in-4-patterns-category)
 
@@ -59,9 +63,32 @@
 | 7   | 560      | [Subarray Sum Equals K](#lc-560subarray-sum-equals-k)                                                     | https://leetcode.com/problems/subarray-sum-equals-k/                                       | _O(n)_                                                     | _O(n)_                | Medium     | Array          | DP ; Prefix Sum              |            |
 | 8   | 138      | [Copy List with Random Pointer](#lc-138copy-list-with-random-pointer)                                     | https://leetcode.com/problems/copy-list-with-random-pointer/                               | _O(n)_                                                     | _O(1)_                | Medium     | Linked List    |                              |            |
 | 9   | 297      | [Serialize and Deserialize Binary Tree](#lc-297serialize-and-deserialize-binary-tree)                     | https://leetcode.com/problems/serialize-and-deserialize-binary-tree/                       | _O(n)_                                                     | _O(n)_                | Hard       | Tree           | Level Order Traversal ; DFS ; BFS |            |
-| 10  | 428      | [Serialize and Deserialize N-ary Tree](#lc-428serialize-and-deserialize-n-ary-tree)                       | https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree/                        | _O(n)_                                                      | _O(h)_                | Hard       | Tree           | Binary Serailzation ; DFS-Recursive ; BFS | 🔒  |
+| 10  | 428      | [Serialize and Deserialize N-ary Tree](#lc-428serialize-and-deserialize-n-ary-tree)                       | https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree/                        | _O(n)_                                                     | _O(h)_                | Hard       | Tree           | Binary Serailzation ; DFS-Recursive ; BFS | 🔒  |
 | 11  | 139      | [Word Break](#lc-139word-break)                                                                           | https://leetcode.com/problems/word-break/                                                  | _O(n^2)_                                                   | _O(n)_                | Medium     |                | DP                           |            |
 | 12  | 140      | [Word Break II](#lc-140word-break-ii)                                                                     | https://leetcode.com/problems/word-break-ii/                                               | _O(n^2)_                                                   | _O(n^2)_              | Hard       |                | DP ; DFS                     |            |
+| 13  | 261      | [Graph Valid Tree](#lc-261graph-valid-tree)                                                               | https://leetcode.com/problems/graph-valid-tree/                                            | _O(\|V\| + \|E\|)_                                         | _O(\|V\| + \|E\|)_    | Medium     | Graph          | BFS ; DFS ; UnionFind        | 🔒         |
+| 14  | 98       | [Validate Binary Search Tree](#lc-98validate-binary-search-tree)                                          | https://leetcode.com/problems/validate-binary-search-tree/                                 | _O(N)_                                                     | _O(1)_                | Medium     | Tree           | Morris Traversal             |            |
+| 15  |          | [Google & Facebook | 🌳 Validate Single Binary Tree](#google-and-facebookvalidate-single-binary-tree)     | https://leetcode.com/discuss/interview-question/347374/                                    | _O(N)_                                                     | _O(N)_                | Medium     | Tree           |                              |            |
+| 16  | 621      | [Task Scheduler](#lc-621task-schduler)                                                                    | https://leetcode.com/problems/task-scheduler/                                              | _O(N * n)_ where, N=number_of_tasks , n=cool_off_period    | _O(1)_                | Medium     | Heap/Priority Queue | Greedy                  |            |
+| 17  |          | [FB Phone Interview - Variant of Task Scheduler](#fb-phone-interviewtask-scheduler-variant)               | https://leetcode.com/discuss/interview-question/673575/Facebook-or-Phone-or-Task-Scheduler | _O(N)_                                                     | _O(N)_                | Medium     |                | Greedy                       |            |
+| 18  | 494      | [Target Sum](#lc-494target-sum)                                                                           | https://leetcode.com/problems/target-sum/                                                  | _O(|nums|*(Upperbound of Sum - Lowerbound of Sum))_        | _O(|nums|*(Upperbound of Sum - Lowerbound of Sum))_ | Medium | | DP                |            |
+| 19  | 22       | [Generate Parentheses](#lc-22generate-parenetheses)                                                       | https://leetcode.com/problems/generate-parentheses/                                        | _O( 4^n / (n^ 1/2) )_                                      | _O( 4^n / (n^ 1/2) )_  | Medium    |                | Backtracking ; Catalan Numbers |          |
+| 20  | 400      | [Nth Digit](#lc-400nth-digit)                                                                             | https://leetcode.com/problems/nth-digit/                                                   | _O(logn)_                                                  | _O(1)_                | Easy       |                | Binary Search                |            |
+| 21  | 380      | [Insert Delete GetRandom O(1)](#lc-380insert-delete-getrandom-o1)                                         | https://leetcode.com/problems/insert-delete-getrandom-o1/                                  | _O(1)_                                                     | _O(n)_                | Hard       |                |                              |            |
+| 22  | 381      | [Insert Delete GetRandom O(1) - Duplicates allowed](#lc-381insert-delete-getrandom-o1-duplicates-allowed) | https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed/               | _O(1)_                                                     | _O(n)_                | Hard       |                |                              |            |
+| 23  | 721      | [Accounts Merge](#lc-721accounts-merge)                                                                   | https://leetcode.com/problems/accounts-merge/                                              | _O(nlogn)_                                                 | _O(n)_                | Medium     |                | Union Find                   |            |
+| 32  | 121      | [Best Time to Buy and Sell Stock](#lc-121best-time-to-buy-and-sell-stock)                                 | https://leetcode.com/problems/best-time-to-buy-and-sell-stock/                             | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
+| 44  | 230      | [Kth Smallest Element in a BST](#lc-230kth-smallest-element-in-a-bst)                                     | https://leetcode.com/problems/kth-smallest-element-in-a-bst/                               | _O(max(h, k))_                                             | _O(min(h, k))_        | Medium     |                |                              |            | 
+| 47  | 269      | [Alien Dictionary](#lc-269alien-dictionary)                                                               | https://leetcode.com/problems/alien-dictionary/                                            | _O(n)_                                                     | _O(1)_                | Hard       |                | Topological Sort ; BFS ; DFS | 🔒         |
+| 48  | 207      | [Course Schedule](#lc-207course-schedule)                                                                 | https://leetcode.com/problems/course-schedule/                                             | _O(\|V\| + \|E\|)_                                         | _O(\|E\|)_            | Medium     |                | Topological Sort             |            |
+| 54  | 323      | [Number of Connected Components in an Undirected Graph](#lc-323number-of-connected-components-in-an-undirected-graph/) | https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/ | _O(n)_                                              | _O(n)_                | Medium     |                | Union Find                   | 🔒          |
+| 55  |          | [Facebook | Phone | Connected Components in Graph](#facebook-phone-connected-components-in-graph)         | https://leetcode.com/discuss/interview-question/982506/Facebook-or-Phone-or-Connected-Components-in-Graph/798145                                        |                       | Medium     |                | BFS                          |            |
+| 57  | 125      | [Valid Palindrome](#lc-125valid-palindrome)                                                               | https://leetcode.com/problems/valid-palindrome/                                            | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
+| 62  | 76       | [Minimum Window Substring](#lc-76minimum-window-substring)                                                | https://leetcode.com/problems/minimum-window-substring/                                    | _O(n)_                                                     | _O(k)_                | Hard       |                |                              |            |
+| 64  | 53       | [Maximum Subarray](#lc-53maximum-subarray)                                                                | https://leetcode.com/problems/maximum-subarray/                                            | _O(n)_                                                     | _O(1)_                | Medium     |                | `Kadane's Algorithm`         |            |
+| 66  | 56       | [Merge Intervals](#lc-56merge-intervals)                                                                  | https://leetcode.com/problems/merge-intervals/                                             | _O(nlogn)_                                                 | _O(1)_                | Hard       |                |                              |            |
+| 67  | 133      | [Clone Graph](#lc-133clone-graph)                                                                         | https://leetcode.com/problems/clone-graph/                                                 | _O(n)_                                                     | _O(n)_                | Medium     |                |                              |            |
+
 
 #### [LC-238:Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
 ##### Solution Explanation
@@ -209,7 +236,7 @@ if __name__ == "__main__":
 
 <br/>
 <div align="right">
-    <b><a href="#algorithms">⬆️ Back to Top</a></b>
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
 </div>
 <br/>
 
@@ -629,7 +656,7 @@ class Solution_3:
 
 <br/>
 <div align="right">
-    <b><a href="#algorithms">⬆️ Back to Top</a></b>
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
 </div>
 <br/>
 
@@ -791,7 +818,7 @@ if __name__ == "__main__":
 
 <br/>
 <div align="right">
-    <b><a href="#algorithms">⬆️ Back to Top</a></b>
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
 </div>
 <br/>
 
@@ -1002,7 +1029,7 @@ if __name__ == "__main__":
 
 <br/>
 <div align="right">
-    <b><a href="#algorithms">⬆️ Back to Top</a></b>
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
 </div>
 <br/>
 
@@ -1132,7 +1159,7 @@ class Solution:
 
 <br/>
 <div align="right">
-    <b><a href="#algorithms">⬆️ Back to Top</a></b>
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
 </div>
 <br/>
 
@@ -1237,7 +1264,7 @@ for case in cases:
 
 <br/>
 <div align="right">
-    <b><a href="#algorithms">⬆️ Back to Top</a></b>
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
 </div>
 <br/>
 
@@ -1418,7 +1445,7 @@ class Solution:
 
 <br/>
 <div align="right">
-    <b><a href="#algorithms">⬆️ Back to Top</a></b>
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
 </div>
 <br/>
 
@@ -1497,7 +1524,7 @@ class Solution:
 
 <br/>
 <div align="right">
-    <b><a href="#algorithms">⬆️ Back to Top</a></b>
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
 </div>
 <br/>
 
@@ -1694,7 +1721,7 @@ class Codec:
 
 <br/>
 <div align="right">
-    <b><a href="#algorithms">⬆️ Back to Top</a></b>
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
 </div>
 <br/>
 
@@ -1888,7 +1915,7 @@ class Codec:
 
 <br/>
 <div align="right">
-    <b><a href="#algorithms">⬆️ Back to Top</a></b>
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
 </div>
 <br/>
 
@@ -1971,7 +1998,7 @@ class Solution:
 
 <br/>
 <div align="right">
-    <b><a href="#algorithms">⬆️ Back to Top</a></b>
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
 </div>
 <br/>
 
@@ -2005,6 +2032,9 @@ for j = i -1, i-2, ..., 0,
 	     dp[i].append(j)
 Use DFS to reconstruct all possible segmentations from the end to the start.
 ```
+![lc-140-word-break-ii-image-1](./assets/lc-140-word-break-ii-image-1.png)
+![lc-140-word-break-ii-image-2](./assets/lc-140-word-break-ii-image-2.png)
+![lc-140-word-break-ii-image-3](./assets/lc-140-word-break-ii-image-3.png)
 ##### Interview Notes
 ```
 Approach 1 is for comparison purposes only.
@@ -2152,36 +2182,2939 @@ class Solution:
 
 <br/>
 <div align="right">
-    <b><a href="#algorithms">⬆️ Back to Top</a></b>
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
 </div>
 <br/>
 
-Validate Single Binary Tree
-https://leetcode.com/discuss/interview-question/347374/
-Task Scheduler
-https://leetcode.com/discuss/interview-question/673575/Facebook-or-Phone-or-Task-Scheduler
-https://leetcode.com/problems/task-scheduler/
-https://leetcode.com/problems/target-sum/
-https://leetcode.com/problems/generate-parentheses/
-https://leetcode.com/problems/nth-digit/
-https://leetcode.com/problems/insert-delete-getrandom-o1/
-https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed/
-https://leetcode.com/problems/accounts-merge/
-https://leetcode.com/problems/valid-word-abbreviation/
-https://leetcode.com/problems/candy-crush/
-https://leetcode.com/problems/koko-eating-bananas/
-https://leetcode.com/problems/binary-tree-right-side-view/
-https://leetcode.com/problems/restore-ip-addresses/
-https://leetcode.com/problems/powx-n/
-https://leetcode.com/problems/russian-doll-envelopes/
-https://leetcode.com/problems/walls-and-gates/
-https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
-https://leetcode.com/problems/find-largest-value-in-each-tree-row/
-https://leetcode.com/problems/add-strings/
-https://leetcode.com/problems/combination-sum/
-https://leetcode.com/problems/maximum-swap/
+####  [LC-261:Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/)
+##### Problem Description:
+```
+Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge is a pair of nodes), write a function to check whether these edges make up a valid tree.
+
+For example:
+
+Given n = 5 and edges = [[0, 1], [0, 2], [0, 3], [1, 4]], return true.
+
+Given n = 5 and edges = [[0, 1], [1, 2], [2, 3], [1, 3], [1, 4]], return false.
+
+Hint:
+
+Given n = 5 and edges = [[0, 1], [1, 2], [3, 4]], what should your return? Is this case a valid tree?
+According to the definition of tree on Wikipedia: “a tree is an undirected graph in which any two vertices are connected by exactly one path. In other words, any connected graph without simple cycles is a tree.”
+Note: you can assume that no duplicate edges will appear in edges. Since all edges are undirected, [0, 1] is the same as [1, 0] and thus will not appear together in edges.
+```
+##### Solution Explanation:
+```
+Overall idea
+-----------------------------------------
+We need to check two properties to determine whether a set of edges form a valid tree:
+
+1. it has n-1 edges
+2. it is acyclic
+
+Reference: 
+-----------------------------------------
+prove that a connected graph with n vertices has at least n−1 edges: https://math.stackexchange.com/questions/457042/prove-that-a-connected-graph-with-n-vertices-has-at-least-n-1-edges
+                                                                     https://math.stackexchange.com/a/457062 
+
+# --------------------------------------
+# Approach 1 ( Union Find )
+# --------------------------------------
+Idea
+# --------------------------------------
+This algorithm uses an idea called union find. You first initialize each node so that each node 
+itself forms a node set. 
+As we traverse all edges, we will find connected components.
+The union find algorithm makes sure that every node in a connected component will point to a same node set by using `find` function.
+Therefore, if we see a new edge with two points in the same node set, we will return False because the edge makes a cycle in the graph.
+If no cycle is found, we will finally check if there are exactly `n-1` edges to form a tree rather than disjoint parts in the graph.
+
+# --------------------------------------
+# Approach 2 ( DFS )
+# --------------------------------------
+Idea
+# --------------------------------------
+We start to visit all nodes from node 0.
+If we finish traversing all reachable nodes but there are still some adjacency matrix entry left 
+then we know the given edges actually form multiple separate graphs.
+Therefore we should return False.
+
+# --------------------------------------
+# Approach 3 ( BFS )
+# --------------------------------------
+Idea
+# --------------------------------------
+
+Similar idea as in DFS. But you implement the traversal of nodes using `deque`.
+```
+> NOTE: The Union Find algorithm can also be used to find connected components in an undirected graph. See [LC-130:Surrounding Regions](https://leetcode.com/problems/surrounded-regions/).
+>
+##### Complexity Analysis:
+```
+```
+```python
+# --------------------------------------
+# Approach 1 ( Union Find )
+# --------------------------------------
+# TC: O(E)
+# SC: O(E)
+#
+# where, E = number of edges
+#        V = number of vertices
+from typing import List
+
+class Solution:
+    def find(self, root, e):
+        if root[e] == e:
+            return e
+        else:
+            root[e] = self.find(root, root[e])
+            return root[e]
+			
+    def validTree(self, n: int, edges: List[List[int]]) -> bool:        
+        # @param {int} n an integer
+        # @param {int[][]} edges a list of undirected edges
+        # @return {boolean} true if it's a valid tree, or false
+        root = [i for i in range(n)]
+        for i in edges:
+            root1 = self.find(root, i[0])
+            root2 = self.find(root, i[1])
+            if root1 == root2:
+                return False
+            else:
+                root[root1] = root2
+        return len(edges) == n - 1
+
+# --------------------------------------
+# Approach 2 ( DFS )
+# --------------------------------------
+# TC: O(|V| + |E|)
+# SC: O(|V| + |E|)
+#
+# where, E = number of edges
+#        V = number of vertices
+import collections
+
+from typing import List
+
+class Solution:
+    def helper(self, curr, parent, lookup, visited):
+        print curr, visited
+        if visited[curr]:
+            return False
+        visited[curr] = True
+        for i in lookup[curr]:
+            if (i != parent and not self.helper(i, curr, lookup, visited)):
+                return False
+ 
+        return True
+			
+    def validTree(self, n: int, edges: List[List[int]]) -> bool:        
+        # @param {int} n an integer
+        # @param {int[][]} edges a list of undirected edges
+        # @return {boolean} true if it's a valid tree, or false
+        lookup = collections.defaultdict(list)
+        for edge in edges:
+            lookup[edge[0]].append(edge[1])
+            lookup[edge[1]].append(edge[0])
+        visited = [False] * n
+ 
+        if not self.helper(0, -1, lookup, visited):
+            return False
+ 
+        for v in visited:
+            if not v:
+                return False
+ 
+        return True		
+
+# --------------------------------------
+# Approach 3 ( BFS )
+# --------------------------------------
+# TC: O(|V| + |E|)
+# SC: O(|V| + |E|)
+#
+# where, E = number of edges
+#        V = number of vertices
+import collections
+
+from typing import List
+
+class Solution:
+    def validTree(self, n: int, edges: List[List[int]]) -> bool:        
+        # @param {int} n an integer
+        # @param {int[][]} edges a list of undirected edges
+        # @return {boolean} true if it's a valid tree, or false
+        if len(edges) != n - 1:  # Check number of edges.
+            return False
+ 
+        # init node's neighbors in dict
+        neighbors = collections.defaultdict(list)
+        for u, v in edges:
+            neighbors[u].append(v)
+            neighbors[v].append(u)
+ 
+        # BFS to check whether the graph is valid tree.
+        visited = {}
+        q = collections.deque([0])
+        while q:
+            curr = q.popleft()
+            visited[curr] = True
+            for node in neighbors[curr]:
+                if node not in visited:
+                    visited[node] = True
+                    q.append(node)
+ 
+        return len(visited) == n
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+####  [LC-98:Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
+##### Solution Explanation:
+```
+# InOrder Traversal using Morris Traversal Algorithm
+-----------------------------------------------------
+If we do an inorder traversal of the nodes and find that they are increasing,
+then the tree will be a binary tree (we could prove this by showing that if the
+tree is not a BST then the inorder will not be increasing)
+
+We can do an inorder traversal of the tree in O(1) space with the Morris inorder
+traversal. This implementation of an inorder traversal makes use of the empty
+right pointers at the far right of subtrees to store the recursion stack.
+
+```
+##### Complexity Analysis:
+```
+TC: O(N)
+SC: O(1)
+```
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def morris(self, node):
+        while node:
+            if not node.left:
+                yield node.val
+                node = node.right
+            else:
+                pre = node.left
+                while pre.right and pre.right is not node:
+                    pre = pre.right
+                
+                if pre.right is node:
+                    yield node.val
+                    node = node.right
+                    pre.right = None
+                else:
+                    pre.right = node
+                    node = node.left
+					
+	def isValidBST(self, root: TreeNode) -> bool:
+        if not root:
+            return True
+        
+        values = self.morris(root)
+        prev = next(values)
+		# innocent until proven guilty
+        result = True
+        
+        for value in values:
+			# Make sure that the values are still increasing
+            result = result and prev < value
+            prev = value
+        
+        return result	
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+####  [Google And Facebook:Validate Single Binary Tree](https://leetcode.com/discuss/interview-question/347374/)
+##### Learning Points
+> The in degree and out degree is defined for a Directed graph.
+>
+> ![Indegree-and-Outdegree-Directed-Graph](indegree-and-outdegree-for-a-directed-graph.gif)
+> For a directed graph ![equation](https://latex.codecogs.com/png.image?\dpi{150}%20G=(V(G),E(G)))
+> and a vertex ![equation](https://latex.codecogs.com/png.image?\dpi{150}%20x1%20\in%20V(G)),
+> the **Out-Degree** of x1 refers to the number of arcs incident from x1.
+> That is, the number of arcs directed away from the vertex x1. The **In-Degree** of x1 refers 
+> to the number of arcs incident to x1. That is, the number of arcs directed towards the vertex x1.
+>
+> **Indegree:** In simple terms, the number of edges coming towards a vertex(v) in Directed graphs is the in degree of v.
+>
+> **Outdegree:** The number of edges going out from a vertex(v) in Directed graphs is the in degree of v.
+##### Solution Explanation:
+```
+# --------------------------------------
+# Algorithm
+# --------------------------------------
+For each node in the list:
+
+  1. Check that its children are in the list as well. We use a dictionary to get that in O(1) (keys of the dictionary are the nodes in the original list).
+  2. Check that its children don't have a parent other than the current node. We use the same dict as above, where the value is True if it has already been visited by its parent.
+
+There should be exactly one root. Use a counter for this and check at the end of the code.
+```
+##### Complexity Analysis:
+```
+TC: O(N)
+SC: O(N)
+```
+```python
+from typing import List
+
+class TreeNode:
+    def __init__(self, val):
+        self.left, self.right, self.val = None, None, val
+
+
+def is_binary_tree(nodes_list: List[TreeNode]) -> bool:
+    nodes_dict = dict() 
+    for n in nodes_list:
+        nodes_dict[n] = False   # each node starts without parent
+
+    root = len(nodes_list)  # root candidates counter. Initially, all nodes are candidates.
+    for n in nodes_list:
+        if n.left is not None:
+            if n.left not in nodes_dict:  # child not in original list
+                return False
+            if nodes_dict[n.left]:  # child already has a parent
+                return False
+            nodes_dict[n.left] = True   # we mark the child as "it already has a parent"
+            root -= 1  # root candidates decrease by 1
+        if n.right is not None:  # do the same for the right child
+            if n.right not in nodes_dict:
+                return False
+            if nodes_dict[n.right]:
+                return False
+            nodes_dict[n.right] = True
+            root -= 1
+
+    if root != 1:
+        return False
+    return True
+	
+#   1
+#  / \
+# 2   3
+#    /
+#   4
+#
+n1 = TreeNode(1);
+n2 = TreeNode(2);
+n3 = TreeNode(3);
+n4 = TreeNode(4);
+
+n1.left = n2;
+n1.right = n3;
+n3.left = n4;
+
+print(verifyBinaryTree([n4, n2, n3, n1]))
+# Output: True
+
+#   1
+#  / \
+# 2   3
+#  \ /
+#   4
+#
+n1 = TreeNode(1);
+n2 = TreeNode(2);
+n3 = TreeNode(3);
+n4 = TreeNode(4);
+
+n1.left = n2;
+n1.right = n3;
+n2.right = n4;
+n3.left = n4;
+
+print(verifyBinaryTree([n2, n3, n4, n1]))
+# Output: False
+
+#   1
+#  / \
+#  \ /
+#   2
+#
+n1 = TreeNode(1);
+n2 = TreeNode(2);
+
+n1.left = n2;
+n2.left = n1;
+
+print(verifyBinaryTree([n1, n2]))
+# Output: False
+
+
+#   1     4
+#  / \   / \
+# 2   3 5   6
+#
+n1 = TreeNode(1);
+n2 = TreeNode(2);
+n3 = TreeNode(3);
+n4 = TreeNode(4);
+n5 = TreeNode(5);
+n6 = TreeNode(6);
+
+n1.left = n2;
+n1.right = n3;
+
+n4.left = n5;
+n4.right = n6;
+
+print(verifyBinaryTree([n2, n6, n4, n1, n3, n5]))
+# Output: False
+
+
+# 1   2
+#  \ /
+#   3
+#
+n1 = TreeNode(1);
+n2 = TreeNode(2);
+n3 = TreeNode(3);
+
+n1.right = n3;
+n2.left = n3;
+
+print(verifyBinaryTree([n1, n2, n3]))
+# Output: False
+
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+####  [LC-621:Task Scheduler](https://leetcode.com/problems/task-scheduler/)
+##### Problem Description:
+```
+Given a characters array tasks, representing the tasks a CPU needs to do, where each letter represents a different task.
+Tasks could be done in any order. Each task is done in one unit of time. For each unit of time, the CPU could complete 
+either one task or just be idle.
+
+However, there is a non-negative integer n that represents the cooldown period between two same tasks (the same letter in the array),
+that is that there must be at least n units of time between any two same tasks.
+
+Return the least number of units of times that the CPU will take to finish all the given tasks.
+------------
+Example 1:
+
+Input: tasks = ["A","A","A","B","B","B"], n = 2
+Output: 8
+Explanation: 
+A -> B -> idle -> A -> B -> idle -> A -> B
+There is at least 2 units of time between any two same tasks.
+Example 2:
+
+Input: tasks = ["A","A","A","B","B","B"], n = 0
+Output: 6
+Explanation: On this case any permutation of size 6 would work since n = 0.
+["A","A","A","B","B","B"]
+["A","B","A","B","A","B"]
+["B","B","B","A","A","A"]
+...
+And so on.
+```
+##### Solution Explanation:
+```
+# --------------------------------------
+# Algorithm
+# --------------------------------------
+1. This is an extremely tricky problem.
+
+2. The main idea is to schedule the most frequent tasks as frequently as possible.
+   Begin with scheduling the most frequent task. Then cool-off for n, and in that cool-off period 
+   schedule tasks in order of frequency, or if no tasks are available, then be idle.
+
+   Example: 
+   ----------------------------------------------------------------------------------------------------
+   Say we have the following tasks: [A,A,A,B,C,D,E] with n =2
+   Now if we schedule using the idea of scheduling all unique tasks once and then calculating 
+   if a cool-off is required or not, then we have: A,B,C,D,E,A,idle,dile,A i.e. 2 idle slots.
+
+   But if we schedule using most frequent first, then we have:
+   2.1: A,idle,idle,A,idle,idle,A
+   2.2: A,B,C,A,D,E,A i.e. no idle slots. This is the general intuition of this problem.
+
+3. The idea in two can be implemented using a heap and temp list. This is illustrated in the code below.
+
+4. Time complexity is O(N * n) where N is the number of tasks and n is the cool-off period.
+5. Space complexity is O(1) - will not be more than O(26).
+```
+##### Solution Visualization
+```
+Legend: '->' : heap pop operation
+'#' : idle time
+
+    [A A A A B B D E]
+    using most frequent first: [A ## A ## A ## A]
+    other jobs in idle time:   [A BD A BE A ## A] i.e. 10 intervals
+    
+    HEAP            TEMP                    TIME
+    (-4,A)->        [(-3,A)]                      1
+    (-2,B)->        [(-3,A), (-1,B)]          2
+    (-1,D)->        [(-3,A), (-1,B)]          3
+    
+    *********************COOL TIME COMPLETE************************
+    put items in TEMP back to HEAP
+    
+    HEAP becomes: [(-3,A), (-1,E), (-1,B)]
+    
+    HEAP            TEMP                    TIME
+    (-3,A)->        [(-2,A)]                  4
+    (-1,B)->        [(-2,A)]                  5
+    (-1,E)->        [(-2,A)]                  6
+    
+    *********************COOL TIME COMPLETE************************
+    put items in TEMP back to HEAP
+    
+    HEAP becomes: [(-2,A)]
+    
+    HEAP            TEMP                    TIME
+    (-2,A)->        [(-1,A)]                  7
+    EMPTY                                         8
+    EMPTY                                         9
+    
+    *********************COOL TIME COMPLETE************************
+    put items in TEMP back to HEAP
+    
+    HEAP becomes: [(-1,A)]
+    
+    HEAP            TEMP                    TIME
+    (-1,A)->                                       10
+    EMPTY         EMPTY                  break
+```
+##### Complexity Analysis:
+```
+TC: O(N * n)
+SC: O(1)
+
+where, N = number_of_tasks , n = cool_off_period
+```
+```python
+from heapq import heappush, heappop
+from collections import Counter
+
+
+# Task Scheduler - https://leetcode.com/problems/task-scheduler/
+
+class Solution:
+    def inverse(self, num):
+        return -1 * num
+
+    def leastInterval(self, tasks: List[str], n: int) -> int:
+        # What are the inputs here
+        #   - tasks - a list of strings the represent information we're processing
+        #   - n - the time between tasks of the exact same time. This would leave us room to process other tasks
+        # we asking for here?
+        #   - We're looking for an int as an output. That's because we're returning a count
+        #   - We're looking for the minimum number of intervals that we're going to use for the problem
+
+        # How I think we're going to solve the problem
+        # 1. We process the most important tasks often
+        #   - That's because we want to process everything quickly, and processing it quickly means processing the most frequent tasks immediately after the cooldown time is over is necessary.
+        # 2. Determine my interval
+        #   - I want to be able to determine what step I'm at
+        # 3. Create a dict of counts since I last processed my task
+
+        # Task map to store if we've seen the item before
+        task_count = Counter(tasks)
+        current_time = 0
+        current_heap = []
+        
+        # Sorting from least to greatest inside of the heap current_heap
+        for k,v in task_count.items():
+            heappush(current_heap, (self.inverse(v), k)) # Pushes item from least to greatest (hence the negative values)        
+
+        # Here we're running through the entire heap and processing the sorted tasks
+        while current_heap: # We're running until this list runs out because we intend to pop elements from it
+            index, temp = 0, []
+            while index <= n:
+                current_time += 1 # We're counting the interval time here
+                if current_heap:
+                    timing, taskid = heappop(current_heap)
+                    # We're checking to see if it's at the end of the overall count. 
+                    # Remember that it was negative at the beginning
+                    if timing != -1:
+
+                        temp.append((timing + 1, taskid))
+                # Checking to see if we're out of tasks. Exit the inner loop if both are true.
+                # This will automatically exit out of the overall tasks 
+                if not current_heap and not temp:  
+                    break
+                else:
+                    index += 1
+            # Because we transfered all of the items from the heap to temp, we're transferring them back to know if we should continue
+            # heap -> If we're not out of tasks -> temp
+            # temp -> Because we're not out -> heap
+            for item in temp:
+                heappush(current_heap, item)
+            # We only stop if we're out of tasks 
+            # (Constantly checking the current_heap for if it's empty)
+        return current_time 
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+####  [FB Phone Interview:Task Scheduler Variant](https://leetcode.com/discuss/interview-question/673575/Facebook-or-Phone-or-Task-Scheduler)
+##### Problem Description
+```
+A sequence of task given where each task identified by a unique id. There is cool down period to be observed before executing same task again. Find the execution time for the task sequence.
+
+Example:
+Task sequence: 1 2 1 2
+cool-down period: 3
+
+Execution time: 6 (o/p seq: 1 2 . . 1 2)
+```
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+TC: O(N)
+SC: O(N)
+```
+```python
+def schedule(tasks, cool):
+    tasks_dict = {}
+    unique_tasks = set(tasks)
+    for u in unique_tasks:
+        tasks_dict[u] = 0
+    res = []
+    left = len(tasks)
+    while left > 0:
+        zeroes = [k for k, v in tasks_dict.items() if v <= 0]
+        if zeroes:
+            curr = zeroes.pop()
+            res.append(curr)
+            tasks_dict[curr] = cool + 1
+            left -= 1
+        else:
+            res.append('-')
+        for k in tasks_dict:
+            tasks_dict[k] -= 1
+    return res, len(res)
+
+
+print(schedule([1, 2, 1, 2], 3))
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+####  [LC-494:Target Sum](https://leetcode.com/problems/target-sum/)
+##### DP Notes
+```
+1. Category
+Most dynamic programming questions can be boiled down to a few categories. It's important to recognize the category 
+because it allows us to FRAME a new question into something we already know. Frame means use the framework, 
+not copy an approach from another problem into the current problem.
+You must understand that every DP problem is different.
+
+Question: Identify this problem as one of the categories below before continuing.
+
+	* 0/1 Knapsack
+	* Unbounded Knapsack
+	* Shortest Path (eg: Unique Paths I/II)
+	* Fibonacci Sequence (eg: House Thief, Jump Game)
+	* Longest Common Substring/Subsequeunce
+
+Answer: 0/1 Knapsack
+
+Why 0/1 Knapsack? Our 'Capacity' is the target we want to reach 'S'. Our 'Items' are the numbers in the input subset 
+and the 'Weights' of the items are the values of the numbers itself. This question follows 0/1 and not 
+unbounded knapsack because we can use each number ONCE.
+
+What is the variation? The twist on this problem from standard knapsack is that we must add ALL items 
+in the subset to our knapsack. We can reframe the question into adding the positive or negative value of the 
+current number to our knapsack in order to reach the target capacity 'S'.
+
+2. States
+What variables we need to keep track of in order to reach our optimal result? This Quora post explains 
+state beautifully, so please refer to this link if you are confused: 
+www.quora.com/What-does-a-state-represent-in-terms-of-Dynamic-Programming
+
+Question: Determine State variables.
+Hint: As a general rule, Knapsack problems will require 2 states at minimum.
+
+Answer: Index and Current Sum
+Why Index? Index represents the index of the input subset we are considering. 
+This tells us what values we have considered, what values we haven't considered, and what value 
+we are currently considering. As a general rule, index is a required state in nearly 
+all dynamic programming problems, except for shortest paths which is row and column 
+instead of a single index but we'll get into that in a seperate post.
+
+Why Current Sum? The question asks us if we can sum every item (either the positive or 
+negative value of that item) in the subset to reach the target value. Current Sum gives 
+us the sum of all the values we have processed so far. Our answer revolves around Current Sum being equal to Target.
+
+3. Decisions
+Dynamic Programming is all about making the optimal decision. In order to make the optimal decision, 
+we will have to try all decisions first. The MIT lecture on DP (highly recommended) refers to this 
+as the guessing step. My brain works better calling this a decision instead of a guess. 
+Decisions will have to bring us closer to the base case and lead us towards the question we want to answer. 
+Base case is covered in Step 4 but really work in tandem with the decision step.
+
+Question: What decisions do we have to make at each recursive call?
+Hint: As a general rule, Knapsack problems will require 2 decisions.
+
+Answer: This problem requires we take ALL items in our input subset, so at every step we will be adding an item to our knapsack. Remember, we stated in Step 2 that "The question asks us if we can sum every item (either the positive or negative value of that item) in the subset to reach the target value." The decision is:
+
+	1. Should we add the current numbers positive value
+	2. Should we add the current numbers negative value
+
+As a note, knapsack problems usually don't require us to take all items, thus a usual knapsack decision is to take the item or leave the item.
+
+4. Base Case
+Base cases need to relate directly to the conditions required by the answer we are seeking. This is why 
+it is important for our decisions to work towards our base cases, as it means our decisions are working towards our answer.
+
+Let's revisit the conditions for our answers.
+
+	1. We use all numbers in our input subset.
+	2. The sum of all numbers is equal to our target 'S'.
+
+Question: Identify the base cases.
+Hint: There are 2 base cases.
+
+Answer: We need 2 base cases. One for when the current state is valid and one for when the current state is invalid.
+
+	1. Valid: Index is out of bounds AND current sum is equal to target 'S'
+	2. Invalid: Index is out of bounds
+
+Why Index is out of bounds? A condition for our answer is that we use EVERY item in our input subset. When the index is out of bounds, we know we have considered every item in our input subset.
+
+Why current sum is equal to target? A condition for our answer is that the sum of using either the positive or negative values of items in our input subet equal to the target sum 'S'.
+
+If we have considered all the items in our input subset and our current sum is equal to our target, we have successfully met both conditions required by our answer.
+
+On the other hand, if we have considered all the items in our input subset and our current sum is NOT equal to our target, we have only met condition required by our answer. No bueno.
+
+5. Code it
+
+If you've thought through all the steps and understand the problem, it's trivial to code the actual solution.
+
+ def findTargetSumWays(self, nums, S):
+     index = len(nums) - 1
+     curr_sum = 0
+     return self.dp(nums, S, index, curr_sum)
+     
+ def dp(self, nums, target, index, curr_sum):
+ 	# Base Cases
+     if index < 0 and curr_sum == target:
+         return 1
+     if index < 0:
+         return 0 
+     
+ 	# Decisions
+     positive = self.dp(nums, target, index-1, curr_sum + nums[index])
+     negative = self.dp(nums, target, index-1, curr_sum + -nums[index])
+     
+     return positive + negative
+
+6. Optimize
+
+Once we introduce memoization, we will only solve each subproblem ONCE. We can remove recursion altogether 
+and avoid the overhead and potential of a stack overflow by introducing tabulation. It's important to note 
+that the top down recursive and bottom up tabulation methods perform the EXACT same amount of work. 
+The only difference is memory. If they peform the exact same amount of work, the conversion just 
+requires us to specify the order in which problems should be solved.
+
+Memoization Solution for Reference
+
+class Solution:
+    def findTargetSumWays(self, nums, S):
+        index = len(nums) - 1
+        curr_sum = 0
+        self.memo = {}
+        return self.dp(nums, S, index, curr_sum)
+        
+    def dp(self, nums, target, index, curr_sum):
+        if (index, curr_sum) in self.memo:
+            return self.memo[(index, curr_sum)]
+        
+        if index < 0 and curr_sum == target:
+            return 1
+        if index < 0:
+            return 0 
+        
+        positive = self.dp(nums, target, index-1, curr_sum + nums[index])
+        negative = self.dp(nums, target, index-1, curr_sum + -nums[index])
+        
+        self.memo[(index, curr_sum)] = positive + negative
+        return self.memo[(index, curr_sum)]
+```
+##### Solution Explanation:
+```
+# --------------------------------------
+# Algorithm 1 - DP w/ Memoization
+# --------------------------------------
+Algorithm Explanation: https://leetcode.com/problems/target-sum/discuss/455024/DP-IS-EASY!-5-Steps-to-Think-Through-DP-Questions.
+
+# --------------------------------------
+# Algorithm 2 - Optiomal Solution (2D DP)
+# --------------------------------------
+Algorithm Explanation: https://ygongdev.github.io/blog/categories/leetcode/leetcode-494-target-sum
+```
+![lc-494-target-sum-complexity-analysis-image](./assets/lc-494-target-sum-complexity-analysis.PNG)
+##### Complexity Analysis:
+```
+# --------------------------------------
+# Algorithm 1 - DP w/ Memoization
+# --------------------------------------
+Complexity analysis:
+------------------------------------------------------
+Refer to the drawing above
+1.The depth of the recursion tree is |nums|
+2.The maximum possible range of sum of either postive or negative value of each int in nums is 1000 to -1000 (we are told sum won't exceed 1000 in the prompt)
+3.For each level of recursion tree, there should be less than 2000 (index,curSum) pairs. Think about why?
+4.The overal time compleixty is O(2000*|nums|)
+
+The complexity could be made more generic, O(|nums|*(Upperbound of Sum - Lowerbound of Sum)).
+Space complexity is the same as time complexity for this question
+
+TC: O(|nums|*(Upperbound of Sum - Lowerbound of Sum))
+SC: O(|nums|*(Upperbound of Sum - Lowerbound of Sum))
+
+# --------------------------------------
+# Algorithm 2 - Optiomal Solution (2D DP)
+# --------------------------------------
+Since we have to generate a 2D table of N and 2*sum(nums)+1 and also iterate through the entire table, 
+we will have both time complexity and space complexity of O(N*(2*sum(nums)+1))
+
+TC: O(N*(2*sum(nums)+1))
+SC: O(N*(2*sum(nums)+1))
+```
+```python
+# --------------------------------------
+# Algorithm 1 - DP w/ Memoization
+# --------------------------------------
+#
+# TC: O(|nums|*(Upperbound of Sum - Lowerbound of Sum))
+# SC: O(|nums|*(Upperbound of Sum - Lowerbound of Sum))
+#
+from typing import List
+class Solution:
+    def findTargetSumWays(self, nums: List[int], S: int) -> int:
+        self.memo = {}
+        def dfs(i,curSum):
+            if (i,curSum) in self.memo:
+                return self.memo[(i,curSum)]
+            if i == len(nums):
+                return 1 if curSum == S else 0
+            positive = dfs(i+1,curSum-nums[i])
+            negative = dfs(i+1,curSum+nums[i])
+            self.memo[(i,curSum)] = positive + negative
+            return self.memo[(i,curSum)]
+            
+        res = dfs(0,0)
+        
+        return res
+
+# --------------------------------------
+# Algorithm 2 - Optiomal Solution (2D DP)
+# --------------------------------------
+#
+# TC: O(N*(2*sum(nums)+1))
+# SC: O(N*(2*sum(nums)+1))
+#
+from typing import List
+class Solution:
+    def findTargetSumWays(self, nums: List[int], S: int) -> int:
+      return self.dp(nums, S)
+    
+    def dp(self, nums, target):
+      n = len(nums)
+      max_limit = sum(nums)
+      
+      dp = [[ 0 for i in range(max_limit*2+1) ] for j in range(n+1)]
+      
+      # Remember to shift by max_limit to move negative indices to correct indices
+      dp[n][max_limit] = 1
+      
+      # iterate from n-1 -> 0
+      for i in reversed(range(n)):
+        for j in range(-max_limit, max_limit+1): # -3 -> 3, if limit was 3
+          # Remember to shift :D
+          centered_j = j + max_limit
+          # Choosing a positive and deducting
+          negative = centered_j - nums[i]
+          # Choosing a negative and deducting
+          positive = centered_j + nums[i]
+          
+          # it is possible for out of bounds, but we don't care because we know it is impossible to achieve a target that is outside of our limit
+          if negative >= 0 and negative <= 2*max_limit:
+            dp[i][centered_j] += dp[i+1][negative]
+          if positive >= 0 and positive <= 2*max_limit:
+            dp[i][centered_j] += dp[i+1][positive]
+      
+      # Remember to shift again :D
+      return 0 if target < -max_limit or target > max_limit else dp[0][target + max_limit]
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+####  [LC-22:Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
+##### Problem Description:
+![lc-22-problem-description-image](./assets/lc-22-problem-description-image.png)
+##### Learning Points (Catalan Numbers):
+```
+A famous ancient question in this context is:
+"How many distinct arrangements of n pairs of left-right parentheses are there all of which close?"
+The answer to this question is called the n-th Catalan number, C(n).
+Here are the first few answers:
+  * C(1)=1         ( )
+  * C(2)=2         ()() and (())
+  * C(3)=5         ()()(), ()(()), (())(), (()()) and ((()))
+
+
+Generating all combinations of well formed parentheses is a typical example of catalan numbers.
+You can use the links at the bottom here if you are not aware of the catalan numbers since they
+are at the heart of the exercise.
+Let time complexity for the generating all combinations of well-formed parentheses is f(n),
+then,
+f(n) = g(n) * h(n) where g(n) is the time complexity for calculating nth catalan number,
+and h(n) is the time required to copy this combination to result array.
+
+Therefore, f(n) = catalan(n) * O(n) which is O((4^n/n^1.5)*(n)).
+Broadly saying just remember that this is a typical example of catalan number
+and it's time complexity is similar to how catalan(n) is got.
+Further readings in to catalan numbers:
+
+https://en.wikipedia.org/wiki/Catalan_number
+https://www.youtube.com/watch?v=GlI17WaMrtw
+https://www.youtube.com/watch?v=eoofvKI_Okg
+```
+##### Solution Explanation:
+```
+# --------------------------------------
+# Backtracking Solution:
+# --------------------------------------
+The idea is to have a empty string, and put “(” and “)” in one by one.
+We put “(” in first. In total there are n “(”. We can keep adding “(” in until we used up all the “(”.
+Then we start adding “)” in. To keep the resulting string well-formed, we only add in “)” 
+when the number of existing “(” exceeds the number of “)” in the current string:
+```
+![lc-22-generate-parentheses-image-1](./assets/lc-22-generate-parentheses-image-1.jpeg)
+```
+When current string length == 2*n, we got an answer. Therefore we record it, 
+and return to previous step to search for other possible combinations.
+```
+##### Code Analysis
+```
+At first sight, it looks complicated to get a clear view of how it backtracks, specifically where the “return” returns to.
+At least I struggled for a while.
+
+I didn’t give up. In the end, I successfully get this tree, which clearly shows how the program goes.
+It turned out, back tracking is just DFS, or in my opinion, traverse a tree:
+```
+![lc-22-generate-parentheses-image-2](./assets/lc-22-generate-parentheses-image-2.jpeg)
+```
+Note that the tree is not full, because our two if-cases cut some of the tree branches.
+```
+##### Complexity Analysis:
+```
+My Analysis:
+---------------------------------
+Time Complexity: The tree has a max height of 2n, therefore the max nodes the tree has is 2^ 2n. 
+Therefore the time complexity is O(2^ 2n)=O(4^n).
+
+Space Complexity: We have 2^(2n-1) leaves at most, therefore, the time complexity is O(4^n).
+Clearly, my analysis over estimated the total tree nodes, and the number of leaves.
+
+Leetcode Analysis:
+---------------------------------
+The tree is not full, and the number of leaves actually can be described by n-th Catalan number, which is bounded by 4^n /(n ^ 3/2).
+
+Time Complexity: since each sequence at most back tracks 2n steps, time complexity is n-th Catalan number*2n, which gives O( 4^n / (n^ 1/2) ).
+Space Complexity: since each sequence takes at most 2*n space, the answer list takes at most n-th Catalan number*2n space, which gives O( 4^n / (n^ 1/2) ).
+---------------------------------
+
+TC: O( 4^n / (n^ 1/2) )
+SC: O( 4^n / (n^ 1/2) )
+```
+##### References:
+[Crack Leetcode 22: Generate Parentheses](https://christinalalay.medium.com/crack-leetcode-22-generate-parentheses-895de3a677c7)
+```python
+# TC: O( 4^n / (n^ 1/2) )
+# SC: O( 4^n / (n^ 1/2) )
+from typing
+
+class Solution:
+    def generateParenthesis(self, n: int) -> List[str]:
+        """
+		:type n: int
+		:rtype: List[str]
+		"""
+		res = []
+		self.generateHelper(res, n, 0, 0, "")
+		return res
+		
+    def generateHelper(self, res, n, left, right, temp):
+        if len(temp) == 2*n:
+            res.append(temp)
+            return
+        else:
+            if left < n:
+                self.generateHelper(res, n, left+1, right, temp+"(")
+            if right < left:
+                self.generateHelper(res, n, left, right+1, temp+")")
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+####  [LC-400:Nth Digit](https://leetcode.com/problems/nth-digit/)
+##### Solution Explanation:
+```
+# --------------------------------------
+# Algorithm 1 - Fast Skip Method
+# --------------------------------------
+How many digits of size size can we have?
+
+1 * 9 (size 1, 1... 9)
+2 * 90 (size 2, 10... 99)
+3 * 900 (size 3, 100... 999)
+
+So we can "fast-skip" those numbers until we find the size of the number that will hold our digit.
+At the end of the loop, we will have:
+
+start: first number of size size (will be power of 10)
+n: will be the number of digits that we need to count after start
+How do we get the number that will hold the digit? It will be start + (n - 1) // size (we use n - 1 because we need zero-based index). Once we have that number, we can get the n - 1 % size-th digit of that number, and that will be our result.
+
+# --------------------------------------
+# Algorithm 2 - Binary Search
+# --------------------------------------
+- Keep incrementing the power of ten until you find the onces b/w which the answer lies, by decreasing the digits found in previous (prev, curr) range.
+
+- When such an power is found apply a binary search in (prev, curr) to find the required number
+
+- And then you can easily find the required digit in < 10 operations
+```
+##### Complexity Analysis:
+```
+For both approaches:
+
+TC: O(log(N))
+SC: O(N)
+```
+```python
+# --------------------------------------
+# Algorithm 0 - O(N) sub-optimal solution
+# Good to start off w/ this in an interview,
+# and then optimize.
+#
+# NOTE: Will lead to TLE.
+# --------------------------------------
+class Solution:
+    def findNthDigit(self, n: int) -> int:
+        start, size = 1, 1
+        while n > size:
+            n, start = n - size, start + 1
+            size = len(str(start))
+        return int(str(start)[n-1]).
+		
+# --------------------------------------
+# Algorithm 1 - Fast Skip Method
+# --------------------------------------
+class Solution:
+    def findNthDigit(self, n: int) -> int:
+        start, size, step = 1, 1, 9
+        while n > size * step:
+            n, size, step, start = n - (size * step), size + 1, step * 10, start * 10
+        return int(str(start + (n - 1) // size)[(n - 1) % size])
+		
+# --------------------------------------
+# Algorithm 2 - Binary Search
+# --------------------------------------
+class Solution:
+    def findNthDigit(self, n: int) -> int:
+        curr, prev = 10, 1
+        for i in range(1, 32):
+
+            if (n >= i * (curr - prev)):
+                # Decrese the no of digits found in previous powers
+                n -= i * (curr - prev)    
+                # Just increment the current power of 10  
+                prev = curr
+                curr *= 10
+            else:
+                # Apply a binary search in ( prev, curr)
+                mid = (curr + prev) // 2
+                while (prev < curr - 1):
+                    note = (mid - prev) * i
+                    if (note > n):
+                        curr = mid
+                    else:
+                        n -= note
+                        prev = mid
+                    mid = (curr + prev) // 2
+
+                mid += n // i
+                n = n % i
+                if (n == 0):
+                    return (mid - 1) % 10
+                else:
+                    n = i + 1 - n
+                    while (n > 1):
+                        mid //= 10
+                        n -= 1
+                    return mid % 10
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-380:Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-381:Insert Delete GetRandom O(1) - Duplicates allowed](https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-721:Accounts Merge](https://leetcode.com/problems/accounts-merge/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-121:Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+##### Solution Explanation
+```
+Approach: Dynamic Programming + State Machine
+=================================================================================================================================================================
+
+- It is impossible to have stock to sell on first day, so -infinity is set as initial value for cur_hold and cur_not_hold is set to 0
+- Iterate through the list of prices
+  + Either keep in hold, or just buy today with stock price
+  + Either keep in not holding, or just sell today with stock price
+- Max profit must be in not-hold state
+
+                                  Sell
+                                  + stock price to balance
+                      +------------------------------------------------+
+                     /                                                  \
+   ___    _________|/_                                                   \_________    ___
+  /  _\| /         \                                                     /         \ |/_  \
+ |      + Not Hold  +                                                   +    Hold   +      | Keep in hold
+  \___/  \_________/                                                     \_________/  \___/
+                    \                                                    /
+ Keep in not holding \                                                  /
+                      +------------------------------------------------+
+                                  Buy
+                                  - stock price from balance
+```
+##### Complexity Analysis:
+```
+Time  : O(N)
+========================
+We traverse the list containing n elements only once.
+
+Space : O(1)
+========================
+No need for a dp array. We have replaced dp array with a variable called cur_not_hold.
+```
+```python
+from typing import List
+
+def maxProfit(prices: List[int]) -> int:
+    if not price: return 0
+
+    # It is impossible to have stock to sell on first day, so -infinity is set as initial value
+    cur_hold, cur_not_hold = -float('inf'), 0
+            
+    for stock_price in prices:        
+        prev_hold, prev_not_hold = cur_hold, cur_not_hold
+            
+        # either keep in hold, or just buy today with stock price
+        cur_hold = max(prev_hold, -stock_price)
+            
+        # either keep in not holding, or just sell today with stock price
+        cur_not_hold = max(prev_not_hold, prev_hold + stock_price)
+        
+    # max profit must be in not-hold state
+    return cur_not_hold if prices else 0
+
+if __name__ == "__main__":
+    #Input: prices = [7,1,5,3,6,4]
+    #Output: 5
+    #Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+    prices = [7,1,5,3,6,4]
+    print(maxProfit(prices))
+```
+```kotlin
+fun maxProfit(prices: IntArray): Int {
+    //if (prices?.isEmpty() ?: true) return 0
+    if (prices.isEmpty()) return 0
+    // It is impossible to have stock to sell on first day, so -infinity is set as initial value
+    var curHold = Int.MIN_VALUE
+    var curNotHold = 0
+
+    for (stockPrice in prices) {
+        val prevHold = curHold
+        val prevNotHold = curNotHold
+            
+        // either keep in hold, or just buy today with stock price
+        curHold = maxOf(prevHold, stockPrice.unaryMinus())
+            
+        // either keep in not holding, or just sell today with stock price
+        curNotHold = maxOf(prevNotHold, prevHold + stockPrice)
+    }
+    // max profit must be in not-hold state
+    return curNotHold
+}
+
+fun main(args: Array<String>) {
+    //Input: prices = [7,1,5,3,6,4]
+    //Output: 5
+    //Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+    var prices = intArrayOf(7, 1, 5, 3, 6, 4)
+    println(maxProfit(prices))
+    //Input: prices = [7,6,4,3,1]
+    //Output: 0
+    //Explanation: In this case, no transactions are done and the max profit = 0.
+    prices = intArrayOf(7, 6, 4, 3, 1)
+    println(maxProfit(prices))
+    //Input: prices = []
+    //Output: 0
+    prices = intArrayOf()
+    println(maxProfit(prices))
+}
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-230:Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-269:Alien Dictionary](https://leetcode.com/problems/alien-dictionary/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-269:Alien Dictionary](https://leetcode.com/problems/alien-dictionary/)
+##### Solution Explanation:
+```
+BFS
+
+------------------------
+Thought process:
+------------------------
+Topological sort:
+------------------------
+Topological sort:
+1. Build graph: 
+   1.1 a map of character -> set of character.
+   1.2 Also get in-degrees for each character. In-degrees will be a map of character -> integer.
+2. Topological sort:
+   2.1 Loop through in-degrees. Offer the characters with in-degree of 0 to queue.
+   2.2 While queue is not empty:
+       2.2.1 Poll from queue. Append to character to result string.
+       2.2.2 Decrease the in-degree of polled character's children by 1.
+       2.2.3 If any child's in-degree decreases to 0, offer it to queue.
+3. At last, if result string's length is less than the number of vertices, that means there is a cycle in my graph. The order is invalid.
+```
+##### Complexity Analysis:
+```
+Time Complexity   : O(N)
+
+- Say the number of characters in the dictionary (including duplicates) is N.
+- Building the graph takes O(N).
+- Topological sort takes O(V + E). V <= N.
+- E also can't be larger than N.
+- So the overall time complexity is O(n).
+                  
+Space Complexity  : O(N)
+```
+```python
+# BFS Solution
+# -----------------------------------
+from typing import List
+
+# Construct the graph.
+def findEdges(word1, word2, in_degree, out_degree):
+    str_len = min(len(word1), len(word2))
+    for i in range(str_len):
+        if word1[i] != word2[i]:
+            if word2[i] not in in_degree:
+                in_degree[word2[i]] = set()
+            if word1[i] not in out_degree:
+                out_degree[word1[i]] = set()
+            in_degree[word2[i]].add(word1[i])
+            out_degree[word1[i]].add(word2[i])
+            break
+
+def alienOrder(words: List[str]) -> str:
+    result, in_degree, out_degree = [], {}, {}
+    zero_in_degree_queue = collections.deque()
+    nodes = set()
+    for word in words:
+        for c in word:
+            nodes.add(c)
+
+    for i in range(1, len(words)):
+        if (len(words[i-1]) > len(words[i]) and
+                words[i-1][:len(words[i])] == words[i]):
+            return ""
+        findEdges(words[i - 1], words[i], in_degree, out_degree)
+
+    for node in nodes:
+        if node not in in_degree:
+            zero_in_degree_queue.append(node)
+
+    while zero_in_degree_queue:
+        precedence = zero_in_degree_queue.popleft()
+        result.append(precedence)
+
+        if precedence in out_degree:
+            for c in out_degree[precedence]:
+                in_degree[c].discard(precedence)
+                if not in_degree[c]:
+                    zero_in_degree_queue.append(c)
+
+            del out_degree[precedence]
+
+    if out_degree:
+        return ""
+
+    return "".join(result)
+
+# DFS solution.
+# -----------------------------------
+from typing import List
+
+# Construct the graph.
+def findEdges(word1, word2, ancestors):
+    min_len = min(len(word1), len(word2))
+    for i in range(min_len):
+        if word1[i] != word2[i]:
+            ancestors[word2[i]].append(word1[i])
+            break
+
+# Topological sort, return whether there is a cycle.
+def topSortDFS(root, node, ancestors, visited, result):
+    if node not in visited:
+        visited[node] = root
+        for ancestor in ancestors[node]:
+            if topSortDFS(root, ancestor, ancestors, visited, result):
+                return True
+        result.append(node)
+    elif visited[node] == root:
+        # Visited from the same root in the DFS path.
+        # So it is cyclic.
+        return True
+    return False
+
+def alienOrder(words: List[str]) -> str:
+    # Find ancestors of each node by DFS.
+    nodes, ancestors = set(), {}
+    for i in range(len(words)):
+        for c in words[i]:
+            nodes.add(c)
+    for node in nodes:
+        ancestors[node] = []
+    for i in range(1, len(words)):
+        if (len(words[i-1]) > len(words[i]) and
+                words[i-1][:len(words[i])] == words[i]):
+            return ""
+        findEdges(words[i - 1], words[i], ancestors)
+
+    # Output topological order by DFS.
+    result = []
+    visited = {}
+    for node in nodes:
+        if topSortDFS(node, node, ancestors, visited, result):
+            return ""
+
+    return "".join(result)
+```
+```kotlin
+// BFS Solution
+// -----------------------------------
+class MyDeque<T> {
+
+    var backingList: MutableList<T> = arrayListOf()
+
+    fun addFirst(element: T) {
+        backingList.add(0, element)
+    }
+
+    fun getFirst(): T? {
+        if (backingList.isEmpty()) {
+            return null
+        }
+        val value = backingList.first()
+        removeFirst()
+        return value
+    }
+
+    fun removeFirst() {
+        if (backingList.isNotEmpty()) backingList.removeAt(0)
+    }
+
+    fun peekFirst(): T? {
+        return if (backingList.isNotEmpty()) backingList.first() else null
+    }
+
+    fun addLast(element: T) {
+        backingList.add(element)
+    }
+
+    fun getLast(): T? {
+        if (backingList.isEmpty()) {
+            return null
+        }
+        val value = backingList.last()
+        removeLast()
+        return value
+    }
+
+    fun removeLast() {
+        if (backingList.isNotEmpty()) backingList.removeAt(backingList.size - 1)
+    }
+
+    fun peekLast(): T? {
+        return if (backingList.isNotEmpty()) backingList.last() else null
+    }
+}
+
+// topological sort or return empty if cycle detected
+// T:O(n) S:O(|V|+|E|)=O(26+26^2)=O(1)
+
+// BFS
+fun findEdgesBFS(word1: String, word2: String, inDegree: HashMap<Char, HashSet<Char>>, outDegree: HashMap<Char, HashSet<Char>>) {
+    val len = minOf(word1.length, word2.length)
+    for (i in 0..len - 1) {
+        if (word1[i] != word2[i]) {
+            if (word2[i] !in inDegree) {
+                inDegree.put(word2[i], hashSetOf())
+            }
+            if (word1[i] !in outDegree) {
+                outDegree.put(word1[i], hashSetOf())
+            }
+            inDegree[word2[i]]?.add(word1[i])
+            outDegree[word1[i]]?.add(word2[i])
+            break
+        }
+    }
+}
+
+fun getAlienDictionaryOrderBFS(words: List<String>): String {
+    val ret = StringBuilder()
+
+    // we see a char as a node
+    val zeroInDegreeDq = MyDeque<Char>()
+    // key is entered from values
+    val inDegree = hashMapOf<Char, HashSet<Char>>()
+    // key enters to values
+    val outDegree = hashMapOf<Char, HashSet<Char>>()
+    val nodes = hashSetOf<Char>()
+
+    // get all chars
+    words.forEach({ it.forEach { nodes.add(it) } })
+
+    // build graph
+    for (i in 1..words.size - 1) {
+        if (words[i - 1].length > words[i].length
+                && words[i - 1].substring(0..words[i].length - 1) == words[i])
+            return ""
+        findEdgesBFS(words[i - 1], words[i], inDegree, outDegree)
+    }
+
+    // get 0 in degree nodes to start with
+    nodes.filter { it !in inDegree }.forEach({ zeroInDegreeDq.addFirst(it) })
+
+    var precedence: Char
+    while (zeroInDegreeDq.peekFirst() != null) {
+        precedence = zeroInDegreeDq.getLast()!!
+        ret.append(precedence)
+
+        if (precedence in outDegree) {
+            for (c in outDegree[precedence]!!) {
+                inDegree[c]?.remove(precedence)
+                if (inDegree[c]!!.isEmpty())
+                    zeroInDegreeDq.addFirst(c)
+            }
+            outDegree.remove(precedence)
+        }
+    }
+    if (outDegree.isNotEmpty())
+        return ""
+    return ret.toString()
+}
+
+// DFS Solution
+// -----------------------------------
+fun getAlienDictionaryOrderDFS(words: List<String>): String {
+    val nodes = hashSetOf<Char>()
+    val ancestors = hashMapOf<Char, ArrayList<Char>>()
+    words.forEach { it.forEach { nodes.add(it) } }
+    for (node in nodes)
+        ancestors.put(node, arrayListOf())
+    for (i in 1..words.size - 1) {
+        if (words[i - 1].length > words[i].length && words[i - 1].substring(0..words[i].length - 1) == words[i])
+            return ""
+        findEdgesDFS(words[i - 1], words[i], ancestors)
+    }
+    val sb = StringBuilder()
+    val visited = hashMapOf<Char, Char>()
+    if (nodes.any { topSortDFS(it, it, ancestors, visited, sb) })
+        return ""
+
+    return sb.toString()
+}
+
+fun findEdgesDFS(word1: String, word2: String, ancestors: HashMap<Char, ArrayList<Char>>) {
+    val minLen = minOf(word1.length, word2.length)
+    for (i in 0..minLen - 1)
+        if (word1[i] != word2[i]) {
+            ancestors[word2[i]]?.add(word1[i])
+            break
+        }
+}
+
+fun topSortDFS(root: Char, node: Char, ancestors: HashMap<Char, ArrayList<Char>>, visited: HashMap<Char, Char>, sb: StringBuilder): Boolean {
+    if (node !in visited) {
+        visited.put(node, root)
+        ancestors[node]?.any { topSortDFS(root, it, ancestors, visited, sb) }?.let {
+            if (it)
+                return it
+        }
+        sb.append(node)
+    } else if (visited[node] == root) {
+        return true
+    }
+    return false
+}
+
+fun main(args: Array<String>) {
+    val words = arrayListOf(
+            "wrt",
+            "wrf",
+            "er",
+            "ett",
+            "rftt"
+    )
+    println(getAlienDictionaryOrderBFS(words))
+    println(getAlienDictionaryOrderDFS(words))
+}
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-207:Course Schedule](https://leetcode.com/problems/course-schedule/)
+##### Solution Explanation:
+```
+----------------------------------
+BFS with Kahn's algorithm
+----------------------------------
+One of these algorithms, first described by Kahn (1962), works by choosing vertices in the same order as the eventual topological sort. 
+First, find a list of "start nodes" which have no incoming edges and insert them into a set S; at least one such node must exist in a non-empty acyclic graph.
+Then:
+----------------------------------
+L ← Empty list that will contain the sorted elements
+S ← Set of all nodes with no incoming edge
+while S is non-empty do
+    remove a node n from S
+    add n to tail of L
+    for each node m with an edge e from n to m do
+        remove edge e from the graph
+        if m has no other incoming edges then
+            insert m into S
+if graph has edges then
+    return error   (graph has at least one cycle)
+else 
+    return L   (a topologically sorted order)
+
+
+----------------------------------
+DFS with Tarjan Algorithm
+----------------------------------
+
+An alternative algorithm for topological sorting is based on depth-first search. The algorithm loops through each node of the graph,
+in an arbitrary order, initiating a depth-first search that terminates when it hits any node that has already been visited 
+since the beginning of the topological sort or the node has no outgoing edges (i.e. a leaf node):
+----------------------------------
+L ← Empty list that will contain the sorted nodes
+while there are unmarked nodes do
+    select an unmarked node n
+    visit(n)
+
+function visit(node n)
+    if n has a permanent mark then return
+    if n has a temporary mark then stop   (not a DAG)
+    mark n temporarily
+    for each node m with an edge from n to m do
+        visit(m)
+    mark n permanently
+    add n to head of L
+----------------------------------
+
+References:
+----------------------------------
+Kahn's Algorithm:
+----------------------------------
+https://en.wikipedia.org/wiki/Topological_sorting#CITEREFKahn1962
+----------------------------------
+Tarjan's Algorithm:
+----------------------------------
+https://en.wikipedia.org/wiki/Tarjan%27s_strongly_connected_components_algorithm
+```
+##### Complexity Analysis:
+```
+DFS ( Tarjan's Algorithm )
+---------------
+TIME COMPLEXITY  : O(V + E) => As all it does is basically run a DFS. 
+                               However this asymptotic analysis assumes that looking up a vertex in a stack can be done in constant time.
+
+SPACE COMPLEXITY : O(N)     => The space complexity is linear as it makes use of additional space for the stack.
+
+BFS ( Kahn's Algorithm )
+---------------
+TIME COMPLEXITY  : O(V + E) => Since we're using an adjacency list.
+                               Each edge and vertex will only be visited once throughout the main loop logic.
+
+SPACE COMPLEXITY : O(V + E) => For the adjacency list.
+```
+```python
+# BFS with Kahn's algorithm ( Topological Sorting )
+def canFinish(numCourses: int, prerequisites: List[List[int]]) -> bool:
+    #base case 
+    if not prerequisites: return None  
+    L = []
+
+    in_degrees = defaultdict(int)
+    graph = defaultdict(list)
+    #Construct the graph 
+    for dest, src in prerequisites:
+        graph[src].append(dest)
+        in_degrees[dest] += 1 
+        
+    Q = [u for u in graph if in_degrees[u]==0]
+    while Q: #while Q is not empty 
+        curr = Q.pop() #remove a node from Q
+        L.append(curr) #add curr to tail of L
+        for v in graph[curr]: #for each node v with a edge e 
+            in_degrees[v] -= 1 #remove edge 
+            if in_degrees[v] == 0:
+                Q.append(v)
+
+    #return number of nodes w/o cycle == total number of courses
+    return len(L) == numCourses 
+
+    #check there exist a cycle
+    #for u in in_degrees: #if graph has edge 
+    #    if in_degrees[u]:
+    #        return False 
+    #return True 
+
+if __name__ == "__main__":
+    #Input: numCourses = 2, prerequisites = [[1,0]]
+    #Output: true
+    #Explanation: There are a total of 2 courses to take. 
+    #To take course 1 you should have finished course 0. So it is possible.
+    numCourses = 2
+    prerequisites = [[1,0]]
+    print(canFinish(numCourses, prerequisites))
+
+# DFS with Tarjan Algorithm
+def canFinish(numCourses: int, prerequisites: List[List[int]]) -> bool:
+    #base case 
+    if not prerequisites: return None  
+
+    #Construct a directed graph from `prerequisites`.
+    #initiate the graph, The nodes are `0` to `n-1`(nodes are origins)
+    graph = [[] for _ in range(numCourses)]
+    # there is an edge from `i` to `j` if `i` is the prerequisite of `j`. 
+    for x, y in prerequisites:
+        graph[x].append(y)   
+    #hold the paint status
+    #we initiate nodes which have not been visited, paint them as 0
+    paint = [0 for _ in range(numCourses)]
+    #if node is being visiting, paint it as -1, if we find a node painted as -1 in dfs,then there is a ring 
+    #if node has been visited, paint it as 1
+
+    def dfs(i):
+        #base cases 
+        if paint[i] == -1: #a ring 
+            return False
+        if paint[i] == 1: #visited 
+            return True
+        paint[i] = -1 #paint it as being visiting.
+        for j in graph[i]: #traverse i's neighbors 
+            if not dfs(j): #if there exist a ring.
+                return False
+        paint[i] = 1 #paint as visited and jump to the next.
+        return True
+
+    for i in range(numCourses):
+        if not dfs(i): #if there exist a ring.
+            return False
+    return True
+
+if __name__ == "__main__":
+    #Input: numCourses = 2, prerequisites = [[1,0]]
+    #Output: true
+    #Explanation: There are a total of 2 courses to take. 
+    #To take course 1 you should have finished course 0. So it is possible.
+    numCourses = 2
+    prerequisites = [[1,0]]
+    print(canFinish(numCourses, prerequisites))
+```
+```kotlin
+// BFS with Kahn's algorithm ( Topological Sorting )
+fun canFinish(numCourses: Int, prerequisites: Array<IntArray>): Boolean {
+    //base case
+    //if (prerequisites?.isEmpty() ?: true) return null
+    if (prerequisites.isEmpty()) return null
+    
+    val graph = mutableMapOf<Int,MutableList<Int>>()
+    val indegree = MutableList(numCourses,{it->0})
+        
+    prerequisites.forEach{value->
+        var src =  value[1]
+        var dest =  value [0]
+        if (graph.containsKey(src)) {
+            graph.get(src)?.add(dest) 
+        } else {
+            graph[src] = mutableListOf(dest)
+        }
+        indegree[dest] += 1
+    }
+    
+    //println(prerequisites)
+        
+    val res = mutableListOf<Int>()
+    val q = mutableListOf<Int>()
+    indegree.forEachIndexed{i,v -> 
+        if (v == 0) {
+          q.add(i)
+        }
+    }
+        
+    while (q.isNotEmpty()) {
+        var curr = q.removeAt(0)
+        res.add(curr)
+        if (graph.contains(curr)) {
+            graph.get(curr)?.forEach{v->
+                indegree[v] -= 1
+                if (indegree[v] == 0) {
+                    q.add(v)
+                }
+            }
+        }
+    }
+
+    //return number of nodes w/o cycle == total number of courses        
+    return res.size == numCourses 
+    // check there exist a cycle
+    // if graph has edge
+    //indegree.forEachIndexed{i,v -> 
+    //    if (v == 1) {
+    //        return false
+    //    }
+    //}
+    //return true
+}
+
+fun main(args: Array<String>) {
+    //Input: numCourses = 2, prerequisites = [[1,0]]
+    //Output: true
+    //Explanation: There are a total of 2 courses to take. 
+    //To take course 1 you should have finished course 0. So it is possible.
+    val numCourses = 2
+    val prerequisites = arrayOf(intArrayOf(1,0))
+    println(canFinish(numCourses, prerequisites))
+}
+
+// DFS with Tarjan Algorithm
+fun dfs(i: Int, paint: MutableList<Int>, graph: MutableList<MutableList<Int>>): Boolean {
+    //base cases 
+    //a ring
+    if (paint[i] == -1) { 
+        return false
+    }
+    //visitied
+    if (paint[i] == 1) { 
+        return true
+    }
+    //paint it as being visiting.
+    paint[i] = -1
+    //traverse i's neighbors 
+    for (j in graph[i]) {
+        //if there exist a ring.
+        if (!dfs(j, paint, graph)) {
+            return false
+        }
+    }
+    //paint as visited and jump to the next.
+    paint[i] = 1
+    return true
+}
+
+fun canFinish(numCourses: Int, prerequisites: Array<IntArray>): Boolean {
+    // convert prerequisites to a graph notation so that it can be DFS traversed
+    val graph = MutableList(numCourses) { mutableListOf<Int>() }
+    prerequisites.forEachIndexed { index, preq ->
+        // course
+        val graphIndex = preq[0]
+        // prerequisite for course
+        val prerequisite = preq[1]
+        graph[graphIndex].add(prerequisite)
+    }
+
+    //hold the paint status
+    //we initiate nodes which have not been visited, paint them as 0
+    //paint = [0 for _ in range(numCourses)]
+    val paint = MutableList(numCourses,{it->0})
+
+    //if node is being visiting, paint it as -1, if we find a node painted as -1 in dfs,then there is a ring 
+    //if node has been visited, paint it as 1
+    for (i in 0 until numCourses) {
+        // if there exist a ring.
+        if (!dfs(i, paint, graph)) {
+            return false
+        }
+    }
+    return true
+}
+
+fun main(args: Array<String>) {
+    //Input: numCourses = 2, prerequisites = [[1,0]]
+    //Output: true
+    //Explanation: There are a total of 2 courses to take. 
+    //To take course 1 you should have finished course 0. So it is possible.
+    val numCourses = 2
+    val prerequisites = arrayOf(intArrayOf(1,0))
+    println(canFinish(numCourses, prerequisites))
+}
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-323:Number of Connected Components in an Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)
+##### Solution Explanation:
+```
+# --------------------------------------
+# Approach 1 ( BFS )
+# --------------------------------------
+# TC: O(2N)
+# SC: O(N)
+#
+# where, N = number of nodes
+
+BFS
+---------
+- Start from index 0 to n.
+- For each index : 
+  - use BFS to find all it’s related numbers
+  - append them to the visited set
+  - if this index has no more related numbers then increment count ( count = count + 1 )
+    and 
+  - start from next index
+  - note that if the index is in visited set. we skip to next index
+
+# --------------------------------------
+# Approach 2 ( DFS )
+# --------------------------------------
+# TC: O(E)
+# SC: O(E + N)
+#
+# where, N = number of nodes
+#        E = number of edges
+
+BFS
+---------
+- Each time DFS removes a connection path, and puts the nodes that have been visited during the DFS process into the set
+- If the currently visited node has been visited in the previous path, it proves that the current node belongs to the connected path that has been generated
+- Otherwise, start a new path from this node
+
+# --------------------------------------
+# Approach 3 ( Union Find )
+# --------------------------------------
+# TC: O(?)
+# SC: O(N)
+#
+# where, N = number of nodes
+#        E = number of edges
+```
+##### Complexity Analysis:
+```
+# --------------------------------------
+# Approach 1 ( BFS )
+# --------------------------------------
+Time complexity   : O(2N)
+
+Build graph will take O(N) and traversal all number will take O(N).
+
+Space Complexity  : O(N)
+
+# where, N = number of nodes
+# --------------------------------------
+# Approach 2 ( DFS )
+# --------------------------------------
+TC: O(E)
+SC: O(E + N)
+
+# where, N = number of nodes
+#        E = number of edges
+
+# --------------------------------------
+# Approach 3 ( Union Find )
+# --------------------------------------
+TC: O(?)
+SC: O(N)
+
+# where, N = number of nodes
+#        E = number of edges
+
+```
+```python
+# --------------------------------------
+# Approach 1 ( BFS )
+# --------------------------------------
+# TC: O(2N)
+# SC: O(N)
+from collections import defaultdict, deque
+from typing import List
+
+class Solution:
+    def countComponents(self, n: int, edges: List[List[int]]) -> int:
+        dist = defaultdict(list)
+        for source, target in edges:
+            dist[source].append(target)
+            dist[target].append(source)
+        count = 0
+        visited = set()
+        queue = deque()
+        for x in range(n):
+            if x in visited:
+                continue
+            queue.append(x)
+            while queue:
+                source=queue.popleft()
+                if source in visited:
+                    continue
+                visited.add(source)
+                for target in dist[source]:
+                    queue.append(target)
+            count+=1
+        return count
+
+# --------------------------------------
+# Approach 2 ( DFS )
+# --------------------------------------
+# TC: O(E)
+# SC: O(E + N)
+#
+# where, N = number of nodes
+#        E = number of edges
+from typing import List
+
+class Solution:
+    def countComponents(self, n: int, edges: List[List[int]]) -> int:
+        helper(u):
+            if u in pair:
+                for v in pair[u]:
+                    if v not in visited:
+                        visited.add(v)
+                        helper(v)
+            
+        pair = collections.defaultdict(set)
+        for u,v in edges:
+            pair[u].add(v)
+            pair[v].add(u)
+        count = 0
+        visited = set()
+        for i in range(n):
+            if i not in visited:
+                helper(i)
+                count+=1
+        return count
+
+# --------------------------------------
+# Approach 3 ( Union Find )
+# --------------------------------------
+# TC: O(?)
+# SC: O(N)
+#
+# where, N = number of nodes
+#        E = number of edges
+class Solution:
+    def countComponents(self, n: int, edges: List[List[int]]) -> int:
+        def unionfind(p1,p2):
+            nonlocal count
+            # find root of p1
+            while root[p1]!=p1:
+                p1 = root[p1]
+            # find root of p2
+            while root[p2]!=p2:
+                p2 = root[p2]
+            #if roots of p1 and p2 are identicle, meaning they have already been merged
+            if root[p1]==root[p2]:
+                return
+            # merge them if not merged 
+            else:
+                root[p1] = p2
+                count -= 1
+        # initially, we have n connected path
+        count = n 
+        # store original roots
+        root = [i for i in range(n)] 
+        # go through each node pair
+        for edge in edges:
+            unionfind(edge[0],edge[1])
+        return count
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [Facebook Phone Connected Components in Graph](https://leetcode.com/discuss/interview-question/982506/Facebook-or-Phone-or-Connected-Components-in-Graph/798145)
+##### Problem Description:
+```
+Given information about the links between various data centers, find the groups of isolated but connected data centers. For example --> Input : {A<->B, B<->C, D<->E}, Output : {A, B, C}, {D, E}
+
+Clarifying questions -
+
+appears undirected-graph structure. Do we also assume A <-> A ? Interviewer suggested self-edges need not be taken into consideration.
+I was also unclear about <-> notation to begin with. Clearly the problem statement did not have the method signature that I was expected to solve. I asked for some hints / help regarding the full method signature, particularly input representation. Interviewer suggested it is all up to me.
+Of course, I was familiar with BFS and DFS to some degree, but not a whole lot in Graphs.
+My first though about the solution was -
+
+class Node { 
+    Character value; // representing each character.
+    List<Node> edges = new ArrayList<>(); //  representing it's connections.
+}
+Therefore, method signature was -
+
+public Set<Set<Node>> disjointSets(List<Node> input);
+Then I went ahead and implemented a naive DFS, something like backtracking, that appears to have solved the problem.
+
+Biggest issue - no compiler. This is entirely plain text-editor, and I was expected to walk-through the solution conceptually. My solution did seem to work correctly. Only I noticed the glaring recursive stack-overflow issue, but never mentioned that.
+```
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+# BFS approach
+#graph = {
+#'A': ['B'], 'B': ['A', 'C'], 'C': ['B'], 'D': ['E'], 'E': ['D']
+#}
+
+class Solution:
+    def connected_data_centers(self, graph):
+        visited = {}
+        nodes = set()
+        for k, v in graph.items():
+            nodes.add(k)
+            for n in v:
+                nodes.add(n)
+        for i in nodes:
+            visited[i] = False
+
+        def bfs(start):
+            visited[start] = True
+            queue = [start]
+            path = []
+            while queue:
+                start = queue.pop(0)
+                path.append(start)
+                for node in graph[start]:
+                    if not visited[node]:
+                        queue.append(node)
+                        visited[node] = True
+            return path
+
+        paths = []
+        for i in nodes:
+            if not visited[i]:
+                paths.append(bfs(i))
+        return paths
+# Output: [['B', 'A', 'C'], ['D', 'E']]
+
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+####  [LC-125:Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
+##### Solution Explanation:
+```
+Approach: Two-Pointers
+=================================================================================================================================================================
+Algorithm
+----------
+- Normalize the string and convert to lowercase.
+- Use 2 pointers start and end to compare characters.
+- Skip non alphanumeric characters. Return False if characters do not match.
+```
+##### Complexity Analysis:
+```
+Time  : O(N)
+Space : O(1)
+=============================
+Time Complexity  : O(N)
+Since your checking every letter in the string. Because we move beg only to the right and end only to the left, until they meet.
+Space Complexity : O(1)
+We just use a couple of additional variables.
+```
+```python
+def isPalindrome(s: str) -> bool:
+    start, end = 0, len(s) - 1
+    while start < end:
+        if not s[start].isalnum():
+            start += 1
+        elif not s[end].isalnum():
+            end -= 1
+        elif s[start].lower() != s[end].lower():
+            return False
+        else:
+            start += 1
+            end -= 1
+    return True
+
+if __name__ == "__main__":
+    #Input: s = "A man, a plan, a canal: Panama"
+    #Output: true
+    #Explanation: "amanaplanacanalpanama" is a palindrome.    s = "()[]{}"
+    s = "A man, a plan, a canal: Panama"
+    print(isPalindrome(s))
+```
+```kotlin
+fun isPalindrome(s: String): Boolean {
+    var start = 0
+    var end = s.length - 1
+    while (true) {
+        if (start >= end) return true
+        if (!isAlnum(s[start])) {
+            start++
+        } else if (!isAlnum(s[end])) {
+            end--
+        } else if (!equal(s[start], s[end])) {
+            return false
+        } else {
+            start++
+            end--
+        }
+    }
+	return true
+}
+
+fun equal(char1: Char, char2: Char): Boolean {
+    return char1.toLowerCase() == char2.toLowerCase()
+}
+
+fun isAlnum(char: Char): Boolean {
+    return char in '0'..'9' || char in 'a'..'z' || char in 'A'..'Z'
+}
+
+fun main(args: Array<String>) {
+    //Input: s = "A man, a plan, a canal: Panama"
+    //Output: true
+    //Explanation: "amanaplanacanalpanama" is a palindrome.
+    val s = "A man, a plan, a canal: Panama"
+    println(isPalindrome(s))
+}
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+####  [LC-76:Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
+##### Solution Explanation:
+```
+Approach: Sliding Window Algorithm.
+=================================================================================================================================================================
+- The idea is we use a variable-length sliding window which is gradually applied across the string.
+- We use two pointers: start and end to mark the sliding window.
+- We start by fixing the start pointer and moving the end pointer to the right.
+- The way we determine the current window is a valid one is by checking if all the target letters have been found in the current window.
+- If we are in a valid sliding window, we first make note of the sliding window of the most minimum length we have seen so far.
+- Next we try to contract the sliding window by moving the start pointer.
+- If the sliding window continues to be valid, we note the new minimum sliding window. 
+- If it becomes invalid (all letters of the target have been bypassed), 
+  we break out of the inner loop and go back to moving the end pointer to the right.
+```
+##### Complexity Analysis:
+```
+Time  : O(N)
+Space : O(N)
+```
+```python
+import collections
+def minWindow(s: str, t: str) -> str:
+    # Base condition
+    if (s == "" || t == "" || len(s) < len(t))  return ""
+    char_freq_in_target = collections.Counter(target)
+    start = 0
+    end = 0
+    shortest = ""
+    target_len = len(target)
+        
+    for end in range(len(s)):
+        # If we see a target letter, decrease the total target letter count
+        if char_freq_in_target[s[end]] > 0:
+            target_len -= 1
+
+        # Decrease the letter count for the current letter
+        # If the letter is not a target letter, the count just becomes -ve
+        char_freq_in_target[s[end]] -= 1
+
+        # If all letters in the target are found:
+        while target_len == 0:
+            window_len = end - start + 1
+            if not shortest or window_len < len(shortest):
+                # Note the new minimum window
+                shortest = s[start : end + 1]
+
+            # Increase the letter count of the current letter
+            char_freq_in_target[s[start]] += 1
+
+            # If all target letters have been seen and now, a target letter is seen with count > 0
+            # Increase the target length to be found. This will break out of the loop
+            if char_freq_in_target[s[start]] > 0:
+                target_len += 1
+                    
+            start+=1
+                
+    return shortest
+
+if __name__ == "__main__":
+    #Input: s = "ADOBECODEBANC", t = "ABC"
+    #Output: "BANC"
+    s = "ADOBECODEBANC"
+    t = "ABC"
+    print(minWindow(s,k))
+```
+```kotlin
+fun minWindow(s: String, t: String): String {
+    // Base condition
+    if (s.isEmpty() || t.isEmpty() || s.length < t.length)  return ""
+    //val charFreqInTarget = IntArray(128){ 0 }
+    //for(ch in t){
+    //    ++charFreqInTarget[ch.toInt()]
+    //}
+    val charFreqInTarget = t.groupingBy { it }.eachCount().toMutableMap()        
+    var start = 0
+    var end = 0
+    var shortest = ""
+    var lengthOfTarget = t.length
+
+    for (end in 0..s.length - 1) {
+        //if (charFreqInTarget[s[end].toInt()]-- > 0) --lengthOfTarget
+        if (charFreqInTarget.contains(s[end].toInt())) --lengthOfTarget
+            
+        while (lengthOfTarget == 0){
+            if (shortest.isEmpty() || end - start + 1 < shortest.length){
+                shortest = s.substring(start, end + 1)
+            }
+                
+            //if (++charFreqInTarget[s[start].toInt()] > 0) ++lengthOfTarget
+            if (charFreqInTarget.contains(s[start].toInt())) ++lengthOfTarget
+            ++start
+        }
+    }
+        
+    return shortest
+}
+
+fun main(args: Array) {
+    //Input: s = "anagram", t = "nagaram"
+    //Output: true
+    val s = "ADOBECODEBANC"
+    val t = "ABC"
+    println(minWindow(s,k))
+}
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-53:Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
+##### Solution Explanation ( 2 possible solutions w/ their trade-offs explained ):
+```
+Approach 1: Kadane's Algorithm
+-------------------------------
+The largest subarray is either:
+  - the current element
+  - sum of previous elements
+
+If the current element does not increase the value a local maximum subarray is found.
+
+If local > global replace otherwise keep going
+
+Problem is called Kadane's algorithm.
+
+Reference: https://www.youtube.com/watch?v=86CQq3pKSUw
+           https://medium.com/@rsinghal757/kadanes-algorithm-dynamic-programming-how-and-why-does-it-work-3fd8849ed73d
+
+
+=================================================================================================================================================================
+Complexity Analysis:
+=================================================================================================================================================================
+
+Time complexity : O(N)
+========================
+The time complexity of Kadane’s algorithm is O(N) because there is only one for loop which scans the entire array exactly once.
+
+Space complexity : O(1)
+========================
+Kadane’s algorithm uses a constant space. So, the space complexity is O(1).
+
+
+Approach 2: Divide and Conquer
+-------------------------------
+Explanation :
+
+In the approach, we follow a divide and conquer approach similar to merge sort.
+
+We use a helper functionhelper for this, wherein we pass in a starting index and the ending index to look at. The idea is to use this helper function recurseively.
+
+Within the helper function, for a given start and end index, we find the mid of the array and split the array into two parts. Part 1 being the start ... mid and part 2 being mid+1 ... end. For each of the parts, we return 4 pieces of information.
+
+1. The best possible answer within the subArray ==> ans
+2. The maxSubarraySum starting at the beginning of the subArray ==> maxFromBegging
+3. The maxSubarraySum ending at the end of the subArray ==> maxFromEnd
+4. The total sum of the subArray ==> totalSum
+
+With these four pieces of information for the two split parts, it is possible to combine them to generate a similar four pieces of information for the aggregated array. The trick to get an O(n) solution is to combine the information in a constant time.
+
+The details of combing the information to curry up the information is as follows. (For each of 1-4 above, I will be prefexing left_ or right_ to denote they came from left/right subArray)
+
+1. For part (1), we need to take the maximum of left_ans (best answer in left subarray), right_ans (nest answer in right subarray) and the crossover. The crossover is simply left_maxFromEnd + right_maxFromBeginning. The max these 3 components gives us the ans. For the highest level recursion, this is all we need.
+
+2. For maxFromBeginning, we take the maximum among left_maxFromBeginning and left_totalSum + right_maxFromBeginning. This logically makes sense i.e either we want to take the result of left part or take the entire left part and merge it with the result from the right part.
+
+3. For maxFromEnd, it is similar to above and we take the maximum among right_maxFromEnd and right_totalSum + left_maxFromEnd
+
+4. For totalSum, we add the left_totalSum and right_totalSum.
+
+Time Complexity : T(n) = 2*T(n/2) + 1 ==> O(n)
+
+See this for proof https://youtu.be/OynWkEj0S-s?t=273
+
+=================================================================================================================================================================
+Complexity Analysis:
+=================================================================================================================================================================
+
+Time complexity : O(N)
+========================
+Time Complexity : T(n) = 2*T(n/2) + 1 ==> O(N) .. See this for proof https://youtu.be/OynWkEj0S-s?t=273.
+
+Space complexity : O(log(N))
+========================
+Space Complexity : O(log(N)) since we are recursing and the call stack/number of recursive calls is of the order of log(N).
+```
+##### Approach-1 ( Kadane's Algorithm ):
+```python
+# If we are only interested in returning the sum of max sub-array
+def maxSubArray(nums: List[int]) -> int:
+    # largest subarray found in entire problem
+    maxGlobal = nums[0]
+    # current maximum subarray that is reset
+    maxCurrent = nums[0]
+        
+    for i in range(1, len(nums)):
+        maxCurrent  = max(nums[i], maxCurrent + nums[i])
+        maxGlobal = max(maxCurrent, maxGlobal)
+        
+    return maxGlobal
+
+if __name__ == "__main__":
+    #Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
+    #Output: 6
+    #Explanation: [4,-1,2,1] has the largest sum = 6.
+    nums = [-2,1,-3,4,-1,2,1,-5,4]
+    print(maxSubArray(nums))
+
+
+# Variant: If we are interested in returning the actual max sub-array
+
+# We can easily solve this problem in linear time using Kadane's algorithm.
+# The idea is to maintain a maximum (positive-sum) subarray "ending" at each index of the given array.
+# 	- The subarray is either empty (in which case its sum is zero) or 
+#	- The subarray consists of one more element than the maximum subarray ending at the previous index.
+ 
+#Variant (Also print the list)
+# - Modify Kadane's algorithm which outputs only the sum of contiguous subarray with the largest sum but
+#   does not print the subarray itself.
+# - Keep track of the maximum subarray's starting and ending indices.
+
+# Function to print contiguous sublist with the largest sum
+# in a given set of integers
+def maxSubArray(A: List[int]) -> List[int]:
+ 
+    # stores maximum sum sublist found so far
+    maxSoFar = 0
+ 
+    # stores the maximum sum of sublist ending at the current position
+    maxEndingHere = 0
+ 
+    # stores endpoints of maximum sum sublist found so far
+    start = end = 0
+ 
+    # stores starting index of a positive-sum sequence
+    beg = 0
+ 
+    # traverse the given list
+    for i in range(len(A)):
+ 
+        # update the maximum sum of sublist "ending" at index `i`
+        maxEndingHere = maxEndingHere + A[i]
+ 
+        # if the maximum sum is negative, set it to 0
+        if maxEndingHere < 0:
+            maxEndingHere = 0        # empty sublist
+            beg = i + 1
+ 
+        # update result if the current sublist sum is found to be greater
+        if maxSoFar < maxEndingHere:
+            maxSoFar = maxEndingHere
+            start = beg
+            end = i
+ 
+    #print(f"The sum of contiguous sublist with the largest sum is: {maxSoFar}")
+    #print(f"The contiguous sublist with the largest sum is: {A[start: end + 1]}")
+    return A[start: end + 1]
+	
+if __name__ == '__main__':
+    A = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+    print(maxSubArray(A))
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-56:Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+##### Solution Explanation:
+```
+=================================================================================================================================================================
+Solution Approach:
+=================================================================================================================================================================
+- if the list of merged intervals is empty 
+  or if the current interval does not overlap with the previous,
+  - simply append it.
+- otherwise, there is overlap,
+  - so we merge the current and previous intervals.
+```
+##### Complexity Analysis:
+```
+TC: O(N*log(N))
+----------------
+In python, use sort method to a list costs O(nlogn), where n is the length of the list.
+The for-loop used to merge intervals, costs O(n).
+O(nlogn)+O(n) = O(nlogn)
+So the total time complexity is O(nlogn).
+
+SC: O(N)
+---------------
+The algorithm used a merged list and a variable i.
+In the worst case, the merged list is equal to the length of the input intervals list. So the space complexity is O(n), where n is the length of the input list.
+```
+```python
+from typing import List
+
+def merge(intervals: List[List[int]]) -> List[List[int]]:
+    intervals.sort(key =lambda x: x[0])
+    merged =[]
+    for i in intervals:
+        # if the list of merged intervals is empty 
+        # or if the current interval does not overlap with the previous,
+        # simply append it.
+        if not merged or merged[-1][-1] < i[0]:
+            merged.append(i)
+        # otherwise, there is overlap,
+        #so we merge the current and previous intervals.
+        else:
+            merged[-1][-1] = max(merged[-1][-1], i[-1])
+    return merged
+
+if __name__ == "__main__":
+    #Input: intervals = [[1,3],[2,6],[8,10],[15,18]]
+    #Output: [[1,6],[8,10],[15,18]]
+    #Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].
+    intervals = [[1,3],[2,6],[8,10],[15,18]]
+    print(merge(intervals))
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-133:Clone Graph](https://leetcode.com/problems/clone-graph/)
+##### Solution Explanation:
+```
+Solution Approach:
+=================================================================================================================================================================
+Idea
+----------------
+Turns out that maintaining a dictionary/hashmap that associates origianl node to its clone {node: clone_node} 
+makes this process very simple. 
+This hashmap also serves as a visited set to make sure you don't loop indefinitely while DFS/BFS.
+
+            +---+
+           /     \
+          +   1   +
+           \     /
+            +---+
+           /     \
+          /       \
+     +---+         +---+
+    /     \       /     \
+   +   2   +     +   4   +
+    \     /       \     /
+     +---+         +---+
+          \       /
+           \     /
+            +---+
+           /     \
+          +   3   +
+           \     /
+            +---+
+                   +--------------------------------- return this
+                   |
+                  \|/
+                   *
+d  =  {  (1) : Node (1),<-----+-----+
+         (2) : Node (2),<-----+     |
+         (3) : Node (3),<-----+     |
+         (4) : Node (4),<-----+-----+
+      }  /       \                   \
+        /         \                   \
+       /         Copies            Connecting the
+    Original                       Cloned Graph
+     Nodes
+```
+##### Complexity Analysis:
+```
+DFS
+---------------
+TIME COMPLEXITY  : O(N)
+SPACE COMPLEXITY : O(V + E) + O(N) ~ O(N)
+
+BFS
+---------------
+TIME COMPLEXITY  : O(N)
+SPACE COMPLEXITY : O(V + E) + O(N) ~ O(N)
+```
+```python
+# DFS ( Using Stack )
+import unittest
+
+# Definition for a Node.
+class Node:
+    def __init__(self, val = 0, neighbors = None):
+        self.val = val
+        self.neighbors = neighbors if neighbors is not None else []
+
+    def flatten_into_str(self):
+        return '{} neighbors: {}'.format(
+            self.val,
+            "".join([x.__repr__() for x in self.neighbors])
+        )			
+    def __repr__(self):
+        return '{} neighbors: {}'.format(
+            self.val,
+            [x.val for x in self.neighbors]
+		)
+
+class Solution:
+    def cloneGraph(node: 'Node') -> 'Node':
+        if not node: return
+        d = {node: Node(node.val)}
+        stack = [node]
+        while stack:
+            curNode = stack.pop()
+            for nei in curNode.neighbors:
+                if nei not in d:
+                    d[nei] = Node(nei.val)
+                    stack.append(nei)
+                d[curNode].neighbors.append(d[nei])
+        return d[node] # return the value of the original node which is a copy of that original node
+
+class Test(unittest.TestCase):
+    def setUp(self):
+	    pass
+	
+	def tearDown(self):
+	    pass
+		
+    def test_cloneGraph(self):
+	    root = Node(1, [Node(2, [Node(1),Node(3, [Node(2), Node(4)])]), Node(4, [Node(1),Node(3, [Node(2), Node(4)])])])
+		self.assertEqual(root.flatten_into_str(), cloneGraph(root)cloneGraph(root))
+
+if __name__ == "__main__":
+    unittest.main()
+	
+# BFS ( Using Deque )
+from collections import deque
+import unittest
+
+# Definition for a Node.
+class Node:
+    def __init__(self, val = 0, neighbors = None):
+        self.val = val
+        self.neighbors = neighbors if neighbors is not None else []
+
+    def flatten_into_str(self):
+        return '{} neighbors: {}'.format(
+            self.val,
+            "".join([x.__repr__() for x in self.neighbors])
+        )
+			
+    def __repr__(self):
+        return '{} neighbors: {}'.format(
+            self.val,
+            [x.val for x in self.neighbors]
+        )
+
+class Solution:
+    def cloneGraph(self, node: 'Node') -> 'Node':
+        if not node: return
+        # map original nodes to their clones
+        d = {node : Node(node.val)}
+        q = deque([node])        
+        while q:
+            for i in range(len(q)):
+                currNode = q.popleft()
+                for nei in currNode.neighbors:
+                    if nei not in d:
+                        # store copy of the neighboring node
+                        d[nei] = Node(nei.val)
+                        q.append(nei)
+                    # connect the node copy at hand to its neighboring nodes (also copies) -------- [1]
+                    d[currNode].neighbors.append(d[nei])
+        # return copy of the starting node ------- [2]
+        return d[node]
+
+class Test(unittest.TestCase):
+    def setUp(self):
+        pass
+	
+    def tearDown(self):
+        pass
+		
+    def test_cloneGraph(self):
+        solution = Solution()
+        root = Node(1, [Node(2, [Node(1),Node(3, [Node(2), Node(4)])]), Node(4, [Node(1),Node(3, [Node(2), Node(4)])])])
+        self.assertEqual(root.flatten_into_str(), solution.cloneGraph(root).flatten_into_str())
+
+if __name__ == "__main__":
+    unittest.main()
+```
+```kotlin
+// DFS ( Using Stack )
+
+// Definition for a Node.
+import java.util.HashMap
+import java.util.Stack
+
+class Node(var `val`: Int) {
+    var neighbors: ArrayList<Node?> = ArrayList<Node?>()
+
+    override fun toString() = "$`val`${if (neighbors.isNotEmpty()) neighbors.toString() else ""}"
+}
+
+class NodeBuilder {
+    private var parent: Node? = null
+    private lateinit var node: Node
+
+    operator fun Int.invoke(block: (NodeBuilder.() -> Node)? = null): Node {
+        node = Node(this)
+        parent?.neighbors?.add(node)
+        if (block != null) {
+            val nodeBuilder = NodeBuilder()
+            nodeBuilder.parent = this@NodeBuilder.node
+            nodeBuilder.block()
+        }
+        return node
+    }
+
+    companion object {
+        operator fun invoke(block: NodeBuilder.() -> Node): Node {
+            return NodeBuilder().block()
+        }
+    }
+}
+
+fun cloneGraph(node: Node?): Node? {
+    if (node == null) return node
+
+    val map = HashMap<Node, Node>()
+    val stack = Stack<Node>()
+    map[node] = Node(node.`val`)
+    stack.push(node)
+    while (!stack.isEmpty()) {
+        val cur: Node = stack.pop()
+        for (neighbor in cur.neighbors) {
+            if (!map.containsKey(neighbor)) {
+                map[neighbor!!] = Node(neighbor!!.`val`)
+                stack.push(neighbor)
+            }
+            map[cur]!!.neighbors.add(map[neighbor])
+        }
+    }
+    return map[node]!!
+}
+
+fun main(args: Array<String>) {
+    //Input: adjList = [[2,4],[1,3],[2,4],[1,3]]
+    //Output: [[2,4],[1,3],[2,4],[1,3]]
+    //Explanation: There are 4 nodes in the graph.
+    //1st node (val = 1)'s neighbors are 2nd node (val = 2) and 4th node (val = 4).
+    //2nd node (val = 2)'s neighbors are 1st node (val = 1) and 3rd node (val = 3).
+    //3rd node (val = 3)'s neighbors are 2nd node (val = 2) and 4th node (val = 4).
+    //4th node (val = 4)'s neighbors are 1st node (val = 1) and 3rd node (val = 3).
+    val root = NodeBuilder{
+        1 {
+            2 {
+                1()
+                3()
+            }
+            4 {
+                1()
+                3()
+            }
+        }
+    }
+    println(cloneGraph(root))
+}
+
+// BFS ( Using Deque )
+
+// Definition for a Node.
+import java.util.ArrayDeque
+import java.util.HashMap
+import java.util.HashSet
+
+class Node(var `val`: Int) {
+    var neighbors: ArrayList<Node?> = ArrayList<Node?>()
+
+    override fun toString() = "$`val`${if (neighbors.isNotEmpty()) neighbors.toString() else ""}"
+}
+
+class NodeBuilder {
+    private var parent: Node? = null
+    private lateinit var node: Node
+
+    operator fun Int.invoke(block: (NodeBuilder.() -> Node)? = null): Node {
+        node = Node(this)
+        parent?.neighbors?.add(node)
+        if (block != null) {
+            val nodeBuilder = NodeBuilder()
+            nodeBuilder.parent = this@NodeBuilder.node
+            nodeBuilder.block()
+        }
+        return node
+    }
+
+    companion object {
+        operator fun invoke(block: NodeBuilder.() -> Node): Node {
+            return NodeBuilder().block()
+        }
+    }
+}
+
+fun cloneGraph(node: Node?): Node? {
+    if (node == null) return node
+        
+    val map = HashMap<Node, Node>()
+    val q = ArrayDeque<Node>()
+    val seen = HashSet<Node>()
+
+    map[node] = Node(node.`val`)
+    q.offer(node)
+    seen.add(node)
+
+    while (!q.isEmpty()) {
+        val cur = q.poll()
+
+        for (neighbor in cur.neighbors) {
+            if (!seen.contains(neighbor)) {
+                map[neighbor!!] = Node(neighbor!!.`val`)
+                q.offer(neighbor)
+                seen.add(neighbor)
+            }
+            map[cur]!!.neighbors.add(map[neighbor])
+        }
+    }
+
+    return map[node]!!
+}
+
+fun main(args: Array<String>) {
+    //Input: adjList = [[2,4],[1,3],[2,4],[1,3]]
+    //Output: [[2,4],[1,3],[2,4],[1,3]]
+    //Explanation: There are 4 nodes in the graph.
+    //1st node (val = 1)'s neighbors are 2nd node (val = 2) and 4th node (val = 4).
+    //2nd node (val = 2)'s neighbors are 1st node (val = 1) and 3rd node (val = 3).
+    //3rd node (val = 3)'s neighbors are 2nd node (val = 2) and 4th node (val = 4).
+    //4th node (val = 4)'s neighbors are 1st node (val = 1) and 3rd node (val = 3).
+    val root = NodeBuilder{
+        1 {
+            2 {
+                1()
+                3()
+            }
+            4 {
+                1()
+                3()
+            }
+        }
+    }
+    println(cloneGraph(root))
+}
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+24 https://leetcode.com/problems/valid-word-abbreviation/
+25 https://leetcode.com/problems/candy-crush/
+26 https://leetcode.com/problems/koko-eating-bananas/
+27 https://leetcode.com/problems/binary-tree-right-side-view/
+28 https://leetcode.com/problems/restore-ip-addresses/
+29 https://leetcode.com/problems/powx-n/
+30 https://leetcode.com/problems/russian-doll-envelopes/
+31 https://leetcode.com/problems/walls-and-gates/
+32 https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+33 https://leetcode.com/problems/find-largest-value-in-each-tree-row/
+34 https://leetcode.com/problems/add-strings/
+35 https://leetcode.com/problems/combination-sum/
+36 https://leetcode.com/problems/maximum-swap/
 Dot Product of Sparse vectors
-https://leetcode.com/discuss/interview-question/124823/
+37 https://leetcode.com/discuss/interview-question/124823/
 Find an efficient way to represent a vector (1,1,1,1,1,1,22,2,2,2,2,2,2,2,3,4,4,5,6,6,7,7,7,8,8,8,9,9,9,99,9,,1,1,1,1,1,1,2,3,34,3,4,,3,3,3,3....)
 Use the representation you come up with to compute dot product of two vectors
 Ex: If you come up with MyDataStructure to represent a vector, then your function signature will be
@@ -2189,51 +5122,41 @@ int dotProduct(MyDataStructure vector1, MyDataStructure vector2)
 // dot product of two vectors [1,2,3,4] and [5,6,7,8] is 1 * 5 + 2 * 6 + 3 * 7 + 4 * 8
 Take advantage of your "efficient" representation to compute the dot product faster.
 New question added for dot product of sparse vectors,
-https://leetcode.com/problems/dot-product-of-two-sparse-vectors/
-
-https://leetcode.com/problems/random-pick-with-weight/
-
+38 https://leetcode.com/problems/dot-product-of-two-sparse-vectors/
+39 https://leetcode.com/problems/random-pick-with-weight/
 Some questions are the closest that it can get to the actual question. Like Russian Doll envelopes or Task Scheduler.
-
-https://leetcode.com/problems/find-all-anagrams-in-a-string/
+40 https://leetcode.com/problems/find-all-anagrams-in-a-string/
 A string / array problem involving distinct characters and window
-https://leetcode.com/problems/shortest-bridge/
-https://leetcode.com/problems/partition-equal-subset-sum/
-https://leetcode.com/problems/valid-palindrome-ii/
-https://leetcode.com/problems/kth-smallest-element-in-a-bst/
+41 https://leetcode.com/problems/shortest-bridge/
+42 https://leetcode.com/problems/partition-equal-subset-sum/
+43 https://leetcode.com/problems/valid-palindrome-ii/
 You are given a mn grid. You are asked to generate k mines on this grid randomly. Each cell should have equal probability of k / mn of being chosen. Your algorithm should run in O(m) time.
-https://leetcode.com/problems/continuous-subarray-sum/
+45 https://leetcode.com/problems/continuous-subarray-sum/
 (Given a list of positive numbers and a target integer k, write a function to check if the array has a continuous subarray which sums to k.)
-https://leetcode.com/problems/verifying-an-alien-dictionary/
-https://leetcode.com/problems/alien-dictionary/
-https://leetcode.com/problems/course-schedule/
-https://leetcode.com/problems/interval-list-intersections/
-https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/
-https://leetcode.com/problems/plus-one/
-https://www.***.org/find-index-maximum-occurring-element-equal-probability/***
-https://leetcode.com/problems/range-sum-of-bst/
+46 https://leetcode.com/problems/verifying-an-alien-dictionary/
+47 https://leetcode.com/problems/alien-dictionary/
+48 https://leetcode.com/problems/course-schedule/
+49 https://leetcode.com/problems/interval-list-intersections/
+50 https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/
+51 https://leetcode.com/problems/plus-one/
+52 https://www.***.org/find-index-maximum-occurring-element-equal-probability/***
+53 https://leetcode.com/problems/range-sum-of-bst/
 Similar strings ("face", "eacf") returns true if only 2 positions in the strings are swapped. Here 'f' and 'e' are swapped in the example.
-https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph
-https://leetcode.com/problems/add-binary/
+54 https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph
+55 https://leetcode.com/discuss/interview-question/982506/Facebook-or-Phone-or-Connected-Components-in-Graph/798145
+56 https://leetcode.com/problems/add-binary/
 Given two binary search trees how do we merge everything so it prints inorder. The answer I gave was to run inorder on both trees and use "merge" from merge-sort.
-https://leetcode.com/problems/valid-palindrome
-https://leetcode.com/problems/add-strings
-https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
-https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree
-https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/
-https://leetcode.com/problems/binary-tree-paths
-https://leetcode.com/problems/minimum-window-substring
-How to remove duplicates from a list
-https://leetcode.com/problems/maximum-subarray
-https://leetcode.com/problems/valid-parentheses
-https://leetcode.com/problems/merge-intervals
-https://leetcode.com/problems/task-scheduler/
-https://leetcode.com/problems/clone-graph/
+58 https://leetcode.com/problems/add-strings
+59 https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree
+60 https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/
+61 https://leetcode.com/problems/binary-tree-paths
+63 How to remove duplicates from a list
+65 https://leetcode.com/problems/valid-parentheses
 
-| [34] - Facebook - Onsite - Generate Random Max Index | <p>Given an array of integers `arr`, randomly return an index of the maximum value seen by far.</p> | [Facebook - Onsite - Generate random max index](https://leetcode.com/discuss/interview-question/451431/facebook-onsite-generate-random-max-index) | [Python](Arrays/034_facebook_onsite_Generate_Random_Max_Index/Solution.py) |
-| [20] - Facebook - Interview Question - Minimum number of people to spread a message | <p>You need to find the minimum number of people to reach out so that your promotion message is spread out across entire network in twitter.</p> | [Facebook - Interview Question - Minimum number of people to spread a message](https://leetcode.com/discuss/interview-question/124827/Find-minimum-number-of-people-to-reach-to-spread-a-message-across-all-people-in-twitter/) | [Python](Graph/020_facebook_interview_question_Minimum_Number_Of_People_To_Spread_A_Message/Solution.py) |
-| [21] - Facebook - Phone Interview Question - Given a directed graph remove return minimum of edges to keep all paths | <p>Given a directed graph remove return minimum of edges to keep all paths.</p> | [Facebook - Phone Interview Question - Given a directed graph remove return minimum of edges to keep all paths](https://leetcode.com/discuss/interview-question/630806/facebook-phone-transitive-reduction-factorial-trailing-zeroes) | [Python](Graph/021_facebook_phone_interview_question_Transitive_Reduction/Solution.py) |
-| [27] - Facebook - Phone screen - Shortest Path with Obstacles | <p>Given a 2D matrix where some of the elements are filled with 1<br>and the rest of the elements are filled with X, except 2 elements, of which one is S (start point) and E (endpoint).<br>Here X means you cannot traverse to that particular point.<br>From a cell you can either traverse to left, right, up or down.<br>Given two points in the matrix find the shortest path between these points.</p> | [Facebook - Phone screen - Shortest Path with Obstacles](https://leetcode.com/discuss/interview-question/301192/Facebook-phone-screen-Shortest-Path-with-Obstacles/283312) | [Python](Graph/027_facebook_PhoneScreen_Shortest_Path_With_Obstacles/Solution.py) |
+68 | [34] - Facebook - Onsite - Generate Random Max Index | <p>Given an array of integers `arr`, randomly return an index of the maximum value seen by far.</p> | [Facebook - Onsite - Generate random max index](https://leetcode.com/discuss/interview-question/451431/facebook-onsite-generate-random-max-index) | [Python](Arrays/034_facebook_onsite_Generate_Random_Max_Index/Solution.py) |
+69 | [20] - Facebook - Interview Question - Minimum number of people to spread a message | <p>You need to find the minimum number of people to reach out so that your promotion message is spread out across entire network in twitter.</p> | [Facebook - Interview Question - Minimum number of people to spread a message](https://leetcode.com/discuss/interview-question/124827/Find-minimum-number-of-people-to-reach-to-spread-a-message-across-all-people-in-twitter/) | [Python](Graph/020_facebook_interview_question_Minimum_Number_Of_People_To_Spread_A_Message/Solution.py) |
+70 | [21] - Facebook - Phone Interview Question - Given a directed graph remove return minimum of edges to keep all paths | <p>Given a directed graph remove return minimum of edges to keep all paths.</p> | [Facebook - Phone Interview Question - Given a directed graph remove return minimum of edges to keep all paths](https://leetcode.com/discuss/interview-question/630806/facebook-phone-transitive-reduction-factorial-trailing-zeroes) | [Python](Graph/021_facebook_phone_interview_question_Transitive_Reduction/Solution.py) |
+71 | [27] - Facebook - Phone screen - Shortest Path with Obstacles | <p>Given a 2D matrix where some of the elements are filled with 1<br>and the rest of the elements are filled with X, except 2 elements, of which one is S (start point) and E (endpoint).<br>Here X means you cannot traverse to that particular point.<br>From a cell you can either traverse to left, right, up or down.<br>Given two points in the matrix find the shortest path between these points.</p> | [Facebook - Phone screen - Shortest Path with Obstacles](https://leetcode.com/discuss/interview-question/301192/Facebook-phone-screen-Shortest-Path-with-Obstacles/283312) | [Python](Graph/027_facebook_PhoneScreen_Shortest_Path_With_Obstacles/Solution.py) |
 
 ## 2. Coding Round 1:
 https://leetcode.com/problems/insert-interval/
