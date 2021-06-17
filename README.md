@@ -81,7 +81,7 @@
 | 25  | 723      | [Candy Crush](#lc-723candy-crush)                                                                         | https://leetcode.com/problems/candy-crush/                                                 | _O((R * C)^2)_                                             | _O(1)_                | Medium     |                |                              |            |
 | 26  | 875      | [Koko Eating Bananas](#lc-875koko-eating-bananas)                                                         | https://leetcode.com/problems/koko-eating-bananas/                                         | _O(nlogr)_                                                 | _O(1)_                | Medium     |                |                              |            |
 | 27  | 199      | [Binary Tree Right Side View](#lc-199binary-tree-right-side-view)                                         | https://leetcode.com/problems/binary-tree-right-side-view/                                 | _O(n)_                                                     | _O(h)_                | Medium     |                |                              |            |
-| 28  | 93       | [Restore IP Addresses](#lc-93restore-ip-addresses)                                                        | https://leetcode.com/problems/restore-ip-addresses/)                                       | _O(1)_                                                     | _O(1)_                | Medium     |                |                              |            |
+| 28  | 93       | [Restore IP Addresses](#lc-93restore-ip-addresses)                                                        | https://leetcode.com/problems/restore-ip-addresses/                                       | _O(1)_                                                     | _O(1)_                | Medium     |                |                              |            |
 | 29  | 50       | [Pow(x, n)](#lc-50pow-x-n)                                                                                | https://leetcode.com/problems/powx-n/                                                      | _O(1)_                                                     | _O(1)_                | Medium     |                |                              |            |
 | 30  | 354      | [Russian Doll Envelopes](#lc-354russian-doll-envelopes)                                                   | https://leetcode.com/problems/russian-doll-envelopes/                                      | _O(nlogn)_                                                 | _O(1)_                | Hard       |                |                              |            |
 | 31  | 286      | [Walls and Gates](#lc-286walls-and-gates)                                                                 | https://leetcode.com/problems/walls-and-gates/                                             | _O(m * n)_                                                 | _O(g)_                | Medium     |                |                              | 🔒         |
@@ -89,7 +89,7 @@
 | 33  | 515      | [Find Largest Value in Each Tree Row](#lc-515find-largest-value-in-each-tree-row)                         | https://leetcode.com/problems/find-largest-value-in-each-tree-row/                         | _O(n)_                                                     | _O(h)_                | Medium     |                |                              |            |
 | 34  | 415      | [Add Strings](#lc-415add-strings)                                                                         | https://leetcode.com/problems/add-strings/                                                 | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
 | 35  | 39       | [Combination Sum](#lc-39combination-sum)                                                                  | https://leetcode.com/problems/combination-sum/                                             | _O(k * n^k)_                                               | _O(k)_                | Medium     |                |                              |            |
-| 36  | 670      | [Maximum Swap](#lc-670maximum-swap)                                                                       | https://leetcode.com/problems/maximum-swap/)                                               | _O(logn)_                                                  | _O(logn)_             | Medium     |                |                              |            |
+| 36  | 670      | [Maximum Swap](#lc-670maximum-swap)                                                                       | https://leetcode.com/problems/maximum-swap/                                               | _O(logn)_                                                  | _O(logn)_             | Medium     |                |                              |            |
 | 37  |          | [Facebook Onsite dot product of sparse vectors](#facebook-onsite-dot-product-of-two-sparse-vectors)       | https://leetcode.com/discuss/interview-question/124823/                                    | _O(h)_                                              | _O(1)_                | Medium     | Binary Tree    |                              |            |
 | 38  | 1570     | [Dot Product of Two Sparse Vectors](#lc-1570dot-product-of-two-sparse-vectors)                            | https://leetcode.com/problems/dot-product-of-two-sparse-vectors/                           | ctor: _O(n)_<br>dot_product: _O(min(n, m))_                | _O(n)_                | Medium     |                |                              | 🔒          |
 | 39  | 528      | [Random Pick with Weight](#lc-528random-pick-with-weight)                                                 | https://leetcode.com/problems/random-pick-with-weight/                                     | ctor: _O(n)_ <br> pick: _O(logn)_                          | _O(n)_                | Medium     |                |                              |            |
@@ -98,7 +98,7 @@
 | 42  | 403      | [Frog Jump](#lc-903frog-jump)                                                                             | https://leetcode.com/problems/frog-jump/                                                   | _O(n^2)_                                                   | _O(n^2)_              | Hard       |                |                              |            |
 | 43  | 680      | [Valid Palindrome II](#lc-680valid-palindrome-II)                                                         | https://leetcode.com/problems/valid-palindrome-ii/                                         | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
 | 44  | 230      | [Kth Smallest Element in a BST](#lc-230kth-smallest-element-in-a-bst)                                     | https://leetcode.com/problems/kth-smallest-element-in-a-bst/                               | _O(max(h, k))_                                             | _O(min(h, k))_        | Medium     |                |                              |            | 
-| 45  | 523      | [Continuous Subarray Sum](#lc-523continuous-subarray-sum)                                                 | https://leetcode.com/problems/continuous-subarray-sum/)                                    | _O(n)_                                                     | _O(k)_                | Medium     |                |                              |            |
+| 45  | 523      | [Continuous Subarray Sum](#lc-523continuous-subarray-sum)                                                 | https://leetcode.com/problems/continuous-subarray-sum/                                    | _O(n)_                                                     | _O(k)_                | Medium     |                |                              |            |
 | 46  |          | [Facebook OnSite Randomly generate mines on a grid](#facebook-onsite-randomly-generate-mines-on-a-grid)   | https://leetcode.com/discuss/interview-question/algorithms/124759                          | _O(k*m*n)_                                                 | _O(m*n)_              | Medium     |                | Reservoir Sampling           |            |
 | 47  | 953      | [Verifying an Alien Dictionary](#lc-953verifying-an-alien-dictionary)                                     | https://leetcode.com/problems/verifying-an-alien-dictionary/                               | _O(n * l)_                                                 | _O(1)_                | Easy       |                |                              |            |
 | 48  | 269      | [Alien Dictionary](#lc-269alien-dictionary)                                                               | https://leetcode.com/problems/alien-dictionary/                                            | _O(n)_                                                     | _O(1)_                | Hard       |                | Topological Sort ; BFS ; DFS | 🔒         |
@@ -3763,6 +3763,134 @@ class Solution:
 </div>
 <br/>
 
+#### [LC-408:Valid Word Abbreviation](https://leetcode.com/problems/valid-word-abbreviation/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-723:Candy Crush](https://leetcode.com/problems/candy-crush/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-875:Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-199:Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-93:Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-50:Pow(x, n)](https://leetcode.com/problems/powx-n/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-354:Russian Doll Envelopes](https://leetcode.com/problems/russian-doll-envelopes/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-286:Walls and Gates](https://leetcode.com/problems/walls-and-gates/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
 #### [LC-121:Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 ##### Solution Explanation
 ```
@@ -3865,6 +3993,182 @@ fun main(args: Array<String>) {
     prices = intArrayOf()
     println(maxProfit(prices))
 }
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-515:Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-415:Add Strings](https://leetcode.com/problems/add-strings/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-39:Combination Sum](https://leetcode.com/problems/combination-sum/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-670:Maximum Swap](https://leetcode.com/problems/maximum-swap/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [Facebook Onsite dot product of sparse vectors](https://leetcode.com/discuss/interview-question/124823/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-1570:Dot Product of Two Sparse Vectors](https://leetcode.com/problems/dot-product-of-two-sparse-vectors/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-528:Random Pick with Weight](https://leetcode.com/problems/random-pick-with-weight/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-438:Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-934:Shortest Bridge](https://leetcode.com/problems/shortest-bridge/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-403:Frog Jump](https://leetcode.com/problems/frog-jump/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-680:Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
 ```
 
 <br/>
@@ -4008,6 +4312,54 @@ class Solution:
                     temp = temp.right
                 rightmost.left, temp.right = None, rightmost
         return val
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-523:Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [Facebook OnSite Randomly generate mines on a grid](https://leetcode.com/discuss/interview-question/algorithms/124759)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-953:Verifying an Alien Dictionary](https://leetcode.com/problems/verifying-an-alien-dictionary/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
 ```
 
 <br/>
@@ -4722,6 +5074,70 @@ class Solution:
         return res
 ```
 
+#### [LC-1249:Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-66:Plus One](https://leetcode.com/problems/plus-one/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [Find an index of maximum occurring element with equal probability](https://www.geeksforgeeks.org/find-index-maximum-occurring-element-equal-probability/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-938:Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
 #### [LC-323:Number of Connected Components in an Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)
 ##### Solution Explanation:
 ```
@@ -4977,6 +5393,22 @@ class Solution:
 </div>
 <br/>
 
+#### [LC-67:Add Binary](https://leetcode.com/problems/add-binary/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
 ####  [LC-125:Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
 ##### Solution Explanation:
 ```
@@ -5055,6 +5487,70 @@ fun main(args: Array<String>) {
     val s = "A man, a plan, a canal: Panama"
     println(isPalindrome(s))
 }
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-415:Add Strings](https://leetcode.com/problems/add-strings/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-236:Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-866:Smallest Subtree with all the Deepest Nodes](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-257:Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
 ```
 
 <br/>
@@ -5168,6 +5664,70 @@ fun main(args: Array) {
     val t = "ABC"
     println(minWindow(s,k))
 }
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [Google Remove Duplicates from Unsorted Array](https://leetcode.com/discuss/interview-question/168757/Google%3A-Remove-Duplicates-from-Unsorted-Array)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-83:Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-83:Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
+##### Solution Explanation:
+```| [
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-257:Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
 ```
 
 <br/>
@@ -5326,6 +5886,22 @@ def maxSubArray(A: List[int]) -> List[int]:
 if __name__ == '__main__':
     A = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
     print(maxSubArray(A))
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-20:Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
 ```
 
 <br/>
@@ -5715,6 +6291,70 @@ fun main(args: Array<String>) {
     }
     println(cloneGraph(root))
 }
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [Facebook Onsite Generate Random Max Index](https://leetcode.com/discuss/interview-question/451431/facebook-onsite-generate-random-max-index)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [Facebook Interview Question Minimum number of people to spread a message](https://leetcode.com/discuss/interview-question/124827/Find-minimum-number-of-people-to-reach-to-spread-a-message-across-all-people-in-twitter/)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [Facebook Phone Interview Question Given a directed graph remove return minimum of edges to keep all paths](https://leetcode.com/discuss/interview-question/630806/facebook-phone-transitive-reduction-factorial-trailing-zeroes)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [Facebook Phone screen Shortest Path with Obstacles](https://leetcode.com/discuss/interview-question/301192/Facebook-phone-screen-Shortest-Path-with-Obstacles/283312)
+##### Solution Explanation:
+```
+```
+##### Complexity Analysis:
+```
+```
+```python
 ```
 
 <br/>
