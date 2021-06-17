@@ -1,0 +1,2 @@
+Useful Interview study links from across github:
+https://github.com/ParentJA/algorithms
