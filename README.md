@@ -81,6 +81,7 @@
 | 44  | 230      | [Kth Smallest Element in a BST](#lc-230kth-smallest-element-in-a-bst)                                     | https://leetcode.com/problems/kth-smallest-element-in-a-bst/                               | _O(max(h, k))_                                             | _O(min(h, k))_        | Medium     |                |                              |            | 
 | 47  | 269      | [Alien Dictionary](#lc-269alien-dictionary)                                                               | https://leetcode.com/problems/alien-dictionary/                                            | _O(n)_                                                     | _O(1)_                | Hard       |                | Topological Sort ; BFS ; DFS | 🔒         |
 | 48  | 207      | [Course Schedule](#lc-207course-schedule)                                                                 | https://leetcode.com/problems/course-schedule/                                             | _O(\|V\| + \|E\|)_                                         | _O(\|E\|)_            | Medium     |                | Topological Sort             |            |
+| 49  | 986      | [Interval List Intersections](#lc-49interval-list-intersections)                                          | https://leetcode.com/problems/interval-list-intersections/                                 | _O(m + n)_                                                 | _O(1)_                | Medium     |                |                              |            |
 | 54  | 323      | [Number of Connected Components in an Undirected Graph](#lc-323number-of-connected-components-in-an-undirected-graph/) | https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/ | _O(n)_                                              | _O(n)_                | Medium     |                | Union Find                   | 🔒          |
 | 55  |          | [Facebook Phone Connected Components in Graph](#facebook-phone-connected-components-in-graph)             | https://leetcode.com/discuss/interview-question/982506/Facebook-or-Phone-or-Connected-Components-in-Graph/798145                                        |                       | Medium     |                | BFS                          |            |
 | 57  | 125      | [Valid Palindrome](#lc-125valid-palindrome)                                                               | https://leetcode.com/problems/valid-palindrome/                                            | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
@@ -2251,6 +2252,26 @@ Similar idea as in DFS. But you implement the traversal of nodes using `deque`.
 >
 ##### Complexity Analysis:
 ```
+E = number of edges
+V = number of vertices
+
+# --------------------------------------
+# Approach 1 ( Union Find )
+# --------------------------------------
+TC: O(E)
+SC: O(E)
+
+# --------------------------------------
+# Approach 2 ( DFS )
+# --------------------------------------
+TC: O(|V| + |E|)
+SC: O(|V| + |E|)
+
+# --------------------------------------
+# Approach 3 ( BFS )
+# --------------------------------------
+TC: O(|V| + |E|)
+SC: O(|V| + |E|)
 ```
 ```python
 # --------------------------------------
@@ -3353,6 +3374,9 @@ Problem already defines TC for us.
 TC: O(1)
 ```
 ```python
+# --------------------------------------
+# Super Efficient Soluton
+# --------------------------------------
 class RandomizedSet:
 
     def __init__(self):
@@ -3418,11 +3442,87 @@ class RandomizedSet:
 #### [LC-381:Insert Delete GetRandom O(1) - Duplicates allowed](https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed/)
 ##### Solution Explanation:
 ```
+# --------------------------------------
+# Frugal Python Solution Explanation
+# --------------------------------------
+
+Just wanted to clarify the logic for other readers:
+
+  1. The main idea of an efficient speedup is when removing an element.
+     Here you find the index of the element to be deleted as the last item in its dictionary entry (which is a list).
+  2. You then swap it with the actual last element in the numbers list you are maintaining. (Some corner cases need to be handled here).
+
+e.g. 1,2,3,1,5
+If you want to delete 1, swap it with 5 at the end of the list and shrink the list!
+
+# --------------------------------------
+# NOTE about complexity:
+# --------------------------------------
+
+Very clean solution. random.choice is O(log n) as it generates a random number between 0 and len(self.vals) 
+and uses that to index into self.vals. 
+Generating a random bit is constant time but generating a random number in a range takes time proportional 
+to the number of bits needed to distinguish between all the numbers in the range which is log of the size 
+of the range. getRandom actually can't be done in constant time.
+
+# --------------------------------------
+# NOTE about the solution:
+# --------------------------------------
+I think the beauty about this solution is following lines, saves so much edge case handling
+
+self.idxs[ins].add(out)
+self.idxs[ins].discard(len(self.vals) - 1)
 ```
 ##### Complexity Analysis:
 ```
+Problem already defines TC for us.
+
+TC: O(1)
 ```
 ```python
+# --------------------------------------
+# Frugal Python Solution
+# --------------------------------------
+import random
+
+class RandomizedCollection(object):
+
+    def __init__(self):
+        self.vals, self.idxs = [], collections.defaultdict(set)
+        
+
+    def insert(self, val):
+        self.vals.append(val)
+        self.idxs[val].add(len(self.vals) - 1)
+        return len(self.idxs[val]) == 1
+        
+
+    #def remove(self, val):
+    #    if self.idxs[val]:
+    #        out, ins = self.idxs[val].pop(), self.vals[-1]
+    #        self.vals[out] = ins
+    #        if self.idxs[ins]:
+    #            self.idxs[ins].add(out)
+    #            self.idxs[ins].discard(len(self.vals) - 1)
+    #        self.vals.pop()
+    #        return True
+    #    return False 
+
+    # No need to check for the condition if self.idxs[ins]: if you pop from vals from the end
+    # this would also work
+    def remove(self, val):
+        if self.idxs[val]:
+            idx=self.idxs[val].pop()
+            temp_val=self.vals[-1]
+            self.vals[idx]=temp_val
+            self.idxs[temp_val].add(idx)
+            self.idxs[temp_val].discard(len(self.vals)-1)
+            self.vals.pop(-1)
+            return True
+        return False
+		
+    def getRandom(self):
+        return random.choice(self.vals)
 ```
 
 <br/>
@@ -3434,11 +3534,189 @@ class RandomizedSet:
 #### [LC-721:Accounts Merge](https://leetcode.com/problems/accounts-merge/)
 ##### Solution Explanation:
 ```
+# --------------------------------------
+# Approach 1 - DFS
+# --------------------------------------
+
+Algorithm
+--------------------------------------
+For each account, draw the edge from the first email to all other emails.
+Additionally, we'll remember a map from emails to names on the side.
+After finding each connected component using a depth-first search, we'll add that to our answer.
+
+# --------------------------------------
+# Approach 2 - Disjoint Set Union ( or Union Find )
+# --------------------------------------
+
+Intuition
+--------------------------------------
+As in Approach #1, our problem comes down to finding the connected components of a graph.
+This is a natural fit for a Disjoint Set Union (DSU) structure.
+
+Algorithm
+--------------------------------------
+As in Approach #1, draw edges between emails if they occur in the same account.
+For easier interoperability between our DSU template, we will map each email to some integer index by using emailToID.
+Then, dsu.find(email) will tell us a unique id representing what component that email is in.
+
+For more information on DSU, please look at Approach #2 in the article here => https://leetcode.com/articles/redundant-connection/.
+For brevity, the solutions showcased below do not use union-by-rank.
+
+Reference: https://www.hackerearth.com/practice/notes/disjoint-set-union-union-find/
+           https://leetcode.com/articles/redundant-connection/
 ```
 ##### Complexity Analysis:
-```
-```
+> ###### Approach 1 - DFS
+> * Time Complexity: ![equation](https://latex.codecogs.com/png.image?\dpi{150}%20O(\sum a_{i}loga_{i})), where ![equation](https://latex.codecogs.com/png.image?\dpi{150}%20a_{i}) 
+> is the length of accounts[i]. Without the log factor, this is the complexity to build the graph and search for each component.
+> The log factor is for sorting each component at the end.
+>
+> * Space Complexity: ![equation](https://latex.codecogs.com/png.image?\dpi{150}%20O(\sum a_{i}), the space used by our graph and our search.
+>
+> ###### Approach 2 - Disjoint Set Union ( or Union Find )
+> * Time Complexity: ![equation](https://latex.codecogs.com/png.image?\dpi{150}%20O(AlogA)), where ![equation](https://latex.codecogs.com/png.image?\dpi{150}%20A%20=\sum a_{i}),
+> and ![equation](https://latex.codecogs.com/png.image?\dpi{150}%20a_{i}) is the length of accounts[i]. If we used union-by-rank, this complexity improves to
+> ![equation](https://latex.codecogs.com/png.image?\dpi{150}%20O(A\alpha(A))%20\approx%20O(A)), where ![equation](https://latex.codecogs.com/png.image?\dpi{150}\alpha) is the _Inverse-Ackermann_ function.
+>
+> * Space Complexity: ![equation](https://latex.codecogs.com/png.image?\dpi{150}%20O(A)), the space used by our DSU structure.
+>
 ```python
+# --------------------------------------
+# Approach 1 - DFS
+# --------------------------------------
+from typing import List
+
+class Solution:
+    def accountsMerge(self, accounts: List[List[str]]) -> List[List[str]]:        
+        em_to_name = {}
+        graph = collections.defaultdict(set)
+        for acc in accounts:
+            name = acc[0]
+            for email in acc[1:]:
+                graph[acc[1]].add(email)
+                graph[email].add(acc[1])
+                em_to_name[email] = name
+
+        seen = set()
+        ans = []
+        for email in graph:
+            if email not in seen:
+                seen.add(email)
+                stack = [email]
+                component = []
+                while stack:
+                    node = stack.pop()
+                    component.append(node)
+                    for nei in graph[node]:
+                        if nei not in seen:
+                            seen.add(nei)
+                            stack.append(nei)
+                ans.append([em_to_name[email]] + sorted(component))
+        return ans
+
+# --------------------------------------
+# Approach 2 - Disjoint Set Union ( or Union Find )
+# --------------------------------------
+from typing import List
+
+class DSU:
+    def __init__(self):
+        self.p = range(10001)
+    def find(self, x):
+        if self.p[x] != x:
+            self.p[x] = self.find(self.p[x])
+        return self.p[x]
+    def union(self, x, y):
+        self.p[self.find(x)] = self.find(y)
+
+class Solution:
+    def accountsMerge(self, accounts: List[List[str]]) -> List[List[str]]:        
+        dsu = DSU()
+        em_to_name = {}
+        em_to_id = {}
+        i = 0
+        for acc in accounts:
+            name = acc[0]
+            for email in acc[1:]:
+                em_to_name[email] = name
+                if email not in em_to_id:
+                    em_to_id[email] = i
+                    i += 1
+                dsu.union(em_to_id[acc[1]], em_to_id[email])
+
+        ans = collections.defaultdict(list)
+        for email in em_to_name:
+            ans[dsu.find(em_to_id[email])].append(email)
+
+        return [[em_to_name[v[0]]] + sorted(v) for v in ans.values()]
+
+# --------------------------------------
+# Approach 3 - Union Find with Path Compression and Union By Rank
+# --------------------------------------
+#time: O(α(n)), where n is the total number of email accounts for all users and α(n) is the inverse Ackermann function. 
+#space: O(n)
+from typing import List
+		
+class UnionFind:
+    def __init__(self, accounts):
+        self.size = defaultdict(lambda: defaultdict(int))
+        self.link = defaultdict(lambda: defaultdict(str))
+		# initialize the dicts with each component of size 1 and itself as the link
+        for account in accounts:
+            name, emails = account[0], account[1:]
+            for email in emails:
+                self.size[name][email] = 1
+                self.link[name][email] = email
+    
+	# find the parent for a given email and compress paths if possible
+    def find(self, u, name):
+        res = u
+        while res != self.link[name][res]:
+            res = self.link[name][res]
+        while u != res:
+            temp = self.link[name][u]
+            self.link[name][u] = res
+            u = temp
+        return res
+    
+	# unify the smaller component to the larger one
+    def union(self, u, v, name):
+        u, v = self.find(u, name), self.find(v, name)
+        if u == v:
+            return False
+        if self.size[name][u] < self.size[name][v]:
+            u,v = v,u
+        self.size[name][u] += self.size[name][v]
+        self.size[name][v] = 0
+        self.link[name][v] = self.link[name][u]
+        return True
+                
+class Solution:
+    
+    def accountsMerge(self, accounts: List[List[str]]) -> List[List[str]]:
+        U = UnionFind(accounts)
+        res = []
+        
+		# draw an edge from the first email to the rest of the emails in each group 
+        for account in accounts:
+            name, emails = account[0], account[1:]
+            for i in range(1, len(emails)):
+                U.union(emails[0], emails[i], name)
+        
+		# compress all paths
+        for name in U.link:
+            for k in U.link[name]:
+                U.find(k, name)
+        
+		# return a list of lists containing each name and each connected component in sorted order 
+        for name in U.link.keys():
+            link_to_emails = defaultdict(list)
+            for k,v in U.link[name].items():
+                link_to_emails[v].append(k)
+            for v in link_to_emails.values():
+                res.append([name]+sorted(v))
+                
+        return res
 ```
 
 <br/>
@@ -3558,29 +3836,140 @@ fun main(args: Array<String>) {
 <br/>
 
 #### [LC-230:Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
+##### Data Structure and Algorithm Learning Points:
+###### How to traverse the tree
+There are two general strategies to traverse a tree:
+* Depth First Search (DFS)
+  In this strategy, we adopt the depth as the priority, so that one would start from a root 
+  and reach all the way down to certain leaf, and then back to root to reach another branch.
+
+  The DFS strategy can further be distinguished as preorder, inorder, and postorder 
+  depending on the relative order among the root node, left node and right node.
+
+* Breadth First Search (BFS)
+
+  We scan through the tree level by level, following the order of height, from top to bottom.
+  The nodes on higher level would be visited before the ones with lower levels.
+
+On the following figure the nodes are numerated in the order you visit them,
+please follow 1-2-3-4-5 to compare different strategies.
+
+![lc-230-kth-smallest-elements-in-a-BST-DS_and_Algo-learning-points-1](./assets/lc-230-kth-smallest-elements-in-a-BST-DS_and_Algo-learning-points-1.png)
+##### Python3 Learning Points
+Introduced with [PEP 255](https://www.python.org/dev/peps/pep-0255), generator functions are a special kind of function  that 
+return a [lazy iterator](https://en.wikipedia.org/wiki/Lazy_evaluation).
+These are objects that you can loop over like a [list](https://realpython.com/python-lists-tuples/).
+However, unlike lists, lazy iterators do not store their contents in memory.
 ##### Solution Explanation:
 ```
+Hint: To solve the problem, one could use the property of BST : inorder traversal of BST is an array sorted in the ascending order.
+-------------------------------
+
+# --------------------------------------
+# Approach 1: lazy in order traversal using an iterator with early stopping - condensed.
+# --------------------------------------
+
+It's a very straightforward approach with O(k) time complexity.
+The idea is to build an inorder traversal of BST which is an array sorted in the ascending order.
+Now the answer is the (k - 1)th element of this array.
+```
+![lc-230-kth-smallest-elements-in-a-BST-image-2](./assets/lc-230-kth-smallest-elements-in-a-BST-image-2.png)
+```
+
+# --------------------------------------
+# Approach 2: morris in order traversal
+# --------------------------------------
+
+
+Reference: https://www.educative.io/edpresso/what-is-morris-traversal
 ```
 ##### Complexity Analysis:
 ```
 ```
 ```python
-```
+# --------------------------------------
+# Approach 1: lazy in order traversal using an iterator with early stopping - condensed.
+# --------------------------------------
 
-<br/>
-<div align="right">
-    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
-</div>
-<br/>
+# TC: O(k)
+# SC: O(1)
+#
 
-#### [LC-269:Alien Dictionary](https://leetcode.com/problems/alien-dictionary/)
-##### Solution Explanation:
-```
-```
-##### Complexity Analysis:
-```
-```
-```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def kthSmallest(self, root: TreeNode, k: int) -> int:
+        # lazy in order traversal using an iterator with early stopping
+        def traverse(node: TreeNode):
+            if not node:
+                return
+            yield from traverse(node.left)
+            yield node.val
+            yield from traverse(node.right)
+
+        for i, val in enumerate(traverse(root)):
+            if k - i == 1:
+                return val
+
+    # even more condensed
+    def kthSmallest(self, root: TreeNode, k: int) -> int:  # O(k) time and O(1) space
+        # lazy in order traversal using an iterator with early stopping - condensed
+        def traverse(node: TreeNode):
+            yield from (*traverse(node.left), node.val, *traverse(node.right)) if node else ()
+
+        return next(val for i, val in enumerate(traverse(root), 1) if not k - i)
+
+
+# --------------------------------------
+# Approach 1: lazy in order traversal using an iterator with early stopping - condensed.
+# --------------------------------------
+
+# TC: O(k)
+# SC: O(1)
+#
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+
+    def kthSmallest(self, root: TreeNode, k: int) -> int:  # O(k) time and O(1) space
+        # Morris traversal
+        node = root
+        while node:
+            if not node.left:
+                k -= 1
+                if k == 0:
+                    return node.val
+                node = node.right
+            else:
+                rightmost = node
+                node = temp = node.left
+                while temp.right:
+                    temp = temp.right
+                rightmost.left = None
+                temp.right = rightmost
+
+    # even more condensed
+    def kthSmallest(self, root: TreeNode, k: int) -> int:  # O(k) time and O(1) space
+        # Morris traversal - condensed
+        node, val = root, None
+        while k:
+            if not node.left:
+                val, node, k = node.val, node.right, k - 1
+            else:
+                rightmost, node, temp = node, node.left, node.left
+                while temp.right:
+                    temp = temp.right
+                rightmost.left, temp.right = None, rightmost
+        return val
 ```
 
 <br/>
@@ -4196,6 +4585,104 @@ fun main(args: Array<String>) {
     <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
 </div>
 <br/>
+
+#### [LC-986:Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/)
+##### Review
+```
+DeMorgan's Law
+---------------------------------
+```
+> - `!(A and B) = !A OR !B`
+> - `!A AND !B = !(A OR B)`
+
+##### Solution Explanation:
+```
+# --------------------------------------
+# Approach 1: Merge Intervals ( Using Two-Pointers Technique )
+# --------------------------------------
+
+Intuition
+---------------------
+In an interval [a, b], call b the "endpoint".
+
+Among the given intervals, consider the interval A[0] with the smallest endpoint.
+(Without loss of generality, this interval occurs in array A.)
+
+Then, among the intervals in array B, A[0] can only intersect one such interval in array B.
+(If two intervals in B intersect A[0], then they both share the endpoint of A[0] -- but intervals in B are disjoint, which is a contradiction.)
+
+
+Algorithm
+---------------------
+If A[0] has the smallest endpoint, it can only intersect B[0]. After, we can discard A[0] since it cannot intersect anything else.
+
+Similarly, if B[0] has the smallest endpoint, it can only intersect A[0], and we can discard B[0] after since it cannot intersect anything else.
+
+We use two pointers, i and j, to virtually manage "discarding" A[0] or B[0] repeatedly.
+
+# --------------------------------------
+# Approach 2: Using De Morgan's Law from Set Theory
+# --------------------------------------
+
+```
+![lc-986-interval-list-intersections-solution-visualization](./assets/lc-986-interval-list-intersections-solution-visualization.png)
+##### Complexity Analysis:
+```
+For both solutions:
+---------------------
+Time Complexity  :  O(min(M,N))
+Space Complexity :  O(K) [ O(1) if not considering the result array ]
+
+where, 
+M = length of firstList
+N = length of secondList
+K = number of intersections
+```
+```python
+# --------------------------------------
+# Approach 1: Merge Intervals ( Using Two-Pointers Technique )
+# --------------------------------------
+from typing import List
+
+class Solution:
+    def intervalIntersection(self, firstList: List[List[int]], secondList: List[List[int]]) -> List[List[int]]:
+         i = 0
+         j = 0
+         
+         result = []
+         while i < len(A) and j < len(B):
+             a_start, a_end = A[i]
+             b_start, b_end = B[j]
+             if a_start <= b_end and b_start <= a_end:                       # Criss-cross lock
+                 result.append([max(a_start, b_start), min(a_end, b_end)])   # Squeezing
+                 
+             if a_end <= b_end:         # Exhausted this range in A
+                 i += 1               # Point to next range in A
+             else:                      # Exhausted this range in B
+                 j += 1               # Point to next range in B
+         return result
+
+# --------------------------------------
+# Approach 2: Using De Morgan's Law from Set Theory
+# --------------------------------------
+from typing import List
+
+class Solution:
+    def intervalIntersection(self, firstList: List[List[int]], secondList: List[List[int]]) -> List[List[int]]:
+        i = j = 0
+        m, n = len(firstList), len(secondList)
+        res = []
+        
+        while i < m and j < n:
+            if not (firstList[i][1] < secondList[j][0] or secondList[j][1] < firstList[i][0]):
+                res.append([max(firstList[i][0], secondList[j][0]), min(firstList[i][1], secondList[j][1])])
+            if firstList[i][1] < secondList[j][1]:
+                i += 1
+            else:
+                j += 1
+        
+        return res
+```
 
 #### [LC-323:Number of Connected Components in an Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)
 ##### Solution Explanation:
