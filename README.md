@@ -3766,11 +3766,47 @@ class Solution:
 #### [LC-408:Valid Word Abbreviation](https://leetcode.com/problems/valid-word-abbreviation/)
 ##### Solution Explanation:
 ```
+# --------------------------------------
+# Two Pointers Approach
+# --------------------------------------
+
+Use two pointers to track the start of the word and abbr.
+Move abbr pointer, change word pointer accordingly, check whether we can get to the end of word
 ```
 ##### Complexity Analysis:
 ```
+TC: O(N)
+SC: O(1)
 ```
 ```python
+# Time:  O(n)
+# Space: O(1)
+
+class Solution(object):
+    def validWordAbbreviation(self, word, abbr):
+        """
+        :type word: str
+        :type abbr: str
+        :rtype: bool
+        """
+        i , digit = 0, 0
+        for c in abbr:
+            if c.isdigit():
+                if digit == 0 and c == '0':
+                    return False
+                digit *= 10
+                digit += int(c)
+            else:
+                if digit:
+                    i += digit
+                    digit = 0
+                if i >= len(word) or word[i] != c:
+                    return False
+                i += 1
+        if digit:
+            i += digit
+
+        return i == len(word)
 ```
 
 <br/>
@@ -3780,13 +3816,122 @@ class Solution:
 <br/>
 
 #### [LC-723:Candy Crush](https://leetcode.com/problems/candy-crush/)
+##### Problem Description:
+```
+This question is about implementing a basic elimination algorithm for Candy Crush.
+
+Given a 2D integer array board representing the grid of candy, different positive integers board[i][j] represent different types of candies. A value of board[i][j] = 0 represents that the cell at position (i, j) is empty. The given board represents the state of the game following the player's move. Now, you need to restore the board to a stable state by crushing candies according to the following rules:
+
+  1. If three or more candies of the same type are adjacent vertically or horizontally, "crush" them all at the same time - these positions become empty.
+  2. After crushing all candies simultaneously, if an empty space on the board has candies on top of itself, then these candies will drop until they hit a candy or bottom at the same time. (No new candies will drop outside the top boundary.)
+  3. After the above steps, there may exist more candies that can be crushed. If so, you need to repeat the above steps.
+  4. If there does not exist more candies that can be crushed (ie. the board is stable), then return the current board.
+
+You need to perform the above rules until the board becomes stable, then return the current board.
+-----------------
+Example:
+-----------------
+Input:
+board = 
+[[110,5,112,113,114],[210,211,5,213,214],[310,311,3,313,314],[410,411,412,5,414],[5,1,512,3,3],[610,4,1,613,614],[710,1,2,713,714],[810,1,2,1,1],[1,1,2,2,2],[4,1,4,4,1014]]
+Output:
+[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[110,0,0,0,114],[210,0,0,0,214],[310,0,0,113,314],[410,0,0,213,414],[610,211,112,313,614],[710,311,412,613,714],[810,411,512,713,1014]]
+Explanation:
+```
+![lc-723-candy-crush-problem-description](./assets/lc-723-candy-crush-problem-description.png)
+```
+Note:
+-----------------
+The length of board will be in the range [3, 50].
+The length of board[i] will be in the range [3, 50].
+Each board[i][j] will initially start as an integer in the range [1, 2000].
+```
 ##### Solution Explanation:
 ```
+# --------------------------------------
+# Two Pointers Approach
+# --------------------------------------
+
+Hint
+----------------
+First of all, there is a place where the topic is not very clear. The title requires that the same row must be connected to 3 or more,
+or that the same column must be connected to 3 or more. If an element is connected to the same row plus the same column to satisfy 3 or more,
+it is not counted. So you don't need to search four directions with BFS or DFS.
+
+Thought Process
+----------------
+1. Mark the crushed candidate directly on the board by negating the value
+2. We check in group of 3, if they are the same absolute value, we mark them for crushing step
+
+
+Algorithm
+----------------
+Step 1: The first step, marking all the locations to be eliminated. Because there are rows and columns in both directions,
+        but rows and columns cannot be marked at the same time, the way the tags are marked is more tricky.
+		This side uses the use that when searching rows, if there are several elements that meet the criteria, 
+		mark them with the opposite number of one of their elements, so that absolute values can be taken to ensure 
+		that the direction of the column can also consider the elements that have been marked before
+
+Step 2: In the second step, after the element is removed, the double pointer method moves the original element.
+        This side, like the elimination of music, only considers the movement up and down, that is,
+		the movement in the direction of the column. For a column, 
+		set two pointers p1 p2, p1 points to the position of the element that is now to be rewritten, 
+		and p2 points to the position of what the overridden element is (that is, the position of the negative number). 
+		The last p1 is where all the elements above are set to 0. 
+		
+		Why is this true?  Because the number of times p1 moves is the number of all elements greater than 0 in this column.
+		And although to eliminate, the relative relationship between the elements and the top and bottom is unchanged.
+		So it's definitely right to rewrite elements in a decreasing way of p1
+
+Final Step: Finally, you need to call this function recursively, because there may be multiple steps
+
+Complexity
+----------------
+Time complexity O((rc)^2), because it costs 3rc to scan the whole board then we call at most rc/3 times
+Space complexity O(1)
+
+where, 
+r = # of rows
+c = # of columns
 ```
 ##### Complexity Analysis:
 ```
+TC: O((R * C)^2)
+SC: O(1)
+
+where, 
+R = # of rows
+C = # of columns
 ```
 ```python
+class Solution:
+    def candyCrush(self, board: List[List[int]]) -> List[List[int]]:
+        row,col = len(board),len(board[0])
+        crush = False
+        
+        for r in range(row-2):
+            for c in range(col):
+                if abs(board[r][c])==abs(board[r+1][c])==abs(board[r+2][c]) != 0:
+                    board[r][c] = board[r+1][c] = board[r+2][c] = -abs(board[r][c])
+                    crush = True
+        
+        for r in range(row):
+            for c in range(col-2):
+                if abs(board[r][c])==abs(board[r][c+1])==abs(board[r][c+2]) != 0:
+                    board[r][c]=board[r][c+1]=board[r][c+2]=-abs(board[r][c])
+                    crush = True
+        
+        for c in range(col):
+            wp = row-1
+            for r in range(row-1,-1,-1):
+                if board[r][c]>0:
+                    board[wp][c] = board[r][c]
+                    wp -= 1
+            
+            for wp in range(wp,-1,-1):
+                board[wp][c] = 0
+        
+        return self.candyCrush(board) if crush else board
 ```
 
 <br/>
@@ -3798,11 +3943,81 @@ class Solution:
 #### [LC-875:Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)
 ##### Solution Explanation:
 ```
+# --------------------------------------
+# Binary Search
+# --------------------------------------
+
+Each hour, Koko chooses some pile of bananas, and eats K bananas from that pile.
+
+There is a limited value range of K: [lo, hi].
+There is a K' value, such that K(for any K >= K') can enable her to eat all the bananas within H hours: [K', hi].
+We are asked to find K'.
+
+Given a linear searching space [lo, hi], [mi, hi] (lo <= mi) satisfy a property, we can use Binary Searc to get mi.
+
+Initially, we know that K belongs to [1, the largest element in piles[]]. 
+And we follow the pattern of lower-bound Binary Search except that if (K == target) is replaced with if (canEat(piles, K, H)).
 ```
 ##### Complexity Analysis:
 ```
+Complexity Analysis
+----------------------
+Time Complexity: O(NlogW), where N is the number of piles, and W is the maximum size of a pile.
+
+Space Complexity: O(1).
 ```
 ```python
+# --------------------------------------
+# Binary Search
+# --------------------------------------
+#
+# TC: O(NlogW)
+# SC: O(1)
+#
+# N = the number of piles.
+#     len(piles)
+# W = the maximum size of a pile.
+#     max(piles)
+#
+import math
+from typing import List
+
+class Solution:
+    def minEatingSpeed(self, piles: List[int], h: int) -> int:
+        """
+        :type piles: List[int]
+        :type H: int
+        :rtype: int
+        """
+        lo,hi = 1,max(piles)
+        def canEat(k):
+            time = 0
+            for i in range(len(piles)):
+                time += int(math.ceil(piles[i]/float(k)))
+                if time > H: return False
+            return True
+        while lo < hi:
+            mid = (lo + hi) // 2
+            if canEat(mid):
+                hi = mid
+            else:
+                lo = mid + 1
+        return lo
+		
+    # Cleaner Solution
+    def minEatingSpeed(piles: List[int], H: int) -> int:
+        def feasible(speed) -> bool:
+            # return sum(math.ceil(pile / speed) for pile in piles) <= H  # slower        
+            return sum((pile - 1) / speed + 1 for pile in piles) <= H  # faster
+
+        left, right = 1, max(piles)
+        while left < right:
+            mid = left  + (right - left) // 2
+            if feasible(mid):
+                right = mid
+            else:
+                left = mid + 1
+        return left
 ```
 
 <br/>
