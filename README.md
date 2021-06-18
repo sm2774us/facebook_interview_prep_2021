@@ -4288,7 +4288,6 @@ Final note 2: I've found explaining stuff in a simple way (at least I think it's
 #
 # Solution-2 : Math based solution - Recursive
 #
-
 ```
 ![lc-50-pow_x_n-image-1](./assets/lc-50-pow_x_n-image-1.png)
 ##### Complexity Analysis:
