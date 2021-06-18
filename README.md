@@ -4235,7 +4235,8 @@ class Solution:
         
         self.res = []
         backtrack( [], s, 4 )
-        return self.res```
+        return self.res
+```
 
 <br/>
 <div align="right">
