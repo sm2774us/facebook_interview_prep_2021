@@ -4029,11 +4029,90 @@ class Solution:
 #### [LC-199:Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)
 ##### Solution Explanation:
 ```
+# --------------------------------------
+# Approach-1 : DFS
+# --------------------------------------
+Like in many other problems about binary trees, we need to somehow traverse our tree, using dfs (inorder, preorder or postorder) or bfs. There are different solutions here, I use almost inorder traversal, with just one small change: instead of going Left -> Node -> Right, we will go Right -> Node -> Left. In this way we first visit nodes on the right side of our tree. Algorithm will look like this:
+
+Create ans dictionary, which for each level H will keep the rightest node.
+Traverse tree: first visit right children and if we do not have this H in ans yet, we put it there, then visit left children. Note again that with this order of traversal we always will put the rightest node for each level and next time we visit this level we will do nothing.
+Finally, create list from our dictionary.
+
+Complexity: time complexity is O(n) for classical dfs, space is O(h), again classical complexity for dfs as well as this amount of space we need to keep in our answer.
+
+# --------------------------------------
+# Approach-2 : BFS
+# --------------------------------------
+This problem looks good for a bfs, because what we need is always the rightest node.
+
+This is the plan:
+
+ * We perform a bfs.
+ * We traverse all child nodes for each row.
+ * We fill a stack and use the top as the solution node for that row.
 ```
 ##### Complexity Analysis:
 ```
+For both approaches:
+--------------------------------------
+TC: O(n)
+SC: O(h)
+
+where, h = height of the tree
 ```
 ```python
+# --------------------------------------
+# Approach-1 : DFS
+# --------------------------------------
+# TC: O(n) ; SC: O(h)
+#
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def rightSideView(self, root: TreeNode) -> List[int]:
+        ans = {}
+        def dfs(node, H):
+            if not node: return 
+            
+            dfs(node.right, H + 1)
+            if H not in ans: ans[H] = node.val
+            dfs(node.left, H + 1)
+            
+        dfs(root, 0)
+        return [ans[i] for i in range(len(ans))]
+
+# --------------------------------------
+# Approach-2 : BFS
+# --------------------------------------
+# TC: O(n) ; SC: O(h)
+#
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def rightSideView(self, root: TreeNode) -> List[int]:
+        deque = collections.deque()
+        if root:
+            deque.append(root)
+        res = []
+        while deque:
+            size, val = len(deque), 0
+            for _ in range(size):
+                node = deque.popleft()
+                val = node.val # store last value in each level
+                if node.left:
+                    deque.append(node.left)
+                if node.right:
+                    deque.append(node.right)
+            res.append(val)
+        return res
 ```
 
 <br/>
@@ -4045,12 +4124,118 @@ class Solution:
 #### [LC-93:Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses/)
 ##### Solution Explanation:
 ```
+# --------------------------------------
+# Approach-1 : DFS
+# --------------------------------------
+
+This problem is a classic dfs problem that I usally use recursion to recursively construct each of the solution.
+Parameters:
+
+1. build a block by taking 1 digit
+2. build a block by taking 2 digits. Make sure first digit is not 0.
+3. build a block by taking 3 digits. Make sure first digit is not 0 and 3 digits <= 255.
+4. we created 4 blocks; so, stop here. 
+   4.1 If string is empty, this means this is a valid ip address so add it to res.
+
+# --------------------------------------
+# Approach-2 : Backtracking
+# --------------------------------------
+## EDGE CASE : zeros 00 ## ( case : "010010")
+
+one already put a dot that leaves only 3 possibilities for the next dot to be placed : after one digit, after two digits, or after three digits.
+The first dot has only 3 available slots as well.
+it's enough to check just 3×3×3=27. ==> O(1)		
 ```
+![lc-93-restore-ip-addresses-image-1](./assets/lc-93-restore-ip-addresses-image-1.png)
 ##### Complexity Analysis:
 ```
+# --------------------------------------
+# Approach-1 : DFS
+# --------------------------------------
+Time complexity technically is O(1).
+
+There at most will be 81 searches since there are 81 permutations (3^4) max for a given string that fits into an IP structure.
+
+The algorithm above will short circuit to avoid searching the edge cases (e.g. checking for 0s and checking less than 255), so it will be actually a lot less than 81.
+
+For example, given the following input "123456789012", if we generate all the IP permutations (short circuiting after 4 blocks), it will be 1.2.3.4, 1.2.3.45, 1.2.3.456, 1.2.34.4, ... 123.4.567.89 ... 123.456.789.012 and there will be 81 total.
+
+# --------------------------------------
+# Approach-2 : Backtracking
+# --------------------------------------
+TIME COMPLEXITY : O(1) 
+SPACE COMPLEXITY : O(1)		
 ```
 ```python
-```
+# --------------------------------------
+# Approach-1 : DFS
+# --------------------------------------
+class Solution:    
+    def dfs(self, s, curr, res):
+        # we created 4 blocks; stop here. 
+        if len(curr) == 4:
+            # If string is empty, this means this is a valid ip address so add it to res.
+            if not s:
+                res.append('.'.join(curr))
+            return
+        
+        # build a block by taking 1 digit
+        if len(s) >= 1:
+            self.dfs(s[1:], [*curr, s[:1]], res)
+
+        # build a block by taking 2 digits. Make sure first digit is not 0.
+        if len(s) >= 2 and s[0] != '0':
+            self.dfs(s[2:], [*curr, s[:2]], res)
+            
+        # build a block by taking 3 digits. Make sure first digit is not 0 and 3 digits <= 255.
+        if len(s) >= 3 and s[0] != '0' and int(s[:3]) <= 255:
+            self.dfs(s[3:], [*curr, s[:3]], res)
+
+    def restoreIpAddresses(self, s: str) -> List[str]:
+        res = []
+        self.dfs(s, [], res)
+        return res
+
+# --------------------------------------
+# Approach-2 : Backtracking
+# --------------------------------------
+
+class Solution:
+    def restoreIpAddresses(self, s: str) -> List[str]:
+        ## RC ##
+        ## APPROACH : BACKTRACKING ##
+        ## EDGE CASE : zeros 00 ## ( case : "010010")
+		
+        ## TIME COMPLEXITY : O(1) ##
+		## SPACE COMPLEXITY : O(1) ##
+        
+        """
+        one already put a dot that leaves only 3 possibilities for the next dot to be placed : after one digit, after two digits, or after three digits. The first dot has only 3 available slots as well.
+        it's enough to check just 3×3×3=27. ==> O(1)
+        """
+	
+        def backtrack( curr, s, k ):
+            if( k < 0 ):
+                return
+            
+            if(not s and k == 0):
+                self.res.append(".".join(curr[:]))
+                return
+            
+            if( len(s) > 3 * (4 - len(curr)) ):             # optimization early pruning, when we have too many dgitis for next slots
+                return
+            
+            num = 0
+            for i in range(min(3,len(s))):                  # max size 3
+                num = num * 10 + int(s[i])
+                if( i > 0 and s[0] == "0" or num > 255 ):   # edge case, when we are filling a slot starting 0, donot consider later numbers
+                    break                                   # break, (not continue)
+                if( 0 <= num <= 255 ):
+                    backtrack( curr+[str(num)], s[i+1:], k-1 )
+        
+        self.res = []
+        backtrack( [], s, 4 )
+        return self.res```
 
 <br/>
 <div align="right">
@@ -4061,11 +4246,97 @@ class Solution:
 #### [LC-50:Pow(x, n)](https://leetcode.com/problems/powx-n/)
 ##### Solution Explanation:
 ```
+#
+# Solution-1 : imagine you want to do 2^(-3). How will you do it normally? 1/(2^3), right? That's all.
+#
+Trick/Hint: imagine you want to do 2^(-3). How will you do it normally? 1/(2^3), right? That's all.
+
+We should implement pow, right? What happens when you do a number to the power of sth? It's two cases, the power is either positive, zero, or negative. If it's zero, the result is 1 regardless. Right? If it's positive, you multiply your number the power times, and if it's negative, you (let's say your number is x) multiply 1/x the power times. That's exactly what we're going to do. The code has two parts, main function (myPow) and helper, both accepting the same input variabes. Let's focus on the first function, myPow.
+
+It's doing the above. If the is >= 0, call the helper function with x and n as input (line #1). Otherwise, call the inverse of it with x and -n as input (line #2). For the last case, imagine you want to do 2^(-3). How will you do it normally? 1/(2^3), right? That's all.
+
+# First part
+class Solution:
+    def myPow(self, x: float, n: int) -> float:
+        if n >= 0:
+            return self.helper(x, n) #1
+        else:
+            return 1/self.helper(x, -n) #2
+    
+    
+# Second part
+    
+    def helper(self, x, n): 
+        if n == 0: #3
+            return 1
+        
+        temp = self.myPow(x, n//2) #4
+         
+        if int(n%2) == 0: #5
+            return  temp * temp
+        else:
+            return temp * temp * x #6
+Now, let's focus on the second part. Line #3 takes care of the base case when n is zero. Then we calculate the temp for the case that n = n/2. This way, we break down the problem into two problems, each with the same solution. So, we just need to calculate it once. If n is divisible by 2, then we multiply temp by itself (line #5) and if it's not, we multiply the product by an additional x (line #6).
+
+That's all.
+
+============================================================
+Final note: Please let me know if you found any error/typo/etc. I'll try to fix it.
+
+Final note 2: I've found explaining stuff in a simple way (at least I think it's simple) would be instructive for myself. I'd suggest you do the same in case you're having hard time understanding something. Thanks for reading.
+
+#
+# Solution-2 : Math based solution - Recursive
+#
+
 ```
+![lc-50-pow_x_n-image-1](./assets/lc-50-pow_x_n-image-1.png)
 ##### Complexity Analysis:
 ```
 ```
 ```python
+#
+# Solution-1 : imagine you want to do 2^(-3). How will you do it normally? 1/(2^3), right? That's all.
+#
+# First part
+class Solution:
+    def myPow(self, x: float, n: int) -> float:
+        if n >= 0:
+            return self.helper(x, n) #1
+        else:
+            return 1/self.helper(x, -n) #2
+    
+    
+# Second part
+    
+    def helper(self, x, n): 
+        if n == 0: #3
+            return 1
+        
+        temp = self.myPow(x, n//2) #4
+         
+        if int(n%2) == 0: #5
+            return  temp * temp
+        else:
+            return temp * temp * x #6
+			
+#
+# Solution-2 : Math based solution - Recursive
+#
+class Solution:
+    def myPow(self, x: float, n: int) -> float:
+
+        def function(base = x, exponent = abs(n)):
+            if exponent == 0:
+                return 1
+            elif exponent % 2 == 0:
+                return function(base * base, exponent // 2)
+            else:
+                return base * function(base * base, (exponent - 1) // 2)
+
+        f = function()
+        
+        return float(f) if n >= 0 else 1/f
 ```
 
 <br/>
