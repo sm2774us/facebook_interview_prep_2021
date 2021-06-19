@@ -4348,11 +4348,55 @@ class Solution:
 #### [LC-354:Russian Doll Envelopes](https://leetcode.com/problems/russian-doll-envelopes/)
 ##### Solution Explanation:
 ```
+The idea is to order the envelopes and then calculate the longest increasing subsequence (LISS). 
+
+We first sort the envelopes by width, 
+and we also make sure that when the width is the same, the envelope with greater height comes first. 
+
+Why? This makes sure that when we calculate the LISS, we don't have a case such as [3, 4] [3, 5] (we could increase the LISS 
+but this would be wrong as the width is the same. It can't happen when [3, 5] comes first in the ordering).
+
+We could calculate the LISS using the standard DP algorithm (quadratic runtime), but we can just use the tails array method 
+with a twist: we store the index of the tail, and we do leftmost insertion point as usual to find the right index in nlogn time. 
+Why not rightmost? Think about the case [1, 1], [1, 1], [1, 1].
 ```
 ##### Complexity Analysis:
 ```
+TC: O(N*log(N))
+SC: O(N)
 ```
 ```python
+from typing import List
+
+class Solution:
+    def maxEnvelopes(self, envelopes: List[List[int]]) -> int:
+        '''
+        Time: O(nlogn)
+        Space: O(n)
+        '''
+        n = len(envelopes)
+        if n <= 1:
+            return n
+        
+        # asend with width and desend with height
+        envelopes.sort(key=lambda x:(x[0], -x[1]))
+        # find the longest increasing subsequence
+        size = 0
+        tails = [0]*n
+        
+        for _, h in envelopes:
+            l, r = 0, size-1
+            while l <= r:
+                mid = (l+r) // 2
+                if tails[mid] >= h:
+                    r = mid - 1
+                else:
+                    l = mid + 1
+            
+            tails[l] = h
+            size = max(size, l+1)
+        
+        return size
 ```
 
 <br/>
@@ -4362,13 +4406,171 @@ class Solution:
 <br/>
 
 #### [LC-286:Walls and Gates](https://leetcode.com/problems/walls-and-gates/)
+##### Problem Description:
+```
+You are given a m x n 2D grid initialized with these three possible values.
+
+-1 - A wall or an obstacle.
+0 - A gate.
+INF - Infinity means an empty room. We use the value 231 - 1 = 2147483647 to represent INF as you may assume that the distance to a gate is less than 2147483647.
+Fill each empty room with the distance to its nearest gate. If it is impossible to reach a gate, it should be filled with INF.
+
+Example:
+
+Given the 2D grid:
+
+INF -1 0 INF
+INF INF INF -1
+INF -1 INF -1
+0 -1 INF INF
+After running your function, the 2D grid should be:
+
+3 -1 0 1
+2 2 1 -1
+1 -1 2 -1
+0 -1 3 4
+————————————————
+```
 ##### Solution Explanation:
 ```
+# --------------------------------------
+# Approach-1 : DFS
+# --------------------------------------
+DFS. 
+--------------
+Traversing the rooms, if you encounter a grid with a value of 0, update the value of the grid with dfs. Defining the dfs function, 
+base case is when x, y is out of range or the value of the current grid is lower than the calculated distance (at which point the 
+current grid is either an obstacle, or an empty room and a closer distance to the door has been found), directly. The body of the 
+function updates the distance to the current grid, and then continues to recurs in the four directions around it.
+
+Reference: https://leetcode.com/problems/walls-and-gates/discuss/72759/python-dfs-like-number-of-islands
+
+# --------------------------------------
+# Approach-2 : BFS
+# --------------------------------------
+BFS. 
+--------------
+Base case is returned directly when the room is empty. We first find the index of all the doors in the room, put them into q, then traverse q, 
+calculate the distance from the grid around the door to the door, and then look for the empty room up and down the door, if we find the empty room, 
+update the value of the empty room, and add the empty room index to q, in order to find the distance from the empty room around the empty room to the door.
+
 ```
 ##### Complexity Analysis:
 ```
 ```
 ```python
+# --------------------------------------
+# Approach-1 : DFS
+# --------------------------------------
+from typing import List
+
+class Solution:
+    def wallsAndGates(self, rooms: List[List[int]]) -> None:
+        """
+        :type rooms: List[List[int]]
+        :rtype: void Do not return anything, modify rooms in-place instead.
+        """
+        # base case
+        if not rooms: return
+        
+        row, col = len(rooms), len(rooms[0])
+        for i in range(row):
+            for j in range(col):
+                if rooms[i][j] == 0:
+                    self.dfs(rooms, i, j, 0)
+                    
+    def dfs(self, rooms, x, y, dist):
+        row, col = len(rooms), len(rooms[0])
+        if x < 0 or x >= row or y < 0 or y >= col or rooms[x][y] < dist:
+            return
+        rooms[x][y] = dist
+        for dx, dy in [(-1,0),(1,0),(0,-1),(0,1)]:
+            self.dfs(rooms, x+dx, y+dy, dist+1)
+
+# --------------------------------------
+# Approach-2 : BFS
+# --------------------------------------
+from typing import List
+
+class Solution:
+    def wallsAndGates(self, rooms: List[List[int]]) -> None:
+        """
+        :type rooms: List[List[int]]
+        :rtype: void Do not return anything, modify rooms in-place instead.
+        """
+        # base case:
+        if not rooms:
+            return
+        row, col = len(rooms), len(rooms[0])
+        # find the index of a gate
+        q = [(i, j) for i in range(row) for j in range(col) if rooms[i][j] == 0]
+        for x, y in q:
+            # get the distance from a gate
+            distance = rooms[x][y]+1
+            directions = [(-1,0), (1,0), (0,-1), (0,1)]
+            for dx, dy in directions:
+                # find the INF around the gate
+                new_x, new_y = x+dx, y+dy
+                if 0 <= new_x < row and 0 <= new_y < col and rooms[new_x][new_y] == 2147483647:
+                    # update the value
+                    rooms[new_x][new_y] = distance
+                    q.append((new_x, new_y))
+
+```
+##### Variant (asked in FB phone interview)
+```
+https://leetcode.com/problems/walls-and-gates/ (premium)
+
+Given a maze with cells being: gates, walls or empty spaces.
+
+Example:
+
+Input:
+_ W G _
+_ _ _ W
+_ W _ W
+G W _ _
+
+Output:
+3 W G 1
+2 2 1 W
+1 W 2 W
+G W 3 4
+Fill the empty spaces with the number of steps to the closest gate. Allowed steps: UP, RIGHT, LEFT & DOWN
+```
+```python
+# Python Solution using BFS:
+# ----------------
+# Steps:
+# ----------------
+# 1. Loop over the maze and start BFS from each gate
+# 2. For each cell, the number of steps should be the min of the step count from all the gates.
+def wallsAndGates(maze):
+	for i in range(len(maze)):
+		for j in range(len(maze[0])):
+			if maze[i][j] == 'G':
+				bfs(i, j, maze)
+
+def bfs(i, j, maze):
+	m, n = len(maze), len(maze[0])	
+	visited = [[False for _ in range(n)] for _ in range(m)]
+	queue = [(i, j, 0)]
+	while queue:
+		r, c, level = queue.pop(0)
+		if r < 0 or r >= m or c < 0 or c >= n:
+			continue
+		if visited[r][c] or maze[r][c] == 'W':
+			continue
+		visited[r][c] = True
+		if maze[r][c] != 'G':
+			if maze[r][c] == '_':
+				maze[r][c] = level
+			else:
+				maze[r][c] = min(maze[r][c], level)
+		queue.append((r-1,c,level+1))
+		queue.append((r,c-1,level+1))
+		queue.append((r+1,c,level+1))
+		queue.append((r,c+1,level+1))
 ```
 
 <br/>
@@ -4490,11 +4692,88 @@ fun main(args: Array<String>) {
 #### [LC-515:Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/)
 ##### Solution Explanation:
 ```
+# --------------------------------------
+# Approach-1 : DFS
+# --------------------------------------
+
+# --------------------------------------
+# Approach-2 : BFS
+# --------------------------------------
+'''
+w: BFS based level-order traveseral
+h: we traverse the tree level by level and record the max for each level
+'''
 ```
 ##### Complexity Analysis:
 ```
 ```
 ```python
+# --------------------------------------
+# Approach-1 : DFS
+# --------------------------------------
+from typing import List
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def __init__(self):
+        self.dic = {}
+        
+    def largestValues(self, root: TreeNode) -> List[int]:
+        """
+        :type root: TreeNode
+        :rtype: List[int]
+        """
+        def dfs(node, level):
+            if node is None:
+                return
+            
+            dfs(node.left, level+1)
+            dfs(node.right, level+1)
+            if level in self.dic:
+                self.dic[level].append(node.val)
+            else:
+                self.dic[level] = [node.val]
+        dfs(root,0)
+        return [max(l) for l in self.dic.values()]	
+
+# --------------------------------------
+# Approach-2 : BFS
+# --------------------------------------
+import collections
+
+from typing import List
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def largestValues(self, root: TreeNode) -> List[int]:
+        if not root:
+            return []
+        res = []
+        queue = collections.deque([root])
+        
+        while queue:
+            size = len(queue)
+            max_ = -float('inf')
+            for _ in range(size):
+                node = queue.popleft()
+                max_ = max(max_, node.val)
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
+            res.append(max_)
+            
+        return res
 ```
 
 <br/>
@@ -4505,12 +4784,90 @@ fun main(args: Array<String>) {
 
 #### [LC-415:Add Strings](https://leetcode.com/problems/add-strings/)
 ##### Solution Explanation:
+> Overview
+> Facebook interviewers like this question and propose it in four main variations. The choice of algorithm should be based on the input format:
+> 
+> 1. Strings (the current problem). Use schoolbook digit-by-digit addition. Note, that to fit into constant space is not possible 
+> for languages with immutable strings, for example, for Java and Python. Here are two examples:
+> 
+>  * [Add Binary](https://leetcode.com/articles/add-binary/): sum two binary strings.
+> 
+>  * [Add Strings](https://leetcode.com/problems/add-strings/): sum two non-negative numbers in a string representation without converting them to integers directly.
+>
+> 2. Integers. Usually, the interviewer would ask you to implement a sum without using + and - operators. Use bit manipulation approach. Here is an example:
+>
+>  * [Sum of Two Integers](https://leetcode.com/articles/sum-of-two-integers/): Sum two integers without using + and - operators.
+>
+> 3. Arrays. The same textbook addition. Here is an example:
+>
+>  * [Add to Array Form of Integer](https://leetcode.com/articles/add-to-array-form-of-integer/).
+>
+> 4. Linked Lists. Sentinel Head + Textbook Addition. Here are some examples:
+>
+>  * [Plus One](https://leetcode.com/articles/plus-one/).
+>
+>  * [Add Two Numbers](https://leetcode.com/articles/add-two-numbers/).
+>
+>  * [Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii/).
+>
+> 
 ```
+Approach 1: Elementary Math
+----------------------------
+Here we have two strings as input and asked not to convert them to integers. Digit-by-digit addition is the only option here.
+
+Algorithm
+--------------
+* Initialize an empty res structure. Once could use array in Python and StringBuilder in Java.
+
+* Start from carry = 0.
+
+* Set a pointer at the end of each string: p1 = num1.length() - 1, p2 = num2.length() - 1.
+
+* Loop over the strings from the end to the beginning using p1 and p2. Stop when both strings are used entirely.
+
+  [] Set x1 to be equal to a digit from string nums1 at index p1. If p1 has reached the beginning of nums1, set x1 to 0.
+
+  [] Do the same for x2. Set x2 to be equal to digit from string nums2 at index p2. If p2 has reached the beginning of nums2, set x2 to 0.
+
+  [] Compute the current value: value = (x1 + x2 + carry) % 10, and update the carry: carry = (x1 + x2 + carry) / 10.
+
+  [] Append the current value to the result: res.append(value).
+
+* Now both strings are done. If the carry is still non-zero, update the result: res.append(carry).
+
+* Reverse the result, convert it to a string, and return that string.
+```
+![lc-415-add-two-strings-1](./assets/lc-140-word-break-ii-image-1.PNG)
+![lc-415-add-two-strings-2](./assets/lc-140-word-break-ii-image-2.PNG)
+![lc-415-add-two-strings-3](./assets/lc-140-word-break-ii-image-3.PNG)
+![lc-415-add-two-strings-4](./assets/lc-140-word-break-ii-image-4.PNG)
+![lc-415-add-two-strings-5](./assets/lc-140-word-break-ii-image-5.PNG)
+![lc-415-add-two-strings-6](./assets/lc-140-word-break-ii-image-6.PNG)
 ```
 ##### Complexity Analysis:
-```
-```
+![lc-415-complexity-analysis](./assets/lc-415-complexity-analysis.PNG)
 ```python
+class Solution:
+    def addStrings(self, num1: str, num2: str) -> str:
+        res = []
+
+        carry = 0
+        p1 = len(num1) - 1
+        p2 = len(num2) - 1
+        while p1 >= 0 or p2 >= 0:
+            x1 = ord(num1[p1]) - ord('0') if p1 >= 0 else 0
+            x2 = ord(num2[p2]) - ord('0') if p2 >= 0 else 0
+            value = (x1 + x2 + carry) % 10
+            carry = (x1 + x2 + carry) // 10
+            res.append(value)
+            p1 -= 1
+            p2 -= 1
+        
+        if carry:
+            res.append(carry)
+        
+        return ''.join(str(x) for x in res[::-1])
 ```
 
 <br/>
@@ -4522,11 +4879,137 @@ fun main(args: Array<String>) {
 #### [LC-39:Combination Sum](https://leetcode.com/problems/combination-sum/)
 ##### Solution Explanation:
 ```
+# --------------------------------------
+# Approach-1 : DFS (w/ Backtracking)
+# --------------------------------------
+Combination questions can be solved with dfs most of the time. I'm following caikehe's approach. Also, if you want to fully understand this concept and backtracking, try to finish this post and do all the examples.
+
+We have an array [1, 2, ..., n], if k == 0, meaning combination of zero numbers which is nothing (lines #7, 8, 9), right? Return [[]].
+
+def combine(self, n, k):
+    res = [] #1
+    self.dfs(range(1,n+1), k, 0, [], res) #2
+    return res #3
+    
+def dfs(self, nums, k, index, path, res):  #4
+	print('index is:', index)
+    print('path is:', path)
+    if k == 0:  #7
+        res.append(path)  #8
+        return # backtracking  #9 
+    for i in range(index, len(nums)):  #10
+        self.dfs(nums, k-1, i+1, path+[nums[i]], res)  #11
+		
+Lines #1, 2, 3 are the main function, where you initialize res = []. Also, you call the dfs function to find all the combinations, and finally, you return the res. The dfs function is the main part of the code. Lines #7, 8 were explained before. dfsfuction goes into deeper levels until these two lines get activated. Keep reading.
+
+Let's do an example for the rest! I define levels as the number of times dfs gets called recursively before moving on in the for loop of line #10.
+
+---- Level 0 (input: nums, k=2, index = 0, path = [], res = []).
+The idea of dfs is that it starts from first entry of nums = [1, 2, ..., n]. At first, nums[0] gets chosen in line #10, it calls the dfs again in line #11 with updated inputs and goes basically one level deeper to choose the second number in the combination (note that his combination would look something like [1, ...], right? nums doesn't change, but since we have already chosen one entry, variables get updated k = k - 1. Also, since we're already chosen entry 0, index variable becomes i = i +1 to go one step deeper.
+
+---- Level 1 (input: nums, k=1, index = 1, path = [1], res = []).
+Now, in line #10, the range changes. It starts from 1 to len(nums). It goes in and calls dfs one more time.
+
+--- Level 2 (input: nums, k=0, index = 2, path = [1,2]], res = []).
+This time it gets stuck in line #7, and appends path to res. Now, res = [[1,2]].
+
+Does this make sense?
+
+All these level just return one combination, right? ( res = [[1,2]]). Remember going into deeper levels happened when we were in line #10 and called dfs for the first time in line #11, and then for the second time in level 1, and we ended up in level 2 and got stuck in line #7. Now, we go back one step to level 1 and move on in line #10. This time, i = 1 and index = 2. Again we go back to level 2 and return path = [1,3]. This will be appended to res to get to res = [[1,2],[1,3]]. Finally, we exhaust all indices in level 1. We end up with res = [[1,2],[1,3],[1,4]]. We go up one level, to level 0. Move on in line #10, this time, we'll get to path = [[2,3],[2,4]], and will update res = [[1,2],[1,3],[1,3],[2,3],[2,4]]. We keep going to get the final combination, we're done.
+
+If you want to fully understand how this works, try to print some variables at the start of your dfs function. I printed index and path and this is the outcome.
+
+index is: 0
+path is: []
+index is: 1
+path is: [1]
+index is: 2
+path is: [1, 2]
+index is: 3
+path is: [1, 3]
+index is: 4
+path is: [1, 4]
+index is: 2
+path is: [2]
+index is: 3
+path is: [2, 3]
+index is: 4
+path is: [2, 4]
+index is: 3
+path is: [3]
+index is: 4
+path is: [3, 4]
+index is: 4
+path is: [4]
+
+Final output: [[1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4]]
+Another way of doing this without the index variable is:
+
+class Solution:
+    def combine(self, n: int, k: int) -> List[List[int]]:
+        res = []
+        self.dfs(range(1,n+1), k, [], res)
+        return res
+        
+    def dfs(self, nums, k, path, res):
+        if k == 0:
+            res.append(path)
+            return res
+        
+        if len(nums) >= k:
+            for i in range(len(nums)):
+                self.dfs(nums[i+1:], k-1, path+[nums[i]], res)
+        return
+That's it!
+
+# --------------------------------------
+# Approach-2 : Dynamic Programming
+# --------------------------------------
+class Solution:
+    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
+        dp = [[[]]] + [[] for _ in range(target)]
+        for candidate in candidates:
+            for i in range(candidate, target + 1):
+                dp[i] += [sublist + [candidate] for sublist in dp[i - candidate]]
+        return dp[target]
 ```
 ##### Complexity Analysis:
 ```
 ```
 ```python
+# --------------------------------------
+# Approach-1 : DFS
+# --------------------------------------
+from typing import List
+
+class Solution:
+    def combine(self, n: int, k: int) -> List[List[int]]:
+        res = []
+        self.dfs(range(1,n+1), k, [], res)
+        return res
+        
+    def dfs(self, nums, k, path, res):
+        if k == 0:
+            res.append(path)
+            return res
+        
+        if len(nums) >= k:
+            for i in range(len(nums)):
+                self.dfs(nums[i+1:], k-1, path+[nums[i]], res)
+        return
+
+# --------------------------------------
+# Approach-2 : Dynamic Programming
+# --------------------------------------
+from typing import List
+
+class Solution:
+    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
+        dp = [[[]]] + [[] for _ in range(target)]
+        for candidate in candidates:
+            for i in range(candidate, target + 1):
+                dp[i] += [sublist + [candidate] for sublist in dp[i - candidate]]
+        return dp[target]
 ```
 
 <br/>
@@ -4538,11 +5021,87 @@ fun main(args: Array<String>) {
 #### [LC-670:Maximum Swap](https://leetcode.com/problems/maximum-swap/)
 ##### Solution Explanation:
 ```
+Pyhon2>
+--------
+The number only has 8 digits, so there are only 8 choose 2 = 28 available swaps. 
+Brute force them all for an O(N^2) solution which passes.
+
+We will store the candidates as lists of length len(num). For each candidate swap with positions (i, j), 
+we swap the number and record if the candidate is larger than the current answer, then swap back to restore the original number. 
+The only detail is possibly to check that we didn't introduce a leading zero. We don't actually need to check it, because our original number doesn't have one.
+
+def maximumSwap(self, num):
+    A = list(str(num))
+    ans = A[:]
+    for i in range(len(A)):
+        for j in range(i+1, len(A)):
+            A[i], A[j] = A[j], A[i]
+            if A > ans: ans = A[:]
+            A[i], A[j] = A[j], A[i]
+
+    return int("".join(ans))
+We can also get an O(N) solution. At each digit, if there is a larger digit that occurs later, we want the swap it with the largest such digit that occurs the latest.
+
+def maximumSwap(self, num):
+    A = map(int, str(num))
+    last = {x: i for i, x in enumerate(A)}
+    for i, x in enumerate(A):
+        for d in range(9, x, -1):
+            if last.get(d, None) > i:
+                A[i], A[last[d]] = A[last[d]], A[i]
+                return int("".join(map(str, A)))
+    return num
+	
+Python3>
+
+For python3,
+Here A needs to be converted to a list because in python3 map is a iterable. So it needs to be converted to a list.
+
+and in the below line
+
+            if last.get(d, None) > i:
+it needs to be converted to
+
+            if last.get(d, -1) > i: 
+or any other smaller number to ensure that it is either not in the dict last or it does not come after the current element.
+
+    def maximumSwap(self, num):
+        A = list(map(int, str(num)))
+        last = {x: i for i, x in enumerate(A)}
+        for i, x in enumerate(A):
+            for d in range(9, x, -1):
+                if last.get(d, -1) > i: 
+                    A[i], A[last[d]] = A[last[d]], A[i]
+                    return int("".join(map(str, A)))
+        return num
+Another way to write that may be more clear
+
+    def maximumSwap(self, num):
+        a = list(map(int, str(num)))
+        last = {x: i for i,x in enumerate(a)}
+        for i,x in enumerate(a):
+            for d in range(9,x,-1):
+                if d in last:
+                    if last[d]>i:
+                        a[last[d]],a[i]=a[i],a[last[d]]
+                        return int(''.join(map(str,a)))
+        return num
 ```
 ##### Complexity Analysis:
 ```
+TC: O(N)
 ```
 ```python
+class Solution:
+    def maximumSwap(self, num: int) -> int:
+        A = map(int, str(num))
+        last = {x: i for i, x in enumerate(A)}
+        for i, x in enumerate(A):
+            for d in range(9, x, -1):
+                if last.get(d, None) > i:
+                    A[i], A[last[d]] = A[last[d]], A[i]
+                    return int("".join(map(str, A)))
+        return num
 ```
 
 <br/>
@@ -4552,13 +5111,62 @@ fun main(args: Array<String>) {
 <br/>
 
 #### [Facebook Onsite dot product of sparse vectors](https://leetcode.com/discuss/interview-question/124823/)
+##### Problem Description:
+```
+Suppose we have very large sparse vectors (most of the elements in vector are zeros)
+
+Find a data structure to store them
+Compute the Dot Product.
+Follow-up:
+What if one of the vectors is very small?
+```
 ##### Solution Explanation:
 ```
+
 ```
 ##### Complexity Analysis:
 ```
+If read/load array is costly, we can do this:
+
+read the first array and keep a linked list (or hash map) for non-zero entries. Each linked list node stores the index of the element, the value of the element, and a pointer to next node.
+Then read the second array, now when we do not need to read those entries, whose index are not recorded in previous operation. Instead, we only read indexes that have appeared before. This can be achieved by calculating the offset of the entry in an array, because array should be stored in continuous addresses in the disk. Therefore, we only care about the intersection of two arrays. For the intersecting entries, we do multiplication: node->val *= arr[node->index]. For those nodes with arr[node->index] == 0, we just delete the node in O(1) time.
+By doing this for all arrays, the linked list nodes are intersection of all arrays, and the values are dot-product of all arrays.
+Finally, we traverse the list again and sum the the values up.
+
+The time complexity should be O(E + K*N), where E is the size of an array, K is the number of non-zero elements in an array, and N is the number of arrays.
 ```
 ```python
+def sparseVDotProduct(a,b):
+    listA=[]
+    listB=[]
+
+    for i in range(len(a)):
+        if a[i]!=0:
+            listA.append((i,a[i]))
+
+    for i in range(len(b)):
+        if b[i]!=0:
+            listB.append((i,b[i]))
+
+    p1=0
+    p2=0
+    result=0
+
+    while (p1<len(listA) and p2<len(listB)):
+        if listA[p1][0]==listB[p2][0]:
+            result+= listA[p1][1]*listB[p2][1]
+            p1+=1
+            p2+=1
+        elif listA[p1][0] < listB[p2][0]:
+            p1+=1
+        else:
+            p2+=1
+
+    return result
+
+a=[0,2,3,4,0,0,0,0,0,0,5]
+b=[5,1,0,0,0,0,0,0,0,0,9,3]
+print(sparseVDotProduct(a, b))
 ```
 
 <br/>
@@ -4570,11 +5178,36 @@ fun main(args: Array<String>) {
 #### [LC-1570:Dot Product of Two Sparse Vectors](https://leetcode.com/problems/dot-product-of-two-sparse-vectors/)
 ##### Solution Explanation:
 ```
+Do element wise sum between vectors.
 ```
 ##### Complexity Analysis:
 ```
+#Time complexity: O(N).
+#Space complexity: O(N).
 ```
 ```python
+
+from typing import List
+
+#Time complexity: O(N).
+#Space complexity: O(N).
+
+class SparseVector:
+    def __init__(self, nums: List[int]):
+        self.nums = nums
+
+    # Return the dotProduct of two sparse vectors
+    def dotProduct(self, vec: 'SparseVector') -> int:
+        result = 0
+        for n1, n2 in zip(self.nums, vec.nums):
+            result += n1 * n2
+        
+        return result
+
+# Your SparseVector object will be instantiated and called as such:
+# v1 = SparseVector(nums1)
+# v2 = SparseVector(nums2)
+# ans = v1.dotProduct(v2)
 ```
 
 <br/>
