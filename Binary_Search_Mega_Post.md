@@ -56,8 +56,8 @@ Below I'll show you guys how to apply this powerful template to many LeetCode pr
 
 ---
 
-**Basic Application**
-[278. First Bad Version [Easy]](https://leetcode.com/problems/first-bad-version/)
+**>> Basic Application**
+#### [278. First Bad Version [Easy]](https://leetcode.com/problems/first-bad-version/)
 
 You are a product manager and currently leading a team to develop a new product.
 Since each version is developed based on the previous version, all the versions after a bad version are also bad.
@@ -95,7 +95,7 @@ class Solution:
 
 ---
 
-[69. Sqrt(x) [Easy]](https://leetcode.com/problems/sqrtx/)
+#### [69. Sqrt(x) [Easy]](https://leetcode.com/problems/sqrtx/)
 
 Implement `int sqrt(int x)`. Compute and return the square root of x, where x is guaranteed to be a non-negative integer.
 Since the return type is an integer, the decimal digits are truncated and only the integer part of the result is returned.
@@ -130,7 +130,7 @@ to decide which value to return, `left` or `left - 1`.
 
 ---
 
-[35. Search Insert Position [Easy]](https://leetcode.com/problems/search-insert-position/)
+#### [35. Search Insert Position [Easy]](https://leetcode.com/problems/search-insert-position/)
 
 Given a sorted array and a target value, return the index if the target is found. If not, return the index where 
 it would be if it were inserted in order. You may assume no duplicates in the array.
@@ -173,7 +173,9 @@ and get stuck for a very long time.
 As for the question "When can we use binary search?", my answer is that, **If we can discover some kind of monotonicity, for example**, 
 **if** `condition(k) is True` **then** `condition(k + 1) is True`, **then we can consider binary search**.
 
-[1011. Capacity To Ship Packages Within D Days [Medium]](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/)
+---
+
+#### [1011. Capacity To Ship Packages Within D Days [Medium]](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/)
 
 days. The `i`-th package on the conveyor belt has a weight of `weights[i]`.
 Each day, we load the ship with packages on the conveyor belt (in the order given by `weights`).
@@ -236,7 +238,7 @@ def shipWithinDays(weights: List[int], D: int) -> int:
 
 ---
 
-[410. Split Array Largest Sum [Hard]](https://leetcode.com/problems/split-array-largest-sum/)
+#### [410. Split Array Largest Sum [Hard]](https://leetcode.com/problems/split-array-largest-sum/)
 
 Given an array which consists of non-negative integers and an integer `m`, you can split the array into m non-empty continuous subarrays. 
 Write an algorithm to minimize the largest sum among these `m` subarrays.
@@ -301,7 +303,7 @@ which is a contradiction. So our assumption is incorrect. Now we've proved that 
 
 ---
 
-[875. Koko Eating Bananas [Medium]](https://leetcode.com/problems/koko-eating-bananas/)
+#### [875. Koko Eating Bananas [Medium]](https://leetcode.com/problems/koko-eating-bananas/)
 
 Koko loves to eat bananas. There are `N` piles of bananas, the `i`-th pile has `piles[i]` bananas.
 The guards have gone and will come back in `H` hours. Koko can decide her bananas-per-hour eating speed of `K`.
@@ -343,7 +345,7 @@ def minEatingSpeed(piles: List[int], H: int) -> int:
 
 ---
 
-[1482. Minimum Number of Days to Make m Bouquets [Medium]](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/)
+#### [1482. Minimum Number of Days to Make m Bouquets [Medium]](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/)
 
 Given an integer array `bloomDay`, an integer `m` and an integer `k`. We need to make `m` bouquets. To make a bouquet, you need to use `k` **adjacent flowers**
 from the garden. The garden consists of `n` flowers, the `i`th flower will bloom in the `bloomDay[i]` and then can be used in **exactly one** bouquet.
@@ -394,7 +396,7 @@ def minDays(bloomDay: List[int], m: int, k: int) -> int:
 
 ---
 
-[668. Kth Smallest Number in Multiplication Table [Hard]](https://leetcode.com/problems/kth-smallest-number-in-multiplication-table/description/)
+#### [668. Kth Smallest Number in Multiplication Table [Hard]](https://leetcode.com/problems/kth-smallest-number-in-multiplication-table/description/)
 
 Nearly every one have used the [Multiplication Table](https://en.wikipedia.org/wiki/Multiplication_table). But could you find out the `k`-th smallest number 
 quickly from the multiplication table? Given the height `m` and the length `n` of a `m * n` Multiplication Table, and a positive integer `k`, 
@@ -419,7 +421,7 @@ and the length of the table. If we are to apply Heap method, we need to explicit
 The time complexity and space complexity of this process are both O(mn), which is quite inefficient. This is when binary search comes in.
 Remember we say that designing `condition` function is the most difficult part? In order to find the `k`-th smallest value in the table,
 we can design an `enough` function, given an input `num`, determine whether there're at least `k` values less than or equal to `num`.
-The minimal `num` satisfying `enough` function is the answer we're looking for. Recall that the key to binary search is discovering monotonicity.
+**The minimal** `num` **satisfying** `enough` **function is the answer we're looking for**. Recall that the key to binary search is discovering monotonicity.
 In this problem, if `num` satisfies `enough`, then of course any value larger than `num` can satisfy. This monotonicity is the fundament of our binary search algorithm.
 
 Let's consider search space. Obviously the lower bound should be 1, and the upper bound should be the largest value in the Multiplication Table,
@@ -453,16 +455,23 @@ def findKthNumber(m: int, n: int, k: int) -> int:
     return left 
 ```
 
-In LC 410 above, we have doubt "Is the result from binary search actually a subarray sum?". Here we have a similar doubt: "Is the result from binary search actually 
-in the Multiplication Table?". The answer is yes, and we also can apply proof by contradiction. Denote num as the minimal input that satisfies enough function. 
-Let's assume that num is not in the table, which means that num is not divisible by any val in [1, m], that is, num % val > 0. Therefore, changing the input 
-from num to num - 1 doesn't have any effect on the expression add = min(num // val, n). So enough(num) would also return True, just like enough(num). But we already know num is the minimal input satisfying enough function, so enough(num - 1) has to be False. Contradiction! The opposite of our original assumption is true: num is actually in the table.
+In LC 410 above, we have doubt "Is the result from binary search actually a subarray sum?". Here we have a similar doubt: **"Is the result from binary search actually in the Multiplication Table?"**.
+The answer is yes, and we also can apply proof by contradiction. Denote `num` as the minimal input that satisfies `enough` function. 
+Let's assume that `num` is not in the table, which means that `num` is not divisible by any `val` in `[1, m]`, that is, `num % val > 0`.
+Therefore, changing the input from `num` to `num - 1` doesn't have any effect on the expression `add = min(num // val, n)`.
+So `enough(num - 1)` would also return `True`, just like `enough(num)`.
+But we already know `num` is the minimal input satisfying `enough` function, so `enough(num - 1)` has to be `False`.
+Contradiction! The opposite of our original assumption is true: `num` is actually in the table.
 
-719. Find K-th Smallest Pair Distance [Hard]
-Given an integer array, return the k-th smallest distance among all the pairs. The distance of a pair (A, B) is defined as the absolute difference between A and B.
+---
 
-Example :
+#### [719. Find K-th Smallest Pair Distance [Hard]](https://leetcode.com/problems/find-k-th-smallest-pair-distance/)
 
+Given an integer array, return the k-th smallest **distance** among all the pairs. The distance of a pair (A, B) is defined as the absolute difference between A and B.
+
+**Example :**
+
+```
 Input:
 nums = [1,3,1]
 k = 1
@@ -472,8 +481,16 @@ Following are all the pairs. The 1st smallest distance pair is (1,1), and its di
 (1,3) -> 2
 (1,1) -> 0
 (3,1) -> 2
-Very similar to LC 668 above, both are about finding Kth-Smallest. Just like LC 668, We can design an enough function, given an input distance, determine whether there're at least k pairs whose distances are less than or equal to distance. We can sort the input array and use two pointers (fast pointer and slow pointer, pointed at a pair) to scan it. Both pointers go from leftmost end. If the current pair pointed at has a distance less than or equal to distance, all pairs between these pointers are valid (since the array is already sorted), we move forward the fast pointer. Otherwise, we move forward the slow pointer. By the time both pointers reach the rightmost end, we finish our scan and see if total counts exceed k. Here is the implementation:
+```
 
+Very similar to LC 668 above, both are about finding Kth-Smallest. Just like LC 668, We can design an `enough` function,
+given an input `distance`, determine whether there're at least `k` pairs whose distances are less than or equal to distance.
+We can sort the input array and use two pointers (fast pointer and slow pointer, pointed at a pair) to scan it. Both pointers go 
+from leftmost end. If the current pair pointed at has a distance less than or equal to `distance`, all pairs between these pointers are valid 
+(since the array is already sorted), we move forward the fast pointer. Otherwise, we move forward the slow pointer. By the time both pointers 
+reach the rightmost end, we finish our scan and see if total counts exceed k. Here is the implementation:
+
+```
 def enough(distance) -> bool:  # two pointers
     count, i, j = 0, 0, 0
     while i < n or j < n:
@@ -482,8 +499,11 @@ def enough(distance) -> bool:  # two pointers
         count += j - i - 1  # count pairs
         i += 1  # move slow pointer
     return count >= k
-Obviously, our search space should be [0, max(nums) - min(nums)]. Now we are ready to copy-paste our template:
+```
 
+Obviously, our search space should be `[0, max(nums) - min(nums)]`. Now we are ready to copy-paste our template:
+
+```
 def smallestDistancePair(nums: List[int], k: int) -> int:
     nums.sort()
     n = len(nums)
@@ -495,9 +515,15 @@ def smallestDistancePair(nums: List[int], k: int) -> int:
         else:
             left = mid + 1
     return left
-1201. Ugly Number III [Medium]
-Write a program to find the n-th ugly number. Ugly numbers are positive integers which are divisible by a or b or c.
+```
 
+---
+
+#### [1201. Ugly Number III [Medium]](https://leetcode.com/problems/ugly-number-iii/)
+
+Write a program to find the `n`-th ugly number. Ugly numbers are **positive integers** which are divisible by `a` **or** `b` **or** `c`.
+
+```
 Example :
 
 Input: n = 3, a = 2, b = 3, c = 5
@@ -506,8 +532,13 @@ Explanation: The ugly numbers are 2, 3, 4, 5, 6, 8, 9, 10... The 3rd is 4.
 Input: n = 4, a = 2, b = 3, c = 4
 Output: 6
 Explanation: The ugly numbers are 2, 3, 4, 6, 8, 9, 10, 12... The 4th is 6.
-Nothing special. Still finding the Kth-Smallest. We need to design an enough function, given an input num, determine whether there are at least n ugly numbers less than or equal to num. Since a might be a multiple of b or c, or the other way round, we need the help of greatest common divisor to avoid counting duplicate numbers.
+```
 
+Nothing special. Still finding the Kth-Smallest. We need to design an `enough` function, given an input `num`,
+determine whether there are at least n ugly numbers less than or equal to `num`.
+Since a might be a multiple of b or c, or the other way round, we need the help of greatest common divisor to avoid counting duplicate numbers.
+
+```
 def nthUglyNumber(n: int, a: int, b: int, c: int) -> int:
     def enough(num) -> bool:
         total = mid//a + mid//b + mid//c - mid//ab - mid//ac - mid//bc + mid//abc
@@ -525,19 +556,28 @@ def nthUglyNumber(n: int, a: int, b: int, c: int) -> int:
         else:
             left = mid + 1
     return left
-1283. Find the Smallest Divisor Given a Threshold [Medium]
-Given an array of integers nums and an integer threshold, we will choose a positive integer divisor and divide all the array by it and sum the result of the division. Find the smallest divisor such that the result mentioned above is less than or equal to threshold.
+```
+
+#### [1283. Find the Smallest Divisor Given a Threshold [Medium]](https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/)
+
+Given an array of integers `nums` and an integer `threshold`, we will choose a positive integer divisor and divide all the array by it 
+and sum the result of the division. Find the **smallest** divisor such that the result mentioned above is less than or equal to `threshold`.
 
 Each result of division is rounded to the nearest integer greater than or equal to that element. (For example: 7/3 = 3 and 10/2 = 5). It is guaranteed that there will be an answer.
 
+```
 Example :
 
 Input: nums = [1,2,5,9], threshold = 6
 Output: 5
 Explanation: We can get a sum to 17 (1+2+5+9) if the divisor is 1. 
-If the divisor is 4 we can get a sum to 7 (1+1+2+3) and if the divisor is 5 the sum will be 5 (1+1+1+2). 
-After so many problems introduced above, this one should be a piece of cake. We don't even need to bother to design a condition function, because the problem has already told us explicitly what condition we need to satisfy.
+```
 
+If the divisor is 4 we can get a sum to 7 (1+1+2+3) and if the divisor is 5 the sum will be 5 (1+1+1+2). 
+After so many problems introduced above, this one should be a piece of cake. We don't even need to bother to design a `condition` function,
+because the problem has already told us explicitly what condition we need to satisfy.
+
+```
 def smallestDivisor(nums: List[int], threshold: int) -> int:
     def condition(divisor) -> bool:
         return sum((num - 1) // divisor + 1 for num in nums) <= threshold
@@ -550,12 +590,22 @@ def smallestDivisor(nums: List[int], threshold: int) -> int:
         else:
             left = mid + 1
     return left
-End
-Wow, thank you so much for making it to the end, really appreciate that. As you can see from the python codes above, they all look very similar to each other. That's because I copy-pasted my template all the time. No exception. This is the strong proof of my template's powerfulness. I believe everyone can acquire this binary search template to solve many problems. All we need is just more practice to build up our ability to discover the monotonicity of the problem and to design a beautiful condition function.
+```
+
+---
+
+#### End
+
+Wow, thank you so much for making it to the end, really appreciate that. As you can see from the python codes above, they all look very similar to each other.
+That's because I copy-pasted my template all the time. No exception. This is the strong proof of my template's powerfulness.
+I believe everyone can acquire this binary search template to solve many problems.
+All we need is just more practice to build up our ability to discover the monotonicity of the problem and to design a beautiful `condition` function.
 
 Hope this helps.
 
-Reference
+---
+
+#### Reference
 
 * [(C++ / Fast / Very clear explanation / Clean Code) Solution with Greedy Algorithm and Binary Search](https://leetcode.com/problems/split-array-largest-sum/discuss/89819/C%2B%2B-Fast-Very-clear-explanation-Clean-Code-Solution-with-Greedy-Algorithm-and-Binary-Search)
 * [Approach the problem using the "trial and error" algorithm](https://leetcode.com/problems/find-k-th-smallest-pair-distance/discuss/109082/Approach-the-problem-using-the-%22trial-and-error%22-algorithm)

@@ -5117,25 +5117,42 @@ Suppose we have very large sparse vectors (most of the elements in vector are ze
 
 Find a data structure to store them
 Compute the Dot Product.
+----------------------------------------------
 Follow-up:
+----------------------------------------------
 What if one of the vectors is very small?
 ```
 ##### Solution Explanation:
 ```
+If read/load array is costly, we can do this:
 
+* read the first array and keep a linked list (or hash map) for non-zero entries. Each linked list node stores the index of the element, the value of the element,
+  and a pointer to next node.
+* Then read the second array, now when we do not need to read those entries, whose index are not recorded in previous operation. Instead, we only read indexes 
+  that have appeared before. This can be achieved by calculating the offset of the entry in an array, because array should be stored in continuous addresses in the disk.
+  Therefore, we only care about the intersection of two arrays. For the intersecting entries, we do multiplication: node->val *= arr[node->index].
+  For those nodes with arr[node->index] == 0, we just delete the node in O(1) time.
+* By doing this for all arrays, the linked list nodes are intersection of all arrays, and the values are dot-product of all arrays.
+* Finally, we traverse the list again and sum the the values up.
+* The time complexity should be O(E + K*N), where E is the size of an array, K is the number of non-zero elements in an array, and N is the number of arrays.
 ```
 ##### Complexity Analysis:
 ```
-If read/load array is costly, we can do this:
+TC: O(E + K*N)
 
-read the first array and keep a linked list (or hash map) for non-zero entries. Each linked list node stores the index of the element, the value of the element, and a pointer to next node.
-Then read the second array, now when we do not need to read those entries, whose index are not recorded in previous operation. Instead, we only read indexes that have appeared before. This can be achieved by calculating the offset of the entry in an array, because array should be stored in continuous addresses in the disk. Therefore, we only care about the intersection of two arrays. For the intersecting entries, we do multiplication: node->val *= arr[node->index]. For those nodes with arr[node->index] == 0, we just delete the node in O(1) time.
-By doing this for all arrays, the linked list nodes are intersection of all arrays, and the values are dot-product of all arrays.
-Finally, we traverse the list again and sum the the values up.
-
-The time complexity should be O(E + K*N), where E is the size of an array, K is the number of non-zero elements in an array, and N is the number of arrays.
+where,
+E = the size of an array
+K = the number of non-zero elements in an array
+N = the number of arrays.
 ```
 ```python
+#TC: O(E + K*N)
+#
+#where,
+#E = the size of an array
+#K = the number of non-zero elements in an array
+#N = the number of arrays.
+#
 def sparseVDotProduct(a,b):
     listA=[]
     listB=[]
@@ -5176,21 +5193,101 @@ print(sparseVDotProduct(a, b))
 <br/>
 
 #### [LC-1570:Dot Product of Two Sparse Vectors](https://leetcode.com/problems/dot-product-of-two-sparse-vectors/)
+##### Problem Description:
+```
+Given two sparse vectors, compute their dot product.
+
+Implement class SparseVector:
+
+SparseVector(nums) Initializes the object with the vector nums
+dotProduct(vec) Compute the dot product between the instance of SparseVector and vec
+A sparse vector is a vector that has mostly zero values, you should store the sparse vector efficiently and compute the dot product between two SparseVector.
+
+Follow up: What if only one of the vectors is sparse?
+-----------------------------------
+
+-----------------------------------
+Example 1:
+-----------------------------------
+Input: nums1 = [1,0,0,2,3], nums2 = [0,3,0,4,0]
+Output: 8
+Explanation: v1 = SparseVector(nums1) , v2 = SparseVector(nums2)
+v1.dotProduct(v2) = 1*0 + 0*3 + 0*0 + 2*4 + 3*0 = 8
+-----------------------------------
+-----------------------------------
+Example 2:
+-----------------------------------
+Input: nums1 = [0,1,0,0,0], nums2 = [0,0,0,0,2]
+Output: 0
+Explanation: v1 = SparseVector(nums1) , v2 = SparseVector(nums2)
+v1.dotProduct(v2) = 0*0 + 1*0 + 0*0 + 0*0 + 0*2 = 0
+-----------------------------------
+-----------------------------------
+Example 3:
+-----------------------------------
+Input: nums1 = [0,1,0,0,2,0,0], nums2 = [1,0,0,0,3,0,4]
+Output: 6
+-----------------------------------
+
+-----------------------------------
+Constraints:
+-----------------------------------
+n == nums1.length == nums2.length
+1 <= n <= 10^5
+0 <= nums1[i], nums2[i] <= 100
+```
 ##### Solution Explanation:
 ```
+# --------------------------------------
+# Approach-1 : Hash Table
+# --------------------------------------
+
 Do element wise sum between vectors.
+
+Use Map to store each vector.
+- Each entry of map has index as key and value as the vector value at the particular index. Insert only the non zero values 
+-  Iterate on one map and for each entry check whether the particular key is present in the other map.If yes update the product else ignore the current key
+
+# --------------------------------------
+# Approach-2 : Two Pointers
+# --------------------------------------
+
 ```
 ##### Complexity Analysis:
 ```
-#Time complexity: O(N).
-#Space complexity: O(N).
+-  Time Complexity :  n -> vector size
+                    O(n) - for map construction 
+                    O(n) - for iteration 
+-  Space Complexity :  O(n) - for maps
+
+
+Time complexity: O(N).
+Space complexity: O(N).
 ```
 ```python
+# --------------------------------------
+# Approach-1 : Hash Table
+# --------------------------------------
+#Time complexity: O(N).
+#Space complexity: O(N).
 
 from typing import List
 
+class SparseVector:
+    def __init__(self, nums: List[int]):
+        self.num = {i:x for i,x in enumerate(nums) if x != 0}
+
+    # Return the dotProduct of two sparse vectors
+    def dotProduct(self, vec: 'SparseVector') -> int:
+        return sum([x*vec.num[i] if i in vec.num else 0 for i,x in self.num.items()])
+
+# --------------------------------------
+# Approach-1a : using built-in zip function
+# --------------------------------------
 #Time complexity: O(N).
 #Space complexity: O(N).
+
+from typing import List
 
 class SparseVector:
     def __init__(self, nums: List[int]):
@@ -5202,6 +5299,34 @@ class SparseVector:
         for n1, n2 in zip(self.nums, vec.nums):
             result += n1 * n2
         
+        return result
+
+# --------------------------------------
+# Approach-2 : Two Pointers
+# --------------------------------------
+#Time complexity: O(N).
+#Space complexity: O(N).
+
+from typing import List
+
+class SparseVector:
+    def __init__(self, nums: List[int]):
+        self.nums = nums
+
+    # Return the dotProduct of two sparse vectors
+    def dotProduct(self, vec: 'SparseVector') -> int:
+        i = 0
+        j = 0
+        result = 0
+        while i < len(a) and j < len(b):
+            if a[i][0] == b[j][0]:
+                result += a[i][1] * b[j][1]
+                i += 1
+                j += 1
+            elif a[i][0] < b[j][0]:
+                i += 1
+            else:
+                j += 1
         return result
 
 # Your SparseVector object will be instantiated and called as such:
@@ -5219,11 +5344,156 @@ class SparseVector:
 #### [LC-528:Random Pick with Weight](https://leetcode.com/problems/random-pick-with-weight/)
 ##### Solution Explanation:
 ```
+# --------------------------------------
+# Approach-1 : Alias Method
+# --------------------------------------
+```
+![lc-528-random-pick-with-weight-soution-explanation-1](./assets/lc-528-random-pick-with-weight-soution-explanation-1.PNG)
+![lc-528-random-pick-with-weight-soution-explanation-2](./assets/lc-528-random-pick-with-weight-soution-explanation-2.PNG)
+```
+# --------------------------------------
+# Approach-2 : CDF (Cumulative Density Function) of our input PDF (Probability Density Function)
+# --------------------------------------
+
+Maths background
+Our input is a Probability Density Function (PDF) where probability of choosing index i is wi and 0 otherwise i.e. we have a discrete probability distribution at hand.
+
+Selecting from a weighted discrete distribution is implemented in random.choices function by Python. We want to do similar thing. In order to do this, we first have to find a uniform distribution which will give us same weights as our discrete PDF.
+
+Consider the Cummulative Density Function of our discrete PDF. (I am adding 0 in the starting for the sake of completion, it means there is 0 chance of selecting index -1). So,
+CDF0 = 0 and CDFi = w0 + w1 .... + wi-1 for i = 1,2,..n.
+
+Let us look at the Uniform distribution U(0, CDFn) and let p be a number chosen from this distrinution.
+
+We can easily see that probability of p lying in range (a, b] is (b-a) / (CDFn - 0), where a >= 0 and b <= CDFn.
+
+So, if we choose a=CDFi-1 and b = CDFi, (where i=1,2...n) the probability becomes (CDFi - CDFi-1) / (CDFn) = wi-1 / CDFn. This our desired weight for choosing index i-1.
+
+Algorithm
+This means, we should
+
+select p from U(0, CDFn)
+find an index i in {1, 2, ...n} such that CDFi-1 < p <= CDFi, we will use binary search as CDF is always a non-decreasing function.
+return i-1
 ```
 ##### Complexity Analysis:
 ```
+Complexity. Time and space complexity of preprocessing is O(n), but we do it only once. Time and space for function pickIndex is just O(1): 
+all we need to do is generate uniformly distributed random variable twice!
+
+TC: O(1) [ w/ O(N) pre-processing ]
+SC: O(N)
 ```
 ```python
+# --------------------------------------
+# Approach-1 : Alias Method
+# --------------------------------------
+#
+#TC: O(1) [ w/ O(N) pre-processing ]
+#SC: O(N)
+
+# Using epsilon
+class Solution:
+    def __init__(self, w):
+        '''
+        Create n uniform boxes of size 1/n each
+        Fill them with (at most) 2 indices, and the weight associated with the first index
+        O(n) time & space
+        '''
+        self.n = len(w)
+        self.boxes = []
+        
+        ep = 10e-5
+        summ = sum(w)
+        weights = [elem / summ for elem in w]
+        size = 1 / self.n
+        big_weights = {i: x for i, x in enumerate(weights) if x >= size}
+        small_weights = {i: x for i, x in enumerate(weights) if x < size}
+        
+        while big_weights and small_weights:
+            # Pick a small and a big weight to make a full box
+            i = next(iter(big_weights))
+            j, w_j = small_weights.popitem()
+            self.boxes.append([j, i, w_j])
+
+            # The leftover from the big weight may now qualify as a small one
+            big_weights[i] -= (size - w_j)
+            if big_weights[i] < size - ep:  # I can't explain why it bugs if I remove that epsilon...
+                small_weights[i] = big_weights.pop(i)
+        
+        self.boxes.extend([key] for key in big_weights)
+        
+    def pickIndex(self):
+        '''
+        Pick a random box (it has either 1 or 2 indices)
+        If it has 2, randomly pick according to the relative weight between the two
+        O(1) time & space
+        '''
+        box_num = random.randint(0, self.n - 1)
+        
+        if len(self.boxes[box_num]) == 1:
+            return self.boxes[box_num][0]
+        
+        return self.boxes[box_num][random.uniform(0, 1 / self.n) >= self.boxes[box_num][2]]        
+
+# Without using epsilon
+import collections
+Box = collections.namedtuple('Box', ('small', 'big', 'div'))
+
+class Solution:
+    def __init__(self, w):
+        self.n, self.size = len(w), sum(w)
+        self.boxes = []
+        w = [elem * self.n for elem in w]
+        bigs = {i: x for i, x in enumerate(w) if x >= self.size}
+        smalls = {i: x for i, x in enumerate(w) if x < self.size}
+        while smalls:
+            big = next(iter(bigs))
+            small, div = smalls.popitem()
+            self.boxes.append(Box(small, big, div))
+            bigs[big] -= self.size - div
+            if bigs[big] < self.size:
+                smalls[big] = bigs.pop(big)
+        self.boxes += [Box(0, big, 0) for big in bigs]
+        
+    def pickIndex(self):
+        '''
+        Pick a random box (it has either 1 or 2 indices)
+        If it has 2, randomly pick according to the relative weight between the two
+        O(1) time & space
+        box = random.choice(self.boxes)
+        weight = random.randint(0, self.size)
+        return box.big if weight >= box.div else box.small        '''
+
+# --------------------------------------
+# Approach-2 : CDF (Cumulative Density Function) of our input PDF (Probability Density Function)
+# --------------------------------------
+class Solution:
+
+    def __init__(self, w):
+        self.cdf = [0] + w
+        for i in range(2, len(self.cdf)):
+            self.cdf[i] += self.cdf[i-1]
+            
+    def binarySearch(self, target):
+        low = 0
+        high = len(self.cdf)
+        while low <= high:
+            mid = (low + high) // 2
+            if self.cdf[mid-1] < target <= self.cdf[mid]:
+                return mid
+            elif self.cdf[mid] > target:
+                high = mid - 1
+            else:
+                low = mid + 1
+            
+    def pickIndex(self):
+        p = random.uniform(0, self.cdf[-1])
+        return self.binarySearch(p) - 1
+
+# Your Solution object will be instantiated and called as such:
+# obj = Solution(w)
+# param_1 = obj.pickIndex()
 ```
 
 <br/>
@@ -5235,11 +5505,95 @@ class SparseVector:
 #### [LC-438:Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/)
 ##### Solution Explanation:
 ```
+# --------------------------------------
+# Sliding Window
+# --------------------------------------
+
+Maintain a window of len(p) in s, and slide to right until finish. Time complexity is O(len(s)).
 ```
 ##### Complexity Analysis:
 ```
+TC: O(len(s)) ; where s is the input string
+SC: O(len(p)) ; window length, if we ignore the space used by the result array
 ```
 ```python
+# --------------------------------------
+# Sliding Window
+# --------------------------------------
+#
+#TC: O(len(s)) ; where s is the input string
+#SC: O(len(p)) ; window length, if we ignore the space used by the result array
+#
+from collections import Counter
+from typing import List
+
+class Solution:
+    def findAnagrams(self, s: str, p: str) -> List[int]:
+        """
+        :type s: str
+        :type p: str
+        :rtype: List[int]
+        """
+        res = []
+        pCounter = Counter(p)
+        sCounter = Counter(s[:len(p)-1])
+        for i in range(len(p)-1,len(s)):
+            sCounter[s[i]] += 1   # include a new char in the window
+            if sCounter == pCounter:    # This step is O(1), since there are at most 26 English letters 
+                res.append(i-len(p)+1)   # append the starting index
+            sCounter[s[i-len(p)+1]] -= 1   # decrease the count of oldest char in the window
+            if sCounter[s[i-len(p)+1]] == 0:
+                del sCounter[s[i-len(p)+1]]   # remove the count if it is 0
+        return res
+
+#
+# Same as above without using python's collections.Counter
+#
+from typing import List
+
+class Solution(object):
+    def findAnagrams(self, s: str, p: str) -> List[int]:
+        """
+        :type s: str
+        :type p: str
+        :rtype: List[int]
+        """
+        hash = {}   # hash stores the list of characters we need to cross-off. Initially has all of p in it
+        for c in p:
+            if c in hash:
+                hash[c] += 1
+            else:
+                hash[c] = 1
+        count = len(p)  # number of characters still to be crossed-off
+        
+        # initialize
+        result = []
+        left = 0    # the current candidate is s[left:right+1]
+        right = 0
+        while right < len(s):
+            # for every iteration, check if current character is a desired char. if so, cross it off. otherwise, move on to the next character
+            if s[right] in hash:
+                hash[s[right]] -= 1
+                if hash[s[right]] >= 0: # If we have a negative hash value(meaning more than enough of that particular character), it means we are not getting any closer to the solution, so, count should not change
+                    count -= 1
+            
+            
+            # print 'left=', left, 'right=', right, 'count=', count, 'hash=', hash, 'cur_window=', s[left:right+1] 
+            # if all items are crossed-off, add to result list
+            if count == 0:
+                result.append(left)
+            
+            
+            # Move window only if the minimum size is met. 
+            if right == left + len(p) - 1:   
+                if s[left] in hash:     # If the char we are getting rid of is already in the hash, increment the hash (add to the items that we need to cross-off)
+                    if hash[s[left]]>=0:    # If the hash (number of items we need to cross-off) is negative(i.e we have had double chars in out current window), do not increment the required count
+                        count += 1
+                    hash[s[left]] += 1
+                left += 1
+            right += 1
+            
+        return result
 ```
 
 <br/>
