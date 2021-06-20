@@ -112,22 +112,26 @@
 | 56  |          | [Facebook Phone Connected Components in Graph](#facebook-phone-connected-components-in-graph)             | https://leetcode.com/discuss/interview-question/982506/Facebook-or-Phone-or-Connected-Components-in-Graph/798145                                        |                       | Medium     |                | BFS                          |            |
 | 57  | 67       | [Add Binary](#lc-67add-binary)                                                                            | https://leetcode.com/problems/add-binary/                                                  | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
 | 58  | 125      | [Valid Palindrome](#lc-125valid-palindrome)                                                               | https://leetcode.com/problems/valid-palindrome/                                            | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
-| 59  | 415      | [Add Strings](#lc-415add-strings)                                                                         | https://leetcode.com/problems/add-strings/                                                 | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
-| 60  | 236      | [Lowest Common Ancestor of a Binary Tree](#lc-236lowest-common-ancestor-of-a-binary-tree)                 | https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/                     | _O(n)_                                                     | _O(h)_                | Medium     | EPI            |                              |            |
-| 61  | 866      | [Smallest Subtree with all the Deepest Nodes](#lc-866smallest-subtree-with-all-the-deepest-nodes)         | https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/                 | _O(n)_                                                     | _O(h)_                | Medium     |                | DFS                          |            |
-| 62  | 257      | [Binary Tree Paths](#lc-257binary-tree-paths)                                                             | https://leetcode.com/problems/binary-tree-paths/                                           | _O(n * h)_                                                 | _O(h)_                | Easy       |                |                              |            |
-| 63  | 76       | [Minimum Window Substring](#lc-76minimum-window-substring)                                                | https://leetcode.com/problems/minimum-window-substring/                                    | _O(n)_                                                     | _O(k)_                | Hard       |                |                              |            |
-| 64  |          | [Google Remove Duplicates from Unsorted Array](#google-remove-duplicates-from-unsorted-array)             | https://leetcode.com/discuss/interview-question/168757/Google%3A-Remove-Duplicates-from-Unsorted-Array |                                                |                       | Hard       |                |                              |            |
-| 65  | 83       | [Remove Duplicates from Sorted List](#lc-83remove-duplicates-from-sorted-list)                            | https://leetcode.com/problems/remove-duplicates-from-sorted-list/                          | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
-| 66  | 26       | [Remove Duplicates from Sorted Array](#lc-26remove-duplicates-from-sorted-array)                          | https://leetcode.com/problems/remove-duplicates-from-sorted-array/                         | _O(n)_                                                     | _O(1)_                | Easy       |                | Two Pointers                 |            |
-| 67  | 53       | [Maximum Subarray](#lc-53maximum-subarray)                                                                | https://leetcode.com/problems/maximum-subarray/                                            | _O(n)_                                                     | _O(1)_                | Medium     |                | `Kadane's Algorithm`         |            |
-| 68  | 20       | [Valid Parentheses](#lc-20valid-parenetheses)                                                             | https://leetcode.com/problems/valid-parentheses/                                           | _O(n)_                                                     | _O(n)_                | Easy       |                |                              |            |
-| 69  | 56       | [Merge Intervals](#lc-56merge-intervals)                                                                  | https://leetcode.com/problems/merge-intervals/                                             | _O(nlogn)_                                                 | _O(1)_                | Hard       |                |                              |            |
-| 70  | 133      | [Clone Graph](#lc-133clone-graph)                                                                         | https://leetcode.com/problems/clone-graph/                                                 | _O(n)_                                                     | _O(n)_                | Medium     |                |                              |            |
-| 71  |          | [Facebook Onsite Generate Random Max Index](#facebook-onsite-generate-random-max-index)                   | https://leetcode.com/discuss/interview-question/451431/facebook-onsite-generate-random-max-index |                                                      |                       | Medium     |                |                              |            |
-| 72  |          | [Facebook Interview Question Minimum number of people to spread a message](#facebook-interview-question-minimum-number-of-people-to-spread-a-message) | https://leetcode.com/discuss/interview-question/124827/Find-minimum-number-of-people-to-reach-to-spread-a-message-across-all-people-in-twitter/ |  |  | Medium     |                |                              |            |
-| 73  |          | [Facebook Phone Interview Question Given a directed graph remove return minimum of edges to keep all paths](#facebook-phone-interview-question-given-a-directed-graph-remove-return-minimum-of-edges-to-keep-all-paths) | https://leetcode.com/discuss/interview-question/630806/facebook-phone-transitive-reduction-factorial-trailing-zeroes |  |  | Medium     |                |                              |            |
-| 74  |          | [Facebook Phone screen Shortest Path with Obstacles](#facebook-phone-screen-shortest-path-with-obstacles) | https://leetcode.com/discuss/interview-question/301192/Facebook-phone-screen-Shortest-Path-with-Obstacles/283312 |  |  | Medium     |                |                              |            |
+| 59  | 371      | [Sum of Two Integer](#lc-371sum-of-two-integers)                                                          | https://leetcode.com/problems/sum-of-two-integers/                                         | _O(1)_                                                     | _O(1)_                | Medium     |                |                              |            |
+| 60  | 989      | [Add to Array-Form of Integer](#lc-989add-to-array-form-of-integer)                                       | https://leetcode.com/problems/add-to-array-form-of-integer/                                | _O(n + logk)_                                              | _O(1)_                | Easy       |                |                              |            |
+| 61  | 66       | [Plus One](#lc-66plus-one)                                                                                | https://leetcode.com/problems/plus-one/                                                    | _O(n)_                                                     | _O(1)_                | Easy       | Linked List    |                              |            |
+| 62  | 2        | [Add Two Numbers](#lc-2add-two-numbers)                                                                   | https://leetcode.com/problems/add-two-numbers/                                             | _O(n)_                                                     | _O(1)_                | Medium     | Linked List    |                              |            |
+| 63  | 445      | [Add Two Numbers II](#lc-445add-two-numbers-ii)                                                           | https://leetcode.com/problems/add-two-numbers-ii/                                          | _O(m + n)_                                                 | _O(m + n)_            | Medium     | Limked List    |                              |            |
+| 64  | 236      | [Lowest Common Ancestor of a Binary Tree](#lc-236lowest-common-ancestor-of-a-binary-tree)                 | https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/                     | _O(n)_                                                     | _O(h)_                | Medium     |                |                              |            |
+| 65  | 866      | [Smallest Subtree with all the Deepest Nodes](#lc-866smallest-subtree-with-all-the-deepest-nodes)         | https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/                 | _O(n)_                                                     | _O(h)_                | Medium     |                | DFS                          |            |
+| 66  | 257      | [Binary Tree Paths](#lc-257binary-tree-paths)                                                             | https://leetcode.com/problems/binary-tree-paths/                                           | _O(n * h)_                                                 | _O(h)_                | Easy       |                |                              |            |
+| 67  | 76       | [Minimum Window Substring](#lc-76minimum-window-substring)                                                | https://leetcode.com/problems/minimum-window-substring/                                    | _O(n)_                                                     | _O(k)_                | Hard       |                |                              |            |
+| 68  |          | [Google Remove Duplicates from Unsorted Array](#google-remove-duplicates-from-unsorted-array)             | https://leetcode.com/discuss/interview-question/168757/Google%3A-Remove-Duplicates-from-Unsorted-Array |                                                |                       | Hard       |                |                              |            |
+| 69  | 83       | [Remove Duplicates from Sorted List](#lc-83remove-duplicates-from-sorted-list)                            | https://leetcode.com/problems/remove-duplicates-from-sorted-list/                          | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
+| 70  | 26       | [Remove Duplicates from Sorted Array](#lc-26remove-duplicates-from-sorted-array)                          | https://leetcode.com/problems/remove-duplicates-from-sorted-array/                         | _O(n)_                                                     | _O(1)_                | Easy       |                | Two Pointers                 |            |
+| 71  | 53       | [Maximum Subarray](#lc-53maximum-subarray)                                                                | https://leetcode.com/problems/maximum-subarray/                                            | _O(n)_                                                     | _O(1)_                | Medium     |                | `Kadane's Algorithm`         |            |
+| 72  | 20       | [Valid Parentheses](#lc-20valid-parenetheses)                                                             | https://leetcode.com/problems/valid-parentheses/                                           | _O(n)_                                                     | _O(n)_                | Easy       |                |                              |            |
+| 73  | 56       | [Merge Intervals](#lc-56merge-intervals)                                                                  | https://leetcode.com/problems/merge-intervals/                                             | _O(nlogn)_                                                 | _O(1)_                | Hard       |                |                              |            |
+| 74  | 133      | [Clone Graph](#lc-133clone-graph)                                                                         | https://leetcode.com/problems/clone-graph/                                                 | _O(n)_                                                     | _O(n)_                | Medium     |                |                              |            |
+| 75  |          | [Facebook Onsite Generate Random Max Index](#facebook-onsite-generate-random-max-index)                   | https://leetcode.com/discuss/interview-question/451431/facebook-onsite-generate-random-max-index |                                                      |                       | Medium     |                |                              |            |
+| 76  |          | [Facebook Interview Question Minimum number of people to spread a message](#facebook-interview-question-minimum-number-of-people-to-spread-a-message) | https://leetcode.com/discuss/interview-question/124827/Find-minimum-number-of-people-to-reach-to-spread-a-message-across-all-people-in-twitter/ |  |  | Medium     |                |                              |            |
+| 77  |          | [Facebook Phone Interview Question Given a directed graph remove return minimum of edges to keep all paths](#facebook-phone-interview-question-given-a-directed-graph-remove-return-minimum-of-edges-to-keep-all-paths) | https://leetcode.com/discuss/interview-question/630806/facebook-phone-transitive-reduction-factorial-trailing-zeroes |  |  | Medium     |                |                              |            |
+| 78  |          | [Facebook Phone screen Shortest Path with Obstacles](#facebook-phone-screen-shortest-path-with-obstacles) | https://leetcode.com/discuss/interview-question/301192/Facebook-phone-screen-Shortest-Path-with-Obstacles/283312 |  |  | Medium     |                |                              |            |
 
 #### [LC-238:Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
 ##### Solution Explanation
@@ -4790,25 +4794,25 @@ class Solution:
 > 1. Strings (the current problem). Use schoolbook digit-by-digit addition. Note, that to fit into constant space is not possible 
 > for languages with immutable strings, for example, for Java and Python. Here are two examples:
 > 
->  * [Add Binary](https://leetcode.com/articles/add-binary/): sum two binary strings.
+>  * [Add Binary](https://leetcode.com/problems/add-binary/) [Refer to Solution](#lc-67add-binary): sum two binary strings.
 > 
 >  * [Add Strings](https://leetcode.com/problems/add-strings/): sum two non-negative numbers in a string representation without converting them to integers directly.
 >
 > 2. Integers. Usually, the interviewer would ask you to implement a sum without using + and - operators. Use bit manipulation approach. Here is an example:
 >
->  * [Sum of Two Integers](https://leetcode.com/articles/sum-of-two-integers/): Sum two integers without using + and - operators.
+>  * [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) [Refer to Solution](#lc-371sum-of-two-integers): Sum two integers without using + and - operators.
 >
 > 3. Arrays. The same textbook addition. Here is an example:
 >
->  * [Add to Array Form of Integer](https://leetcode.com/articles/add-to-array-form-of-integer/).
+>  * [Add to Array Form of Integer](https://leetcode.com/problems/add-to-array-form-of-integer/).
 >
 > 4. Linked Lists. Sentinel Head + Textbook Addition. Here are some examples:
 >
->  * [Plus One](https://leetcode.com/articles/plus-one/).
+>  * [Plus One](https://leetcode.com/problems/plus-one/) [Refer to Solution](#lc-989add-to-array-form-of-integer).
 >
->  * [Add Two Numbers](https://leetcode.com/articles/add-two-numbers/).
+>  * [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) [Refer to Solution](#lc-2add-two-numbers).
 >
->  * [Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii/).
+>  * [Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii/) [Refer to Solution](#lc-445add-two-numbers-ii).
 >
 > 
 ```
@@ -7240,11 +7244,115 @@ class Solution:
 #### [LC-67:Add Binary](https://leetcode.com/problems/add-binary/)
 ##### Solution Explanation:
 ```
+What we need to do in this problem is just add two numbers given in binary representation. How we can do it? Using usual schoolbook сolumnar addition of course! So, we need to start from the last column and add two digits and also not to forget about carry. We need to stop when we reached beginning of both numbers. d1 and d2 are current processed digits. We form summ string, adding element to the end and in the end we reverse it.
+
+Complexity: time complexity is O(n + m), where n and m are lengths of numbers, space complexity is O(max(m,n)), because result will have this length.
+
+NOTE: Though TC is O(n + m) it can be made faster by:
+
+* using a deque and avoiding that reverse operation in the end
+* avoiding // and % and using pure string checks
 ```
 ##### Complexity Analysis:
 ```
+TC: O(m+n)
+SC: O(max(m,n))
+
+where,
+m and n are lengths of numbers
 ```
 ```python
+#TC: O(m+n)
+#SC: O(max(m,n))
+
+#where,
+#m and n are lengths of numbers
+
+class Solution:
+    def addBinary(self, a: str, b: str) -> str:
+        i, j, summ, carry = len(a) - 1, len(b) - 1, "", 0
+        while i >= 0 or j >= 0 or carry:
+            d1 = int(a[i]) if i >= 0 else 0
+            d2 = int(b[j]) if j >= 0 else 0
+            summ += str((d1 + d2 + carry) % 2)
+            carry = (d1 + d2 + carry) // 2
+            i, j = i-1, j-1 
+        return summ[::-1]
+
+#Pure string solution in Python
+#TC: O(m+n)
+#SC: O(max(m,n))
+
+#where,
+#m and n are lengths of numbers
+
+class Solution:
+    def addBinary(self, a: str, b: str) -> str:
+        
+        # (sum, carry)    
+        addTwo = {"00": ("0", ""),
+                  "01": ("1", ""),
+                  "10": ("1", ""),
+                  "11": ("0", "1")}
+        res = ""
+        
+        i = len(a) - 1
+        j = len(b) - 1
+        carry = ''
+        
+        while i >= 0 or j >= 0 or carry:
+            valA = a[i] if i >= 0 else "0"
+            valB = b[j] if j >= 0 else "0"
+            if carry:
+                sumAB, newCarry = addTwo[valA + valB]
+                sumAB, _ = addTwo[sumAB + carry]
+                carry = newCarry
+                res += sumAB
+            else:
+                sumAB, carry = addTwo[valA + valB]
+                res += sumAB
+            i -= 1
+            j -= 1
+            
+        return res[::-1]
+
+#Pure string solution in Python using deque
+#TC: O(m+n)
+#SC: O(max(m,n))
+
+#where,
+#m and n are lengths of numbers
+from collections import deque
+
+class Solution:
+    def addBinary(self, a: str, b: str) -> str:
+        
+        # (sum, carry)    
+        addTwo = {"00": ("0", ""),
+                  "01": ("1", ""),
+                  "10": ("1", ""),
+                  "11": ("0", "1")}
+        res = deque()
+        
+        i = len(a) - 1
+        j = len(b) - 1
+        carry = ''
+        
+        while i >= 0 or j >= 0 or carry:
+            valA = a[i] if i >= 0 else "0"
+            valB = b[j] if j >= 0 else "0"
+            if carry:
+                sumAB, newCarry = addTwo[valA + valB]
+                sumAB, _ = addTwo[sumAB + carry]
+                carry = newCarry
+                res.appendleft(sumAB)
+            else:
+                sumAB, carry = addTwo[valA + valB]
+                res.appendleft(sumAB)
+            i -= 1
+            j -= 1
+            
+        return ''.join(res)
 ```
 
 <br/>
@@ -7339,14 +7447,516 @@ fun main(args: Array<String>) {
 </div>
 <br/>
 
-#### [LC-415:Add Strings](https://leetcode.com/problems/add-strings/)
+####  [LC-371:Sum of Two Integer](https://leetcode.com/problems/sum-of-two-integers/)
+##### Prerequisite Knowledge (Bit Operations)
+```
+First, this problem is not intended to be so difficult, but a weird feature of Python makes it unnecessarily troublesome. 
+I'll assume you have learned the basic ideas for adding integers using bit operations. Namely, take the 'uncarried' sum a^b and add to it the carry (a&b)<<1.
+If you have questions about this, I suggest this video https://www.youtube.com/watch?v=qq64FrA2UXQ&t=848s
+```
 ##### Solution Explanation:
 ```
+This post, however, will focus on why this simple idea cannot be implemented smoothly using Python.
+
+Let's see a java version of the solution:
+
+class Solution {
+    public int getSum(int a, int b) {
+        while (b != 0) {
+            int sum = a ^ b;
+            int carry = (a & b) << 1;
+            a = sum;
+            b = carry;
+        }
+        return a;
+    }
+}
+The correctness of this version relies on the fact that integers have fixed length (32 bits) in java. So carry (or b) will eventually be moved out of boundary and go to 0, and you can get out of the while loop. This is NOT the case for the Python! Python allows unlimited length of integers. If you try to mimic the code above, you will get to infinite loop!
+
+(It is not very important but there is still a maximum integer in Python, although you can leftshift a bit infinitely many times).
+
+So what do we do? The first step is to manually bound the length of sum and carry by setting up a mask 0xFFFFFFFF. & this mask with an (very long) integer will only keep the last 32 bits. Then, at each step of the loop, we & sum and carry with this mask, and eventually carry will be wiped out once it goes beyond 32 bits.
+
+The Python code so far is
+
+class Solution(object):
+    def getSum(self, a, b):
+        """
+        :type a: int
+        :type b: int
+        :rtype: int
+        """
+        mask = 0xffffffff
+        while b:
+		    sum = (a^b) & mask
+			carry = ((a&b)<<1) & mask
+            a = sum
+			b = carry
+        
+        # Warning: this return statement is not correct yet!!!
+	    return a
+BUT this is not the whole story. Although we successfully get out of the while loop, sadly a consequence is that the value of a also has only 32 bits. If it is a non-negative value then we are fine, but we will lose information if it is negative in the normal sense!
+
+For example, for the testcase a = -12, b=-8. We know the finally answer is -20, and the current code will produce 32 bits 0xFFFFFFEC which looks like -20 in our usual sense. Well, Python doesn't think so! Python believes this is a large positive integer 4294967276, because all the bits to the far left are 0.
+
+So what is the true representation of -20 is in Python? I don't know the exact answer but logically since integers have "infinite" length, it can be thought of as 0x...FFFFFFFFFFFFFFEC where there are infinitely many F.
+
+At this moment, what we want to do it to convert the 32 bits sense 0xFFFFFFEC to the infinite bits sense 0x...FFFFFFFFFFFFFFEC. We can achieve this by using two's complements. First, we take the two's complement of -20 in the 32 bits sense. This gives us a nice, positive 20 which is valid no matter how many bits we are using. Then, we take the two's complement of 20 is the infinite bits sense. This will produce a -20 that Python can interpret.
+
+Let's recall the rule for taking two's complements: Flip all the bits, then plus one.
+
+So, to take the two's complement of -20 in the 32 bits sense. We flip all the 32 bits of 0xFFFFFFEC and add 1 to it. Note that here we cannot use the bit operation ~ because it will flip infinite many bits, not only the last 32. Instead, we xor it with the mask 0xFFFFFFFF. Recall that xor with 1 has the same effect as flipping. This only flips the last 32 bits, all the 0's to the far left remains intact. Then we add 1 to it to finish the two's complement and produce a valid 20
+
+(0xFFFFFFEC^mask)+1 == 0x14 == 20
+Next, we take the two's complement of 20 in the Python fashion. Now we can direcly use the default bit operation
+
+~20+1 == -20
+Write these two steps in one line
+
+~((0xFFFFFFEC^mask)+1)+1 == -20 == 0x...FFFFFFFFFFFFFFEC
+Wait a minute, do you spot anything weird? We are not supposed to use + in the first place, right? Why are there two +1's? Does it mean this method won't work? Hold up and let me give the final magic of today:
+
+for any number x, we have
+
+~(x+1)+1 = ~x
+(Here the whole (0xFFFFFFEC^mask) is considered as x).
+
+In other words, the two +1's miracly cancel each other! so we can simly write
+
+~(0xFFFFFFEC^mask) == -20
+To sum up, since Python allows arbitary length for integers, we first use a mask 0xFFFFFFFF to restrict the lengths. But then we lose information for negative numbers, so we use the magical formula ~(a^mask) to convert the result to Python-interpretable form.
+
+Here is the complete code
+
+class Solution(object):
+    def getSum(self, a, b):
+        """
+        :type a: int
+        :type b: int
+        :rtype: int
+        """
+        mask = 0xffffffff
+        while b:
+		    sum = (a^b) & mask
+			carry = ((a&b)<<1) & mask
+            a = sum
+			b = carry
+
+		if (a>>31) & 1: # If a is negative in 32 bits sense
+			return ~(a^mask)
+		return a
 ```
 ##### Complexity Analysis:
 ```
+TC: O(1)
+SC: O(1)
 ```
 ```python
+class Solution:
+    def getSum(self, a: int, b: int) -> int:
+        """
+        :type a: int
+        :type b: int
+        :rtype: int
+        """
+        mask = 0xffffffff
+        while b:
+		    sum = (a^b) & mask
+			carry = ((a&b)<<1) & mask
+            a = sum
+			b = carry
+
+		if (a>>31) & 1: # If a is negative in 32 bits sense
+			return ~(a^mask)
+		return a
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-989:Add to Array Form of Integer](https://leetcode.com/problems/add-to-array-form-of-integer/)
+##### Solution Explanation:
+```
+#-----------------------------------
+# Approach 1: Schoolbook Addition
+#-----------------------------------
+
+Intuition
+-----------------------------------
+Let's add numbers in a schoolbook way, column by column. For example, to add 123 and 912, we add 3+2, then 2+1, then 1+9. Whenever our addition result is more than 10, we carry the 1 into the next column. The result is 1035.
+
+Algorithm
+
+We can do a variant of the above idea that is easier to implement - we put the entire addend in the first column from the right.
+
+Continuing the example of 123 + 912, we start with [1, 2, 3+912]. Then we perform the addition 3+912, leaving 915. The 5 stays as the digit, while we 'carry' 910 into the next column which becomes 91.
+
+We repeat this process with [1, 2+91, 5]. We have 93, where 3 stays and 90 is carried over as 9. Again, we have [1+9, 3, 5] which transforms into [1, 0, 3, 5].
+
+Notes:
+-----------------------------------
+ - Leetcode provided a simple solution ( the above solution ), but it is not efficient. K has 5 digits at most, but A can have 10000 elements.
+   This means that the summation might finish after 5 iterations, but the loop will continue for 10000 times! I added a condition to avoid this.
+ - I think the purpose of this question is to provide a summation based on elementary school math, and avoid other functions such as 'str', 'int' and 'map'.
+ - The Leetcode solution does not work for Python3, but slight changes would make it compatible for both Python/ Python3.
+ 
+#-----------------------------------
+# Approach 2: Convert to string
+#-----------------------------------
+```
+##### Complexity Analysis:
+```
+For both solutions:
+
+TC: O(max(N, logK))
+SC: O(max(N, logK))
+
+where,
+N = length of A
+```
+```python
+#-----------------------------------
+# Approach 1: Schoolbook Addition
+#-----------------------------------
+
+from typing import List
+
+class Solution:
+    def addToArrayForm(self, num: List[int], k: int) -> List[int]:
+        for i in range(len(A) - 1, -1, -1):
+            if not K: break
+            # Option 1: vanilla way to deal with remainder and quotient
+            # K, A[i] = (A[i] + K) // 10, (A[i] + K) % 10
+            # Option 2: use divmod()			
+            K, A[i] = divmod(A[i] + K, 10)
+        while K:
+            # Option 1: vanilla way to deal with remainder and quotient
+            # K, a = K // 10, K % 10
+            # Option 2: use divmod()			
+            K, a = divmod(K, 10)
+            A = [a] + A
+        return A
+
+#-----------------------------------
+# Approach 2: Convert to string
+#-----------------------------------
+
+from typing import List
+
+class Solution:
+    def addToArrayForm(self, num: List[int], k: int) -> List[int]:
+        # prepare original number
+        str_numbers_list = [str(number) for number in A]
+        number = int("".join(str_numbers_list))
+
+        # prepare and return the answer
+        number += K
+        res = [int(x) for x in str(number)] 
+        return res
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-66:Plus One](https://leetcode.com/problems/plus-one/)
+##### Solution Explanation:
+```
+#---------------------------
+#Approach 1: Convert 9s to 0s
+#---------------------------
+Algorithm
+----------------------------
+How we can add 1 to given number? We need to find the biggest number of 9 in the end of our number, for example for number 5123521999235123999, there will be three 9 in the end. 5123521999235123999+ 1 = 5123521999235124000: so we need to increase previous symbol by one and change all 9 after to 0. Now, the steps of algorithm are to following:
+
+ 1. Let us add one 0 before our data to handle cases like 9, 99, 999, ...
+ 2. Find maximum number of 9, starting from the end and moving to the left.
+ 3. Change all found 9 in the end to 0 and previous digit increasy by 1.
+ 4. Handle border cases: if we have leading zero, remove it.
+ 
+#--------------------------
+#Approach 2: Start from end of input and maintain new carry
+#--------------------------
+Algorithm
+---------------------------
+ Use a deque to store the result. Start from the end of the input and maintain the value of the new carry
+ 
+```
+##### Complexity Analysis:
+```
+For both solutions:
+time complexity is O(n), where n is length of list. Additional space complexity is O(1), because we edit input data directly.
+
+TC: O(N)
+SC: O(1)
+
+where, N = length of list
+```
+```python
+#---------------------------
+#Approach 1: Convert 9s to 0s
+#---------------------------
+#
+#TC: O(N)
+#SC: O(1)
+#
+#where, N = length of list
+#
+
+from typing import List
+
+class Solution:
+    def plusOne(self, digits: List[int]) -> List[int]:
+        digits = [0] + digits
+        
+        end = len(digits) - 1
+        while digits[end] == 9:
+            end -= 1
+    
+        digits[end] += 1
+        digits[end+1:] = [0] * (len(digits)-1-end)
+                   
+        return digits if digits[0] != 0 else digits[1:]
+		
+#--------------------------
+#Approach 2: Start from end of input and maintain new carry
+#--------------------------
+#
+#TC: O(N)
+#SC: O(1)
+#
+#where, N = length of list
+#
+from collections import deque
+
+from typing import List
+
+class Solution:
+    def plusOne(self, digits: List[int]) -> List[int]:
+        """
+        :type digits: List[int]
+        :rtype: List[int]
+        """
+        result, carry = deque(), 1
+        for i in range(len(digits)-1,-1,-1):
+            r, carry = (digits[i]+carry)%10, (digits[i]+carry)//10
+            # using divmod()			
+            #r, carry = divmod(digits[i]+carry, 10)
+
+            result.appendleft(r)
+        if carry == 1:
+            result.appendleft(1)
+        return [x for x in result]
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-62:Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)
+##### Solution Explanation:
+```
+we need to deal with one situation here:
+l1     1     3                              1     
++      +     +                              +
+l2     1     9                              1 
+-----------------------------------------------------------------------------------
+cur    2    12(we need to put 2 here)        2+carry(carry from the previous 12)
+            12 %10 = 2
+		    carry = 12//10 =1
+
+By adding a variable called carry can deal with this situation: align the addends vertically and add the columns, starting from the left-most column.
+If a column's sum exceeds nine, the extra digit "carried" add into the next column.
+
+l1          1                  3                       1     
++           +                  +                       +
+l2          1                  9                       1 
+-----------------------------------------------------------------------------------
+carry  0+1+1=2             0+3+9=12              1+1+1 = 3  
+cur     2%10=2             12%10=2               3%10 = 3
+carry  2//10 =0             12//10=1             3//10 = 0 
+```
+![lc-2-add-two-numbers-algo-visualization](./assets/lc-2-add-two-numbers-algo-visualization.PNG)
+![lc-2-add-two-numbers-algorithm](./assets/lc-2-add-two-numbers-algorithm.PNG)
+![lc-2-add-two-numbers-test-cases](./assets/lc-2-add-two-numbers-test-cases.PNG)
+##### Complexity Analysis:
+```
+Time Complexity: O(max(m,n)+1)
+-------------------------------
+where m is the length of linked list l1, n is the length of linked list l2.
+The algorithm needs to iterate at most O(max(m,n)+1) times. "+1" comes from the carry.
+
+Space Complexity:O(max(m,n) + 1)
+-------------------------------
+where m is the length of linked list l1, n is the length of linked list l2.
+The algorithm needs to create a new list, and the length will be at most max(m,n)+1
+```
+```python
+# Answer to Question
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
+        carry = 0
+        res = ListNode()
+        current = res
+        while l1 or l2 or carry:
+            val1 = l1.val if l1 else 0
+            val2 = l2.val if l2 else 0
+            int_res = val1 + val2 + carry
+            if int_res > 9:
+                carry = int_res // 10
+                int_res = int_res % 10
+				#or, divmod()
+				#carry, int_res = divmod(int_res, 10)
+            else:
+                carry = 0
+            new_node = ListNode(int_res)
+            current.next = new_node
+            current = new_node
+            if l1: l1 = l1.next
+            if l2: l2 = l2.next
+        return res.next
+
+# Answer to Follow-Up Question ( General Solition for Adding n numbers )
+		
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
+        carry = 0
+        res = ListNode()
+        current = res
+        while any(ls) or carry:
+            int_res = sum([l.val if l else 0 for l in ls]) + carry
+            if int_res > 9:
+                carry = int_res // 10
+                int_res = int_res % 10
+				#or, divmod()
+				#carry, int_res = divmod(int_res, 10)
+            else:
+                carry = 0
+            new_node = ListNode(int_res)
+            current.next = new_node
+            current = new_node
+            ls = [l.next if l else None for l in ls]
+        return res.next
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-445:Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii/)
+##### Solution Explanation:
+```
+#--------------------------
+#Approach 1: Two Stacks Solution
+#--------------------------
+
+If we can not reverse our original lists, why not to put them into stack? So, what we do is the following:
+
+  1. Iterate over the first and the second lists and create two stacks: st1 and st2.
+  2. Iterate over stacks, pop last elements from stack if possible, if not, use 0 for empty stack. Add these two numbers and evaluate next digit and carry. Create new node with digit and attach it before current head, update head.
+  3. Just return head in the end.
+
+Complexity: time and space complexity is O(m+n), where m and n lengths of our lists.
+```
+##### Complexity Analysis:
+```
+TC: O(m+n)
+SC: O(m+n)
+
+where,
+m and n are the lengths of our lists
+```
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
+        st1, st2 = [], []
+        while l1:
+            st1.append(l1.val)
+            l1 = l1.next
+            
+        while l2:
+            st2.append(l2.val)
+            l2 = l2.next
+        
+        carry, head = 0, None
+
+        while st1 or st2 or carry:
+            d1, d2 = 0, 0
+            d1 = st1.pop() if st1 else 0
+            d2 = st2.pop() if st2 else 0
+            carry, digit = divmod(d1 + d2 + carry, 10)
+            head_new = ListNode(digit)
+            head_new.next = head
+            head = head_new
+              
+        return head
+		
+# Another Solution ( Collect Numbers )		
+class Solution:
+    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
+
+        def fn(node): 
+            """Return number represented by linked list."""
+            ans = 0
+            while node:
+                ans = 10*ans + node.val
+                node = node.next
+            return ans 
+        
+        dummy = node = ListNode()
+        for x in str(fn(l1) + fn(l2)): 
+            node.next = ListNode(int(x))
+            node = node.next
+        return dummy.next 		
+
+# Yet Another Solution ( eversed linked-lists based on {2. Add Two Numbers: https://leetcode.com/problems/add-two-numbers/discuss/456844/Python3-Compact-implementation-(96.75)}. )
+class Solution:
+    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
+        
+        def fn(node): 
+            """Reverse a linked list."""
+            prev = None
+            while node: prev, node.next, node = node, prev, node.next
+            return prev 
+        
+        l1, l2 = fn(l1), fn(l2) # reverse l1 & l2
+        carry = 0
+        dummy = node = ListNode()
+        while carry or l1 or l2:
+            if l1: 
+                carry += l1.val
+                l1 = l1.next
+            if l2: 
+                carry += l2.val
+                l2 = l2.next
+            carry, x = divmod(carry, 10)
+            node.next = node = ListNode(x)
+        return fn(dummy.next)
 ```
 
 <br/>
