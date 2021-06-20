@@ -2505,7 +2505,7 @@ class Solution:
 ##### Learning Points
 > The in degree and out degree is defined for a Directed graph.
 >
-> ![Indegree-and-Outdegree-Directed-Graph](indegree-and-outdegree-for-a-directed-graph.gif)
+> ![Indegree-and-Outdegree-Directed-Graph](./assets/indegree-and-outdegree-for-a-directed-graph.gif)
 > For a directed graph ![equation](https://latex.codecogs.com/png.image?\dpi{150}%20G=(V(G),E(G)))
 > and a vertex ![equation](https://latex.codecogs.com/png.image?\dpi{150}%20x1%20\in%20V(G)),
 > the **Out-Degree** of x1 refers to the number of arcs incident from x1.
