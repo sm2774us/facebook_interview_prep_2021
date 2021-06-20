@@ -95,7 +95,7 @@
 | 39  | 528      | [Random Pick with Weight](#lc-528random-pick-with-weight)                                                 | https://leetcode.com/problems/random-pick-with-weight/                                     | ctor: _O(n)_ <br> pick: _O(logn)_                          | _O(n)_                | Medium     |                |                              |            |
 | 40  | 438      | [Find All Anagrams in a String](#lc-438find-all-anagrams-in-a-string)                                     | https://leetcode.com/problems/find-all-anagrams-in-a-string/                               | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
 | 41  | 934      | [Shortest Bridge](#lc-934shortest-bridge)                                                                 | https://leetcode.com/problems/shortest-bridge/                                             | _O(n^2)_                                                   | _O(n^2)_              | Medium     |                | BFS, DFS                     |            |
-| 42  | 403      | [Frog Jump](#lc-903frog-jump)                                                                             | https://leetcode.com/problems/frog-jump/                                                   | _O(n^2)_                                                   | _O(n^2)_              | Hard       |                |                              |            |
+| 42  | 403      | [Frog Jump](#lc-403frog-jump)                                                                             | https://leetcode.com/problems/frog-jump/                                                   | _O(n^2)_                                                   | _O(n^2)_              | Hard       |                |                              |            |
 | 43  | 680      | [Valid Palindrome II](#lc-680valid-palindrome-II)                                                         | https://leetcode.com/problems/valid-palindrome-ii/                                         | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
 | 44  | 230      | [Kth Smallest Element in a BST](#lc-230kth-smallest-element-in-a-bst)                                     | https://leetcode.com/problems/kth-smallest-element-in-a-bst/                               | _O(max(h, k))_                                             | _O(min(h, k))_        | Medium     |                |                              |            | 
 | 45  | 523      | [Continuous Subarray Sum](#lc-523continuous-subarray-sum)                                                 | https://leetcode.com/problems/continuous-subarray-sum/                                    | _O(n)_                                                     | _O(k)_                | Medium     |                |                              |            |
@@ -5603,13 +5603,85 @@ class Solution(object):
 <br/>
 
 #### [LC-934:Shortest Bridge](https://leetcode.com/problems/shortest-bridge/)
+##### Problem Description:
+```
+In a given 2D binary array grid, there are two islands.  (An island is a 4-directionally connected group of 1s not connected to any other 1s.)
+
+Now, we may change 0s to 1s so as to connect the two islands together to form 1 island.
+
+Return the smallest number of 0s that must be flipped.  (It is guaranteed that the answer is at least 1.)
+
+ 
+
+Example 1:
+
+Input: grid = [[0,1],[1,0]]
+Output: 1
+Example 2:
+
+Input: grid = [[0,1,0],[0,0,0],[0,0,1]]
+Output: 2
+Example 3:
+
+Input: grid = [[1,1,1,1,1],[1,0,0,0,1],[1,0,1,0,1],[1,0,0,0,1],[1,1,1,1,1]]
+Output: 1
+ 
+
+Constraints:
+
+* 2 <= grid.length == grid[0].length <= 100
+* grid[i][j] == 0 or grid[i][j] == 1
+```
 ##### Solution Explanation:
 ```
+Key idea:
+
+BFS
+c - the number of flips to get here.
+use c as the weight of the min priority queue.
+Start from an arbitrary 1, c is always 0 within the same island and all those belong to the same island are handled first. Meeting 0 when walking A means we get out of an island and then c becomes greater than 0. When we meet another island(1), we're done.
+
+Basically there are three phases in this BFS:
+
+ 1. walk one island
+ 2. walk the water(flip/build the bridge)
+ 3. meet an island again(must be another bridge)
 ```
 ##### Complexity Analysis:
 ```
 ```
 ```python
+import heapq
+from typing import List, Tuple
+
+def find_first1(A: List[List[int]]) -> Tuple[int, int]:
+    for i, row in enumerate(A):
+        for j, n in enumerate(row):
+            if n == 1:
+                return (i, j)
+
+
+class Solution:
+    def shortestBridge(self, A: List[List[int]]) -> int:
+        # STEP 1: find a 1
+        # STEP 2: use bfs with a priority queue
+        directions = [(0, 1), (0, -1), (1, 0), (-1, 0)]
+        H, W = len(A), len(A[0])
+        ans = 0
+        first = find_first1(A)
+        q = [(0, first), ]
+        A[first[0]][first[1]] = 2
+
+        while q:
+            c, pos = heapq.heappop(q)
+            i, j = pos
+            for di, dj in directions:
+                ni, nj = i+di, j+dj
+                if 0 <= ni < H and 0 <= nj < W and A[ni][nj] <= 1:
+                    if c > 0 and A[ni][nj] == 1:
+                        return c
+                    heapq.heappush(q, (0 if c == 0 and A[ni][nj] == 1 else (c+1), (ni, nj)))
+                    A[ni][nj] = 2
 ```
 
 <br/>
@@ -5621,11 +5693,89 @@ class Solution(object):
 #### [LC-403:Frog Jump](https://leetcode.com/problems/frog-jump/)
 ##### Solution Explanation:
 ```
+# --------------------------------------
+# Approach 1 - Memoization: Time: O(N^2) and Space: O(N^2 + N)
+# --------------------------------------
+
+- The problem can be formulated as: Given we are at postiion pos and the previous jump that got us here was k, can we reach the final destination?
+- The state of the problem can be described using the current position (pos) and the previous jump (k) which got us in the current position.
+- Given pos and k, the set of new jumps is (k-1,k,k+1) and the set of new positions is (pos+k-1,pos+k, pos+k+1). If the new jumps are positive and the new positions are valid positions in stone array, we can make potentially three recursive calls.
+- The initial condition is that at start position, the previous jump is 0. The terminating condition is pos == stones[-1].
+- To rapidly test if a new position is valid, we use extra memory and store the valid positions in a set. If we do not want to use additional memory, we can use a linear scan O(N^3) or we can use binary search O(N^2 lg(N)). Otherwise the complexity is ~O(3N^2) which is N^2.
+
+# --------------------------------------
+# Approach 2 - Dynamic Programming - Time and Space as: O(N^2) 
+# --------------------------------------
+- Imagine at position pos, we have the set of jumps that could have brought us to position pos. Then, each of these jumps, can feed three additional jumps and 3 new positions. If at the last stone, there is even a single possible jump that could have brought us there, we know there is a path to the last stone.
+- Say we iterate each of the stone positions in order (lowest to largest) and say we are at position pos. How can we know what jumps could have got us to pos?
+- Maintain a map(stone_map) with key as position and value as a set of possible jumps (pjumps) that could have helped us reach pos. For the first position, we have just 1 pjump as 0. Using a pjump, we can find the potential new jumps (njumps) and then derive the new positions implied by them. If those positions are valid, we can add njump to the set corresponding to their entry in the stone_map
+
 ```
 ##### Complexity Analysis:
 ```
+# --------------------------------------
+# Approach 1 - Memoization: Time: O(N^2) and Space: O(N^2 + N)
+# --------------------------------------
+
+# --------------------------------------
+# Approach 2 - Dynamic Programming - Time and Space as: O(N^2) 
+# --------------------------------------
 ```
 ```python
+# --------------------------------------
+# Approach 1 - Memoization
+# --------------------------------------
+#TC: O(N^2)
+#SC: O(N^2 + N)
+#
+from typing import List
+
+class Solution:
+    def helper(self, pos, k, stones, N, cache):
+        if pos > N:
+            return False
+        elif pos == N:
+            return True
+        elif pos in cache and k in cache[pos]:
+            return cache[pos][k]
+        else:
+            cache.setdefault(pos, {})[k] = False
+            for jump in (k-1, k, k+1):
+                if jump > 0 and (pos+jump) in stones:
+                    if self.helper(pos+jump, jump, stones, N, cache):
+                        cache[pos][k] = True
+                        return True
+            return False
+
+    def canCross(self, stones: List[int]) -> bool:
+        """
+        :type stones: List[int]
+        :rtype: bool
+        """
+        return self.helper(stones[0], 0, set(stones), stones[-1], {})
+
+# --------------------------------------
+# Approach 2 - Dynamic Programming 
+# --------------------------------------
+#TC: O(N^2)
+#SC: O(N^2)
+#
+from typing import List
+
+class Solution:
+    def canCross(self, stones: List[int]) -> bool:
+        """
+        :type stones: List[int]
+        :rtype: bool
+        """
+        stone_map = {pos:set([]) for pos in stones}
+        stone_map[stones[0]].add(0)
+        for pos in stones:
+            for pjump in stone_map[pos]:
+                for njump in (offset+pjump for offset in [-1,0,1] if offset+pjump > 0):
+                    if njump+pos in stone_map:
+                        stone_map[njump+pos].add(njump)
+        return len(stone_map[stones[-1]]) > 0
 ```
 
 <br/>
@@ -5637,11 +5787,45 @@ class Solution(object):
 #### [LC-680:Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/)
 ##### Solution Explanation:
 ```
+#
+# Two Pointers ( Thinking Process )
+#
+Assuming i = 0, j = s.length() - 1;, s is a valid palindrome (as defined in the problem) if
+
+ * there is only one pair of i, j such that s.charAt(i) != s.charAt(j)
+* after the different pair hit, we try removing i or j, the characters in middle should be a palindrome.
+* there is no pair of i, j such that s.charAt(i) != s.charAt(j)
 ```
 ##### Complexity Analysis:
 ```
+TC: O(N)
+SC: O(1)
 ```
 ```python
+#
+# Two Pointers
+#
+class Solution:
+    def validPalindromeUtil(self, s, i, j):
+        while i < j:
+            if s[i] == s[j]:
+                i += 1
+                j -= 1
+            else:
+                return False
+        
+        return True
+		
+    def validPalindrome(self, s: str) -> bool:
+        i, j = 0, len(s) - 1
+        
+        while i < j:
+            if s[i] == s[j]:
+                i += 1
+                j -= 1
+            else:
+                return self.validPalindromeUtil(s, i + 1, j) or self.validPalindromeUtil(s, i, j - 1)
+        return True		
 ```
 
 <br/>
