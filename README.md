@@ -8244,11 +8244,164 @@ class Solution:
 #### [LC-866:Smallest Subtree with all the Deepest Nodes](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/)
 ##### Solution Explanation:
 ```
+#-----------------------------------
+# Approach 1: Two Pass ( first pass: "Level Order Traversal via DFS" + second pass: "LCA" )
+#             aka Paint Deepest Nodes
+#-----------------------------------
+Intuition
+-----------------------------------
+1. Find two deepest tree nodes(p and q) with the greatest distance between them. (maybe only one deepest node, thus p == q).
+   This can be achieved by doing a Level Order Traversal of the Tree (using DFS).
+2. Find their lowest common ancestor which is the answer.
+
+More Elaborate Explanation:
+
+We try a straightforward approach that has two phases.
+
+The first phase is to identify the nodes of the tree that are deepest. To do this, we have to annotate the depth of each node. We can do this with a depth first search.
+
+Afterwards, we will use that annotation to help us find the answer:
+
+ * If the node in question has maximum depth, it is the answer.
+
+ * If both the left and right child of a node have a deepest descendant, then the answer is this parent node.
+
+ * Otherwise, if some child has a deepest descendant, then the answer is that child.
+
+ * Otherwise, the answer for this subtree doesn't exist.
+
+Algorithm
+-----------------------------------
+In the first phase, we use a depth first search dfs to annotate our nodes ( i.e., do a level order traversal of the tree ).
+
+In the second phase, we also use a depth first search answer(node), returning the answer for the subtree at that node, 
+and using the rules above to build our answer from the answers of the children of node ( i.e., find LCA ).
+
+Note that in this approach, the answer function returns answers that have the deepest nodes of the entire tree, 
+not just the subtree being considered.
+
+#-----------------------------------
+# Approach 2: Recursion
+#-----------------------------------
+Intuition
+-----------------------------------
+We can combine both depth first searches in Approach #1 into an approach that does both steps in one pass.
+We will have some function dfs(node) that returns both the answer for this subtree, 
+and the distance from node to the deepest nodes in this subtree.
+
+Algorithm
+-----------------------------------
+Let us use dfs(level, node) function, where:
+
+  1. level is distance between root of our tree and current node we are in.
+  2. result of this function is the distance between node and its farthest children: that is the largest numbers of steps we need to make to reach leaf.
+
+So, how exactly this function will work:
+
+  1. If not node, then we are in the leaf and result is 0.
+  2. in other case, we run recursively dfs for node.left and node.right.
+  3. What we keep in our cand: in first value sum of distances to root and to farthest leaf, second value is distance to root and final value is current node. Note, that cand[0] represent length of the longest path going from root to leaf, through our node.
+  4. if cand[0] > self.ans[0]: it means that we found node with longer path going from root to leaf, and it means that we need to update self.ans.
+  5. Also, if cand[0] = self.ans[0] and also lft = rgh, it means that we are now on the longest path from root to leaf and we have a fork: we can go either left or right and in both cases will have longest paths. Note, that we start from root of our tree, so it this way we will get fork which is the closest to our root, and this is exactly what we want in the end.
+  6. Finally, we return cand[0] - cand[1]: distance from node to farthest children.
 ```
 ##### Complexity Analysis:
 ```
+#-----------------------------------
+# Approach 1: Two Pass ( first pass: "Level Order Traversal via DFS" + second pass: "LCA" )
+#             aka Paint Deepest Nodes
+#-----------------------------------
+Time Complexity: O(N), where N is the number of nodes in the tree.
+
+Space Complexity: O(N)
+
+#-----------------------------------
+# Approach 2: Recursion
+#-----------------------------------
+Time Complexity: O(N), where N is the number of nodes in the tree.
+
+Space Complexity: O(N)
 ```
 ```python
+#-----------------------------------
+# Approach 1: Two Pass ( first pass: "Level Order Traversal via DFS" + second pass: "LCA" )
+#             aka Paint Deepest Nodes
+#-----------------------------------
+# TC: O(N)
+# SC: O(N)
+# where, N is the number of nodes in the tree.
+#
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+
+class Solution:
+    def subtreeWithAllDeepest(self, root: TreeNode) -> TreeNode:
+        if not root:
+            return root
+        
+        d = []
+        def levelTraversal(root, level):
+            if not root:
+                return
+            if len(d) == level:
+                d.append([root.val])
+            else:
+                d[level].append(root.val)
+            levelTraversal(root.left, level + 1)
+            levelTraversal(root.right, level + 1)
+        levelTraversal(root, 0)
+		
+        p = d[-1][0]
+        q = d[-1][-1]
+		
+        def LCA(root):
+            if not root:
+                return root
+            left = LCA(root.left)
+            right = LCA(root.right)
+            if root.val in (p, q):
+                return root
+            if left and right:
+                return root
+            return left or right
+        return LCA(root)
+
+#-----------------------------------
+# Approach 2: Recursion
+#-----------------------------------
+# TC: O(N)
+# SC: O(N)
+# where, N is the number of nodes in the tree.
+#
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+
+class Solution:
+    def subtreeWithAllDeepest(self, root: TreeNode) -> TreeNode:
+        self.ans = (0, 0, None)
+        def dfs(lvl, node):
+            if not node: return 0
+            lft = dfs(lvl + 1, node.left)
+            rgh = dfs(lvl + 1, node.right)
+            cand = (max(lft, rgh) + 1 + lvl, lvl, node)
+
+            if cand[0] > self.ans[0] or cand[0] == self.ans[0] and lft == rgh:
+                self.ans = cand
+          
+            return cand[0] - cand[1]
+        
+        dfs(0, root)
+        return self.ans[2]
 ```
 
 <br/>
@@ -8260,11 +8413,117 @@ class Solution:
 #### [LC-257:Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)
 ##### Solution Explanation:
 ```
+#-----------------------------------
+# Approach 1: Recursive Approach
+#-----------------------------------
+We traverse the tree with the help of a stack.
+
+In each iteration, we add the value to the stack and then we can face two cases:
+
+1. We are a processing a node that has no children (a leaf), so we stringify the path, add it to the output and pop a value.
+   NOTE: A leaf node is one which does not have children either left or right.
+   
+2. We are not a leaf, so we keep repeating Step-1 to each child (i.e., We begin a DFS recursion from the root node ).
+   When both children have been processed, we need to backtrack the current node before going back to the caller.
+ 
+Time complexity: O(N) since we visit every node of the tree once.
+Space complexity: O(N) since we are using the stack to fill the output and since we have the output as a list
+
+#-----------------------------------
+# Approach 2: Iterative Approach
+#-----------------------------------
+Same as Approach 1, but, without using Recursion.
 ```
 ##### Complexity Analysis:
 ```
+For both approaches:
+
+Time complexity: O(N) since we visit every node of the tree once.
+Space complexity: O(N) since we are using the stack to fill the output and since we have the output as a list
+
+TC: O(N)
+SC: O(N)
 ```
 ```python
+#-----------------------------------
+# Approach 1: Recursive Approach
+#-----------------------------------
+#
+# TC: O(N)
+# SC: O(N)
+#
+from typing import List
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def isLeafNode(self, node: TreeNode) -> bool:
+        return node.left is None and node.right is None
+
+    def binaryTreePaths(self, root: TreeNode) -> List[str]:
+        def rootToLeaf(node, cur_path, output):
+            cur_path.append(str(node.val))
+
+            # 1) A leaf node
+            #if not node.left and not node.right:
+			if isLeafNode(node):
+                output.append('->'.join(cur_path))
+                cur_path.pop()
+                return output
+            
+            # 2) Recurse to my children
+            if node.left:
+                rootToLeaf(node.left, cur_path, output)
+            if node.right:
+                rootToLeaf(node.right, cur_path, output)
+            
+            # Backtrack before exiting
+            cur_path.pop()
+            
+            return output
+        
+        if not root:
+            return []
+        
+        return rootToLeaf(root, [], [])	
+#-----------------------------------
+# Approach 2: Iterative Approach
+#-----------------------------------
+#
+# TC: O(N)
+# SC: O(N)
+#
+from typing import List
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def isLeafNode(self, node: TreeNode) -> bool:
+        return node.left is None and node.right is None
+
+    def binaryTreePaths(self, root: TreeNode) -> List[str]:
+        if not root:
+            return []
+        res = []
+        stack = [(root, "")]
+        while stack:
+            node, path = stack.pop()
+            if not node:
+                continue
+            #if not node.left and not node.right:
+			if isLeafNode(node):
+                res.append("{}{}".format(path,node.val))
+            stack.append((node.left, "{}{}->".format(path,node.val)))
+            stack.append((node.right, "{}{}->".format(path,node.val)))
+        return res
 ```
 
 <br/>
