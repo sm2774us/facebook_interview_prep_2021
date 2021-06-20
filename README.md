@@ -5978,13 +5978,65 @@ class Solution:
 <br/>
 
 #### [LC-523:Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/)
+##### Basic Math Prerequisite (Modular Arithmetic)
+![Mod_Arithmetic](./assets/Mod_Arithmetic.PNG)
+[What is Modular Arithmetic](https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/what-is-modular-arithmetic)
+##### Math Explanation:
+```
+Short version of an explanation: 
+-----------------------------------------
+Say the the difference is d between a and b, such as d = b - a(b is on the right of a).
+
+You want d is multiple of k, so you just need d % k = 0. Because d = b - a, so d % k = 0 = (b - a) %k.
+
+So (b-a)%k=0 equal b%k - a%k = 0, then b%k = a%k.
+
+Comparing to other hashtable based problem, you need check b-k whether in the hashtable. 
+
+In this problem , you always check b%k, and always pust a%k into hashtable. 
+
+When k = 0, you need do it as other similar problem.
+```
 ##### Solution Explanation:
 ```
+* cur 	: calculate the prefix sum remainder of input array A
+* seen  : will record the first occurrence of the remainder.
+* If we have seen the same remainder before,
+* it means the subarray sum if a multiple of k
 ```
 ##### Complexity Analysis:
 ```
+TC: O(N)
+SC: O(N)
 ```
 ```python
+from typing import List
+
+class Solution:
+    def checkSubarraySum(self, nums: List[int], k: int) -> bool:
+        seen, cur = {0: -1}, 0
+        for i, a in enumerate(A):
+            cur = (cur + a) % abs(k) if k else cur + a
+            if cur not in seen:
+                seen[cur] = i
+            elif i - seen[cur] > 1:
+                return True
+        return False
+
+# Using python builtin itertools.accumulate 
+import itertools
+from typing import List
+
+class Solution:
+    def checkSubarraySum(self, nums: List[int], k: int) -> bool:
+        mapping = {0: -1}
+        for i, prefix in enumerate(itertools.accumulate(nums)):
+            key = prefix % k if k else prefix
+            if key not in mapping:
+                mapping[key] = i
+            elif i - mapping[key] > 1:
+                return True
+        return False
 ```
 
 <br/>
@@ -5994,13 +6046,85 @@ class Solution:
 <br/>
 
 #### [Facebook OnSite Randomly generate mines on a grid](https://leetcode.com/discuss/interview-question/algorithms/124759)
+##### Problem Description:
+```
+You are given a m*n grid. You are asked to generate k mines on this grid randomly. Each cell should have equal probability of k / m*n of being chosen.
+```
+##### Reservoir Sampling Explained:
+![Reservoir-Sampling-Explanation : Part-1](./assets/Reservoir-Sampling-Explanation-part-1.PNG)
+![Reservoir-Sampling-Explanation : Part-2](./assets/Reservoir-Sampling-Explanation-part-2.PNG)
+[Reservoir Sampling](https://www.youtube.com/watch?v=A1iwzSew5QY)
 ##### Solution Explanation:
 ```
+Use reservoir sampling: k out of mn.
+To make it easier to understand, assign an element ID to each grid square 1..mn.
+To begin the algo, first k IDs are added to the reservoir of k elements.
+Subsequently, go through the rest of the elements (k+1 .. m*n) and generate a random number (r) between 1 and the element ID in the iteration.
+If the random number (r) is between 1 and k, replace the rth value in the reservoir with the new element ID.
+At the end, the reservoir list will have the element IDs of the grid which need to be mined. So convert these back to the grid indices.
+
+To see why the overall probability is exactly k/mn, check out this quora page:
+https://www.quora.com/What-is-an-intuitive-explanation-of-reservoir-sampling
+
+We can extend the 1-d reservoir sampling to 2-d. We know that using reservoir sampling, we can sample k elements from m element evenly each with a probability of k/m.
+
+Now, extending the above to 2D, we can traverse each row we can randomly select 1 element from the n elements in each row. Hence, (k/m) * (1/n) => k / m*n
+
+Time Complexity : O(m)
+Space Complexity : O(k)
 ```
 ##### Complexity Analysis:
 ```
+We can extend the 1-d reservoir sampling to 2-d. We know that using reservoir sampling, we can sample k elements from m element evenly each with a probability of k/m.
+
+Now, extending the above to 2D, we can traverse each row we can randomly select 1 element from the n elements in each row. Hence, (k/m) * (1/n) => k / m*n
+
+Time Complexity : O(m)
+Space Complexity : O(k)
 ```
 ```python
+#import random
+#from typing import List
+#
+# def reservoir_sampling(nums: int, k): #1~n pick k number equal probability
+#     ans = [nums[i] for i in range(k)]# select first k elements from nums
+#     for i in range(k+1,len(nums)):
+#         random_number = random.randint(0,i)
+#         if random_number<k:
+#             ans[random_number] = nums[i]
+#     return ans
+
+# print(reservoir_sampling([1,2,3,4,5,6,7,8,9],4))
+
+import random
+from typing import List
+
+def putMines(m: int, n: int, k: int) -> List[List[int]]:
+    grid = [[0]*n for _ in range(m)]
+    ids = [i for i in range(m*n)]
+    idx = [i for i in range(k)]
+    for i in range(k+1,m*n):
+        random_idx = random.randint(0,i)
+        if random_idx<k:
+            idx[random_idx] = ids[i]
+    #print(idx)
+    for id_ in idx:
+        grid[id_//m][id_%m]=1
+    #for line in grid:
+    #    print(line)
+    return grid
+    
+#print(putMines(5,5,5))
+
+# Proof it is uniform
+#from collections import Counter
+#
+#cnt = Counter()
+#for j in range(100000):
+#    L = sorted(putMines(2,2,2))
+#    cnt[str(L)] += 1
+#    
+#cnt
 ```
 
 <br/>
@@ -6012,11 +6136,74 @@ class Solution:
 #### [LC-953:Verifying an Alien Dictionary](https://leetcode.com/problems/verifying-an-alien-dictionary/)
 ##### Solution Explanation:
 ```
+-----------
+Thinking
+-----------
+* Hash indexes of each character for better runtime
+* Compare every adjacent word
+* If any letter of former word is in higher order, return False
+* If current letter of former word is in lower order, forget the rest of word
+* If lenght of former word is longer and latter word is substring of former, return False (apple & app etc.)
+* Return True
+
+----------
+Algorithm
+----------
+
+ * Initialize a hashmap/array to record the relations between each letter and its ranking in order.
+ * Iterate over words and compare each pair of adjacent words.
+   + Iterate over each letter to find the first different letter between words[i] and words[i + 1].
+   + If words[i + 1] ends before words[i] and no different letters are found, then we need to return false because words[i + 1] should come before words[i] (for example, apple and app).
+   + If we find the first different letter and the two words are in the correct order, then we can exit from the current iteration and proceed to the next pair of words.
+   + If we find the first different letter and the two words are in the wrong order, then we can safely return false.
+ * If we reach this point, it means that we have examined all pairs of adjacent words and that they are all sorted. Therefore we can return true.
 ```
 ##### Complexity Analysis:
 ```
+Let N be the length of order, and M be the total number of characters in words.
+
+Time complexity : O(M).
+
+Storing the letter-order relation of each letter takes O(N) time.
+For the nested for-loops, we examine each pair of words in the outer-loop and for the inner loop, 
+we check each letter in the current word. Therefore, we will iterate over all of letters in words.
+
+Taking both into consideration, the time complexity is O(M + N). However, we know that N is fixed as 26. Therefore, the time complexity is O(M).
+
+Space complexity : O(1). The only extra data structure we use is the hashmap/array that serves to store the letter-order relations for each word in order.
+Because the length of order is fixed as 26, this approach achieves constant space complexity.
+
+TC: O(M)
+SC: O(N)
+
+where,
+N = length of order
+M = the total number of characters in words
 ```
 ```python
+from typing import List
+
+# The all(...) checks if a list is sorted or not.	
+
+class Solution:
+    # Easier to read solution
+	
+	# 1. Make a mapping between letters, then,
+	# 2. make a lambda function that can translate words with that mapping, and, 
+	# 3. then translate all of the words and see if the words actually came in dictionary order.
+    def isAlienSorted(self, words: List[str], order: str) -> bool:
+        human_language_mapping = {}
+        for i, c in enumerate(order):
+            human_language_mapping[c] = chr(97+i)
+        translate = lambda word: ''.join(map(human_language_mapping.get, list(word)))
+        translated_words = list(map(translate, words))
+        return all(translated_words[i] <= translated_words[i + 1] for i in range(len(translated_words)-1))
+
+    # Concise
+    def isAlienSorted(self, words: List[str], order: str) -> bool:
+        dt = {v: i for i, v in enumerate(order)}
+        trans = lambda x: tuple(dt[i] for i in x)
+        return all(trans(words[i+1]) >= trans(words[i]) for i in range(len(words) - 1))	
 ```
 
 <br/>
