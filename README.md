@@ -6934,6 +6934,12 @@ class Solution:
         return res
 ```
 
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
 #### [LC-1249:Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
 ##### Solution Explanation:
 ```
@@ -8845,7 +8851,6 @@ if __name__ == '__main__':
 >
 > For example, given that the population of London is greater than the maximum number of hairs that can be present on a human's head,
 > then the pigeonhole principle requires that there must be at least two people in London who have the same number of hairs on their heads.
-````
 ##### Problem Constraints:
 ```
 1. You must not modify the array (assume the array is read only).
