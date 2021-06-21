@@ -144,6 +144,37 @@
 | 88  |          | [English Words to Integer](#english-words-to-integer)                                                     | https://leetcode.com/discuss/interview-question/633508/amazon-onsite-english-words-to-integer |                                                         |                       | Easy       |                |                              |            |
 | 89  | 12       | [Integer to Roman](#lc-12integer-to-roman)                                                                | https://leetcode.com/problems/integer-to-roman/                                            | _O(n)_                                                     | _O(1)_                | Medium     |                |                              |            |
 | 90  | 13       | [Roman to Integer](#lc-13roman-to-integer)                                                                | https://leetcode.com/problems/roman-to-integer/                                            | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
+| 91  | 426      | [Convert Binary Search Tree to Sorted Doubly Linked List](#lc-426convert-binary-search-tree-to-sorted-doubly-linked-list) | https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list | _O(1)_                                          | _O(1)_                |            |                |                              | 🔒          |
+| 92  | 173      | [Binary Search Tree Iterator](#lc-172binary-search-tree-iterator)                                         | https://leetcode.com/problems/binary-search-tree-iterator/                                 | _O(1)_, amortized                                          | _O(h)_                | Medium     |                | Design                       |            |
+| 93  | 208      | [Implement Trie (Prefix Tree)](#lc-208implement-trie-prefix-tree)                                         | https://leetcode.com/problems/implement-trie-prefix-tree/                                  | _O(n)_                                                     | _O(1)_                | Medium     |                | Design                       |            |
+| 94  | 347      | [Top K Frequent Elements](#lc-347top-k-frequent-elements)                                                 | https://leetcode.com/problems/top-k-frequent-elements/                                     | _O(n)_                                                     | _O(n)_                | Medium     |                | Heap, Bucket Sort            |            |
+| 95  | 839      | [Similar String Groups](#lc-839similar-string-groups)                                                     | https://leetcode.com/problems/similar-string-groups/                                       | _O(n^2 * l)_                                               | _O(n)_                | Hard       |                | Union Find                   |            |
+| 96  | 102      | [Binary Tree Level Order Traversal](#lc-102binary-tree-level-order-traversal)                             | https://leetcode.com/problems/binary-tree-level-order-traversal/                           | _O(n)_                                                     | _O(n)_                | Easy       |                | BFS ; DFS                    |            |
+| 97  | 708      | [Insert into a Sorted Circular Linked List](#lc-708insert-into-a-sorted-circular-linked-list)             | https://leetcode.com/problems/insert-into-a-sorted-circular-linked-list/                   | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
+| 98  | 691      | [Stickers to Spell Word](https://leetcode.com/problems/stickers-to-spell-word/) | [C++](./C++/stickers-to-spell-word.cpp) [Python](./Python/stickers-to-spell-word.py) | _O(T * S^T)_ | _O(T * S^T)_ | Hard || Backtracking, Memoization
+| 99  | 977      | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/) | [C++](./C++/squares-of-a-sorted-array.cpp) [Python](./Python/squares-of-a-sorted-array.py) | _O(n)_ | _O(1)_ | Easy ||
+| 100 | 232      | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/) | [C++](./C++/implement-queue-using-stacks.cpp) [Python](./Python/implement-queue-using-stacks.py) | _O(1), amortized_| _O(n)_| Easy | EPI, LintCode | 
+| 101 | 329      | [Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/) | [C++](./C++/longest-increasing-path-in-a-matrix.cpp)  [Python](./Python/longest-increasing-path-in-a-matrix.py)  | _O(m * n)_ | _O(m * n)_ | Hard         || DFS, Topological Sort |
+| 102 | 224      | [Basic Calculator](https://leetcode.com/problems/basic-calculator/) | [C++](./C++/basic-calculator.cpp) [Python](./Python/basic-calculator.py) | _O(n)_| _O(n)_| Hard || 
+| 103 | 227      | [Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/) | [C++](./C++/basic-calculator-ii.cpp) [Python](./Python/basic-calculator-ii.py) | _O(n)_| _O(n)_| Medium || 
+| 104 | 772      | [Basic Calculator III](https://leetcode.com/problems/basic-calculator-iii/) | [C++](./C++/basic-calculator-iii.cpp) [Python](./Python/basic-calculator-iii.py) | _O(n)_  | _O(n)_         | Hard           ||
+| 105 | 770      | [Basic Calculator IV](https://leetcode.com/problems/basic-calculator-iv/) | [C++](./C++/basic-calculator-iv.cpp) [Python](./Python/basic-calculator-iv.py) | add: _O(d * t)_<br> sub: _O(d * t)_<br> mul: _O(d * t^2)_<br> eval: _O(d * t)_ <br> to_list: _O(d * tlogt)_  | _O(e + d * t)_ | Hard           ||
+| 106 | 1597     | [Build Binary Expression Tree From Infix Expression](https://leetcode.com/problems/build-binary-expression-tree-from-infix-expression/) | [C++](./C++/build-binary-expression-tree-from-infix-expression.cpp) [Python](./Python/build-binary-expression-tree-from-infix-expression.py) | _O(n)_  | _O(n)_         | Medium           | 🔒, variant of [Basic Calculator III](https://leetcode.com/problems/basic-calculator-iii/) |
+| 107 | 106      | [Construct Binary Tree from Inorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/) | [C++](./C++/construct-binary-tree-from-inorder-and-postorder-traversal.cpp) [Python](./Python/construct-binary-tree-from-inorder-and-postorder-traversal.py) | _O(n)_        | _O(n)_          | Medium         ||
+| 108 | 108      | [Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) | [C++](./C++/convert-sorted-array-to-binary-search-tree.cpp) [Python](./Python/convert-sorted-array-to-binary-search-tree.py) | _O(n)_        | _O(logn)_          | Medium         ||
+| 109 | 109      | [Convert Sorted List to Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/) | [C++](./C++/convert-sorted-list-to-binary-search-tree.cpp) [Python](./Python/convert-sorted-list-to-binary-search-tree.py) | _O(n)_        | _O(logn)_          | Medium         ||
+| 110 | 203      | [Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/)| [C++](./C++/remove-linked-list-elements.cpp) [Python](./Python/remove-linked-list-elements.py) | _O(n)_       | _O(1)_         | Easy         || 
+| 111 | 210      | [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)| [C++](./C++/course-schedule-ii.cpp) [Python](./Python/course-schedule-ii.py)   | _O(\|V\| + \|E\|)_          | _O(\|E\|)_          | Medium         || Topological Sort |
+| 112 | 536      | [Construct Binary Tree from String](https://leetcode.com/problems/construct-binary-tree-from-string/) | [C++](./C++/construct-binary-tree-from-string.cpp) [Python](./Python/construct-binary-tree-from-string.py) | _O(n)_ | _O(h)_ | Medium    | 🔒 |
+| 113 | 606      | [Construct String from Binary Tree](https://leetcode.com/problems/construct-string-from-binary-tree/)| [C++](./C++/construct-string-from-binary-tree.cpp) [Python](./Python/construct-string-from-binary-tree.py)| _O(n)_ | _O(h)_ | Easy | | |
+| 114 | 617      | [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/)| [C++](./C++/merge-two-binary-trees.cpp) [Python](./Python/merge-two-binary-trees.py)| _O(n)_ | _O(h)_ | Easy | | |
+| 115 | 226      | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | [C++](./C++/invert-binary-tree.cpp) [Python](./Python/invert-binary-tree.py) | _O(n)_ | _O(h)_, _O(w)_ | Easy ||
+| 116 | 232      | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/) | [C++](./C++/implement-queue-using-stacks.cpp) [Python](./Python/implement-queue-using-stacks.py) | _O(1), amortized_| _O(n)_| Easy | EPI, LintCode | 
+| 117 | 490      | [The Maze](https://leetcode.com/problems/the-maze/)| [C++](./C++/the-maze.cpp) [Python](./Python/the-maze.py) | _O(max(r, c) * w)_ | _O(w)_ | Medium | | |
+| 118 | 505      | [The Maze II](https://leetcode.com/problems/the-maze-ii/)| [C++](./C++/the-maze-ii.cpp) [Python](./Python/the-maze-ii.py) | _O(max(r, c) * wlogw)_ | _O(w)_ | Medium | | |
+| 119 | 499      | [The Maze III](https://leetcode.com/problems/the-maze-iii/)| [C++](./C++/the-maze-iii.cpp) [Python](./Python/the-maze-iii.py) | _O(max(r, c) * wlogw)_ | _O(w^2)_ | Hard | | |
+| 120 | 1233     | [Remove Sub-Folders from Filesystem](https://leetcode.com/problems/remove-sub-folders-from-the-filesystem/submissions/)
+| 121 | 200      | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | [C++](./C++/number-of-islands.cpp) [Python](./Python/number-of-islands.py) | _O(m * n)_ | _O(m * n)_| Medium         || BFS, DFS, Union Find
 
 #### [LC-238:Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
 ##### Solution Explanation
@@ -11711,3 +11742,1269 @@ class Solution:
     <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
 </div>
 <br/>
+
+#### [LC-426:Convert Binary Search Tree to Sorted Doubly Linked List](https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list)
+##### Also asked at FB - Phone Screen
+[https://leetcode.com/discuss/interview-question/algorithms/125088/facebook-phone-screen-convert-a-bst-into-a-doubly-linked-list](https://leetcode.com/discuss/interview-question/algorithms/125088/facebook-phone-screen-convert-a-bst-into-a-doubly-linked-list)
+##### Visualization
+![lc-426-convert-binary-search-tree-to-sorted-doubly-linked-list-1](./assets/lc-426-convert-binary-search-tree-to-sorted-doubly-linked-list-1.PNG)
+![lc-426-convert-binary-search-tree-to-sorted-doubly-linked-list-2](./assets/lc-426-convert-binary-search-tree-to-sorted-doubly-linked-list-2.PNG)
+##### Solution Explanation
+```
+Hint
+---------
+inorder is a very natural way as in order will make the binary search tree sorted.
+```
+##### Complexity Analysis
+```
+TC: O(1)
+SC: O(1)
+```
+```python
+# ------------------
+# DFS + INORDER
+# ------------------
+class Node:
+    def __init__(self, val, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+class Solution:
+    """
+    @param root: root of a tree
+    @return: head node of a doubly linked list
+    """
+    ### build an iterator so that we can flattern the tree to get a increasing order
+    def inorder(self, node):
+        if not node: return
+        left = node.left
+        for n in self.inorder(left):
+            yield n
+        yield node
+        right = node.right
+        for n in self.inorder(right):
+            yield n
+    
+    def treeToDoublyList(self, root: 'Node') -> 'Node':
+        # Write your code here.
+        if not root: return root
+        first = None
+        last = None
+        prev = None
+        # iterate the tree like a list
+        for v in self.inorder(root):
+            if first is None: first = v
+            last = v
+            if prev is not None:
+                prev.right = v
+                v.left = prev
+            prev = v
+        first.left = last
+        last.right = first
+        return first
+		
+    def forward(self, head):
+        node = head
+        yield node.val
+        while node.right != head:
+            node = node.right
+            yield node.val
+
+    def backward(self, head):
+        node = head
+        yield node.val
+        while node.left != head:
+            node = node.left
+            yield node.val
+			
+
+if __name__ == "__main__":
+    sol = Solution()
+    # Example tree
+    tree =  Node(4, 
+                Node(2, 
+                    Node(1), Node(3)
+                ),
+                Node(5)
+            )
+    res = sol.treeToDoublyList(tree)
+    print(list(sol.forward(res)))  # [1, 2, 3, 4, 5]
+    print(list(sol.backward(res)))  # [1, 5, 4, 3, 2]
+
+# ------------------
+# BFS + INORDER
+# ------------------
+# V1
+# https://blog.csdn.net/zhangpeterx/article/details/89567460
+# IDEA : BFS + INORDER 
+class Node:
+    def __init__(self, val, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+class Solution:
+    def treeToDoublyList(self, root: 'Node') -> 'Node':
+        if not root: return
+        dummy = Node(0, None, None)
+        prev = dummy
+        stack, node = [], root
+        while stack or node:
+            while node:
+                stack.append(node)
+                node = node.left
+            node = stack.pop()
+            node.left, prev.right, prev = prev, node, node
+            node = node.right
+        dummy.right.left, prev.right = prev, dummy.right
+        return dummy.right
+
+    def forward(self, head):
+        node = head
+        yield node.val
+        while node.right != head:
+            node = node.right
+            yield node.val
+
+    def backward(self, head):
+        node = head
+        yield node.val
+        while node.left != head:
+            node = node.left
+            yield node.val
+			
+
+if __name__ == "__main__":
+    sol = Solution()
+    # Example tree
+    tree =  Node(4, 
+                Node(2, 
+                    Node(1), Node(3)
+                ),
+                Node(5)
+            )
+    res = sol.treeToDoublyList(tree)
+    print(list(sol.forward(res)))  # [1, 2, 3, 4, 5]
+    print(list(sol.backward(res)))  # [1, 5, 4, 3, 2]
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-173:Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)
+##### Solution Explanation
+```
+In this question we are asked to perform Iterator, using inorder traversal, so let us just use inorder traversal, using stack: we will keep two global variables:
+
+self.stack: our explicit stack, where we keep our visited nodes.
+self.curr: current node we want to return during our traversal.
+Next, what we do is perform usual iterative inorder traversal: we go als left as possible until we can and add nodes to stack. Then we remove node from stack and go to right children if it is possible. Also we save our out node, because we need to return it as output of next function. Finally, howe we can understand if we have next Node or not? If stack is not empty, we have it, also if current node is not None, we also have it, in other cases we are done.
+
+Complexity: amortized time complexity of next function is O(1): we spend O(n) time to visit all n nodes. Note, that amortized time means, that we spend O(1) in average, it is exactly what we need in follow-up. Also space complexity for this solution is O(h): our stack will never be longer than height of our tree.
+
+class BSTIterator:
+    def __init__(self, root):
+        self.stack = []
+        self.curr = root
+        
+    def next(self):
+        while self.curr:
+            self.stack.append(self.curr)
+            self.curr = self.curr.left
+        self.curr = self.stack.pop()
+        out = self.curr.val
+        self.curr = self.curr.right
+        return out
+
+    def hasNext(self):
+        return self.stack or self.curr
+
+NOTE: Don't let the while loop in the next() function confuse you.
+      This is in fact average O(1) time. 
+	  The while loop is misleading you to think it is not. 
+	  Think about the number of times a node has been visited after iterating the whole tree. 
+	  Each node has been visited twice. 
+	  In some cases the while loop doesn't execute, so that node at that call is only visited once. 
+	  Where does the other visit go? 
+	  It goes to the while loop when you visit another node. 
+	  
+	  That's why it's "average" O(1) time
+	  
+	  or, better put,
+	  
+	  Amortized time complexity of next function is O(1).
+```
+##### Complexity Analysis
+```
+next() and hasNext() to run in average O(1) time and use O(h) memory, where h is the height of the tree
+
+[ as per problem definition ]
+```
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class BSTIterator:
+
+    def __init__(self, root: TreeNode):
+        self.stack = []
+        self.curr = root        
+
+    def next(self) -> int:
+        while self.curr:
+            self.stack.append(self.curr)
+            self.curr = self.curr.left
+        self.curr = self.stack.pop()
+        out = self.curr.val
+        self.curr = self.curr.right
+        return out        
+
+    def hasNext(self) -> bool:
+        return self.stack or self.curr		
+
+# Your BSTIterator object will be instantiated and called as such:
+# obj = BSTIterator(root)
+# param_1 = obj.next()
+# param_2 = obj.hasNext()
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-208:Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
+##### Solution Explanation
+```
+If we look at the following trie example, we notice that "APPLE" and "APPLY" are inserted as word (they are prefixes as well). However, "APP" is not a word, it is only a prefix. What diffrentiates "word" and "prefix" is the "is_word" flag in TrieNode class. Therefore, we can implement both search and startsWith methods together using dfs (going deep down until word/prefix is found).
+
+A
+|
+P
+|
+P
+|
+L
+| \
+E  Y
+trie.insert("APPLE")
+trie.insert("APPLY")
+trie.search("APPLE") // returns true
+trie.search("APP") // returns false
+trie.startsWith("APP") // returns true
+```
+```python
+import collections
+
+class TrieNode(object):
+    def __init__(self):
+        self.children = collections.defaultdict(TrieNode)  # Defines an empty dictionary whose "type" of "values" is TrieNode.
+        self.is_word = False # determines if word is completed (end of word)
+
+class Trie(object):
+    def __init__(self):
+        """
+        Initialize your data structure here.
+        """
+        self.root = TrieNode()
+
+    def insert(self, word: str) -> None:
+        """
+        Inserts a word into the trie.
+        """
+        current = self.root
+        for letter in word:
+            current = current.children[letter]
+        current.is_word = True
+
+    def search(self, word: str) -> bool:
+        """
+        Returns if the word is in the trie.
+        """
+        node = self.root
+        return self.dfs(word, node)
+
+    def startsWith(self, prefix: str) -> bool:
+        """
+        Returns if there is any word in the trie that starts with the given prefix.
+        """
+        node = self.root
+        return self.dfs(prefix, node, False)
+    
+    def dfs(self, string, node, is_word_given=True):
+		# if is_word_given is True: we are looking for word
+		# if is_word_given is False: we are looking for prefix
+	
+		# the common part of search and startsWith
+        for i, c in enumerate(string):
+            if c not in node.children: return False
+            node = node.children[c]
+
+		# if we run "search", is_word determines the result
+		# if we run "startsWith", we return True as long as "if c not in node.children: return False" does not happen
+		 return node.is_word if is_word_given else True  
+
+if __name__ == "__main__":
+    trie = Trie()
+    trie.insert("APPLE")
+    trie.insert("APPLY")
+    trie.search("APPLE") # returns true
+    trie.search("APP") # returns false
+    trie.startsWith("APP") # returns true
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-347:Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
+##### Solution Explanation
+```
+# -----------------------------
+# Approach-1 : Without sort and without Heap
+# -----------------------------
+
+# -----------------------------
+# Approach-2 : Heap and Counter
+# -----------------------------
+In python heap is defined as a Min-Heap. 
+The method of finding Max-Heap, involves:
+ 1. set value to -value
+ 2. run heapify
+
+algorithm
+-------------------
+
+1. The first step is to build a hash map element -> its frequency. In Java, we use the data structure HashMap.
+   Python provides dictionary subclass Counter to initialize the hash map we need directly from the input array.
+   This step takes O(N) time where N is a number of elements in the list.
+
+2. The second step is to build a heap of size k using N elements. To add the first k elements takes a linear time O(k) in the average case, and 
+   O(log 1 + log 2 + ... + log k) = O(log k!) = O(k log k) in the worst case. 
+   It's equivalent to heapify implementation in Python. 
+   After the first k elements we start to push and pop at each step, N - k steps in total.
+   The time complexity of heap push/pop is O(log k) and we do it N - k times that means O((N−k) log k) time complexity.
+   Adding both parts up, we get O(N logk) time complexity for the second step.
+
+3. The third and the last step is to convert the heap into an output array. That could be done in O}(k log k) time.
+
+In Python, library heapq provides a method nlargest, which combines the last two steps under the hood and has the same O(N log k) time complexity.
+
+TC: O(nlogk)
+SC: O(n + k)
+
+# -----------------------------
+# Approach-3 : Bucket Sort
+# -----------------------------
+There are solution, using quickselect with O(n) complexity in average, but I think they are overcomplicated: actually, there is O(n) solution, using bucket sort. The idea, is that frequency of any element can not be more than n. So, the plan is the following:
+
+Create list of empty lists for bucktes: for frequencies 1, 2, ..., n.
+Use Counter to count frequencies of elements in nums
+Iterate over our Counter and add elements to corresponding buckets.
+buckets is list of lists now, create one big list out of it.
+Finally, take the k last elements from this list, these elements will be top K frequent elements.
+
+Complexity: time complexity is O(n), because we first iterate over nums once and create buckets, then we flatten list of lists with total number of elements O(n) and finally we return last k elements. Space complexity is also O(n).
+```
+##### Complexity Analysis
+```
+# -----------------------------
+# Approach-1 : Without sort and without Heap
+# -----------------------------
+TC: ?
+SC: ?
+
+# -----------------------------
+# Approach-2 : Heap and Counter
+# -----------------------------
+Complexity Analysis
+
+Time complexity : O(N log k) if k < N and O(N) in the particular case of N = k. 
+                  That ensures time complexity to be better than O(N log N).
+
+Space complexity : O(N + k) to store the hash map with not more N elements and a heap with k elements.
+
+TC: O(nlogk)
+SC: O(n + k)
+
+
+# -----------------------------
+# Approach-3 : Bucket Sort
+# -----------------------------
+Complexity: time complexity is O(n), because we first iterate over nums once and create buckets, then we flatten list of lists with total number of elements O(n) and finally we return last k elements. Space complexity is also O(n).
+
+TC: O(N)
+SC: O(N)
+```
+```python
+# -----------------------------
+# Approach-1 : Without sort and without Heap
+# -----------------------------
+#TC: ?
+#SC: ?
+
+from typing import List
+
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        frq = defaultdict(list)
+        for key, cnt in Counter(nums).items():
+            frq[cnt].append(key)
+
+        res = []
+        for times in reversed(range(len(nums) + 1)):
+            res.extend(frq[times])
+            if len(res) >= k: return res[:k]
+
+        return res[:k]
+		
+# -----------------------------
+# Approach-2 : Heap and Counter
+# -----------------------------
+#TC: O(nlogk)
+#SC: O(n + k)
+
+from typing import List
+
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        res = []
+        # 1. build hash map : character and how often it appears
+        # O(N) time		
+        dic = Counter(nums)
+        # 2-3. build heap of top k frequent elements and
+        # convert it into an output array
+        # O(N log k) time
+        max_heap = [(-val, key) for key, val in dic.items()]
+        heapq.heapify(max_heap)
+        for i in range(k):
+            res.append(heapq.heappop(max_heap)[1])
+        return res   
+        # 2-3. build heap of top k frequent elements and
+        # convert it into an output array
+        # O(N log k) time
+		#
+		# NOTE: In Python, library heapq provides a method nlargest, which combines the last two steps under the hood and has the same O(N log k) time complexity.
+        #return heapq.nlargest(k, count.keys(), key=count.get) 
+
+# -----------------------------
+# Approach-3 : Bucket Sort
+# -----------------------------
+#TC: O(N)
+#SC: O(N)
+
+from typing import List
+
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        bucket = [[] for _ in range(len(nums) + 1)]
+        Count = Counter(nums).items()  
+        for num, freq in Count: bucket[freq].append(num) 
+        flat_list = list(chain(*bucket))
+        return flat_list[::-1][:k]
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-839:Similar String Groups](https://leetcode.com/problems/similar-string-groups/)
+##### Solution Explanation
+```
+# ---------------------------------------------------
+# Approach-1: Graph
+# ---------------------------------------------------
+We simply construct edges for every string in A but construction method differs for 2 cases as len(A[i]) * len(A) <= 20 000.
+
+Case 1: For short length of A[i] and long length of A, we find every swaps in A[i].
+Runtime: O(N(L^2) )
+Case 2: For long length of A[i] and short length of A, we compare every A[i] and A[j] in A by checking characters instead of swap variations. If they differ just by 2 characters theres is edge between them.
+Runtime: O((N^2)L)
+
+# ---------------------------------------------------
+# Approach-2: Union Find
+# ---------------------------------------------------
+1. first build the swappable pairs from all (i,j), i.e. tars, rats <- only the characters at index0 and index2 are different
+2. Union Find(with Weighted quick-union with path compression) to group all of them
+
+TC: O(N^2*L + NlogM)
+
+L: length of the string, N: number of strings, M: number of unions, it can be as big as N at worst case
+
+SC: O(N)
+
+ref of union find:
+https://algs4.cs.princeton.edu/15uf/
+```
+##### Complexity Analysis
+```
+# ---------------------------------------------------
+# Approach-1: Graph
+# ---------------------------------------------------
+Case 1: For short length of A[i] and long length of A, we find every swaps in A[i].
+Runtime: O(N(L^2) )
+Case 2: For long length of A[i] and short length of A, we compare every A[i] and A[j] in A by checking characters instead of swap variations. If they differ just by 2 characters theres is edge between them.
+Runtime: O((N^2)L)
+
+TC: O(N*L^2) or O(N^2*L)
+SC: O(N)
+
+where, L: length of the string, N: number of strings, M: number of unions, it can be as big as N at worst case
+
+# ---------------------------------------------------
+# Approach-2: Union Find
+# ---------------------------------------------------
+
+TC: O(N^2*L + NlogM)
+
+L: length of the string, N: number of strings, M: number of unions, it can be as big as N at worst case
+
+SC: O(N)
+
+```
+```python
+# ---------------------------------------------------
+# Approach-1: Graph
+# ---------------------------------------------------
+#TC: O(N*L^2) or O(N^2*L)
+#SC: O(N)
+#
+#where, L: length of the string, N: number of strings
+from typing import List
+
+class Solution:
+    def numSimilarGroups(self, A: List[str]) -> int:
+    def numSimilarGroups(self, A: List[str]) -> int:
+        m, n = len(A[0]), len(A)
+        A = set(A)
+        p, res = {s : s for s in A}, len(A) # p: parent
+        def find(s):
+            while s != p[s]: 
+                p[s] = p[p[s]]
+                s = p[s]
+            return s
+        def judge(a, b):
+            cnt = 0
+            for i, j in zip(a, b):
+                if i != j:
+                    if cnt < 2: cnt += 1
+                    else: return False
+            return cnt == 2
+        if m > n:
+            for a, b in itertools.combinations(A, 2): # O(m * n ^ 2)
+                if judge(a, b):
+                    ra, rb = find(a), find(b)
+                    if ra != rb: res, p[ra] = res - 1, rb
+        else: 
+            for a in A: # O(n * m ^ 2)
+                for i, j in itertools.combinations(range(m), 2):
+                    b = a[:i] + a[j] + a[i + 1: j] + a[i] + a[j + 1:]
+                    if b in A: 
+                        ra, rb = find(a), find(b)
+                        if ra != rb: res, p[ra] = res - 1, rb
+        return res
+
+# ---------------------------------------------------
+# Approach-2: Union Find
+# ---------------------------------------------------
+#TC: O(N^2*L + NlogM)
+#
+#where, L: length of the string, N: number of strings, M: number of unions, it can be as big as N at worst case
+#
+#SC: O(N)
+from typing import List
+
+class UnionFind(object):
+    def __init__(self, n):
+        self.count = n
+        self.roots = {}
+        self.caps = {}
+        for i in range(n):
+            self.roots[i] = i
+            self.caps[i] = 1
+
+    def find(self, key):
+        cur = key
+        while cur != self.roots[cur]:
+            cur = self.roots[cur]
+        return cur
+
+    def union(self, p, q):
+        pId = self.find(p)
+        qId = self.find(q)
+        if pId == qId:
+            return
+        if self.caps[pId] < self.caps[qId]:
+            self.roots[pId] = qId
+            self.caps[qId] += self.caps[pId]
+        else:
+            self.roots[qId] = pId
+            self.caps[pId] += self.caps[qId]
+        self.count -= 1
+
+class Solution:
+    def numSimilarGroups(self, A: List[str]) -> int:
+        n = len(A)
+        pairs = []
+        for i in range(n):
+            for j in range(i+1, n):
+                if A[i] == A[j] or self.isSwappable(A[i], A[j]):
+                    pairs.append((i, j))
+        uf = UnionFind(n)
+        for a, b in pairs:
+            uf.union(a, b)
+        return uf.count
+    
+    def isSwappable(self, s, t):
+        count = 0
+        for i in range(len(s)):
+            if s[i] != t[i]:
+                count += 1
+        return count == 2
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-102:Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+##### Solution Explanation
+```
+# ----------------------------------------------------
+# Approach-1: Breadth First Search
+# ----------------------------------------------------
+
+ * Using BFS, at any instant only L1 and L1+1 nodes are in the queue.
+ * When we start the while loop, we have L1 nodes in the queue.
+ * for _ in range(len(q)) allows us to dequeue L1 nodes one by one and add L2 children one by one.
+ * Time complexity: O(N). Space Complexity: O(N)
+
+# ----------------------------------------------------
+# Approach-2: Depth First Search
+# ----------------------------------------------------
+
+ * Use a variable to track level in the tree and use simple Pre-Order traversal
+ * Add sub-lists to result as we move down the levels
+ * Time Complexity: O(N)
+ * Space Complexity: O(N) + O(h) for stack space
+
+```
+##### Complexity Analysis
+```
+# ----------------------------------------------------
+# Approach-1: Breadth First Search
+# ----------------------------------------------------
+
+TC: O(N)
+SC: O(N)
+
+# ----------------------------------------------------
+# Approach-2: Depth First Search
+# ----------------------------------------------------
+
+TC: O(N)
+SC: O(N) + O(h) for stack space
+
+```
+```python
+# ----------------------------------------------------
+# Approach-1: Breadth First Search
+# ----------------------------------------------------
+#TC: O(N)
+#SC: O(N)
+
+from collections import deque
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def levelOrder(self, root: TreeNode) -> List[List[int]]:
+        """
+        :type root: TreeNode
+        :rtype: List[List[int]]
+        """
+        q, result = deque(), []
+        if root:
+            q.append(root)
+        while len(q):
+            level = []
+            for _ in range(len(q)):
+                x = q.popleft()
+                level.append(x.val)
+                if x.left:
+                    q.append(x.left)
+                if x.right:
+                    q.append(x.right)
+            result.append(level)
+        return result
+
+# ----------------------------------------------------
+# Approach-2: Depth First Search
+# ----------------------------------------------------
+#TC: O(N)
+#SC: O(N) + O(h) for stack space
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def levelOrder(self, root: TreeNode) -> List[List[int]]:
+        result = []
+        self.helper(root, 0, result)
+        return result
+    
+    def helper(self, root, level, result):
+        if root is None:
+            return
+        if len(result) <= level:
+            result.append([])
+        result[level].append(root.val)
+        self.helper(root.left, level+1, result)
+        self.helper(root.right, level+1, result)
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-708:Insert into a Sorted Circular Linked List](https://leetcode.com/problems/insert-into-a-sorted-circular-linked-list/)
+##### Solution Explanation
+```
+```
+##### Complexity Analysis
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+
+#### [LC-691:Stickers to Spell Word](https://leetcode.com/problems/stickers-to-spell-word/)
+##### Solution Explanation
+```
+```
+##### Complexity Analysis
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-977:Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)
+##### Solution Explanation
+```
+```
+##### Complexity Analysis
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-232:Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
+##### Solution Explanation
+```
+```
+##### Complexity Analysis
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-329:Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/)
+##### Solution Explanation
+```
+```
+##### Complexity Analysis
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-234:Basic Calculator](https://leetcode.com/problems/basic-calculator/)
+##### Solution Explanation
+```
+```
+##### Complexity Analysis
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-237:Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/)
+##### Solution Explanation
+```
+```
+##### Complexity Analysis
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-772:Basic Calculator III](https://leetcode.com/problems/basic-calculator-iii/)
+##### Solution Explanation
+```
+```
+##### Complexity Analysis
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-770:Basic Calculator IV](https://leetcode.com/problems/basic-calculator-iv/)
+##### Solution Explanation
+```
+```
+##### Complexity Analysis
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-1597:Build Binary Expression Tree From Infix Expression](https://leetcode.com/problems/build-binary-expression-tree-from-infix-expression/)
+##### Solution Explanation
+```
+```
+##### Complexity Analysis
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-106:Construct Binary Tree from Inorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
+##### Solution Explanation
+```
+```
+##### Complexity Analysis
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-108:Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
+##### Solution Explanation
+```
+```
+##### Complexity Analysis
+```
+```
+```python
+```
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+
+#### [LC-109:Convert Sorted List to Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/)
+##### Solution Explanation
+```
+```
+##### Complexity Analysis
+```
+```
+```python
+```
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+
+#### [LC-203:Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/)
+##### Solution Explanation
+```
+```
+##### Complexity Analysis
+```
+```
+```python
+```
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-210:Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)
+##### Solution Explanation
+```
+```
+##### Complexity Analysis
+```
+```
+```python
+```
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-536:Construct Binary Tree from String](https://leetcode.com/problems/construct-binary-tree-from-string/)
+##### Solution Explanation
+```
+```
+##### Complexity Analysis
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-606:Construct String from Binary Tree](https://leetcode.com/problems/construct-string-from-binary-tree/)
+##### Solution Explanation
+```
+```
+##### Complexity Analysis
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-617:Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/)
+##### Solution Explanation
+```
+```
+##### Complexity Analysis
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-226:Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
+##### Solution Explanation
+```
+```
+##### Complexity Analysis
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-232:Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
+##### Solution Explanation
+```
+```
+##### Complexity Analysis
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-490:The Maze](https://leetcode.com/problems/the-maze/)
+##### Solution Explanation
+```
+```
+##### Complexity Analysis
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-505:The Maze II](https://leetcode.com/problems/the-maze-ii/)
+##### Solution Explanation
+```
+```
+##### Complexity Analysis
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+
+#### [LC-499:The Maze III](https://leetcode.com/problems/the-maze-iii/)
+##### Solution Explanation
+```
+```
+##### Complexity Analysis
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+
+#### [LC-1233:Remove Sub-Folders from Filesystem](https://leetcode.com/problems/remove-sub-folders-from-the-filesystem/submissions/)
+##### Solution Explanation
+```
+# -------------------------------
+# Approach-1: sort by length then put only parent into HashSet
+# -------------------------------
+
+1. Sort folder by length;
+2. Check if the floder's parent fold in HashSet before adding it into the HashSet.
+Note: the part before any / is a parent.
+
+# -------------------------------
+# Approach-2: sort folders
+# -------------------------------
+1. Sort the folders;
+2. For each folder check if the followings are child folders; if yes, ignore; otherwise, count it in.
+
+time complexity for method 2 is actually O(n * m * logn) and do not need to simplify.
+Because the sort is based on merge sort for Object and time complexity of merge sort is O(n * logn). That means n * logn times comparing happened.
+For this question, it just makes the comparing time be O(m). Thus it won't increase the number of "layers" of merge sort to log(n * m).
+
+# -------------------------------
+# Approach-3: Trie
+# -------------------------------
+```
+##### Complexity Analysis
+```
+# -------------------------------
+# Approach-1: sort by length then put only parent into HashSet
+# -------------------------------
+
+Analysis
+Sort cost n * logn;
+Outer for loop run n times; inner for loop cost i in each iteration due to substring(0, i), that is, 2 + ... + m, which is O(m ^ 2);
+Therefore,
+
+Time: O(n * (logn + m ^ 2)), space: (n * m), where n = folder.length, m = average size of the strings in folder.
+
+# -------------------------------
+# Approach-2: sort folders
+# -------------------------------
+time complexity for method 2 is actually O(n * m * logn) and do not need to simplify.
+Because the sort is based on merge sort for Object and time complexity of merge sort is O(n * logn). That means n * logn times comparing happened.
+For this question, it just makes the comparing time be O(m). Thus it won't increase the number of "layers" of merge sort to log(n * m).
+
+# -------------------------------
+# Approach-3: Trie
+# -------------------------------
+So the space Complexity is O(n) where n is the number of folders and time complexity is O(n){to create Trie} + O(m){to find parent dir}
+
+TC: O(n + m)
+SC: O(n)
+
+where,
+n = folder.length
+m = average size of the strings in folder
+```
+```python
+# -------------------------------
+# Approach-1: sort by length then put only parent into HashSet
+# -------------------------------
+
+class Solution:
+    def removeSubfolders(self, folder: List[str]) -> List[str]:
+        folder.sort(key=len)
+        seen = set()
+        for f in folder:
+            if not any(f[i] == '/' and f[: i] in seen for i in range(2, len(f))):
+                seen.add(f)
+        return list(seen)
+
+# -------------------------------
+# Approach-2: sort folders
+# -------------------------------
+
+class Solution:
+    def removeSubfolders(self, folder: List[str]) -> List[str]:
+        ans = []
+        for f in sorted(folder):
+            if not ans or not f.startswith(ans[-1] + '/'):	#  need '/' to ensure a parent.
+                ans.append(f)
+        return ans
+		
+		
+# -------------------------------
+# Approach-3: Trie
+# -------------------------------
+
+class TrieNode:
+    def __init__(self):
+        self.children = {}
+        self.isEnd = False
+
+class Trie:
+    def __init__(self):
+        self.root = TrieNode()
+        
+    def insert(self, word):
+        node = self.root
+        for char in word:
+            if char not in node.children:
+                node.children[char] = TrieNode()
+            node = node.children[char]
+        node.isEnd = True  
+    
+    def find(self):
+        def dfs(direc, node):
+            if node.isEnd:
+                answer.append('/' + '/'.join(direc))
+                return
+            for char in node.children:
+                dfs(direc + [char], node.children[char])
+        
+        answer = []
+        dfs([], self.root)
+        return answer
+
+
+class Solution:
+    def removeSubfolders(self, folder: List[str]) -> List[str]:
+        trie = Trie()
+        for f in folder:
+            f = f.split('/')[1:]
+            trie.insert(f)
+        return trie.find()
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-200:Number of Islands](https://leetcode.com/problems/number-of-islands/)
+##### Solution Explanation
+```
+```
+##### Complexity Analysis
+```
+```
+```python
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
