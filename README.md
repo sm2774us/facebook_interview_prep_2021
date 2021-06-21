@@ -59,7 +59,7 @@
 | 3   |          | [Leftmost Column Index of 1](#leftmost-column-index-of-1) { Similar to LC-1428 }                          | https://leetcode.com/discuss/interview-question/341247/facebook-leftmost-column-index-of-1 | _O(R*log(C)_ or _O(N*log(M))_ [ RxC matrix or N*M matrix ] | _O(1)_                | Medium     | Array/Matrix   | Binary Search                |            |
 | 4   | 240      | [Search a 2D Matrix II](#lc-240search-a-2d-matrix-ii)                                                     | https://leetcode.com/problems/search-a-2d-matrix-ii                                        | _O(M+N)_                                                   | _O(1)_                | Medium     | Array          |                              |            |
 | 5   | 759      | [Employee Free Time](#lc-759employee-free-time)                                                           | https://leetcode.com/problems/employee-free-time/                                          | _O(m * log(n))_                                            | _O(n)_                | Hard       | Heap/Priority Queue | Greedy                  | 🔒         |
-| 6   |          | [Lowest Common Ancestor When Root Node Is Not Known](#lowest-common-ancestor-when-root-node-is-not-known) | https://www.geeksforgeeks.org/lowest-common-ancestor-in-a-binary-tree-set-2-using-parent-pointer/ | _O(h)_                                              | _O(1)_                | Medium     | Binary Tree    |                              |            |
+| 6   |          | [Lowest Common Ancestor When Root Node Is Not Known-GeeksforGeeks](#lowest-common-ancestor-when-root-node-is-not-known-GeeksforGeeks) | https://www.geeksforgeeks.org/lowest-common-ancestor-in-a-binary-tree-set-2-using-parent-pointer/ | _O(h)_                                              | _O(1)_                | Medium     | Binary Tree    |                              |            |
 | 7   | 560      | [Subarray Sum Equals K](#lc-560subarray-sum-equals-k)                                                     | https://leetcode.com/problems/subarray-sum-equals-k/                                       | _O(n)_                                                     | _O(n)_                | Medium     | Array          | DP ; Prefix Sum              |            |
 | 8   | 138      | [Copy List with Random Pointer](#lc-138copy-list-with-random-pointer)                                     | https://leetcode.com/problems/copy-list-with-random-pointer/                               | _O(n)_                                                     | _O(1)_                | Medium     | Linked List    |                              |            |
 | 9   | 297      | [Serialize and Deserialize Binary Tree](#lc-297serialize-and-deserialize-binary-tree)                     | https://leetcode.com/problems/serialize-and-deserialize-binary-tree/                       | _O(n)_                                                     | _O(n)_                | Hard       | Tree           | Level Order Traversal ; DFS ; BFS |            |
@@ -106,7 +106,7 @@
 | 50  | 986      | [Interval List Intersections](#lc-49interval-list-intersections)                                          | https://leetcode.com/problems/interval-list-intersections/                                 | _O(m + n)_                                                 | _O(1)_                | Medium     |                |                              |            |
 | 51  | 1249     | [Minimum Remove to Make Valid Parentheses](#lc-1249minimum-remove-to-make-valid-parentheses)              | https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/                    | _O(n)_                                                     | _O(1)_                | Medium     |                | Stack                        |            |
 | 52  | 66       | [Plus One](#lc-66plus-one)                                                                                | https://leetcode.com/problems/plus-one/                                                    | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
-| 53  |          | [Find an index of maximum occurring element with equal probability](#find-an-index-of-maximum-occurring-element-with-equal-probability) | https://www.geeksforgeeks.org/find-index-maximum-occurring-element-equal-probability/      | _O(n)_                       | _O(n)_                | Medium     |                |                              |            |
+| 53  |          | [Find an index of maximum occurring element with equal probability](#find-an-index-of-maximum-occurring-element-with-equal-probability-GeeksforGeeks) | https://www.geeksforgeeks.org/find-index-maximum-occurring-element-equal-probability/      | _O(n)_                       | _O(n)_                | Medium     |                |                              |            |
 | 54  | 938      | [Range Sum of BST](#lc-938range-sum-of-bst)                                                               | https://leetcode.com/problems/range-sum-of-bst/                                            | _O(n)_                                                     | _O(h)_                | Medium     |                | DFS                          |            |
 | 55  | 323      | [Number of Connected Components in an Undirected Graph](#lc-323number-of-connected-components-in-an-undirected-graph/) | https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/ | _O(n)_                                              | _O(n)_                | Medium     |                | Union Find                   | 🔒          |
 | 56  |          | [Facebook Phone Connected Components in Graph](#facebook-phone-connected-components-in-graph)             | https://leetcode.com/discuss/interview-question/982506/Facebook-or-Phone-or-Connected-Components-in-Graph/798145                                        |                       | Medium     |                | BFS                          |            |
@@ -122,16 +122,28 @@
 | 66  | 257      | [Binary Tree Paths](#lc-257binary-tree-paths)                                                             | https://leetcode.com/problems/binary-tree-paths/                                           | _O(n * h)_                                                 | _O(h)_                | Easy       |                |                              |            |
 | 67  | 76       | [Minimum Window Substring](#lc-76minimum-window-substring)                                                | https://leetcode.com/problems/minimum-window-substring/                                    | _O(n)_                                                     | _O(k)_                | Hard       |                |                              |            |
 | 68  |          | [Google Remove Duplicates from Unsorted Array](#google-remove-duplicates-from-unsorted-array)             | https://leetcode.com/discuss/interview-question/168757/Google%3A-Remove-Duplicates-from-Unsorted-Array |                                                |                       | Hard       |                |                              |            |
-| 69  | 83       | [Remove Duplicates from Sorted List](#lc-83remove-duplicates-from-sorted-list)                            | https://leetcode.com/problems/remove-duplicates-from-sorted-list/                          | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
-| 70  | 26       | [Remove Duplicates from Sorted Array](#lc-26remove-duplicates-from-sorted-array)                          | https://leetcode.com/problems/remove-duplicates-from-sorted-array/                         | _O(n)_                                                     | _O(1)_                | Easy       |                | Two Pointers                 |            |
-| 71  | 53       | [Maximum Subarray](#lc-53maximum-subarray)                                                                | https://leetcode.com/problems/maximum-subarray/                                            | _O(n)_                                                     | _O(1)_                | Medium     |                | `Kadane's Algorithm`         |            |
-| 72  | 20       | [Valid Parentheses](#lc-20valid-parenetheses)                                                             | https://leetcode.com/problems/valid-parentheses/                                           | _O(n)_                                                     | _O(n)_                | Easy       |                |                              |            |
-| 73  | 56       | [Merge Intervals](#lc-56merge-intervals)                                                                  | https://leetcode.com/problems/merge-intervals/                                             | _O(nlogn)_                                                 | _O(1)_                | Hard       |                |                              |            |
-| 74  | 133      | [Clone Graph](#lc-133clone-graph)                                                                         | https://leetcode.com/problems/clone-graph/                                                 | _O(n)_                                                     | _O(n)_                | Medium     |                |                              |            |
-| 75  |          | [Facebook Onsite Generate Random Max Index](#facebook-onsite-generate-random-max-index)                   | https://leetcode.com/discuss/interview-question/451431/facebook-onsite-generate-random-max-index |                                                      |                       | Medium     |                |                              |            |
-| 76  |          | [Facebook Interview Question Minimum number of people to spread a message](#facebook-interview-question-minimum-number-of-people-to-spread-a-message) | https://leetcode.com/discuss/interview-question/124827/Find-minimum-number-of-people-to-reach-to-spread-a-message-across-all-people-in-twitter/ |  |  | Medium     |                |                              |            |
-| 77  |          | [Facebook Phone Interview Question Given a directed graph remove return minimum of edges to keep all paths](#facebook-phone-interview-question-given-a-directed-graph-remove-return-minimum-of-edges-to-keep-all-paths) | https://leetcode.com/discuss/interview-question/630806/facebook-phone-transitive-reduction-factorial-trailing-zeroes |  |  | Medium     |                |                              |            |
-| 78  |          | [Facebook Phone screen Shortest Path with Obstacles](#facebook-phone-screen-shortest-path-with-obstacles) | https://leetcode.com/discuss/interview-question/301192/Facebook-phone-screen-Shortest-Path-with-Obstacles/283312 |  |  | Medium     |                |                              |            |
+| 69  | 287      | [Find the Duplicate Number](#lc-287find-the-duplicate-number)                                             | https://leetcode.com/problems/find-the-duplicate-number/                                   | _O(n)_                                                     | _O(1)_                | Hard       |                | Binary Search, Floyd's Cycle Detection |  |
+| 70  |          | [Remove duplicates from an unsorted linked list-GeeksforGeeks](#remove-duplicates-from-an-unsorted-linked-list-geeksforgeeks) http://www.geeksforgeeks.org/remove-duplicates-from-an-unsorted-linked-list/ | _O(n)_                                                 | _O(1)_                | Easy       |                |                              |            |
+| 71  | 83       | [Remove Duplicates from Sorted List](#lc-83remove-duplicates-from-sorted-list)                            | https://leetcode.com/problems/remove-duplicates-from-sorted-list/                          | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
+| 72  | 26       | [Remove Duplicates from Sorted Array](#lc-26remove-duplicates-from-sorted-array)                          | https://leetcode.com/problems/remove-duplicates-from-sorted-array/                         | _O(n)_                                                     | _O(1)_                | Easy       |                | Two Pointers                 |            |
+| 73  | 53       | [Maximum Subarray](#lc-53maximum-subarray)                                                                | https://leetcode.com/problems/maximum-subarray/                                            | _O(n)_                                                     | _O(1)_                | Medium     |                | `Kadane's Algorithm`         |            |
+| 74  | 20       | [Valid Parentheses](#lc-20valid-parenetheses)                                                             | https://leetcode.com/problems/valid-parentheses/                                           | _O(n)_                                                     | _O(n)_                | Easy       |                |                              |            |
+| 75  | 56       | [Merge Intervals](#lc-56merge-intervals)                                                                  | https://leetcode.com/problems/merge-intervals/                                             | _O(nlogn)_                                                 | _O(1)_                | Hard       |                |                              |            |
+| 76  | 133      | [Clone Graph](#lc-133clone-graph)                                                                         | https://leetcode.com/problems/clone-graph/                                                 | _O(n)_                                                     | _O(n)_                | Medium     |                |                              |            |
+| 77  |          | [Facebook Onsite Generate Random Max Index](#facebook-onsite-generate-random-max-index)                   | https://leetcode.com/discuss/interview-question/451431/facebook-onsite-generate-random-max-index |                                                      |                       | Medium     |                |                              |            |
+| 78  |          | [Facebook Interview Question Minimum number of people to spread a message](#facebook-interview-question-minimum-number-of-people-to-spread-a-message) | https://leetcode.com/discuss/interview-question/124827/Find-minimum-number-of-people-to-reach-to-spread-a-message-across-all-people-in-twitter/ |  |  | Medium  | | | |
+| 79  |          | [Facebook Phone Interview Question Given a directed graph remove return minimum of edges to keep all paths](#facebook-phone-interview-question-given-a-directed-graph-remove-return-minimum-of-edges-to-keep-all-paths) | https://leetcode.com/discuss/interview-question/630806/facebook-phone-transitive-reduction-factorial-trailing-zeroes |  |  | Medium | | | |
+| 80  |          | [Facebook Phone screen Shortest Path with Obstacles](#facebook-phone-screen-shortest-path-with-obstacles) | https://leetcode.com/discuss/interview-question/301192/Facebook-phone-screen-Shortest-Path-with-Obstacles/283312 |                                      |                       | Medium     |                |                              |            |
+| 81  | 785      | [Is Graph Bipartite](#lc-785is-graph-bipartite)                                                           | https://leetcode.com/problems/is-graph-bipartite/                                          | _O(\|V\| + \|E\|)_                                         | _O(\|V\| + \|E\|)_    | Medium     |                |                              |            |
+| 82  | 886      | [Possible Bipartition](#lc-886possible-bipartition)                                                       | https://leetcode.com/problems/possible-bipartition/                                        | _O(\|V\| + \|E\|)_                                         | _O(\|V\| + \|E\|)_    | Medium     |                |                              |            |
+| 83  | 72       | [Edit Distance](#lc-72edit-distance)                                                                      | https://leetcode.com/problems/edit-distance/                                               | _O(m * n)_                                                 | _O(m + n)_            | Hard       |                |                              |            |
+| 84  | 91       | [Decode Ways](#lc-91decode-ways)                                                                          | https://leetcode.com/problems/decode-ways/                                                 | _O(n)_                                                     | _O(1)_                | Medium     |                |                              |            |
+| 85  | 75       | [Sort Colors](#lc-75sort-colors)                                                                          | https://leetcode.com/problems/sort-colors/                                                 | _O(n)_                                                     | _O(1)_                | Medium     |                | Tri Partition                |            |
+| 86  | 172      | [Factorial Trailing Zeroes](#lc-172factorial-trailing-zeroes)                                             | https://leetcode.com/problems/factorial-trailing-zeroes/                                   | _O(1)_                                                     | _O(1)_                | Easy       |                |                              |            |
+| 87  | 273      | [Integer to English Words](#lc-273integer-to-english-words)                                               | https://leetcode.com/problems/integer-to-english-words/                                    | _O(1)_                                                     | _O(1)_                | Hard       |                |                              |            |
+| 88  |          | [English Words to Integer](#english-words-to-integer)                                                     | https://leetcode.com/discuss/interview-question/633508/amazon-onsite-english-words-to-integer |                                                         |                       | Easy       |                |                              |            |
+| 89  | 12       | [Integer to Roman](#lc-12integer-to-roman)                                                                | https://leetcode.com/problems/integer-to-roman/                                            | _O(n)_                                                     | _O(1)_                | Medium     |                |                              |            |
+| 90  | 13       | [Roman to Integer](#lc-13roman-to-integer)                                                                | https://leetcode.com/problems/roman-to-integer/                                            | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
 
 #### [LC-238:Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
 ##### Solution Explanation
@@ -1206,7 +1218,7 @@ class Solution:
 </div>
 <br/>
 
-####  [Lowest Common Ancestor When Root Node Is Not Known](https://www.geeksforgeeks.org/lowest-common-ancestor-in-a-binary-tree-set-2-using-parent-pointer/)
+####  [Lowest Common Ancestor When Root Node Is Not Known-GeeksforGeeks](https://www.geeksforgeeks.org/lowest-common-ancestor-in-a-binary-tree-set-2-using-parent-pointer/)
 ```python
 # Given two nodes of an n-ary tree, return the LCA node. you are *not* given the root node. however, each node has
 # a (nullaple) parent pointer. (this problem may be presented as a binary tree; approach is the same)
@@ -6954,7 +6966,7 @@ class Solution:
 </div>
 <br/>
 
-#### [Find an index of maximum occurring element with equal probability](https://www.geeksforgeeks.org/find-index-maximum-occurring-element-equal-probability/)
+#### [Find an index of maximum occurring element with equal probability-GeeksforGeeks](https://www.geeksforgeeks.org/find-index-maximum-occurring-element-equal-probability/)
 ##### Solution Explanation:
 ```
 ```
@@ -8646,13 +8658,399 @@ fun main(args: Array) {
 <br/>
 
 #### [Google Remove Duplicates from Unsorted Array](https://leetcode.com/discuss/interview-question/168757/Google%3A-Remove-Duplicates-from-Unsorted-Array)
+##### Problem Requirements:
+```
+* can't use Set
+* array is not sorted
+* must be done in-place
+```
 ##### Solution Explanation:
 ```
+* Maintain a dict seen for all the numbers we have encountered before
+* Handle the two cases:
+  + Case 1: If not in seen then keep in the input array
+  + Case 2: If in seen then delete from the input array
 ```
 ##### Complexity Analysis:
 ```
+TC: O(N)
+SC: O(N)
 ```
 ```python
+NOTE: Dictionary lookup is slightly faster then the set's one in Python 3.
+
+# Solution-1: Use this since the problem specifies that we can't use Set. 
+#TC: O(N)
+#SC: O(N)
+def del_dups(seq: List[int]) -> None:
+    seen = {}
+    pos = 0
+    for item in seq:
+        if item not in seen:
+            seen[item] = True
+            seq[pos] = item
+            pos += 1
+    del seq[pos:]
+
+# Soluton-2: If we need to preserve the input array/list
+#TC: O(N)
+#SC: O(N)
+def del_dups(seq: List[int]) -> List[int]:
+    seen = {}
+    pos = 0
+	result = []
+    for item in seq:
+        if item not in seen:
+            seen[item] = True
+            seq[pos] = item
+            pos += 1
+			result.append(item)
+    return result
+
+return list(dict.fromkeys(seq))
+ 
+def del_dups_set(seq: List[int]) -> None:
+    seen = set()
+    seen_add = seen.add
+    pos = 0
+    for item in seq:
+        if item not in seen:
+            seen_add(item)
+            seq[pos] = item
+            pos += 1
+    del seq[pos:]
+ 
+def del_dups_fromkeys(seq: List[int]) -> None:
+	seq[:] = dict.fromkeys(seq)
+ 
+lst = [8, 8, 9, 9, 7, 15, 15, 2, 20, 13, 2, 24, 6, 11, 7, 12, 4, 10, 18,
+       13, 23, 11, 3, 11, 12, 10, 4, 5, 4, 22, 6, 3, 19, 14, 21, 11, 1,
+       5, 14, 8, 0, 1, 16, 5, 10, 13, 17, 1, 16, 17, 12, 6, 10, 0, 3, 9,
+       9, 3, 7, 7, 6, 6, 7, 5, 14, 18, 12, 19, 2, 8, 9, 0, 8, 4, 5]
+ 
+def measure(func):
+    from timeit import Timer
+ 
+    N = 50000
+    setup = 'from __main__ import lst, del_dups, del_dups_set, del_dups_fromkeys'
+    t = Timer('%s(lst[:])' % (func,), setup)
+    print("%s: %.2f us" % (func, 1e6*min(t.repeat(number=N))/N,))
+ 
+if __name__=="__main__":
+    measure('del_dups')
+    measure('del_dups_set')
+    measure('del_dups_fromkeys')
+```
+##### Follow-Up (what if the list/array is sorted):
+##### Solution Explanation:
+```
+Now we can make use of Binary Search.
+```
+```python
+# <<<<<<<<<<<<<<<<< When the list is sorted >>>>>>>>>>>>>>
+
+# Binary search function
+# returns the index of the first occurence of
+# element ele in list_to_search between index
+# left and right
+# @param list_to_search : list in which to search the element ele
+# @param left : left index for where to search element in list
+# @param right : right index for where to search element in list
+# @param ele : element to search in list
+def binSearch(list_to_search, left, right, ele): 
+    # check if the lft index is always smaller
+    # than right index
+    if right >= left: 
+        # calculate the middle index
+        middle = left + (right - left) // 2
+        # check if the middle index of the list
+        # consists the element, then return
+        # the middle element
+        if list_to_search[middle] == ele: 
+            return middle 
+        # Check if the element is less than element at middle
+        # Do Binary Search on left sub array because only
+        # left sub array will contain the element
+        elif list_to_search[middle] > ele: 
+            return binSearch(list_to_search, left, middle-1, ele) 
+        # Check if the element is greater than element at middle
+        # Do Binary Search on right sub array because only
+        # right sub array will contain the element
+        else: 
+            return binSearch(list_to_search, middle + 1, right, ele)
+    else: 
+        # -1 value indicates that the element is not
+        # found in the array 
+        return -1
+
+
+# function to remove duplicates
+# @param list_to_rem_dup: sorted list from which duplicates
+#                         have to be removed
+def remove_duplicates(list_to_rem_dup):
+    # create an empty list
+    new_list = []
+    # For each index from end of sorted array to 1, perform
+    # binary search to check if their duplicates exit
+    # If the duplicates do not exits, then append
+    # the element to the new_list
+    # Finally, reverse the list to maintain the order
+    for i in reversed(range(1, len(list_to_rem_dup))):
+        curr_ele = list_to_rem_dup[i]
+        found_index = binSearch(list_to_rem_dup, 0, i-1, curr_ele)
+        if found_index == -1:
+            new_list.append(curr_ele)
+    new_list.append(list_to_rem_dup[0])
+    return reversed(new_list)
+
+
+# driver method
+def main():
+    # list on which operation is to be performed
+    ord_list = [6, 12, 12, 13, 15, 19, 19, 21] 
+    # print the sorted array in order
+    print ("\nSorted array with duplicates") 
+    for ele in range(len(ord_list)): 
+        print (ord_list[ele])
+    # removing duplicates from list
+    without_dup_list = remove_duplicates(ord_list)
+    print ("\nOrdered array without duplicates") 
+    for element in without_dup_list:
+        print(element)
+
+if __name__ == '__main__':
+    main()
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-287:Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
+##### Problem Prerequisites:
+![Floyd's Cycle Detection Algorithm][./assets/proof-of-floyd's-cycle-detection-algorithm.PNG)
+> Pigeonhole principle:
+>
+> ---
+> 
+> In mathematics, the pigeonhole principle states that if `n` items are put into `m` containers,
+> with `n > m`, then at least one container must contain more than one item.
+>
+> For example, if one has three gloves, then one must have at least two right-hand gloves,
+> or at least two left-hand gloves, because one has three objects, but only two categories of handedness to put them into.
+>
+> This seemingly obvious statement, a type of counting argument, can be used to demonstrate possibly unexpected results.
+>
+> For example, given that the population of London is greater than the maximum number of hairs that can be present on a human's head,
+> then the pigeonhole principle requires that there must be at least two people in London who have the same number of hairs on their heads.
+````
+##### Problem Constraints:
+```
+1. You must not modify the array (assume the array is read only).
+2. You must use only constant, O(1) extra space.
+```
+##### Solution Explanation:
+```
+#-----------------------------------
+# Approach 1: Floyd's cycle-finding algorithm
+#-----------------------------------
+```
+![lc-287-find-the-duplicate-number-1](./assets/lc-287-find-the-duplicate-number-1.PNG)
+![lc-287-find-the-duplicate-number-2](./assets/lc-287-find-the-duplicate-number-2.PNG)
+[Similar to - LeetCode : Problem 142 - Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)
+```
+References:
+Cycle Detection: https://en.wikipedia.org/wiki/Cycle_detection
+Pigeonhole Principle: https://en.wikipedia.org/wiki/Pigeonhole_principle
+
+#-----------------------------------
+# Approach 2: Binary Search
+#-----------------------------------
+```
+![lc-287-find-the-duplicate-number-3](./assets/lc-287-find-the-duplicate-number-3.PNG)
+##### Complexity Analysis:
+```
+#-----------------------------------
+# Approach 1: Floyd's cycle-finding algorithm
+#-----------------------------------
+Time complexity is O(n), because we potentially can traverse all list. Space complexity is O(1), because we actually do not use any extra space: our linked list is virtual.
+
+TC: O(n)
+SC: O(1)
+
+#-----------------------------------
+# Approach 2: Binary Search
+#-----------------------------------
+Each time we reduce searching range twice, but each time we go over all data. So overall time complexity is O(n log n).
+
+TC: O(n*log(n))
+SC: O(1)
+```
+```python
+#-----------------------------------
+# Approach 1: Floyd's cycle-finding algorithm
+#-----------------------------------
+#TC: O(n)
+#SC: O(1)
+#
+
+from typing import List
+
+class Solution:
+    def findDuplicate(self, nums: List[int]) -> int:
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        if not nums:
+            return nums
+        slow, fast = nums[0], nums[nums[0]]
+        while slow != fast:
+            slow = nums[slow]
+            fast = nums[nums[fast]]
+        fast = 0
+        while slow != fast:
+            slow = nums[slow]
+            fast = nums[fast]
+        return slow
+
+#-----------------------------------
+# Approach 2: Binary Search
+#-----------------------------------
+#TC: O(n*log(n))
+#SC: O(1)
+#
+
+from typing import List
+	
+class Solution:
+    def findDuplicate(self, nums: List[int]) -> int:
+        beg, end = 1, len(nums)-1
+        
+        while beg + 1 <= end:
+            mid = beg+(end-beg)//2
+			#mid = (beg + end)//2
+			count = 0
+            for num in nums:
+                if num <= mid: count += 1        
+            if count <= mid:
+                beg = mid + 1
+            else:
+                end = mid
+        return end
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [Remove duplicates from an unsorted linked list-GeeksforGeeks](http://www.geeksforgeeks.org/remove-duplicates-from-an-unsorted-linked-list/)
+##### Solution Explanation:
+```
+# Two Loop Solution
+#-----------------------------------
+# Approach 1: Two Loop Solution
+#-----------------------------------
+
+The easiest way to think of is to delete duplicate nodes in a double loop. The current traversal node is used as the first loop, and the next node of the current node is used as the second loop.
+
+#-----------------------------------
+# Approach 2: Hash Table Solution
+#-----------------------------------
+Using a secondary space hash table, the node value is the key, and the Boolean value is the corresponding value (whether it is boolean value does not really matter, the key is the key).
+```
+##### Complexity Analysis:
+```
+#-----------------------------------
+# Approach 1: Two Loop Solution
+#-----------------------------------
+A double loop with time complexity O( (1/2) * n^2 ), spatial complexity is approximate O(1).
+
+TC: O( (1/2) * n^2 )
+SC: O(1)
+
+#-----------------------------------
+# Approach 2: Hash Table Solution
+#-----------------------------------
+Traverse the linked list once, the time complexity is O(n), an additional hash table is used, and the space complexity is approximately O(n).
+
+TC: O(n)
+SC: O(n)
+```
+```python
+#-----------------------------------
+# Approach 1: Two Loop Solution
+#-----------------------------------
+#TC: O( (1/2) * n^2 )
+#SC: O(1)
+#
+
+"""
+Definition of ListNode
+class ListNode(object):
+    def __init__(self, val, next=None):
+        self.val = val
+        self.next = next
+"""
+class Solution:
+    """
+    @param head: A ListNode
+    @return: A ListNode
+    """
+    def deleteDuplicates(self, head):
+        if head is None:
+            return None
+
+        curr = head
+        while curr is not None:
+            inner = curr
+            while inner.next is not None:
+                if inner.next.val == curr.val:
+                    inner.next = inner.next.next
+                else:
+                    inner = inner.next
+            curr = curr.next
+
+        return head
+
+#-----------------------------------
+# Approach 2: Hash Table Solution
+#-----------------------------------
+#TC: O(n)
+#SC: O(n)
+#
+
+"""
+Definition of ListNode
+class ListNode(object):
+    def __init__(self, val, next=None):
+        self.val = val
+        self.next = next
+"""
+class Solution:
+    """
+    @param head: A ListNode
+    @return: A ListNode
+    """
+    def deleteDuplicates(self, head):
+        if head is None:
+            return None
+
+        hash = {}
+        hash[head.val] = True
+        curr = head
+        while curr.next is not None:
+            if hash.has_key(curr.next.val):
+                curr.next = curr.next.next
+            else:
+                hash[curr.next.val] = True
+                curr = curr.next
+
+        return head
 ```
 
 <br/>
@@ -8662,13 +9060,145 @@ fun main(args: Array) {
 <br/>
 
 #### [LC-83:Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)
+##### Linked List Prerequisite - Sentinel Node
+```
+There's no advantage with sentinels if you're just doing simple iteration and not looking at the data in the elements.
+
+However, there's some real gain when using it for "find" type algorithms.
+For example, imagine a linked list list std::list where you want to find a specific value x.
+
+What you would do without sentinels is:
+
+for (iterator i=list.begin(); i!=list.end(); ++i) // first branch here
+{
+  if (*i == x) // second branch here
+    return i;
+}
+return list.end();
+But with sentinels (of course, end actually has to be a real node for this...):
+
+iterator i=list.begin();
+*list.end() = x;
+
+while (*i != x) // just this branch!
+  ++i;
+
+return i;
+You see there's no need for the additional branch to test for the end of the list - the value is always guaranteed to be there, so you will automatically return end() if x cannot be found in your "valid" elements.
+
+For another cool and actually useful application of sentinels, see "intro-sort", which is the sorting algorithm that's used in most std::sort implementations. It has a cool variant of the partition algorithm that uses sentinels to remove a few branches.
+```
 ##### Solution Explanation:
 ```
+#-----------------------------------
+# Approach 1: Iterative Solution
+#-----------------------------------
+#TC: O(N)
+#SC: O(1)
+#
+Use a sentinel node and a variable prev to track same numbers.
+
+NOTE: Sentinel node makes it easy to handle Edge Case where Linked List might be empty.
+
+#-----------------------------------
+# Approach 2: Recursive Solution
+#-----------------------------------
+#TC: O(N)
+#SC: O(1)
+#
+
 ```
 ##### Complexity Analysis:
 ```
+For both approaches:
+
+Time Complexity: O(N)  .... since we are traversing the linked list
+Space Complexity: O(1)
 ```
 ```python
+#-----------------------------------
+# Approach 1a: Iterative Solution
+#-----------------------------------
+#TC: O(N)
+#SC: O(1)
+#
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+
+class Solution:
+    def deleteDuplicates(self, head: ListNode) -> ListNode:
+        sentinel = ListNode(-1)
+        sentinel.next=head
+        prev=current=head
+    
+	    # Return None if Linked List is empty
+        if head==None:
+            return sentinel.next
+    
+	    # Moving on of the pointer ahead of prev ( which is slower than current pointer)
+        current=current.next
+        while current!=None:
+            if(prev.val==current.val):
+                prev.next=current.next
+                current=current.next
+            else:
+                prev=current
+                current=current.next
+        
+        return sentinel.next
+
+#-----------------------------------
+# Approach 1b: Iterative Solution using HashMap (dicitionary)
+#-----------------------------------
+#TC: O(N)
+#SC: O(1)
+#
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+
+class Solution:
+    def deleteDuplicates(self, head: ListNode) -> ListNode:
+        dic = {}
+        node = head
+        while node:
+            dic[node.val] = dic.get(node.val, 0) + 1
+            node = node.next
+        node = head
+        while node:
+            tmp = node
+            for _ in range(dic[node.val]):
+                tmp = tmp.next
+            node.next = tmp
+            node = node.next
+        return head
+
+#-----------------------------------
+# Approach 2: Recursive Solution
+#-----------------------------------
+#TC: O(N)
+#SC: O(1)
+#
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+
+class Solution:
+    def deleteDuplicates(self, head: ListNode) -> ListNode:
+        if head and head.next:
+            head.next = self.deleteDuplicates(head.next)
+            return head.next if head.next.val == head.val else head
+        return head
 ```
 
 <br/>
@@ -8679,28 +9209,113 @@ fun main(args: Array) {
 
 #### [LC-83:Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
 ##### Solution Explanation:
-```| [
+```
+#-----------------------------------
+# Approach 1: Brute Force ( just for discussion purposes in an Interview )
+#-----------------------------------
+Brute Force, without additional space, iterates thru A, testing if A[i] == A[i + 1] and if so, shift all elements after i by 1.
+When all entries are equal, the number of shifts is (n - 1) + (n - 2) + ... 
+or O(n) ^ 2.
+
+#-----------------------------------
+# Approach 2: Intution to O(n) solution - Two variables prev and write
+#-----------------------------------
+Intution to O(n) solution
+----------------------------
+Since the array is already sorted, repeated elements MUST appear one after another, so we don't need an extra data structure.
+We move just one element, rather than the entire subarray, and just move it once.
+
+Algorithm
+----------------------------
+* Keep two variables prev and write.
+* prev tracks the previos element and makes sure we add an element only once.
+* write tracks the next slot in the input array where we should write our result.
+
+Example
+----------------------------
+For A = [2,3,5,5,7], when processing A[3], we already know we have a 5, 
+by comparing A[3] and A[2], advance to A[4], since this is a new value, 
+move it to the first vacant entry where we should have a new number, in this case it is A[3].
+Now the array is [2,3,5,7,7] and the next vacant entry will be A[4]
+
+The time complexity is O(n) and space is O(1) since all that is needed is the two additional variables
+
+#-----------------------------------
+# Approach 3: Two Pointer Approach
+#-----------------------------------
+
+* Since the array is already sorted, we can keep two pointers slow and fast, where slow is the slow-runner while fast is the fast-runner.
+* As long as nums[slow-1] = nums[fast], we increment fast to skip the duplicate.
+* When we encounter nums[slow] not equals nums[fast], the duplicate run has ended so we must copy its value to nums[slow]. 
+  slow is then incremented and we repeat the same process again until fast reaches the end of array.
+
+Time complextiy : O(n). Assume that n is the length of array. Each of slow and fast pointers traverse at most n steps.
+Space complexity : O(1).
+
 ```
 ##### Complexity Analysis:
 ```
+#-----------------------------------
+# Approach 2: Intution to O(n) solution - Two variables prev and write
+#-----------------------------------
+TC : O(n)
+SC : O(1)
+
+#-----------------------------------
+# Approach 3: Two Pointer Approach
+#-----------------------------------
+TC : O(n)
+SC : O(1)
 ```
 ```python
-```
+#-----------------------------------
+# Approach 2: Intution to O(n) solution - Two variables prev and write
+#-----------------------------------
+#TC : O(n)
+#SC : O(1)
+#
+from typing import List
 
-<br/>
-<div align="right">
-    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
-</div>
-<br/>
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int::
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        write, prev = 0, None
+        for curr in nums:
+            if (prev == None) or (curr != prev):
+                nums[write] = curr
+                write, prev = write + 1, curr
+        return write
 
-#### [LC-257:Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)
-##### Solution Explanation:
-```
-```
-##### Complexity Analysis:
-```
-```
-```python
+#-----------------------------------
+# Approach 3: Two Pointer Approach
+#-----------------------------------
+#TC : O(n)
+#SC : O(1)
+#
+from typing import List
+
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int::
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        """Two pointer approach"""
+    
+        #take two pointers slow and fast
+        slow, fast = 1, 1
+    
+        #compare fast with slow
+        for fast in range(len(nums)):
+            #when you find unique element replace it with slow
+            if nums[slow - 1] != nums[fast]:
+                nums[slow] = nums[fast]
+                slow += 1
+            
+        return slow
 ```
 
 <br/>
@@ -8870,11 +9485,129 @@ if __name__ == '__main__':
 #### [LC-20:Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
 ##### Solution Explanation:
 ```
+#-----------------------------------
+# Approach 1: Iterative Solution
+#-----------------------------------
+* We can use a stack to keep track of the order of brackets seen in s and know whether the current bracket matches the last one seen.
+* The stack will only contain openBrackets and we will use the openToCloseBracket mapping to check that the latest open bracket has a matching close bracket.
+* I.e., The top of the stack (stack[-1]) should be an open bracket that matches the current close bracket, if the current bracket is a close bracket.
+
+#-----------------------------------
+# Approach 2: Resursive Solution
+#-----------------------------------
+Since we only need to check whether the string is valid, "parsing" means consuming as much of the string as is valid.
+We then check whether the whole string has been consumed to determine whether the entire string is valid.
 ```
 ##### Complexity Analysis:
 ```
+#-----------------------------------
+# Approach 1: Iterative Solution
+#-----------------------------------
+Time complexity is O(n) since you are traversing through the string once and the operations on the stack are O(1).
+The space complexity in the worst case would be O(n) if only leading brackets were passed in and would therefore be pushed onto the stack.
+
+TC: O(N)
+SC: O(N)
+
+#-----------------------------------
+# Approach 2: Resursive Solution
+#-----------------------------------
+Time complexity is O(n) since you are traversing through the string once and the operations on the stack are O(1).
+The space complexity in the worst case would be O(n) if only leading brackets were passed in and would therefore be pushed onto the stack.
+
+TC: O(N)
+SC: O(N)
 ```
 ```python
+#-----------------------------------
+# Approach 2: Resursive Solution
+#-----------------------------------
+#TC: O(N)
+#SC: O(N)
+
+class Solution:
+    def isValid(self, s: str) -> bool:
+        stack = []
+        openBrackets = {'(', '[', '{'}
+        openToCloseBracket = {
+            '(': ')',
+            '[': ']',
+            '{': '}'
+        }
+        
+        for bracket in s:
+			# Only add open brackets to the stack.
+            if bracket in openBrackets:
+                stack.append(bracket)
+			# The stack is non-empty, and the last open bracket seen matches the close bracket.
+            elif stack and openToCloseBracket[stack[-1]] == bracket:
+				# Remove the matching open bracket from the stack.
+                stack.pop()
+			# The rules for valid bracket matching have been violated.
+            else:
+                return False
+                
+		# All brackets must be paired up, so the stack must be empty by the end of the string.
+        return len(stack) == 0
+
+#-----------------------------------
+# Approach 2: Resursive Solution
+#-----------------------------------
+#TC: O(N)
+#SC: O(N)
+#
+
+class Solution:
+    def isValid(self, s: str) -> bool:
+        matching_bracket = {
+            '(': ')', 
+            '[': ']', 
+            '{': '}',
+        }
+        
+        def parse_string(s, start=0):
+            """Return the end of the longest valid string 
+            that begins at the index `start`.
+
+            Grammar:
+                <string> -> '' | 
+                            <round> <string> | 
+                            <square> <string> | 
+                            <curly> <string>
+                <round>  -> '(' <string> ')'
+                <square> -> '[' <string> ']'
+                <curly>  -> '{' <string> '}'
+            
+            >>> parse_string('{}([)]')
+            2
+            >>> parse_string('{[]}')
+            4
+            """
+            if len(s) <= start:
+                # The string `s[start:]` is empty.
+                return start
+            elif s[start] in matching_bracket:
+                # We've encountered an opening bracket.  Attempt
+                # to parse the substring immediately after the
+                # opening bracket.
+                sub_end = parse_string(s, start=start+1)
+                if sub_end == len(s) or s[sub_end] != matching_bracket[s[start]]:
+                    # We've either reached the end of the string while
+                    # attempting to parse the substring, or the character
+                    # after the substring is not the closing bracket we 
+                    # expected.
+                    return start
+                else:
+                    # The substring is valid, and is followed by the correct
+                    # closing bracket.  Consume the closing bracket and parse
+                    # the rest of the string.
+                    return parse_string(s, start=sub_end+1)
+            else:
+                # We've encountered an unexpected character at the start
+                # of the string.
+                return start
+        
+        return parse_string(s) == len(s)
 ```
 
 <br/>
@@ -9275,11 +10008,34 @@ fun main(args: Array<String>) {
 #### [Facebook Onsite Generate Random Max Index](https://leetcode.com/discuss/interview-question/451431/facebook-onsite-generate-random-max-index)
 ##### Solution Explanation:
 ```
+Facebook have a practice of asking problems on Random and Reservoir Sampling.
+This problem relates to Reservoir Sampling. 
+It should be solved with O(1) space and time O(N).
+Hence, any solution beyond would be considered by interviewer as failed.
 ```
 ##### Complexity Analysis:
 ```
+TC: O(N)
+SC: O(1)
 ```
 ```python
+import random
+def find_random_Maxindex(arr):
+  if not arr:
+    return -1
+  max_num = arr[0]
+  indices = [0]
+  for i in range(1,len(arr)):
+    if arr[i] > max_num:
+      max_num = arr[i]
+      indices = [i]
+    elif arr[i] == max_num:
+      indices.append(i)
+    else:
+      continue
+  return random.choice(indices)
+print(find_random_Maxindex([11,30,2,30,30,30,6,2]))
+print(find_random_Maxindex([]))
 ```
 
 <br/>
@@ -9289,13 +10045,151 @@ fun main(args: Array<String>) {
 <br/>
 
 #### [Facebook Interview Question Minimum number of people to spread a message](https://leetcode.com/discuss/interview-question/124827/Find-minimum-number-of-people-to-reach-to-spread-a-message-across-all-people-in-twitter/)
+[Similar Problem - Coding Interview Simulation](https://www.youtube.com/watch?v=qz9tKlF431k)
 ##### Solution Explanation:
 ```
+Intuition
+----------------------------
+This is a very interesting graph problem, here is what I would do:
+
+step 1. Build a directed graph based on the input people (nodes) and their relationship (edges).
+
+step 2. Find strongly connected components (SCCs) in the graph. Let's use the wikipedia's graph example, in that case, there are 3 SCCs: (a, b, e), (c, d, h) and (f, g). There are two famous algorithms for getting the SCCs: Kosaraju's algorithm and Tarjan's algorithm.
+
+step 3. Pick one of the nodes from the SCCs we get: a, c, f, now these 3 nodes form a DAG, we just need to do topological sort for them, eventually a is the root node in the path (or stack), and we can let a spread the message and guarantee all other people will get it.
+
+Sometimes, there could be several topological paths, and the root nodes of those paths will be the minimum people to reach out to spread the message.
+
+Algorithm Steps:
+----------------------------
+* Create a directed graph which captures followee -> follower relationship
+* Now create the topological sort for the entire graph
+* For each unvisited node in the topological sort result, add it to the final result and then visit all the nodes in that tree
+* The reason this works is, in the topological sort order the node that appears first is the left most node in the given connected component. So you would use that to traverse the curr node and all its children node.
+    2
+    |       4
+    0       |
+   / \      5
+  1   3
+
+In this example 0 follows 2. so if we reach 2 then we will reach 0 and all its descendents as well.
+So the final result will be [2,4]
+def min_people(num_people, follows):
+    from collections import defaultdict
+    
+    # in this graph we will store 
+    # followee -> follower relation
+    graph = defaultdict(set)
+    
+    # a follows b
+    for a, b in follows:
+        graph[b].add(a)
+
+    def topo(node, graph, visited, result):
+        visited.add(node)
+        for nei in graph[node]:
+            if nei not in visited:
+                topo(nei, graph, visited, result)
+        result.append(node)
+    
+    visited = set([])
+    result = []
+    for i in range(num_people):
+        if i not in visited:
+            topo(i, graph, visited, result)
+    result = list(reversed(result))
+    
+    def visit(node, visited, graph):
+        visited.add(node)
+        for nei in graph[node]:
+            if nei not in visited:
+                visit(nei, visited, graph)
+    
+    visited = set([])
+    start_with = []
+    for r in result:
+        if r not in visited:
+            start_with.append(r)
+            visit(r, visited, graph)
+    
+    return start_with
+
+follows = [(0,2), (1,0), (3,0), (5,4)]
+min_people(6, follows)
+
+[4, 2]
 ```
 ##### Complexity Analysis:
 ```
 ```
 ```python
+import collections
+
+import unittest
+
+
+class Solution:
+
+    #     2
+    #     |       4
+    #     0       |
+    #    / \      5
+    #   1   3
+    #
+    # In this example 0 follows 2. so if we reach 2 then we will reach 0 and all its descendents as well.
+    # So the final result will be [2,4]
+    #
+
+    def minPeopleToSpreadAMessage(self, num_people, follows):
+        # in this graph we will store
+        # followee -> follower relation
+        graph = collections.defaultdict(set)
+
+        # a follows b
+        for a, b in follows:
+            graph[b].add(a)
+
+        def topo(node, graph, visited, result):
+            visited.add(node)
+            for nei in graph[node]:
+                if nei not in visited:
+                    topo(nei, graph, visited, result)
+            result.append(node)
+
+        visited = set([])
+        result = []
+        for i in range(num_people):
+            if i not in visited:
+                topo(i, graph, visited, result)
+        result = list(reversed(result))
+
+        def visit(node, visited, graph):
+            visited.add(node)
+            for nei in graph[node]:
+                if nei not in visited:
+                    visit(nei, visited, graph)
+
+        visited = set([])
+        start_with = []
+        for r in result:
+            if r not in visited:
+                start_with.append(r)
+                visit(r, visited, graph)
+
+        return start_with
+
+
+class Test(unittest.TestCase):
+    def setUp(self) -> None:
+        pass
+
+    def tearDown(self) -> None:
+        pass
+
+    def test_minPeopleToSpreadAMessage(self) -> None:
+        sol = Solution()
+        follows = [(0, 2), (1, 0), (3, 0), (5, 4)]
+        self.assertEqual([4, 2], sol.minPeopleToSpreadAMessage(6, follows))
 ```
 
 <br/>
@@ -9305,13 +10199,61 @@ fun main(args: Array<String>) {
 <br/>
 
 #### [Facebook Phone Interview Question Given a directed graph remove return minimum of edges to keep all paths](https://leetcode.com/discuss/interview-question/630806/facebook-phone-transitive-reduction-factorial-trailing-zeroes)
+##### AKA - Transitive reduction
+![Given-a-directed-graph-remove-return-minimum-of-edges-to-keep-all-path](./assets/Given-a-directed-graph-remove-return-minimum-of-edges-to-keep-all-path.PNG)
 ##### Solution Explanation:
 ```
+Transitive reduction:
+-----------------------------
+Do DFS from each vertex u and if we encounter a verted v which is not a direct descendant of u but there is an edge between u and v then that edge is a redundant edge.
+
+-----------------------------
+Reference:
+-----------------------------
+https://www.wikiwand.com/en/Transitive_reduction
+
+In mathematics, a transitive reduction of a directed graph D is another directed graph with the same vertices and as few edges as possible, such that for all pairs of vertices v, w a (directed) path from v to w in D exists if and only if such a path exists in the reduction. Transitive reductions were introduced by Aho, Garey & Ullman (1972), who provided tight bounds on the computational complexity of constructing them.
+
+More technically, the reduction is a directed graph that has the same reachability relation as D. Equivalently, D and its transitive reduction should have the same transitive closure as each other, and the transitive reduction of D should have as few edges as possible among all graphs with that property.
+
+The transitive reduction of a finite directed acyclic graph (a directed graph without directed cycles) is unique and is a subgraph of the given graph. However, uniqueness fails for graphs with (directed) cycles, and for infinite graphs not even existence is guaranteed.
 ```
 ##### Complexity Analysis:
 ```
 ```
 ```python
+def dfs(adj_map, x, start, visited, edges, redundant_edges):
+    visited.add(x)
+    
+    if x in adj_map:
+        for y in adj_map[x]:
+            if y not in visited:
+                if start != x and (start, y) in edges:
+                    redundant_edges.add((start, y))
+                    
+                a = dfs(adj_map, y, start, set(visited), edges, redundant_edges)
+                redundant_edges.update(a)
+                
+    return redundant_edges
+
+def transitive_reduction(edges):
+    if len(edges) == 0:
+        return 0
+    
+    edges = set([(x, y) for x, y in edges])
+    
+    adj_map = {}
+    for x, y in edges:
+        if x not in adj_map:
+            adj_map[x] = []
+        adj_map[x].append(y)
+    
+    redundant_edges = set()
+    
+    for x in adj_map:
+        redundant_edges = dfs(adj_map, x, x, set(), edges, redundant_edges)
+    
+    return len(edges)-len(redundant_edges)
 ```
 
 <br/>
@@ -9321,6 +10263,23 @@ fun main(args: Array<String>) {
 <br/>
 
 #### [Facebook Phone screen Shortest Path with Obstacles](https://leetcode.com/discuss/interview-question/301192/Facebook-phone-screen-Shortest-Path-with-Obstacles/283312)
+##### Problem Description:
+```
+Facebook Phone Interview Question.
+
+Given a 2D matrix where some of the elements are filled with 1 and the rest of the elements are filled with X, except 2 elements, 
+of which one is S (start point) and E (endpoint). Here X means you cannot traverse to that particular point.
+From a cell you can either traverse to left, right, up or down. Given two points in the matrix find the shortest path between these points.
+
+For example, if the matrix is
+1 1 1 1 1
+S 1 X 1 1
+1 1 1 1 1
+X 1 1 E 1
+1 1 1 1 X
+
+One of the shortest paths (from E to S both exclusive) is: [(3, 2), (3, 1), (2, 1), (2, 0)]. Return null if there is no path between S and E.
+```
 ##### Solution Explanation:
 ```
 ```
@@ -9328,6 +10287,1200 @@ fun main(args: Array<String>) {
 ```
 ```
 ```python
+from typing import List
+import collections
+
+import unittest
+
+
+class Solution:
+    def bfs(self, start_x, start_y, end_x, end_y, n, m, matrix, visited, parent_map):
+        queue = collections.deque([(start_x, start_y)])
+
+        while queue:
+            x, y = queue.popleft()
+            visited[x][y] = True
+
+            if x == end_x and y == end_y:
+                return
+
+            for next_x, next_y in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)):
+                if (
+                    0 <= next_x < n
+                    and 0 <= next_y < m
+                    and matrix[next_x][next_y] != "X"
+                    and not visited[next_x][next_y]
+                ):
+                    queue.append((next_x, next_y))
+                    parent_map[next_x + next_y * m] = x + y * m
+
+    def get_path(self, start_x, start_y, end_x, end_y, n, m, parent_map, path):
+        start = start_x + start_y * m
+        parent = parent_map.get(end_x + end_y * m, None)
+
+        print(parent, start)
+
+        while parent and start != parent:
+            path.append((parent % m, parent // n))
+            parent = parent_map.get(parent, None)
+
+        return path
+
+    def shortest_path_with_obstacles(self, matrix):
+        if not matrix or not matrix[0]:
+            return []
+
+        n, m = len(matrix), len(matrix[0])
+        start_x, start_y = -1, -1
+        end_x, end_y = -1, -1
+
+        for i in range(n):
+            for j in range(m):
+                if matrix[i][j] == "S":
+                    start_x, start_y = i, j
+                elif matrix[i][j] == "E":
+                    end_x, end_y = i, j
+
+        path = []
+        if start_x != -1 and end_x != -1:
+            visited = [[False] * m for _ in range(n)]
+            parent_map = {}
+            self.bfs(start_x, start_y, end_x, end_y, n, m, matrix, visited, parent_map)
+
+            path = self.get_path(
+                start_x, start_y, end_x, end_y, n, m, parent_map, [(end_x, end_y)]
+            )
+            path.append((start_x, start_y))
+
+        return path[::-1]
+
+
+class Test(unittest.TestCase):
+    def setUp(self) -> None:
+        pass
+
+    def tearDown(self) -> None:
+        pass
+
+    def test_shortest_path_with_obstacles(self) -> None:
+        sol = Solution()
+        matrix = [
+            ["1", "1", "X", "1", "1"],
+            ["S", "1", "X", "1", "1"],
+            ["1", "1", "1", "1", "1"],
+            ["X", "1", "1", "E", "1"],
+            ["1", "1", "1", "1", "X"],
+        ]
+        self.assertEqual(
+            [(1, 0), (1, 1), (2, 1), (2, 2), (2, 3), (3, 3)],
+            sol.shortest_path_with_obstacles(matrix),
+        )
+
+
+# main
+if __name__ == "__main__":
+    unittest.main()
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-785:Is Graph Bipartite](https://leetcode.com/problems/is-graph-bipartite/)
+##### Problem Description:
+```
+There is an undirected graph with n nodes, where each node is numbered between 0 and n - 1. You are given a 2D array graph, where graph[u] is an array of nodes that node u is adjacent to. More formally, for each v in graph[u], there is an undirected edge between node u and node v. The graph has the following properties:
+
+There are no self-edges (graph[u] does not contain u).
+There are no parallel edges (graph[u] does not contain duplicate values).
+If v is in graph[u], then u is in graph[v] (the graph is undirected).
+The graph may not be connected, meaning there may be two nodes u and v such that there is no path between them.
+A graph is bipartite if the nodes can be partitioned into two independent sets A and B such that every edge in the graph connects a node in set A and a node in set B.
+
+Return true if and only if it is bipartite.
+```
+![lc-785-is-graph-bipartite-test-case-example-1](./assets/lc-785-is-graph-bipartite-test-case-example-1.PNG)
+##### Solution Explanation:
+```
+# ----------------------------------------------
+# 1st approach: BFS + nodes coloring
+# ----------------------------------------------
+* we need to check every node because it is possible that graph[0] doesn't have any vertices connected.
+
+# ----------------------------------------------
+# 2nd approach: recursive DFS + nodes coloring
+# ----------------------------------------------
+* we need to check every node because it is possible that graph[0] doesn't have any vertices connected.
+```
+##### Complexity Analysis:
+```
+for both approaches:
+
+TC: O(|V| + |E|)
+SC: O(|V| + |E|)
+```
+```python
+# ----------------------------------------------
+# 1st approach: BFS + nodes coloring
+# ----------------------------------------------
+#TC: O(|V| + |E|)
+#SC: O(|V| + |E|)
+#
+
+from typing import List
+
+class Solution:
+    def isBipartite(self, graph: List[List[int]]) -> bool:
+        """
+        :type graph: List[List[int]]
+        :rtype: bool
+        """
+        seen = {}
+        # we need to check every node because it is possible that graph[0] doesn't have any vertices connected
+        for i in range(len(graph)):
+            if i not in seen:
+                if self.check(graph, i, seen) == False:
+                    return False
+        return True
+
+    def check(self, graph, start, seen):
+        q = [(start, 1)]
+        while len(q) > 0:
+            pop, color = q.pop(0)
+            if pop in seen:
+                if seen[pop] != color:
+                    return False
+                continue
+            seen[pop] = color
+            vertices = graph[pop]
+            for v in vertices:
+                q.append((v, -color))
+        return True
+
+# ----------------------------------------------
+# 2nd approach: recursive DFS + nodes coloring
+# ----------------------------------------------
+#TC: O(|V| + |E|)
+#SC: O(|V| + |E|)
+#
+
+from typing import List
+
+class Solution:
+    def isBipartite(self, graph: List[List[int]]) -> bool:
+        """
+        :type graph: List[List[int]]
+        :rtype: bool
+        """
+        seen = {}
+        # we need to check every node because it is possible that graph[0] doesn't have any vertices connected
+        for i in range(len(graph)):
+            if i not in seen:
+                if self.check(graph, i, 1, seen) == False:
+                    return False
+        return True
+
+    def check(self, graph, node, color, seen):
+        if node in seen:
+            if seen[node] != color:
+                return False
+            return True
+        seen[node] = color
+        vertices = graph[node]
+        for v in vertices:
+            if self.check(graph, v, -color, seen) == False:
+                return False
+        return True
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-886:Possible Bipartition](https://leetcode.com/problems/possible-bipartition/)
+##### Similar Actual Interview Question asked at Facebook:
+```
+There is a set of social profiles. Some of them are connected.
+Is it possible to split the set into two groups, such that there are no connections inside the group?
+
+// A B C
+// A-B B-C  [A, C] [B] true，
+// A-B B-C A-C [A, C] [B] false
+
+// input [[A,B] [B, C]]  output true
+// input [[A,B] [B, C], [A, C]] output false
+```
+##### Problem Description:
+```
+Given a set of n people (numbered 1, 2, ..., n), we would like to split everyone into two groups of any size.
+
+Each person may dislike some other people, and they should not go into the same group. 
+
+Formally, if dislikes[i] = [a, b], it means it is not allowed to put the people numbered a and b into the same group.
+
+Return true if and only if it is possible to split everyone into two groups in this way.
+------------------------------------------------------------------------------------------
+
+Example 1:
+----------
+Input: n = 4, dislikes = [[1,2],[1,3],[2,4]]
+Output: true
+Explanation: group1 [1,4], group2 [2,3]
+```
+##### Solution Explanation:
+```
+# ----------------------------------------------
+# 1st approach: BFS + nodes coloring
+# ----------------------------------------------
+
+# ----------------------------------------------
+# 2nd approach: recursive DFS + nodes coloring
+# ----------------------------------------------
+```
+##### Complexity Analysis:
+```
+for both approaches:
+
+TC: O(|V| + |E|)
+SC: O(|V| + |E|)
+```
+```python
+# ----------------------------------------------
+# 1st approach: BFS + nodes coloring
+# ----------------------------------------------
+#TC: O(|V| + |E|)
+#SC: O(|V| + |E|)
+#
+
+from typing import List
+
+class Solution:
+    def possibleBipartition(self, n: int, dislikes: List[List[int]]) -> bool:
+        """
+        :type N: int
+        :type dislikes: List[List[int]]
+        :rtype: bool
+        """
+        connections = []
+        for _ in range(N+1):
+            connections.append([])
+
+        for a, b in dislikes:
+            connections[a].append(b)
+            connections[b].append(a)
+
+        seen = {}
+        for i in range(len(connections)):
+            if i not in seen:
+                if self.check(connections, i, seen) == False:
+                    return False
+        return True
+
+    def check(self, connections, start, seen):
+        q = [(start, 1)]
+        while len(q) > 0:
+            pop, color = q.pop(0)
+            if pop in seen:
+                if seen[pop] != color:
+                    return False
+                continue
+            seen[pop] = color
+            vertices = connections[pop]
+            for v in vertices:
+                q.append((v, -color))
+        return True
+
+# ----------------------------------------------
+# 2nd approach: recursive DFS + nodes coloring
+# ----------------------------------------------
+#TC: O(|V| + |E|)
+#SC: O(|V| + |E|)
+#
+
+from typing import List
+
+class Solution:
+    def possibleBipartition(self, n: int, dislikes: List[List[int]]) -> bool:
+        """
+        :type N: int
+        :type dislikes: List[List[int]]
+        :rtype: bool
+        """
+        connections = []
+        for _ in range(N+1):
+            connections.append([])
+
+        for a, b in dislikes:
+            connections[a].append(b)
+            connections[b].append(a)
+
+        seen = {}
+        for i in range(len(connections)):
+            if i not in seen:
+                if self.check(connections, i, 1, seen) == False:
+                    return False
+        return True
+
+    def check(self, connections, node, color, seen):
+        if node in seen:
+            if seen[node] != color:
+                return False
+            return True
+        seen[node] = color
+        vertices = connections[node]
+        for v in vertices:
+            if self.check(connections, v, -color, seen) == False:
+                return False
+        return True
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-72:Edit Distance](https://leetcode.com/problems/edit-distance/)
+##### Problem Description:
+```
+Given two strings word1 and word2, return the minimum number of operations required to convert word1 to word2.
+
+You have the following three operations permitted on a word:
+
+Insert a character
+Delete a character
+Replace a character
+ 
+
+Example 1:
+
+Input: word1 = "horse", word2 = "ros"
+Output: 3
+Explanation: 
+horse -> rorse (replace 'h' with 'r')
+rorse -> rose (remove 'r')
+rose -> ros (remove 'e')
+```
+##### Solution Explanation:
+```
+# Thought - Process behind going from Brute Force to Recursion to DP.
+----------------
+For those having difficulty cracking dynamic programming solutions, I find it easiest to solve by first starting with a naive, but working recursive implementation. It's essential to do so, because dynamic programming is basically recursion with caching. With this workflow, deciphering dynamic programming problems becomes just a little more manageable for us normal people. :)
+----------------
+Thought process:
+Given two strings, we're tasked with finding the minimum number of transformations we need to make to arrive with equivalent strings. From the get-go, there doesn't seem to be any way around trying all possibilities, and in this, possibilities refers to inserting, deleting, or replacing a character. Recursion is usually a good choice for trying all possilbilities.
+
+Whenever we write recursive functions, we'll need some way to terminate, or else we'll end up overflowing the stack via infinite recursion. With strings, the natural state to keep track of is the index. We'll need two indexes, one for word1 and one for word2. Now we just need to handle our base cases, and recursive cases.
+What happens when we're done with either word? Some thought will tell you that the minimum number of transformations is simply to insert the rest of the other word. This is our base case. What about when we're not done with either string? We'll either match the currently indexed characters in both strings, or mismatch. In the first case, we don't incur any penalty, and we can continue to compare the rest of the strings by recursing on the rest of both strings. In the case of a mismatch, we either insert, delete, or replace. To recap:
+
+base case: word1 = "" or word2 = "" => return length of other string
+recursive case: word1[0] == word2[0] => recurse on word1[1:] and word2[1:]
+recursive case: word1[0] != word2[0] => recurse by inserting, deleting, or replacing
+And in Python:
+
+class Solution:
+    def minDistance(self, word1, word2):
+        """Naive recursive solution"""
+        if not word1 and not word2:
+            return 0
+        if not word1:
+            return len(word2)
+        if not word2:
+            return len(word1)
+        if word1[0] == word2[0]:
+            return self.minDistance(word1[1:], word2[1:])
+        insert = 1 + self.minDistance(word1, word2[1:])
+        delete = 1 + self.minDistance(word1[1:], word2)
+        replace = 1 + self.minDistance(word1[1:], word2[1:])
+        return min(insert, replace, delete)
+
+With a solution in hand, we're ecstatic and we go to submit our code. All is well until we see the dreaded red text... TIME LIMIT EXCEEDED. What did we do wrong? Let's look at a simple example, and for sake of brevity I'll annotate the minDistance function as md.
+
+word1 = "horse"
+word2 = "hello"
+
+The tree of recursive calls, 3 levels deep, looks like the following. I've highlighted recursive calls with multiple invocations. So now we see that we're repeating work. I'm not going to try and analyze the runtime of this solution, but it's exponential.
+
+md("horse", "hello")
+	md("orse", "ello")
+		md("orse", "llo")
+			md("orse", "lo")
+			md("rse", "llo") <- 
+			md("rse", "lo")
+		md("rse", "ello")
+			md("rse", "llo") <-
+			md("se", "ello")
+			md("se", "llo") <<-
+		md("rse", "llo")
+			md("rse", "llo") <-
+			md("se", "llo") <<-
+			md("se", "lo")
+			
+The way we fix this is by caching. We save intermediate computations in a dictionary and if we recur on the same subproblem, instead of doing the same work again, we return the saved value. Here is the memoized solution, where we build from bigger subproblems to smaller subproblems (top-down).
+
+# ------------------------------
+# Approach 1 : Recursion
+# ------------------------------
+class Solution:
+    def minDistance(self, word1, word2, i, j, memo):
+        """Memoized solution"""
+        if i == len(word1) and j == len(word2):
+            return 0
+        if i == len(word1):
+            return len(word2) - j
+        if j == len(word2):
+            return len(word1) - i
+
+        if (i, j) not in memo:
+            if word1[i] == word2[j]:
+                ans = self.minDistance2(word1, word2, i + 1, j + 1, memo)
+            else: 
+                insert = 1 + self.minDistance2(word1, word2, i, j + 1, memo)
+                delete = 1 + self.minDistance2(word1, word2, i + 1, j, memo)
+                replace = 1 + self.minDistance2(word1, word2, i + 1, j + 1, memo)
+                ans = min(insert, delete, replace)
+            memo[(i, j)] = ans
+        return memo[(i, j)]
+
+Of course, an interative implementation is usually better than its recursive counterpart because we don't risk blowing up our stack in case the number of recursive calls is very deep. We can also use a 2D array to do essentially the same thing as the dictionary of cached values. When we do this, we build up solutions from smaller subproblems to bigger subproblems (bottom-up). In this case, since we are no longer "recurring" in the traditional sense, we initialize our 2D table with base constraints. The first row and column of the table has known values since if one string is empty, we simply add the length of the non-empty string since that is the minimum number of edits necessary to arrive at equivalent strings. For both the memoized and dynamic programming solutions, the runtime is O(mn) and the space complexity is O(mn) where m and n are the lengths of word1 and word2, respectively.
+
+# ------------------------------
+# Approach 2 : Iterative DP Solution
+# ------------------------------
+class Solution:
+    def minDistance(self, word1, word2):
+        """Dynamic programming solution"""
+        m = len(word1)
+        n = len(word2)
+        table = [[0] * (n + 1) for _ in range(m + 1)]
+
+        for i in range(m + 1):
+            table[i][0] = i
+        for j in range(n + 1):
+            table[0][j] = j
+
+        for i in range(1, m + 1):
+            for j in range(1, n + 1):
+                if word1[i - 1] == word2[j - 1]:
+                    table[i][j] = table[i - 1][j - 1]
+                else:
+                    table[i][j] = 1 + min(table[i - 1][j], table[i][j - 1], table[i - 1][j - 1])
+        return table[-1][-1]		
+```
+##### Complexity Analysis:
+```
+# ------------------------------
+# Approach 1 : Recursion
+# ------------------------------
+TC: O(mn)
+SC: O(mn)
+
+where, m and n are the lengths of word1 and word2, respectively
+
+# ------------------------------
+# Approach 2 : Iterative DP Solution
+# ------------------------------
+TC: O(mn)
+SC: O(mn)
+
+where, m and n are the lengths of word1 and word2, respectively
+
+```
+```python
+# ------------------------------
+# Approach 1 : Recursion Solution using Memoization
+# ------------------------------
+#TC: O(mn)
+#SC: O(mn)
+#
+#where, m and n are the lengths of word1 and word2, respectively
+#
+class Solution:
+    def minDistance(self, word1: str, word2: str) -> int:
+        """Memoized solution"""
+        if i == len(word1) and j == len(word2):
+            return 0
+        if i == len(word1):
+            return len(word2) - j
+        if j == len(word2):
+            return len(word1) - i
+
+        if (i, j) not in memo:
+            if word1[i] == word2[j]:
+                ans = self.minDistance2(word1, word2, i + 1, j + 1, memo)
+            else: 
+                insert = 1 + self.minDistance2(word1, word2, i, j + 1, memo)
+                delete = 1 + self.minDistance2(word1, word2, i + 1, j, memo)
+                replace = 1 + self.minDistance2(word1, word2, i + 1, j + 1, memo)
+                ans = min(insert, delete, replace)
+            memo[(i, j)] = ans
+        return memo[(i, j)]
+
+# ------------------------------
+# Approach 2 : Iterative DP Solution
+# ------------------------------
+#TC: O(mn)
+#SC: O(mn)
+#
+#where, m and n are the lengths of word1 and word2, respectively
+#
+class Solution:
+    def minDistance(self, word1: str, word2: str) -> int:
+        """Dynamic programming solution"""
+        m = len(word1)
+        n = len(word2)
+        table = [[0] * (n + 1) for _ in range(m + 1)]
+
+        for i in range(m + 1):
+            table[i][0] = i
+        for j in range(n + 1):
+            table[0][j] = j
+
+        for i in range(1, m + 1):
+            for j in range(1, n + 1):
+                if word1[i - 1] == word2[j - 1]:
+                    table[i][j] = table[i - 1][j - 1]
+                else:
+                    table[i][j] = 1 + min(table[i - 1][j], table[i][j - 1], table[i - 1][j - 1])
+        return table[-1][-1]
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-91:Decode Ways](https://leetcode.com/problems/decode-ways/)
+##### Problem Description:
+```
+A message containing letters from A-Z can be encoded into numbers using the following mapping:
+
+'A' -> "1"
+'B' -> "2"
+...
+'Z' -> "26"
+To decode an encoded message, all the digits must be grouped then mapped back into letters using the reverse of the mapping above (there may be multiple ways). For example, "11106" can be mapped into:
+
+"AAJF" with the grouping (1 1 10 6)
+"KJF" with the grouping (11 10 6)
+Note that the grouping (1 11 06) is invalid because "06" cannot be mapped into 'F' since "6" is different from "06".
+
+Given a string s containing only digits, return the number of ways to decode it.
+
+The answer is guaranteed to fit in a 32-bit integer.
+
+--------------------
+
+Example 1:
+
+Input: s = "12"
+Output: 2
+Explanation: "12" could be decoded as "AB" (1 2) or "L" (12).
+```
+##### Solution Explanation:
+```
+# --------------------------------
+# Approach 1 - Memoization
+# --------------------------------
+* Again you need to be wary about edge cases. Inputs: "10", "102", "567". The first character can never be 0. First two characters can never be more than 26.
+* What about empty string? It has zero encodings.
+* The complexity is O(N). Why? The number of possible values of k can be 0, 1, 2, ...N. Caching ensures we calculate it just once.
+
+# --------------------------------
+# Approach 2 - Dynamic Progamming using Tabulation
+# --------------------------------
+# TC: O(N)
+
+```
+##### Complexity Analysis:
+```
+For both approaches:
+
+TC: O(N)
+SC: O(N)
+```
+```python
+# --------------------------------
+# Approach 1 - Memoization
+# --------------------------------
+
+class Solution:
+    def helper(self, k, s, cache):
+        if k == len(s):
+            return 1
+        elif k in cache:
+            return cache[k]
+        else:
+            cache[k] = 0
+            if s[k] != "0":
+                cache[k] = self.helper(k+1, s, cache)
+                if (k+1 <= len(s)-1) and int(s[k:k+2]) <= 26:
+                    cache[k] += self.helper(k+2, s, cache)
+            return cache[k]
+
+    def numDecodings(self, s: str) -> int:
+        if not s:
+            return 0
+        return self.helper(0, s, {})
+
+# --------------------------------
+# Approach 2 - Dynamic Progamming using Tabulation
+# --------------------------------
+class Solution:
+    def numDecodings(self, s: str) -> int:
+        """
+        :type s: str
+        :rtype: int
+        """
+        if len(s) == 0:
+            return 0
+        table = [0]*len(s)
+        for idx,x in enumerate(s):
+            if idx == 0:
+                table[idx] = 1 if x != "0" else 0
+            elif idx == 1:
+                if x != "0":
+                    table[idx] = table[idx-1]
+                if (int(s[0:2]) >= 10) and (int(s[0:2]) <= 26):
+                    table[idx] = table[idx] + 1
+            else:
+                if x != "0":
+                    table[idx] = table[idx-1]
+                if (int(s[idx-1:idx+1]) >= 10) and (int(s[idx-1:idx+1]) <= 26):
+                    table[idx] = table[idx] + table[idx-2]                    
+        return table[-1]
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-75:Sort Colors](https://leetcode.com/problems/sort-colors/)
+##### Problem Description:
+```
+Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.
+
+We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively.
+
+You must solve this problem without using the library's sort function.
+
+---------- 
+
+Example 1:
+
+Input: nums = [2,0,2,1,1,0]
+Output: [0,0,1,1,2,2]
+```
+##### Solution Explanation:
+```
+# ------------------------------------------
+# Dutch National Flag Problem - Solution
+# ------------------------------------------
+
+This problem is called Dutch national flag problem: https://en.wikipedia.org/wiki/Dutch_national_flag_problem
+
+The idea here is the following: we keep 3 pointers: for each of colors (numbers). I called them
+beg = 0, mid = 0, end = len(nums) - 1. The idea here is to put sorted 0 and 1 to the beginning and sorted 2s to the end. Then we iterate over all elements and process each new element in the following way. Imagine, that we already sorted some of the elements, our invariant will be 00...0011...11......22....22, where we already put some 0 and 1 in the beggining and some 2 to the end. Then there are 3 possible optinos for new element ?:
+
+ 1. 00...0011...11?......22....22, where ? = 1, then we do not need to change any elements, just move mid pointer by 1 to the right.
+ 2. 00...0011...11?......22....22, where ? = 2, then we need to put this element befor the first already sorted 2, so we change these elements and then move pointer end by 1 to the left.
+ 3. 00...0011...11?......22....22, where ? = 0, then we need to swap this element with the last sorted 0 and also move two pointers mid and beg by 1.
+
+We can see it this way, that pointers beg, mid and end always point at elements just after the last 0, after the last 1 and before the first 2.
+
+Complexity: Time complexity is O(n), because each moment of time we move at least one of the pointers. Additional space complexity is O(1): to keep only 3 variables: beg, mid and end.
+
+```
+##### Complexity Analysis:
+```
+TC: O(n)
+SC: O(1)
+```
+```python
+#TC: O(n)
+#SC: O(1)
+
+class Solution:
+    def sortColors(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        beg, mid, end = 0, 0, len(nums) - 1
+        
+        while mid <= end:
+            if nums[mid] == 0:
+                nums[beg], nums[mid] = nums[mid], nums[beg]
+                mid += 1
+                beg += 1
+            elif nums[mid] == 2:
+                nums[mid], nums[end] = nums[end], nums[mid]
+                end -= 1
+            else:  #nums[mid] == 1:
+                mid += 1
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-172:Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/)
+##### Problem Description:
+```
+Given an integer n, return the number of trailing zeroes in n!.
+
+Follow up: Could you write a solution that works in logarithmic time complexity?
+
+---------------
+
+Example 1:
+
+Input: n = 3
+Output: 0
+Explanation: 3! = 6, no trailing zero.
+```
+##### Solution Explanation:
+```
+Thought Process from initial approach to optimal iterative to recursive
+--------------
+
+Someone's first attempt might look something like this:
+
+import math
+
+        fact = math.factorial(n) #use the math class to calculate the factorial
+
+        string = [i for i in str(fact)] #Turn the into a string list
+        
+        string.reverse() #reverse it so all 0's are in front
+        count = 0
+        
+        #continue counting up until you hit a number that is not 0, then return the counter
+        for number in string:
+            if number != '0':
+                return count
+            count += 1
+
+# ------------------------------------------
+# Optimal Iterative Solution
+# ------------------------------------------
+
+However, you will notice that this method only works for values of 'n' that are relatively small. In order to account for any value of 'n' we need to look into how trailing 0's occur within factorials.
+
+Let's take a look at a few factorial results:
+
+4! = 1 * 2 * 3 * 4 = 24
+5! = 24 * 5 = 120
+6! = 120 * 6 = 720
+7! = 720 * 7 = 4320
+8! = 4320 * 8 = 34,560
+9! = 34560 * 9 = 311,040
+10! = 311,040 * 10 = 3,110,400
+
+As you can see, the number of trailing 0's is equal to the number of times the given n can be divided by 5, or to put it more bluntly:
+
+4/5 = 0 -> 0 trailing 0's
+5/5 = 1 -> 1 trailing 0
+9/5 = 1 -> 1 trailing 0
+10/5 = 2 -> 2 trailing 0's.
+
+With this in mind, we can count the number of trailing 0's by counting how many times 5 can go into n
+
+However, we also need to consider the case in which 'n' is very large. For example, if n = 200, our logic would look like this: 200/5 = 40. So 40 trailing 0's right? Well, we also have to consider that 40 is also a multiple of 5, so we need to continue dividing by 5 until we reach a number below 5. So the full logic should be:
+
+200/5 = 40 -> 40 trailing 0's
+40/5 = 8 -> 48 trailing 0's
+8/5 = 1 -> 49 trailing 0's
+
+With this logic in hand, we can create a while loop that implements our method
+
+Algorithm
+------------------
+* We start from 5, and we see how many multiples of 5 we have in n.
+* Then, we multiply 5 by 5 (25) and we add how many multiples of 25 we have in n.
+* In this case we will not have duplicates, as at in each step we will add only one 5 to the result.
+
+class Solution(object):
+    def trailingZeroes(self, n):
+        k, tot = 5, 0
+        while k <= n:
+            tot += n // k
+            k = k * 5
+        return tot
+
+Finally, you will notice that we have all the elements we need to implement this solution recursively:
+
+# ------------------------------------------
+# Recursive Solution
+# ------------------------------------------
+
+        if n < 5: #base case
+            return 0
+        else: #add the current factor of 5 to the next smallest factor of n/5
+            return n//5 + self.trailingZeroes(n//5)
+```
+##### Complexity Analysis:
+```
+For both approaches:
+
+TIME COMPLEXITY : O(LogN)
+SPACE COMPLEXITY : O(1)
+```
+```python
+# ------------------------------------------
+# Optimal Iterative Solution
+# ------------------------------------------
+# TC: O(log N)
+# SC: O(1)
+#
+class Solution:
+    def trailingZeroes(self, n: int) -> int:
+        k, tot = 5, 0
+        while k <= n:
+            tot += n // k
+            k = k * 5
+        return tot
+
+# ------------------------------------------
+# Recursive Solution
+# ------------------------------------------
+# TC: O(log N)
+# SC: O(1)
+#
+class Solution:
+    def trailingZeroes(self, n: int) -> int:
+        if n < 5: #base case
+            return 0
+        else: #add the current factor of 5 to the next smallest factor of n/5
+            return n//5 + self.trailingZeroes(n//5)
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-273:Integer to English Words](https://leetcode.com/problems/integer-to-english-words/)
+##### Problem Description:
+```
+Convert a non-negative integer num to its English words representation.
+
+---------------
+
+Example 1:
+
+Input: num = 123
+Output: "One Hundred Twenty Three"
+```
+##### Solution Explanation:
+```
+Let me try to explain my intuition, 
+-------------
+Intuition
+-------------
+* suppose I give you a number 109,320 you would tell me "one hundred nine thousand three twenty",
+* now let us take another number 500,109,320, ans is "Five Hundred Million One Hundred Nine Thousand Three Hundred Twenty",
+* do you see the pattern now?
+
+* Suppose we had a function which would tell the correct answer upto three digits, we are done except for the middle parts right?
+* This is where we use recursion, for example the answer for a number between a million and a billion is word(number divided by a million) + "million" + word
+  (remainder part after dividing by a million).
+  
+* I commented the code for some tricky parts below:
+```
+##### Complexity Analysis:
+```
+TC: O(1)
+SC: O(1)
+```
+```python
+#TC: O(1)
+#SC: O(1)
+
+class Solution:
+    def numberToWords(self, num: int) -> str:
+        # self explanatory - creates a list with the base words
+        to19 = 'One Two Three Four Five Six Seven Eight Nine Ten Eleven Twelve ' \
+               'Thirteen Fourteen Fifteen Sixteen Seventeen Eighteen Nineteen'.split()
+        tens = 'Twenty Thirty Forty Fifty Sixty Seventy Eighty Ninety'.split()
+        def words(n):
+            if n < 20:
+                # slice notation returns a list, also 0 returns an empty list
+                return to19[n-1:n]
+            if n < 100:
+                return [tens[n/10-2]] + words(n%10)
+            if n < 1000:
+                return [to19[n/100-1]] + ['Hundred'] + words(n%100)
+            # enumerate(tuple,1) starts the index from 1 instead of 0
+            for p, w in enumerate(('Thousand', 'Million', 'Billion'), 1):
+                if n < 1000**(p+1):
+                    # division into 3 digits and then solving as I explained above
+                    # [word divided by num](list returned by recursion) + appropriate placeholder + [word modulo num](list returned by recursion)
+                    return words(n/1000**p) + [w] + words(n%1000**p)
+        # if the list is not empty return the list otherwise return the string "Zero"
+        # clever use of python or short circuit
+        return ' '.join(words(num)) or 'Zero'
+
+# Facebook Follow-Up Question:
+# -----------------------------
+#So, what if we want to print the number in reverse order without reversing the number itself.
+#For example, in this case : 124 will be given as input and output should be four hundred twenty one?
+#Constraint here is you are not allowed to reverse the number.
+
+#Without reversing the string, print it in reverse order.
+#
+#for example:
+#s : "321"
+#Output: "One Hundred Twenty Three"
+
+class Solution:    
+    def numberToWords(self, num):
+        num = str(num)[::-1] # follow up twist: input is reversed string, don't allow to reverse it. 
+        under_ten = {
+            '1': 'One', '2': 'Two', '3': 'Three', '4': 'Four', '5': 'Five', 
+            '6': 'Six', '7': 'Seven', '8': 'Eight', '9': 'Nine'
+        }
+        teens = {
+            '11': 'Eleven', '21': 'Twelve', '31': 'Thirteen', '41': 'Fourteen', '51': 'Fifteen', 
+            '61': 'Sixteen', '71': 'Seventeen', '81': 'Eighteen', '91': 'Nineteen'
+        }
+        tens = {
+            '1': 'Ten', '2': 'Twenty', '3': 'Thirty', '4': 'Forty', '5': 'Fifty', 
+            '6': 'Sixty', '7': 'Seventy', '8': 'Eighty', '9': 'Ninety'
+        }
+        chunks = [('Billion', 9), ('Million', 6), ('Thousand', 3)]
+                        
+        
+        def to_words(num):
+            if num == '0': return ['Zero']
+            
+            if len(num) == 1: return [under_ten[num]]
+            
+            if len(num) == 2:
+                if num in teens: return [teens[num]]
+                
+                if num[0] == '0' and num[1] != '0': return [tens[num[1]]]
+                
+                if num[0] != '0' and num[1] == '0': return [under_ten[num[0]]]
+                
+                if num != '00': return [under_ten[num[0]], tens[num[1]]]
+                
+                return []
+                
+            if len(num) == 3:
+                if num[2] == '0': return to_words(num[:2])
+                return to_words(num[:2]) + ['Hundred'] + [under_ten[num[2]]]
+                
+            for chunk, thresh in chunks:
+                if len(num) > thresh:
+                    if num[thresh: thresh + 3] == '000': return to_words(num[:thresh]) + to_words(num[thresh:])
+                    return to_words(num[:thresh]) + [chunk] + to_words(num[thresh:])
+
+        return ' '.join(to_words(num)[::-1]) or 'Zero'
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [English Words to Integer](https://leetcode.com/discuss/interview-question/633508/amazon-onsite-english-words-to-integer)
+##### Problem Description:
+```
+Hey all, I recieved a question called "String to Int" in an interview, and I was flabberghasted at how simple it sounded at first, but difficult it is in practice.
+
+Turn a string to a number
+
+Example 1:
+
+Input: "Three hundred million"
+Output: 300,000,000
+Example 2:
+
+Input: "Five Hundred Thousand"
+Output: 500,000
+```
+##### Solution Explanation:
+```
+Recursive strategy:
+----------------------
+
+Idea: 
+----------------------
+There are two types of tokens: additive and multiplicative. For numbers below 100 we need additive tokens and for rest we need multiplicative tokens.
+For example: 'one hundred twenty two' -> we take first token 'one' , set ans = 1, then we proceed. At second token ('thousand') we need to multiply it with 1000. Now for rest of the string
+('twenty two') we call this function recursively and add that value to current num.
+Here is a working code, fill in the rest of the token and values in dictionaries. To deal with negative values check the first token.
+```
+##### Complexity Analysis:
+```
+```
+```python
+# ----------------------------
+# Recursive Solution
+# ----------------------------
+#import sys
+
+
+class Solution:
+
+    def __init__(self):
+        mults = {'hundred':100, 'thousand':1000, 'million':1000000}
+        adds = {'one':1, 'two':2, 'three':3, 'four':4, 'five':4, 'six':6, 'seven':7, 'eight':8, 'nine':9, 'ten':10, 
+                'twenty':20, 'thirty':30, 'forty':40, 'fifty':50, 'sixty':60, 'seventy':70, 'eighty':80, 'ninety':90}
+    
+	def str2int(self, toks):
+        num = 0
+        for i,tok in enumerate(toks):
+            if tok in adds:
+                num += adds[tok]
+            else:
+                return num*mults[tok] + self.str2int(toks[i+1:])
+        return num
+
+    def word_to_integer(self, s):
+        toks = s.split()
+        if toks[0] == 'negative':
+            return -1 * self.str2int(toks[1:])
+        return self.str2int(toks)
+
+if __name__ == '__main__':
+    solution = Solution()
+    #print(solution.word_to_integer(sys.argv[1]))
+	s = "Three hundred million five thousand forty five"
+	print(solution.word_to_integer(s))
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-12:Integer to Roman](https://leetcode.com/problems/integer-to-roman/)
+##### Solution Explanation
+```
+Idea:
+
+Just like Roman to Integer, this problem is most easily solved using a lookup table (dictionary) for the conversion between digit and numeral. 
+In this case, we can easily deal with the values in descending order and insert the appropriate numeral (or numerals) 
+as many times as we can while reducing the our target number (N) by the same amount.
+
+Once N runs out, we can return ans.
+```
+##### Complexity Analysis
+```
+TC: O(13) = O(1), iterate the length of dictionary keys
+SC: O(13) = O(1), one hash map (dictionary)
+```
+```python
+class Solution(object):
+    def __init__(self):
+        self.value_map = {
+			1000: 'M',
+			900: 'CM',
+			500: 'D',
+			400: 'CD',
+			100: 'C',
+			90: 'XC',
+			50: 'L',
+			40: 'XL',
+			10: 'X',
+			9: 'IX',
+            5: 'V',
+			4: 'IV',
+			1: 'I'
+        }
+
+    def intToRoman(self, num):
+        """
+        :type num: int
+        :rtype: str
+        """
+
+        #d = {1000: 'M', 900: 'CM', 500: 'D', 400: 'CD', 100: 'C', 90: 'XC', 50: 'L', 40: 'XL', 10: 'X', 9: 'IX',
+        #     5: 'V', 4: 'IV', 1: 'I'}
+		##d = {1: 'I', 4: 'IV', 5: 'V', 9: 'IX', 10: 'X', 40: 'XL', 50: 'L', 90: 'XC', 100: 'C', 400: 'CD',
+		##     500: 'D', 900: 'CM', 1000: 'M'}
+        roman = ""
+
+		for v in sorted(self.value_map.keys(), reverse=True):
+        #for v in sorted(d.keys(), reverse=True):
+		##for v in d.keys():
+            roman += (num // v) * self.value_map[v]
+            num -= (num // v) * v
+
+        return roman
+```
+
+<br/>
+<div align="right">
+    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
+</div>
+<br/>
+
+#### [LC-13:Roman to Integer](https://leetcode.com/problems/roman-to-integer/)
+##### Solution Explanation
+```
+Approach:
+
+Use dictionary for fast and easy lookup of numeral to integer value.
+Go through each numeral in the input string
+If numeral is smaller than the next numeral in the input we have a value like IV so subtract the current numeral from the next numeral.
+Else add the value of the numeral to our result.
+```
+##### Complexity Analysis
+```
+TC: O(N)
+SC: O(1)
+```
+```python
+class Solution:
+    
+    def __init__(self):
+        self.value_map = {
+            'I': 1,
+            'V': 5,
+            'X': 10,
+            'L': 50,
+            'C': 100,
+            'D': 500,
+            'M': 1000
+        }
+    
+    def romanToInt(self, s: str) -> int:
+        result = 0
+        index = 0
+        length = len(s)
+        
+        while index < length:
+            current_num = self.value_map[s[index]]
+            
+            # Check next value to see if it is larger. If
+            # it is that means that the we are dealing with
+            # something like 4 'IV' and see need to subtract
+            # the current numeral from next
+            if index+1 < length:
+                next_num = self.value_map[s[index+1]]
+                if next_num > current_num:
+                    current_num = next_num - current_num
+                    # Skip ahead an additional index since we combined two numerals
+                    index += 1
+            
+            result += current_num
+            index += 1
+            
+        return result
 ```
 
 <br/>
