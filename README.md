@@ -4820,7 +4820,7 @@ class Solution:
 >
 > 4. Linked Lists. Sentinel Head + Textbook Addition. Here are some examples:
 >
->  * [Plus One](https://leetcode.com/problems/plus-one/) [Refer to Solution](#lc-989add-to-array-form-of-integer).
+>  * [Plus One](https://leetcode.com/problems/plus-one/) [Refer to Solution](#lc-66plus-one).
 >
 >  * [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) [Refer to Solution](#lc-2add-two-numbers).
 >
@@ -6943,11 +6943,71 @@ class Solution:
 #### [LC-1249:Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
 ##### Solution Explanation:
 ```
+# ---------------------
+# Approach 1 - Convert string to list
+# ---------------------
+1. Convert string to list, because String is an immutable data structure in Python and it's much easier and memory-efficient to deal with a list for this task.
+2. Iterate through list
+3. Keep track of indices with open parentheses in the stack. In other words, when we come across open parenthesis we add an index to the stack.
+4. When we come across close parenthesis we pop an element from the stack. If the stack is empty we replace current list element with an empty string
+5. After iteration, we replace all indices we have in the stack with empty strings, because we don't have close parentheses for them.
+6. Convert list to string and return
+
+# ---------------------
+# Approach 2 - One Pass Remove - Whatever is left in the stack are the ones to remove
+# ---------------------
+Another solution that is simple and readable. 
+Idea is that we one-pass remove all the valid parentheses, and whatever left in the stacks are the ones to remove:
+O(n) time, O(n) space
 ```
 ##### Complexity Analysis:
 ```
+For both approaches:
+
+TC: O(N)
+SC: O(N)
 ```
 ```python
+# ---------------------
+# Approach 1 - Convert string to list
+# ---------------------
+# TC: O(N)
+# SC: O(N)
+class Solution:
+    def minRemoveToMakeValid(self, s: str) -> str:
+        s = list(s)
+        stack = []
+        for i, char in enumerate(s):
+            if char == '(':
+                stack.append(i)
+            elif char == ')':
+                if stack:
+                    stack.pop()
+                else:
+                    s[i] = ''
+        while stack:
+            s[stack.pop()] = ''
+        return ''.join(s)
+
+# ---------------------
+# Approach 2 - One Pass Remove - Whatever is left in the stack are the ones to remove
+# ---------------------
+# TC: O(N)
+# SC: O(N)
+class Solution:
+    def minRemoveToMakeValid(self, s: str) -> str:
+        stack, res = [], ""
+        for i, ch in enumerate(s):
+            if ch in {'(', ')'}: 
+                if ch == ')':
+                    if stack and stack[-1][1] == '(':
+                        stack.pop()
+                        continue
+                stack.append((i, ch))
+        # Whatever left in the stack are the ones to remove.
+        # Initialize a set for constant-time lookup. 
+        idx_set = set([i for i, _ in stack])
+        return ''.join([ch for i, ch in enumerate(s) if i not in idx_set])
 ```
 
 <br/>
@@ -6957,14 +7017,7 @@ class Solution:
 <br/>
 
 #### [LC-66:Plus One](https://leetcode.com/problems/plus-one/)
-##### Solution Explanation:
-```
-```
-##### Complexity Analysis:
-```
-```
-```python
-```
+##### [Refer to Solution](#lc-66plus-one)
 
 <br/>
 <div align="right">
@@ -6975,11 +7028,54 @@ class Solution:
 #### [Find an index of maximum occurring element with equal probability-GeeksforGeeks](https://www.geeksforgeeks.org/find-index-maximum-occurring-element-equal-probability/)
 ##### Solution Explanation:
 ```
+The problem looks complicated at first look but has a straightforward solution. Following is the algorithm:
+1. Store the count of each element of the input in a map.
+2. Traverse the map and find the maximum occurring element.
+3. Generate a random number k between 1 and the count of the maximum occurring element.
+4. Traverse the input and return the index of the k'th occurrence of the maximum occurring element.
 ```
 ##### Complexity Analysis:
 ```
+TC: O(N), where N = input size
+SC: O(N)
 ```
 ```python
+from random import randint
+
+# Return the index of the maximum occurring element with equal probability
+def findIndex(input):
+ 
+    # store count of each list element in a dictionary
+    count = {}
+    for val in input:
+        count[val] = count.get(val, 0) + 1
+ 
+    # traverse the dictionary and find the maximum occurring element
+    max_occurring = input[0]
+    for key, value in count.items():
+        if count[max_occurring] < value:
+            max_occurring = key
+ 
+    # generate a random number `k` between 1 and count of the maximum occurring element
+    k = randint(1, count[max_occurring])
+ 
+    # traverse the input list and return the index of the k'th occurrence
+    # of the maximum occurring element
+    index = 0
+    while k and index < len(input):
+        if input[index] == max_occurring:
+            k = k - 1
+        index = index + 1
+ 
+    return index - 1
+ 
+ 
+if __name__ == '__main__':
+ 
+    input = [4, 3, 6, 8, 4, 6, 2, 4, 5, 9, 7, 4]
+ 
+    for i in range(5):
+        print("The index of the maximum occurring element is", findIndex(input))
 ```
 
 <br/>
@@ -6989,13 +7085,135 @@ class Solution:
 <br/>
 
 #### [LC-938:Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/)
+##### Problem Description:
+![lc-938-range-sum-of-bst-problem-description](./assets/lc-938-range-sum-of-bst-problem-description.PNG)
 ##### Solution Explanation:
 ```
+# --------------------------------
+# Recursive Solution
+# --------------------------------
+
+
+# --------------------------------
+# Recursive Solution ( DFS )
+# --------------------------------
+Based on DFS:
+----------------
+One way to solve this problem is just iterate over our tree and for each element check if it is range or not. However here we are given, that out tree is BST, that is left subtree is always lesser than node lesser than right subtree. So, let us modify classical dfs a bit, where we traverse only nodes we need:
+
+Check value node.val and if it is in our range, add it to global sum.
+We need to visit left subtree only if node.val > low, that is if node.val < low, it means, that all nodes in left subtree less than node.val, that is less than low as well.
+Similarly, we visit right subtree only if node.val < high.
+Complexity: time complexity is O(n), where n is nubmer of nodes in our tree, space complexity potentially O(n) as well. We can impove our estimations a bit and say, that time and space is O(m), where m is number of nodes in our answer.
+
+
+
+# --------------------------------
+# Iterative Solution
+# --------------------------------
+
 ```
 ##### Complexity Analysis:
 ```
+TC: O(N) where N is the number of nodes in our tree
+SC: O(H) where H is the maximum depth the recursion tree can go ( or height of the tree ). 
+               You could argue the max depth (extremely unbalanced tree) is O(N) though.
+
+
+# --------------------------------
+# Recursive Solution ( DFS )
+# --------------------------------
+TC: O(N)
+SC: O(M)
+
+where 
+N is the number of nodes in our tree
+M is the number of nodes in our answer
 ```
 ```python
+# --------------------------------
+# Recursive Solution
+# --------------------------------
+#TC: O(N)
+#SC: O(H)
+#
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def rangeSumBST(self, root: TreeNode, L: int, R: int) -> int:
+        if not root:
+            return 0
+			
+        sum = 0
+        if L <= root.val and R >= root.val:
+            sum += root.val
+        if L < root.val:
+            sum += self.rangeSumBST(root.left, L, R)
+        if R > root.val:
+            sum += self.rangeSumBST(root.right, L, R)
+        
+        return sum
+
+
+# --------------------------------
+# Recursive Solution ( DFS )
+# --------------------------------
+#TC: O(N)
+#SC: O(M)
+#
+#where 
+#N is the number of nodes in our tree
+#M is the number of nodes in our answer
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def rangeSumBST(self, root: TreeNode, L: int, R: int) -> int:
+        def dfs(node):
+            if not node: return
+            if low <= node.val <= high: self.out += node.val
+            if node.val > low:  dfs(node.left)
+            if node.val < high: dfs(node.right)
+                
+        self.out = 0
+        dfs(root)
+        return self.out
+
+# --------------------------------
+# Iterative Solution
+# --------------------------------
+#TC: O(N)
+#SC: O(H)
+#
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def rangeSumBST(self, root: TreeNode, L: int, R: int) -> int:
+        stk, sum = [root], 0
+        while stk:
+            node = stk.pop()
+            if node:
+                if node.val > L:
+                    stk.append(node.left)    
+                if node.val < R:
+                    stk.append(node.right)
+                if L <= node.val <= R:
+                    sum += node.val    
+        return sum
 ```
 
 <br/>
