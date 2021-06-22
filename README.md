@@ -151,30 +151,29 @@
 | 95  | 839      | [Similar String Groups](#lc-839similar-string-groups)                                                     | https://leetcode.com/problems/similar-string-groups/                                       | _O(n^2 * l)_                                               | _O(n)_                | Hard       |                | Union Find                   |            |
 | 96  | 102      | [Binary Tree Level Order Traversal](#lc-102binary-tree-level-order-traversal)                             | https://leetcode.com/problems/binary-tree-level-order-traversal/                           | _O(n)_                                                     | _O(n)_                | Easy       |                | BFS ; DFS                    |            |
 | 97  | 708      | [Insert into a Sorted Circular Linked List](#lc-708insert-into-a-sorted-circular-linked-list)             | https://leetcode.com/problems/insert-into-a-sorted-circular-linked-list/                   | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
-| 98  | 691      | [Stickers to Spell Word](https://leetcode.com/problems/stickers-to-spell-word/) | [C++](./C++/stickers-to-spell-word.cpp) [Python](./Python/stickers-to-spell-word.py) | _O(T * S^T)_ | _O(T * S^T)_ | Hard || Backtracking, Memoization
-| 99  | 977      | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/) | [C++](./C++/squares-of-a-sorted-array.cpp) [Python](./Python/squares-of-a-sorted-array.py) | _O(n)_ | _O(1)_ | Easy ||
-| 100 | 232      | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/) | [C++](./C++/implement-queue-using-stacks.cpp) [Python](./Python/implement-queue-using-stacks.py) | _O(1), amortized_| _O(n)_| Easy | EPI, LintCode | 
-| 101 | 329      | [Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/) | [C++](./C++/longest-increasing-path-in-a-matrix.cpp)  [Python](./Python/longest-increasing-path-in-a-matrix.py)  | _O(m * n)_ | _O(m * n)_ | Hard         || DFS, Topological Sort |
-| 102 | 224      | [Basic Calculator](https://leetcode.com/problems/basic-calculator/) | [C++](./C++/basic-calculator.cpp) [Python](./Python/basic-calculator.py) | _O(n)_| _O(n)_| Hard || 
-| 103 | 227      | [Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/) | [C++](./C++/basic-calculator-ii.cpp) [Python](./Python/basic-calculator-ii.py) | _O(n)_| _O(n)_| Medium || 
-| 104 | 772      | [Basic Calculator III](https://leetcode.com/problems/basic-calculator-iii/) | [C++](./C++/basic-calculator-iii.cpp) [Python](./Python/basic-calculator-iii.py) | _O(n)_  | _O(n)_         | Hard           ||
-| 105 | 770      | [Basic Calculator IV](https://leetcode.com/problems/basic-calculator-iv/) | [C++](./C++/basic-calculator-iv.cpp) [Python](./Python/basic-calculator-iv.py) | add: _O(d * t)_<br> sub: _O(d * t)_<br> mul: _O(d * t^2)_<br> eval: _O(d * t)_ <br> to_list: _O(d * tlogt)_  | _O(e + d * t)_ | Hard           ||
-| 106 | 1597     | [Build Binary Expression Tree From Infix Expression](https://leetcode.com/problems/build-binary-expression-tree-from-infix-expression/) | [C++](./C++/build-binary-expression-tree-from-infix-expression.cpp) [Python](./Python/build-binary-expression-tree-from-infix-expression.py) | _O(n)_  | _O(n)_         | Medium           | 🔒, variant of [Basic Calculator III](https://leetcode.com/problems/basic-calculator-iii/) |
-| 107 | 106      | [Construct Binary Tree from Inorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/) | [C++](./C++/construct-binary-tree-from-inorder-and-postorder-traversal.cpp) [Python](./Python/construct-binary-tree-from-inorder-and-postorder-traversal.py) | _O(n)_        | _O(n)_          | Medium         ||
-| 108 | 108      | [Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) | [C++](./C++/convert-sorted-array-to-binary-search-tree.cpp) [Python](./Python/convert-sorted-array-to-binary-search-tree.py) | _O(n)_        | _O(logn)_          | Medium         ||
-| 109 | 109      | [Convert Sorted List to Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/) | [C++](./C++/convert-sorted-list-to-binary-search-tree.cpp) [Python](./Python/convert-sorted-list-to-binary-search-tree.py) | _O(n)_        | _O(logn)_          | Medium         ||
-| 110 | 203      | [Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/)| [C++](./C++/remove-linked-list-elements.cpp) [Python](./Python/remove-linked-list-elements.py) | _O(n)_       | _O(1)_         | Easy         || 
-| 111 | 210      | [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)| [C++](./C++/course-schedule-ii.cpp) [Python](./Python/course-schedule-ii.py)   | _O(\|V\| + \|E\|)_          | _O(\|E\|)_          | Medium         || Topological Sort |
-| 112 | 536      | [Construct Binary Tree from String](https://leetcode.com/problems/construct-binary-tree-from-string/) | [C++](./C++/construct-binary-tree-from-string.cpp) [Python](./Python/construct-binary-tree-from-string.py) | _O(n)_ | _O(h)_ | Medium    | 🔒 |
-| 113 | 606      | [Construct String from Binary Tree](https://leetcode.com/problems/construct-string-from-binary-tree/)| [C++](./C++/construct-string-from-binary-tree.cpp) [Python](./Python/construct-string-from-binary-tree.py)| _O(n)_ | _O(h)_ | Easy | | |
-| 114 | 617      | [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/)| [C++](./C++/merge-two-binary-trees.cpp) [Python](./Python/merge-two-binary-trees.py)| _O(n)_ | _O(h)_ | Easy | | |
-| 115 | 226      | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | [C++](./C++/invert-binary-tree.cpp) [Python](./Python/invert-binary-tree.py) | _O(n)_ | _O(h)_, _O(w)_ | Easy ||
-| 116 | 232      | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/) | [C++](./C++/implement-queue-using-stacks.cpp) [Python](./Python/implement-queue-using-stacks.py) | _O(1), amortized_| _O(n)_| Easy | EPI, LintCode | 
-| 117 | 490      | [The Maze](https://leetcode.com/problems/the-maze/)| [C++](./C++/the-maze.cpp) [Python](./Python/the-maze.py) | _O(max(r, c) * w)_ | _O(w)_ | Medium | | |
-| 118 | 505      | [The Maze II](https://leetcode.com/problems/the-maze-ii/)| [C++](./C++/the-maze-ii.cpp) [Python](./Python/the-maze-ii.py) | _O(max(r, c) * wlogw)_ | _O(w)_ | Medium | | |
-| 119 | 499      | [The Maze III](https://leetcode.com/problems/the-maze-iii/)| [C++](./C++/the-maze-iii.cpp) [Python](./Python/the-maze-iii.py) | _O(max(r, c) * wlogw)_ | _O(w^2)_ | Hard | | |
-| 120 | 1233     | [Remove Sub-Folders from Filesystem](https://leetcode.com/problems/remove-sub-folders-from-the-filesystem/submissions/)
-| 121 | 200      | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | [C++](./C++/number-of-islands.cpp) [Python](./Python/number-of-islands.py) | _O(m * n)_ | _O(m * n)_| Medium         || BFS, DFS, Union Find
+| 98  | 691      | [Stickers to Spell Word](#lc-691stickers-to-spell-word)                                                   | https://leetcode.com/problems/stickers-to-spell-word/                                      | _O(T * S^T)_                                               | _O(T * S^T)_          | Hard       |                | Backtracking, Memoization    |            |
+| 99  | 977      | [Squares of a Sorted Array](#lc-977squares-of-a-sorted-array)                                             | https://leetcode.com/problems/squares-of-a-sorted-array/                                   | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
+| 100 | 232      | [Implement Queue using Stacks](#lc-232implement-queue-using-stacks)                                       | https://leetcode.com/problems/implement-queue-using-stacks/                                | _O(1), amortized_                                          | _O(n)_                | Easy       |                | Design                       |            |
+| 101 | 329      | [Longest Increasing Path in a Matrix](#lc-329longest-increasing-path-in-a-matrix)                         | https://leetcode.com/problems/longest-increasing-path-in-a-matrix/                         | _O(m * n)_                                                 | _O(m * n)_            | Hard       |                | DFS, Topological Sort        |            |
+| 102 | 224      | [Basic Calculator](#lc-224basic-calculator)                                                               | https://leetcode.com/problems/basic-calculator/                                            | _O(n)_                                                     | _O(n)_                | Hard       |                |                              |            |
+| 103 | 227      | [Basic Calculator II](#lc-227basic-calculator-ii)                                                         | https://leetcode.com/problems/basic-calculator-ii/                                         | _O(n)_                                                     | _O(n)_                | Medium     |                |                              |            |
+| 104 | 772      | [Basic Calculator III](#lc-772basic-calculator-iii)                                                       | https://leetcode.com/problems/basic-calculator-iii/                                        | _O(n)_                                                     | _O(n)_                | Hard       |                |                              | 🔒          |
+| 105 | 770      | [Basic Calculator IV](#lc-770basic-calculator-iv)                                                         | https://leetcode.com/problems/basic-calculator-iv/                                         | add: _O(d * t)_<br> sub: _O(d * t)_<br> mul: _O(d * t^2)_<br> eval: _O(d * t)_ <br> to_list: _O(d * tlogt)_ | _O(e + d * t)_ | Hard | | | |
+| 106 | 1597     | [Build Binary Expression Tree From Infix Expression](#lc-1597build-binary-tree-from-infix-expression)     | https://leetcode.com/problems/build-binary-expression-tree-from-infix-expression/          | _O(n)_                                                     | _O(n)_                | Medium     |                |                              | 🔒, variant of [Basic Calculator III](https://leetcode.com/problems/basic-calculator-iii/) |
+| 107 | 106      | [Construct Binary Tree from Inorder and Postorder Traversal](#lc-106construct-binary-tree-from-inorder-and-postorder-traversal) | https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/) | _O(n)_                               | _O(n)_                | Medium     |                |                              |            |
+| 108 | 108      | [Convert Sorted Array to Binary Search Tree](#lc-106convert-sorted-array-to-binary-search-tree)           | https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/                  | _O(n)_                                                     | _O(logn)_             | Medium     |                |                              |            |
+| 109 | 109      | [Convert Sorted List to Binary Search Tree](#lc-108convert-sorted-list-to-binary-search-tree)             | https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/                   | _O(n)_                                                     | _O(logn)_             | Medium     |                |                              |            |
+| 110 | 203      | [Remove Linked List Elements](#lc-203remove-linked-list-elements)                                         | https://leetcode.com/problems/remove-linked-list-elements/                                 | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
+| 111 | 210      | [Course Schedule II](#lc-210course-schedule-ii)                                                           | https://leetcode.com/problems/course-schedule-ii/                                          | _O(\|V\| + \|E\|)_                                         | _O(\|E\|)_            | Medium     |                | Topological Sort             |            |
+| 112 | 536      | [Construct Binary Tree from String](#lc-536construct-binary-tree-from-string)                             | https://leetcode.com/problems/construct-binary-tree-from-string/                           | _O(n)_                                                     | _O(h)_                | Medium     |                |                              | 🔒          |
+| 113 | 606      | [Construct String from Binary Tree](#lc-606construct-string-from-binary-tree)                             | https://leetcode.com/problems/construct-string-from-binary-tree/)                          | _O(n)_                                                     | _O(h)_                | Easy       |                |                              |            |
+| 114 | 617      | [Merge Two Binary Trees](#lc-617merge-two-binary-trees)                                                   | https://leetcode.com/problems/merge-two-binary-trees/                                      | _O(n)_                                                     | _O(h)_                | Easy       |                |                              |            |
+| 115 | 226      | [Invert Binary Tree](#lc-226invert-binary-tree)                                                           | https://leetcode.com/problems/invert-binary-tree/                                          | _O(n)_                                                     | _O(h)_, _O(w)_        | Easy       |                |                              |            |
+| 116 | 490      | [The Maze](#lc-490the-maze)                                                                               | https://leetcode.com/problems/the-maze/                                                    | _O(max(r, c) * w)_                                         | _O(w)_                | Medium     |                |                              |            |
+| 117 | 505      | [The Maze II](#lc-505the-maze-ii)                                                                         | https://leetcode.com/problems/the-maze-ii/                                                 | _O(max(r, c) * wlogw)_                                     | _O(w)_                | Medium     |                |                              |            |
+| 118 | 499      | [The Maze III](#lc-499the-maze-iii)                                                                       | https://leetcode.com/problems/the-maze-iii/                                                | _O(max(r, c) * wlogw)_                                     | _O(w^2)_              | Hard       |                |                              |            |
+| 129 | 1233     | [Remove Sub-Folders from Filesystem](#lc-1233remove-sub-folders-from-filesystem)                          | https://leetcode.com/problems/remove-sub-folders-from-the-filesystem/                      | _O(n)_                                                     | _O(t)_                | Medium     |                | Trie                         |            |
+| 120 | 200      | [Number of Islands](#lc-200number-of-islands)                                                             | https://leetcode.com/problems/number-of-islands/                                           | _O(m * n)_                                                 | _O(m * n)_            | Medium     |                | BFS, DFS, Union Find         |            |
 
 #### [LC-238:Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
 ##### Solution Explanation
@@ -12498,6 +12497,66 @@ class Solution:
 ```
 ```
 ```python
+## https://code.dennyzhang.com/insert-into-a-cyclic-sorted-list
+## Basic Ideas:
+##    Find the smallest value which is no less than the target
+##    If there are multiple suitable places for insertion, 
+##      here we choose to insert into the first suitable place after head.
+##
+## Question: how we know we are running the loop again?
+##
+## Complexity: Time O(n), Space O(1)
+"""
+# Definition for a Node.
+class Node:
+    def __init__(self, val, next):
+        self.val = val
+        self.next = next
+"""
+class Solution:
+    def insert(self, head, insertVal):
+        """
+        :type head: Node
+        :type insertVal: int
+        :rtype: Node
+        """
+        node = Node(insertVal, None)
+        # empty
+        if head is None:
+            node.next = node
+            return node
+
+        # one node
+        if head.next is None:
+            head.next = node
+            node.next = head
+            return head
+
+        # find the smallest value, which is no less than the target
+        p = head
+        while True:
+            # end of the loop
+            if p.val > p.next.val:
+                # biggest or smallest
+                if insertVal >= p.val or insertVal <= p.next.val:
+                    break
+
+                # should keep going
+                if insertVal > p.next.val and insertVal < p.val:
+                    p = p.next
+                    continue
+                break
+
+            if insertVal >= p.val and insertVal <= p.next.val:
+                break
+            p = p.next
+            if p == head:
+                # run into the loop again
+                break
+
+        node.next = p.next
+        p.next = node
+        return head
 ```
 
 <br/>
@@ -12510,11 +12569,151 @@ class Solution:
 #### [LC-691:Stickers to Spell Word](https://leetcode.com/problems/stickers-to-spell-word/)
 ##### Solution Explanation
 ```
+# -------------------------------------
+# Approach-1 : DFS
+# -------------------------------------
+
+Basic dfs using three optimization ways:
+
+1. sort the stickers according to length.
+2. check whether there is one sticker to spell the target. If so, just return 1.
+3. check if target[0] is in sticker, if not,continue.
+
+NOTE: sorting here is an optimization. You don't need that to execute the solution successfully.
+
+# --------------------------------------
+# Approach-2 : DP + Memoization
+# --------------------------------------
+
+There are potentially a lot of overlapping sub problems, but meanwhile we don't exactly know what those sub problems are. DP with memoization works pretty well in such cases. The workflow is like backtracking, but with memoization. Here I simply use a sorted string of target as the key for the unordered_map DP. A sorted target results in a unique sub problem for possibly different strings.
+
+dp[s] is the minimum stickers required for string s (-1 if impossible). Note s is sorted.
+clearly, dp[""] = 0, and the problem asks for dp[target].
+
+The DP formula is:
+
+dp[s] = min(1+dp[reduced_s]) for all stickers, 
+here reduced_s is a new string after certain sticker applied
+Optimization: If the target can be spelled out by a group of stickers, at least one of them has to contain character target[0]. So I explicitly require next sticker containing target[0], which significantly reduced the search space.
+```
+![lc-691-stickers-to-spell-word-understanding-dp-solution](./assets/lc-691-stickers-to-spell-word-understanding-dp-solution.PNG)
+```
+# --------------------------------------
+# Approach-3 : DP + Bit Manipulation
+# --------------------------------------
+Important to know:
+-----------------------------
+1. "1<<n" means left move "1" with n-times, the result is 2^n. Do not confuse it with n<<1, which is actuall left-move n one bit, the result is 2*n.
+2. (cur>>k)&1 : is to check whether the k-th position is already filled, also refer to the two figures for deep understanding this;
+3. cur |= (1 <<k): is to set k-th position of cur into 1 (i.e., to enlarge the subset with a bigger subset that also include current subset)
+4. four loops, (1) ranger over all the subset of target; (2) range over all the stickers; (3) range over each char in one sticker; (4) look at every char in the target sequence.
 ```
 ##### Complexity Analysis
 ```
 ```
 ```python
+# -------------------------------------
+# Approach-1 : DFS
+# -------------------------------------
+from typing import List
+
+class Solution:
+    def minStickers(self, stickers: List[str], target: str) -> int:
+        """
+        :type stickers: List[str]
+        :type target: str
+        :rtype: int
+        """
+        stickers.sort(key = lambda x:len(x),reverse = True)
+        temp = []
+        for s in stickers:
+            temp1 = {}
+            for i in s:
+                temp1[i] = temp1.get(i,0)+1
+            temp.append(temp1)
+        stickers = temp
+        memo = {'':0}
+        def dfs(target):
+            if target in memo:
+                return memo[target]
+            res = float('inf')
+            for stick in stickers:
+                if target[0] not in stick:
+                    continue
+                targetnew = target
+                for s in stick:
+                    targetnew = targetnew.replace(s,'',stick[s])
+                if targetnew=='':
+                    res = 1
+                    break
+                elif targetnew!=target:
+                    res = min(res,1+dfs(targetnew))
+            memo[target] = res
+            return res
+        res = dfs(target)
+        if res==float('inf'):
+            return -1
+        return res
+
+# --------------------------------------
+# Approach-2 : DP + Memoization
+# --------------------------------------
+from typing import List
+
+class Solution:
+    def minStickers(self, stickers: List[str], target: str) -> int:
+        """
+        :type stickers: List[str]
+        :type target: str
+        :rtype: int
+        """
+        num_sticker = len(stickers)
+        s_cnt = [collections.Counter(s) for s in stickers]    
+        memo = {}
+        memo[""] = 0
+        
+        def helper(target):
+            if target not in memo:
+                t_cnt = collections.Counter(target)
+                ans = float('inf')
+                for i in range(num_sticker):
+                    if s_cnt[i][target[0]] == 0:
+                        continue
+                    s = "".join([c * (n - s_cnt[i][c]) for c, n in t_cnt.items() if n > s_cnt[i][c]])
+                    tmp = helper(s)
+                    if tmp != -1: 
+                        ans = min(ans, 1 + tmp)
+                memo[target] = ans if ans < float('inf') else -1
+            return memo[target]
+        
+        return helper("".join(sorted(target)))
+
+# --------------------------------------
+# Approach-3 : DP + Bit Manipulation
+# --------------------------------------
+from typing import List
+
+class Solution:
+    def minStickers(self, stickers: List[str], target: str) -> int:
+        n = len(target)
+        m = (1 << n) # m=2**n, note this is different from (n<<1) = 2*n! (1<<n) means to left shift 1 n-bits! such as n = 3, then 1 to 1000=8=2**3
+        # n=8, then 1 to 100000000 = 2**8 = 256
+        INTMAX = 2**31-1
+        dp = [INTMAX] * m
+        dp[0] = 0
+        
+        for i in range(m): # The first layer of loop, all subsets of target => O(2^N)
+            if dp[i] == INTMAX: # means start from empty string, no-one stick helped building this subset (it is too small of current subset)
+                continue
+            for sticker in stickers: # The second loop, for all the sticker loops => O(M)
+                cur = i # i-th subset of target
+                for achar in sticker: # The third level of loop, for all characters in the current sticker char loop => O(LEN(M))
+                    for k in range(n): # n = target's length # The fourth level loop, loop => O(N) for each character in target
+                        if (target[k] == achar) and not ((cur>>k) & 1): # The characters match, and the current subset represented by cur is not filled
+                            cur |= 1 << k # According to the current cur, to find a larger subset (the serial number)
+                            break
+                dp[cur] = min(dp[cur], dp[i] + 1)
+        return -1 if dp[-1] == INTMAX else dp[-1]
 ```
 
 <br/>
@@ -12524,13 +12723,271 @@ class Solution:
 <br/>
 
 #### [LC-977:Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)
+##### Problem Description
+```
+Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
+
+ 
+
+Example 1:
+
+Input: nums = [-4,-1,0,3,10]
+Output: [0,1,9,16,100]
+Explanation: After squaring, the array becomes [16,1,0,9,100].
+After sorting, it becomes [0,1,9,16,100].
+```
 ##### Solution Explanation
 ```
-```
-##### Complexity Analysis
-```
-```
-```python
+This question is a cool one in that there is lots of different approaches, each with its own pros and cons. And then there's also different ways of implementing them, depending on whether you are after raw performance or beautiful code.
+
+Something slightly irritating is that leetcode isn't testing with big enough test cases to push the time complexity of the O(n-log-n) approaches below the O(n) ones. It goes to show, sometimes what "wins" at the notoriously inaccurate Leetcode time/ space percentiles isn't always the best in practice, or even in an interview.
+
+----------------------------------------------------------
+Approach #1: Using built in sort.
+----------------------------------------------------------
+There are a few similar approaches we can take here, each with its own subtle differences. All are of an O(n-log-n) time complexity due to using the inbuilt sort, although they differ in their space complexity.
+
+a) Overwriting input:
+----------------------------------------------------------
+
+    def sortedSquares(self, A: List[int]) -> List[int]:
+        for i in range(len(A)):
+            A[i] *= A[i]
+        A.sort()
+        return A
+
+This approach uses O(1) memory beyond the input array, and is truely in-place. However, it is not always a good idea to overwrite inputs. Remember that because we passed it by reference, the original is actually lost. Often functions like this are a part of an API, and in a lot of cases, nobody wants an API that clobbers their input.
+
+I think it's best to ask your interviewer if they want something done in-place or not. It is a common misconception that we should always be trying to do things in-place, overwriting the inputs.
+
+b) Making a new array, not in place, O(n) auxillary space.
+----------------------------------------------------------
+
+def sortedSquares(self, A: List[int]) -> List[int]:
+        return sorted([v**2 for v in A])
+
+Ahhhh, our good 'ol clever Python one-liner. There is a suble space inefficiency in it though. For a brief moment, we're using 3n memory, not 2n. The one line has 2 not-in-place operations in it; the list comprehension creates a new list, and so does sorted. The list comprehension list is promptly garbage collected upon function return, but because it was briefly there, the max memory usage was ultimately 3n. With lots of memory, this is totally fine, and the pythonic nature of it makes it a great solution. But we do need to be aware of it.
+
+c) Making a new array, not in place, O(1) auxillary space.
+----------------------------------------------------------
+
+Making a new array, in place.
+
+def sortedSquares(self, A: List[int]) -> List[int]:
+        return_array = [v**2 for v in A]
+		return_array.sort() # This is in place!
+		return return_array
+
+So, is this O(1) space or O(n) space? Arguments can be made either way, sometimes people say to count the output data stucture in the calculation, and sometimes they don't. If we're talking about auxillary space, we generally don't count the output data structure, which would make it O(1). I think this is a more accurate way of putting it -- we are trying to measure what the algorithm itself is using, not just what the inevitable size of the output is. But it's important to be clear in interviews what you are and aren't counting.
+
+Overall thoughts on these approaches
+You won't be coding any of these approaches in an interview (in my own very, very limited experience though!). By all means your interviewer will want to hear that you could do it this way, but there is 3 big problems if they are the only approaches you can come up with.
+
+We shouldn't need to use an O(n-log-n) sort operation on data that for the most part is already sorted. There's something not right with that. If this is the approach the interviewer wanted, they wouldn't have given you the numbers in a sorted list in the first place.
+Following on from that, there are O(n) solutions.
+Why would they be asking you to code something so trivial? Let's be honest. They want to see you writing some meaty code.
+The remaining approaches exploit the existing sorting. If we were to go down the list squaring each number, we'd have a "v" sorted list, in that the squares of the negatives decrease, and then the squares of the positives increase, i.e.
+[-4, -2, -1, 0, 1, 2, 3, 5] -> [16, 4, 1, 0, 1, 4, 9, 25]
+
+We can get this into a sorted list in O(n) time.
+
+----------------------------------------------------------
+Approach 2: Raw pointers ( i.e., 2 pointers )
+----------------------------------------------------------
+
+In terms of performance, you can't beat this (well, if leetcode actually tested on massive test cases...). It's O(n) time, and O(1) auxillary space.
+
+class Solution:
+    def sortedSquares(self, A: List[int]) -> List[int]:
+        return_array = [0] * len(A)
+        write_pointer = len(A) - 1
+        left_read_pointer = 0
+        right_read_pointer = len(A) - 1
+        left_square = A[left_read_pointer] ** 2
+        right_square = A[right_read_pointer] ** 2
+        while write_pointer >= 0:
+            if left_square > right_square:
+                return_array[write_pointer] = left_square
+                left_read_pointer += 1
+                left_square = A[left_read_pointer] ** 2
+            else:
+                return_array[write_pointer] = right_square
+                right_read_pointer -= 1
+                right_square = A[right_read_pointer] ** 2
+            write_pointer -= 1
+        return return_array
+
+----------------------------------------------------------
+Approach 3: Using a deque
+----------------------------------------------------------
+
+This approach is the first of the trading-off-some-raw-performance-for-beauty=and-elegance approaches. It remains as O(n) time complexity like approach 2, but the heavy-weight nature of it will slow it down by a constant amount. If this doesn't matter though (and in a lot of cases it doesn't), then the elegance will reduce the risk of bugs and lead to more readable and maintable code. It is also important to note that it does use O(n) auxillary space.
+
+    def sortedSquares(self, A: List[int]) -> List[int]:
+        number_deque = collections.deque(A)
+        reverse_sorted_squares = []
+        while number_deque:
+            left_square = number_deque[0] ** 2
+            right_square = number_deque[-1] ** 2
+            if left_square > right_square:
+                reverse_sorted_squares.append(left_square)
+                number_deque.popleft()
+            else:
+                reverse_sorted_squares.append(right_square)
+                number_deque.pop()
+        return reverse_sorted_squares[::-1]
+
+----------------------------------------------------------
+Approach 4: The iterator pattern
+----------------------------------------------------------
+
+This is one of my favourites. While it suffers from the same constant time slowdown as the previous approach, its auxillary space usage remains at O(1). The iterator pattern is a great way of splitting up code into more testable units. It seperates the problem of getting the squares in a sorted order from the problem of writing them into an array.
+
+There are 2 subapproaches. One that returns the squares in reversed order, and one that puts them around the right way. The latter is more complex to code, but it means that the code dealing with the writing doesn't have to reverse them, and it is still a time complexity of O(n) and an auxillary space usage of O(1).
+
+a) Iterator returning from largest -> smallest
+----------------------------------------------------------
+
+class SquaresIterator(object):
+    def __init__(self, sorted_array):
+        self.sorted_array = sorted_array
+        self.left_pointer = 0
+        self.right_pointer = len(sorted_array) - 1
+    
+    def __iter__(self):
+        return self
+    
+    def __next__(self):
+        if self.left_pointer > self.right_pointer:
+            raise StopIteration
+        left_square = self.sorted_array[self.left_pointer] ** 2
+        right_square = self.sorted_array[self.right_pointer] ** 2
+        if left_square > right_square:
+            self.left_pointer += 1
+            return left_square
+        else:
+            self.right_pointer -= 1
+            return right_square
+     
+
+class Solution:
+    def sortedSquares(self, A: List[int]) -> List[int]:
+        return_array = [0] * len(A)
+        write_pointer = len(A) - 1
+        for square in SquaresIterator(A):
+            return_array[write_pointer] = square
+            write_pointer -= 1
+        return return_array
+
+b) Iterator returning from smallest -> largest
+----------------------------------------------------------
+
+This one uses a binary search to set the left and right pointers in the middle of the array to begin with. This way, the items are returned in the correct order. We don't even need explicit write code here!
+
+class SquaresIterator(object):
+    
+    def __init__(self, sorted_array):
+        self.sorted_array = sorted_array
+        self.left_pointer, self.right_pointer = self._get_pointers()
+    
+    def __iter__(self):
+        return self
+    
+    def __next__(self):
+        
+        # If there's no values remaining.
+        if self.left_pointer < 0 and self.right_pointer >= len(self.sorted_array):
+            raise StopIteration
+        
+        # If there's no values remaining on the left end.
+        if self.left_pointer < 0:
+            self.right_pointer += 1
+            return self.sorted_array[self.right_pointer - 1] ** 2
+        
+        # If there's no values remaining on the right end.
+        if self.right_pointer >= len(self.sorted_array):
+            self.left_pointer -= 1
+            return self.sorted_array[self.left_pointer + 1] ** 2
+        
+        # If there's values remaining on both ends.
+        left_square = self.sorted_array[self.left_pointer] ** 2
+        right_square = self.sorted_array[self.right_pointer] ** 2
+        if left_square < right_square:
+            self.left_pointer -= 1
+            return left_square
+        else:
+            self.right_pointer += 1
+            return right_square
+    
+    
+    def _get_pointers(self):
+        low = 0
+        high = len(self.sorted_array)
+        while high - low > 1:
+            mid = low + (high - low) // 2
+            if self.sorted_array[mid] > 0:
+                high = mid
+            else:
+                low = mid
+        return low, high
+        
+    
+class Solution:
+    def sortedSquares(self, A: List[int]) -> List[int]:
+        return list(SquaresIterator(A))
+
+----------------------------------------------------------
+Approach 5: Generators
+----------------------------------------------------------
+
+Why are we using iterators for such a simple task? We can use a generator function instead!
+
+Again, it's O(n) time with O(1) auxillary space.
+
+class Solution:
+    
+    def generate_sorted_squares(self, nums):
+        
+        # Start by doing our binary search to find where
+        # to place the pointers.
+        left = 0
+        right = len(nums)
+        while right - left > 1:
+            mid = left + (right - left) // 2
+            if nums[mid] > 0:
+                right = mid
+            else:
+                left = mid
+        
+        # And now the main generator loop. The condition is the negation
+        # of the StopIteration condition for the iterator approach.
+        while left >= 0 or right < len(nums):
+            if left < 0:
+                right += 1
+                yield nums[right - 1] ** 2
+            elif right >= len(nums):
+                left -= 1
+                yield nums[left + 1] ** 2
+            else:
+                left_square = nums[left] ** 2
+                right_square = nums[right] ** 2
+                if left_square < right_square:
+                    left -= 1
+                    yield left_square
+                else:
+                    right += 1
+                    yield right_square
+        
+    
+    def sortedSquares(self, A: List[int]) -> List[int]:
+        return list(self.generate_sorted_squares(A))
+
+----------------------------------------------------------
+
+In conclusion
+I'm sure there are many more approaches. Another would be to combine the 2 pointer technique with the binary search.
+
+I'm interested in thoughts people have on which is best in an interview!
 ```
 
 <br/>
@@ -12540,13 +12997,96 @@ class Solution:
 <br/>
 
 #### [LC-232:Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
+##### Why do we use two stacks to make a queue?
+```
+It's a common way to implement a queue in functional programming languages with purely functional (immutable, but sharing structure) lists (e.g. Clojure, Haskell, Erlang...):
+
+ * use a pair of lists to represent a queue where elements are in FIFO order in the first list and in LIFO order in the second list
+ * enqueue to the queue by prepending to the second list
+ * dequeue from the queue by taking the first element of the first list
+ * if the first list is empty: reverse the second list and replace the first list with it, and replace the second list with an empty list
+
+(all operations return the new queue object in addition to any possible return values)
+
+The point is that adding (removing) an element to (from) the front of a purely functional list is O(1) and the reverse operation 
+which is O(n) is amortised over all the dequeues, so it's close to O(1), thereby giving you a ~O(1) queue implementation 
+with immutable data structures.
+```
 ##### Solution Explanation
 ```
+1) pour elements from the first stack into the second.
+2) Stacks are LIFO and Queues are FIFO ... and remember what list.pop() does ...
+   Popping from the list from right arr.pop() ....
+   
+   So if we have two lists:
+   
+   input = [1,2]
+   output = []
+   
+   And populate output by popping from right on input ( essentially flips/reverses the list )
+   
+   while input:
+     output += [input.pop()]
+	 #outut.append(input.pop())
+   
+   output becomes [2,1]
+   
+   so now if we pop from output we get 1 and then 2 which is what we want
 ```
+![lc-232-implement-queue-using-stacks](./assets/lc-232-implement-queue-using-stacks.PNG)
 ##### Complexity Analysis
 ```
 ```
 ```python
+class MyQueue:
+
+    def __init__(self):
+        """
+        Initialize your data structure here.
+        """
+        self.input_stack = []
+        self.output_stack = []
+
+    def push(self, x: int) -> None:
+        """
+        Push element x to the back of queue.
+        """
+        self.input_stack += [x]
+
+    def pop(self) -> int:
+        """
+        Removes the element from in front of queue and returns that element.
+        """
+        if not self.output_stack:
+            while self.input_stack:
+                self.output_stack += [self.input_stack.pop()] # переливаем элементы из первого стека во второй
+
+        return self.output_stack.pop() if self.output_stack else -1
+
+    def peek(self) -> int:
+        """
+        Get the front element.
+        """
+        if self.output_stack:
+            return self.output_stack[-1]
+        elif self.input_stack:
+            return self.input_stack[0]
+
+        return -1
+
+    def empty(self) -> bool:
+        """
+        Returns whether the queue is empty.
+        """
+        return not (self.input_stack or self.output_stack)
+
+
+# Your MyQueue object will be instantiated and called as such:
+obj = MyQueue()
+obj.push(1)
+param_2 = obj.pop()
+param_3 = obj.peek()
+param_4 = obj.empty()
 ```
 
 <br/>
@@ -12556,13 +13096,116 @@ class Solution:
 <br/>
 
 #### [LC-329:Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/)
+##### Kahn's Algorithm
+![kahns-algorithm-python](./assets/kahns-algorithm-python.PNG)
+```
+Detecting Circle in a Directed graph
+--------------------------------------
+step1.) Count the incoming edges , store the connection between edges
+step2.) Check the leaves if its length is zero means it's a circle consist of all courses in a bigger loop, if not
+step3.)Reduce connection one by one and keep adding in a leave if it;s connection is zero
+step4.) if len(leave) == n: Means it has travelled all the nodes. if it is not equal to n, means you skipped adding in a leave because there connection with other wasn't zero.
+
+Resources for better understanding:
+https://www.youtube.com/watch?v=2l22FRtU45M&feature=youtu.be
+```
 ##### Solution Explanation
 ```
+# -----------------------------------
+# Approach - 1: Topological sorting of a DAG (Directed Acyclic Graph) using Kahn's Algorithm
+# -----------------------------------
+We first build a directed acyclic graph (DAG) with directed edges (i,j)->(x,y), where (i,j) and (x,y) 
+are neighboring cells in the matrix, and value at (i,j) is strictly smaller than the value at (x,y).
+Then, by topologically sorting this DAG while maintaining max_path_len, we can find the longest increasing path.
+
+Complexity
+------------------
+Time complexity is just O(mn), because we have this number of states and for each state we have at most 4 transitions. Space complexity is the same.
+
+# -----------------------------------
+# Approach - 2: DP - Short DFS with lru_cache
+# -----------------------------------
+This problem is dynamic programming problem, the problem is to understand how to traverse our matrix. Actually we can look at this problem as directed graph, and the goal is to find the longest path. One way to do it is to use bfs, where we start from all nodes with outgoing degree equel to 0 and then traverse all nodes from which we can reach these nodes and so on. Another way is to use dynamic programming (sometimes it is called memoisation here, because it is not the usual way to traverse elements), but in fact it is just usual dynamic programming.
+
+ 1. Let dfs(x, y) be an answer for cell with coordinates (x, y). In the beginning we define it as 1: there is a path of length 1 for sure.
+ 2. Then we check all neighbours and check answers for them and if we can continue path, we update ans.
+ 3. In the end we check values for all cells and return the maximum one.
+
+Notice, how short and clean you code will be when we use memoisation here, we do not need to bother where to start our traversal, in the end we always reach bottom nodes and they will be traversed first.
+
+Complexity
+------------------
+Time complexity is just O(mn), because we have this number of states and for each state we have at most 4 transitions. Space complexity is the same.
 ```
 ##### Complexity Analysis
 ```
+For both approaches:
+
+TC: O(M*N)
+SC: O(M*N)
 ```
 ```python
+# -----------------------------------
+# Approach - 1: Topological sorting of a DAG (Directed Acyclic Graph) using Kahn's Algorithm
+# -----------------------------------
+# TC: O(M*N)
+# SC: O(M*N)
+
+import collections
+
+from typing import List
+
+class Solution:
+    def longestIncreasingPath(self, matrix: List[List[int]]) -> int:
+	    # Step 1: build a directed acyclic graph
+	    graph = collections.defaultdict(list)
+	    indegree = collections.defaultdict(int)
+	    for i in range(len(matrix)):
+		    for j in range(len(matrix[0])):
+			    neighbors = [(i+1, j), (i-1, j), (i, j+1), (i, j-1)]
+			    for x, y in neighbors:
+				    if 0<=x<len(matrix) and 0<=y<len(matrix[0]) and matrix[i][j] < matrix[x][y]:
+					    graph[(i,j)].append((x,y))
+					    indegree[(x,y)]+=1
+
+	    # Step 2: Topological sorting with Kahn's algorithm
+	    queue = collections.deque([(i, j) for i in range(len(matrix)) for j in range(len(matrix[0])) if (i,j) not in indegree])
+	    max_path_len = 0
+	    while queue:
+		    max_path_len += 1
+		    for _ in range(len(queue)):
+			    node = queue.popleft()
+			    for neigh in graph[node]:
+				    indegree[neigh] -= 1
+				    if not indegree[neigh]:
+					    queue.append(neigh)
+	    return max_path_len
+
+# -----------------------------------
+# Approach - 2: DP - Short DFS with lru_cache
+# -----------------------------------
+# TC: O(M*N)
+# SC: O(M*N)
+from functools import cache
+
+from typing import List
+
+class Solution:
+    def longestIncreasingPath(self, matrix: List[List[int]]) -> int:
+        m, n = len(matrix), len(matrix[0])
+        neibs = [(0, -1), (0, 1), (1, 0), (-1, 0)]
+        
+        #@lru_cache(None)
+		#Note that @cache was introduced in Python 3.9, and it's a shorthand for @lru_cache(maxsize=None)
+		@cache
+        def dfs(x, y):
+            ans = 1
+            for dx, dy in neibs:
+                if 0 <= x+dx < m and 0 <= y+dy <n and matrix[x+dx][y+dy] < matrix[x][y]:
+                    ans = max(ans, dfs(x+dx, y+dy) + 1) 
+            return ans
+        
+        return max(dfs(i, j) for i, j in product(range(m), range(n)))
 ```
 
 <br/>
@@ -12574,11 +13217,215 @@ class Solution:
 #### [LC-234:Basic Calculator](https://leetcode.com/problems/basic-calculator/)
 ##### Solution Explanation
 ```
+Since we only have +, -, and (), we can process the input from left to right. We can use a stack to cache parenthesized contents.
+
+The stack solution:
+
+For each char, c:
+peek the top of the stack, t
+if c and t are both numbers, pop the stack and push t+c
+if c is a number and t is -, pop the stack and push -c
+if c is a number and t is none of the above, push c
+if c is ( or - push c
+if c is ) pop the stack until the corresponding ( is popped, sum the intervening numbers, and push that sum
+After this, the stack should contain only numbers that we can sum for the result
+
+The time and space complexities are both O(n). We're popping and pushing back onto the stack, but that's all an amortized O(n) since we handle a given number at most 2 times in the stack (once when we add it and again when we squash it).
+
+------------------------
+
+More detailed explanation:
+
+        1. Take 3 containers:
+        num -> to store current num value only
+        sign -> to store sign value, initially +1
+        res -> to store sum
+        When ( comes these containers used for calculate sum of intergers within () brackets.
+        --------------------
+        2. When c is + or -
+        Move num to res, because we need to empty num for next integer value.
+        set num = 0
+        sign = update with c
+        --------------------
+        3. When c is '('
+        Here, we need num, res, sign to calculate sum of integers within ()
+        So, move num and sign to stack => [num, sign]
+        Now reset - res = 0, num = 0, sign = 1 (default)
+        --------------------
+        4. When c is ')' -> 2-(3+4), Here res=3, num=4, sign=1 stack [2, -] 
+        res +=sign*num -> calculate sum for num first, then pop items from stack, res=7
+        res *=stack.pop() - > Pop sign(+ or -) to multiply with res, res = 7*(-1)
+        res +=stack.pop() - > Pop integer and add with prev. sum, res = -7 + 2 - 5
+        --------------------
+        Simple Example: 2 - 3
+        Initially res will have 2,i.e. res = 2
+        then store '-' in sign. it will be used when 3 comes. ie. sign = -1
+        Now 3 comes => res = res + num*sign
+        Return statement: res+num*sign => res = 2 + 3(-1) = 2 - 3 = -1
 ```
 ##### Complexity Analysis
 ```
+TC: O(N)
+SC: O(N)
 ```
 ```python
+class Solution:
+
+    def calculate(self, s: str) -> int:
+        numbers = {str(x) for x in range(10)}
+        st = []
+        num = ""
+        for c in "("+s+")":
+            if num and not c.isnumeric():
+                if st and st[-1] == "-":
+                    st[-1] = -int(num)
+                elif st and isinstance(st[-1], int):
+                    st[-1] += int(num)
+                else:
+                    st.append(int(num))
+                num = ""
+            if c.isnumeric():
+                num += c
+            elif c == "(" or c == "-":
+                st.append(c)
+            elif c == ")": 
+                squash = 0 
+                while st:
+                    c = st.pop()
+                    if c == "(":
+                        break
+                    squash += c
+                if st and st[-1] == "-":
+                    st[-1] = -squash
+                else:
+                    st.append(squash)
+        return sum(st)
+```
+##### Generic Solution Template for :
+###### [LC-224:Basic Calculator](https://leetcode.com/problems/basic-calculator/)
+###### [LC-227:Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/)
+###### [LC-772:Basic Calculator III](https://leetcode.com/problems/basic-calculator-iii/)
+```python
+from functools import cmp_to_key
+from typing import List
+
+def merge(stack, signs, num):
+    # Merge the cur res and update the stack
+    sign = signs[-1][-1]
+    if sign == "+":
+        stack[-1].append(num)
+    elif sign == "-":
+        stack[-1].append(-num)
+    else:
+        last = stack[-1][-1]
+        if sign == "*":
+            stack[-1][-1] = last * num
+        else:
+            stack[-1][-1] = int(last / num)
+    signs[-1].pop()
+	
+def calculate(s):
+    # Use 2 stacks to record each level of res and ops
+    stack, signs = [[]], [["+"]]
+    i, n = 0, len(s)
+    while i < n:
+		# empty case
+        if s[i] == " ":
+            i += 1
+            continue
+		# read and merge the num to cur level
+        if s[i].isdigit():
+            num = int(s[i])
+            while i+1 < n and s[i+1].isdigit():
+                num = num * 10 + int(s[i+1])
+                i += 1
+            merge(stack, signs, num)
+		# record the op
+        elif s[i] in "+-*/":
+            signs[-1].append(s[i])
+		# update a new level
+        elif s[i] == "(":
+            stack.append([])
+            signs.append(["+"])
+		# remove the cur level and merge the res to previous level
+        else:
+            cur = sum(stack.pop())
+            signs.pop()
+            merge(stack, signs, cur)
+        i += 1
+	# merge the answer of basic level and returnn
+    return sum(stack[-1])
+
+class Solution:
+    def calculateI(self, s: str) -> int:
+        return calculate(s)
+
+    def calculateII(self, s: str) -> int:
+        return calculate(s)
+
+    def calculateIII(self, s: str) -> int:
+        return calculate(s)
+
+if __name__ == "__main__":
+    # Basic Calculator - I
+    # Test Cases:
+
+    # Input: "1 + 1"
+    # Return: 2
+    solution = Solution() 
+    2 == solution.calculateI("1 + 1")
+    print(solution.calculateI("1 + 1"))
+
+    # Input: " 2-1 + 2 "
+    # Output: 3
+    3 == solution.calculateI(" 2-1 + 2 ")
+    print(solution.calculateI(" 2-1 + 2 "))
+
+    # Input: "(1+(4+5+2)-3)+(6+8)"
+    # Output: 23
+    23 == solution.calculateI("(1+(4+5+2)-3)+(6+8)")
+    print(solution.calculateI("(1+(4+5+2)-3)+(6+8)"))
+
+    # Basic Calculator - II
+    # Test Cases:
+
+    # Input: "3+2*2" 
+    # Return 7
+    7 == solution.calculateII("3+2*2")
+    print(solution.calculateII("3+2*2"))
+
+    # Input: " 3/2 " 
+    # Return 1
+    1 == solution.calculateII("3/2")
+    print(solution.calculateII("3/2"))
+
+    # Input: " 3+5 / 2 " 
+    # return: 5
+    5 == solution.calculateII(" 3+5 / 2 ")
+    print(solution.calculateII(" 3+5 / 2 "))
+
+    # Basic Calculator - III
+    # Test Cases:
+
+    # Input: "1 + 1" 
+    # Return: 2
+    2 == solution.calculateIII("1 + 1")
+    print(solution.calculateIII("1 + 1"))
+
+    # Input: " 6-4 / 2 " 
+    # Return: 4
+    4 == solution.calculateIII(" 6-4 / 2 ")
+    print(solution.calculateIII(" 6-4 / 2 "))
+
+    # Input: "2*(5+5*2)/3+(6/2+8)" 
+    # Return: 21
+    21 == solution.calculateIII("2*(5+5*2)/3+(6/2+8)")
+    print(solution.calculateIII("2*(5+5*2)/3+(6/2+8)"))
+
+    # Input: "(2+6* 3+5- (3*14/7+2)*5)+3" 
+    # Return: -12
+    -12 == solution.calculateIII("(2+6* 3+5- (3*14/7+2)*5)+3")
+    print(solution.calculateIII("(2+6* 3+5- (3*14/7+2)*5)+3"))
 ```
 
 <br/>
@@ -12588,13 +13435,127 @@ class Solution:
 <br/>
 
 #### [LC-237:Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/)
-##### Solution Explanation
-```
-```
-##### Complexity Analysis
-```
-```
 ```python
+from functools import cmp_to_key
+from typing import List
+
+def merge(stack, signs, num):
+    # Merge the cur res and update the stack
+    sign = signs[-1][-1]
+    if sign == "+":
+        stack[-1].append(num)
+    elif sign == "-":
+        stack[-1].append(-num)
+    else:
+        last = stack[-1][-1]
+        if sign == "*":
+            stack[-1][-1] = last * num
+        else:
+            stack[-1][-1] = int(last / num)
+    signs[-1].pop()
+	
+def calculate(s):
+    # Use 2 stacks to record each level of res and ops
+    stack, signs = [[]], [["+"]]
+    i, n = 0, len(s)
+    while i < n:
+		# empty case
+        if s[i] == " ":
+            i += 1
+            continue
+		# read and merge the num to cur level
+        if s[i].isdigit():
+            num = int(s[i])
+            while i+1 < n and s[i+1].isdigit():
+                num = num * 10 + int(s[i+1])
+                i += 1
+            merge(stack, signs, num)
+		# record the op
+        elif s[i] in "+-*/":
+            signs[-1].append(s[i])
+		# update a new level
+        elif s[i] == "(":
+            stack.append([])
+            signs.append(["+"])
+		# remove the cur level and merge the res to previous level
+        else:
+            cur = sum(stack.pop())
+            signs.pop()
+            merge(stack, signs, cur)
+        i += 1
+	# merge the answer of basic level and returnn
+    return sum(stack[-1])
+
+class Solution:
+    def calculateI(self, s: str) -> int:
+        return calculate(s)
+
+    def calculateII(self, s: str) -> int:
+        return calculate(s)
+
+    def calculateIII(self, s: str) -> int:
+        return calculate(s)
+
+if __name__ == "__main__":
+    # Basic Calculator - I
+    # Test Cases:
+
+    # Input: "1 + 1"
+    # Return: 2
+    solution = Solution() 
+    2 == solution.calculateI("1 + 1")
+    print(solution.calculateI("1 + 1"))
+
+    # Input: " 2-1 + 2 "
+    # Output: 3
+    3 == solution.calculateI(" 2-1 + 2 ")
+    print(solution.calculateI(" 2-1 + 2 "))
+
+    # Input: "(1+(4+5+2)-3)+(6+8)"
+    # Output: 23
+    23 == solution.calculateI("(1+(4+5+2)-3)+(6+8)")
+    print(solution.calculateI("(1+(4+5+2)-3)+(6+8)"))
+
+    # Basic Calculator - II
+    # Test Cases:
+
+    # Input: "3+2*2" 
+    # Return 7
+    7 == solution.calculateII("3+2*2")
+    print(solution.calculateII("3+2*2"))
+
+    # Input: " 3/2 " 
+    # Return 1
+    1 == solution.calculateII("3/2")
+    print(solution.calculateII("3/2"))
+
+    # Input: " 3+5 / 2 " 
+    # return: 5
+    5 == solution.calculateII(" 3+5 / 2 ")
+    print(solution.calculateII(" 3+5 / 2 "))
+
+    # Basic Calculator - III
+    # Test Cases:
+
+    # Input: "1 + 1" 
+    # Return: 2
+    2 == solution.calculateIII("1 + 1")
+    print(solution.calculateIII("1 + 1"))
+
+    # Input: " 6-4 / 2 " 
+    # Return: 4
+    4 == solution.calculateIII(" 6-4 / 2 ")
+    print(solution.calculateIII(" 6-4 / 2 "))
+
+    # Input: "2*(5+5*2)/3+(6/2+8)" 
+    # Return: 21
+    21 == solution.calculateIII("2*(5+5*2)/3+(6/2+8)")
+    print(solution.calculateIII("2*(5+5*2)/3+(6/2+8)"))
+
+    # Input: "(2+6* 3+5- (3*14/7+2)*5)+3" 
+    # Return: -12
+    -12 == solution.calculateIII("(2+6* 3+5- (3*14/7+2)*5)+3")
+    print(solution.calculateIII("(2+6* 3+5- (3*14/7+2)*5)+3"))
 ```
 
 <br/>
@@ -12604,13 +13565,127 @@ class Solution:
 <br/>
 
 #### [LC-772:Basic Calculator III](https://leetcode.com/problems/basic-calculator-iii/)
-##### Solution Explanation
-```
-```
-##### Complexity Analysis
-```
-```
 ```python
+from functools import cmp_to_key
+from typing import List
+
+def merge(stack, signs, num):
+    # Merge the cur res and update the stack
+    sign = signs[-1][-1]
+    if sign == "+":
+        stack[-1].append(num)
+    elif sign == "-":
+        stack[-1].append(-num)
+    else:
+        last = stack[-1][-1]
+        if sign == "*":
+            stack[-1][-1] = last * num
+        else:
+            stack[-1][-1] = int(last / num)
+    signs[-1].pop()
+	
+def calculate(s):
+    # Use 2 stacks to record each level of res and ops
+    stack, signs = [[]], [["+"]]
+    i, n = 0, len(s)
+    while i < n:
+		# empty case
+        if s[i] == " ":
+            i += 1
+            continue
+		# read and merge the num to cur level
+        if s[i].isdigit():
+            num = int(s[i])
+            while i+1 < n and s[i+1].isdigit():
+                num = num * 10 + int(s[i+1])
+                i += 1
+            merge(stack, signs, num)
+		# record the op
+        elif s[i] in "+-*/":
+            signs[-1].append(s[i])
+		# update a new level
+        elif s[i] == "(":
+            stack.append([])
+            signs.append(["+"])
+		# remove the cur level and merge the res to previous level
+        else:
+            cur = sum(stack.pop())
+            signs.pop()
+            merge(stack, signs, cur)
+        i += 1
+	# merge the answer of basic level and returnn
+    return sum(stack[-1])
+
+class Solution:
+    def calculateI(self, s: str) -> int:
+        return calculate(s)
+
+    def calculateII(self, s: str) -> int:
+        return calculate(s)
+
+    def calculateIII(self, s: str) -> int:
+        return calculate(s)
+
+if __name__ == "__main__":
+    # Basic Calculator - I
+    # Test Cases:
+
+    # Input: "1 + 1"
+    # Return: 2
+    solution = Solution() 
+    2 == solution.calculateI("1 + 1")
+    print(solution.calculateI("1 + 1"))
+
+    # Input: " 2-1 + 2 "
+    # Output: 3
+    3 == solution.calculateI(" 2-1 + 2 ")
+    print(solution.calculateI(" 2-1 + 2 "))
+
+    # Input: "(1+(4+5+2)-3)+(6+8)"
+    # Output: 23
+    23 == solution.calculateI("(1+(4+5+2)-3)+(6+8)")
+    print(solution.calculateI("(1+(4+5+2)-3)+(6+8)"))
+
+    # Basic Calculator - II
+    # Test Cases:
+
+    # Input: "3+2*2" 
+    # Return 7
+    7 == solution.calculateII("3+2*2")
+    print(solution.calculateII("3+2*2"))
+
+    # Input: " 3/2 " 
+    # Return 1
+    1 == solution.calculateII("3/2")
+    print(solution.calculateII("3/2"))
+
+    # Input: " 3+5 / 2 " 
+    # return: 5
+    5 == solution.calculateII(" 3+5 / 2 ")
+    print(solution.calculateII(" 3+5 / 2 "))
+
+    # Basic Calculator - III
+    # Test Cases:
+
+    # Input: "1 + 1" 
+    # Return: 2
+    2 == solution.calculateIII("1 + 1")
+    print(solution.calculateIII("1 + 1"))
+
+    # Input: " 6-4 / 2 " 
+    # Return: 4
+    4 == solution.calculateIII(" 6-4 / 2 ")
+    print(solution.calculateIII(" 6-4 / 2 "))
+
+    # Input: "2*(5+5*2)/3+(6/2+8)" 
+    # Return: 21
+    21 == solution.calculateIII("2*(5+5*2)/3+(6/2+8)")
+    print(solution.calculateIII("2*(5+5*2)/3+(6/2+8)"))
+
+    # Input: "(2+6* 3+5- (3*14/7+2)*5)+3" 
+    # Return: -12
+    -12 == solution.calculateIII("(2+6* 3+5- (3*14/7+2)*5)+3")
+    print(solution.calculateIII("(2+6* 3+5- (3*14/7+2)*5)+3"))
 ```
 
 <br/>
@@ -12621,12 +13696,176 @@ class Solution:
 
 #### [LC-770:Basic Calculator IV](https://leetcode.com/problems/basic-calculator-iv/)
 ##### Solution Explanation
-```
-```
-##### Complexity Analysis
-```
-```
 ```python
+from functools import cmp_to_key
+from typing import List
+
+class Exp:
+    # The class of Expression, has a field of coefficient and list of variables
+    def __init__(self):
+        self.coef = 0
+        self.vars = []
+
+    def getVal(self):
+        # Get the string representation of this expression
+        if not self.coef:
+            return ""
+        if not self.vars:
+            return str(self.coef)
+        return str(self.coef) + "*" + "*".join(self.vars)
+        
+def multiply(exp1, exp2):
+    # Multiply 2 expressions, return a new Exp object with variables in sorted order.
+    ret = Exp()
+    ret.coef = exp1.coef * exp2.coef
+    if ret.coef == 0:
+        return ret
+    ret.vars = list(sorted(exp1.vars + exp2.vars))
+    return ret
+
+
+def mergeExp(stack, signs, exp):
+    # merge this single exp with last group of exps.
+    sign = signs[-1][-1]
+    if sign == "+":
+        # If last op is +, no need to merge
+        stack[-1].append([exp])
+    elif sign == "-":
+        # Same as +, but here we need to reverse the sign
+        exp.coef = - exp.coef
+        stack[-1].append([exp])
+    else:
+        # merge last group of exps with this single exp.
+        last = stack[-1][-1]
+        temp = []
+        for prev in last:
+            temp.append(multiply(prev, exp))
+        stack[-1][-1] = temp
+    # pop the used operator.
+    signs[-1].pop()
+
+def mergeGroup(stack, signs, group):
+    # Merge this group of exps with last group of exps, happens when we strip a pair of parenthesis
+    sign = signs[-1][-1]
+    if sign == "+":
+        # If op is +, simply add this new group to previous level.
+        stack[-1].append(group)    
+    elif sign == "-":
+        # If op is -, similar to +, but reverse the sign of all exps
+        temp = []
+        for exp in group:
+            exp.coef = -exp.coef
+            temp.append(exp)   
+        stack[-1].append(temp)
+    else:
+        # If op is *, merge all exps of last group with that of this group
+        last = stack[-1].pop()
+        temp = []
+        for exp1 in last:
+            for exp2 in group:
+                temp.append(multiply(exp1, exp2))
+        stack[-1].append(temp)
+    # Same, pop the used operator
+    signs[-1].pop()
+
+def compare(c, d):
+    # cmp helper. Use it when we compare 2 keys by the number of vars and its lexicographical order.
+    a, b = c.split("*"), d.split("*")
+    if len(a) != len(b):
+        return len(b) - len(a)
+    return 1 if a > b else -1
+
+def getSum(curLevel):
+    # Get the sum of current level of exps, Merge all exps with same vars and those with only digits
+    exps = {"":0}
+    # Merge this level to the dic
+    for groups in curLevel:
+        for exp in groups:
+            if not exp.vars:
+                exps[""] += exp.coef
+            else:
+                key = "*".join(exp.vars)
+                if key not in exps:
+                    exps[key] = exp
+                else:
+                    exps[key].coef += exp.coef
+    # Sort the result by the number of elements and their lexicographical order, 
+    # and filter the pure digits and the vars that got eliminated.
+    ret = [exps[key] for key in sorted(exps.keys(), key=cmp_to_key(compare)) if key != "" and exps[key].coef]
+    # Add the pure nums in the end
+    if exps[""] != 0:
+        temp = Exp()
+        temp.coef = exps[""]
+        ret.append(temp)
+    return ret
+
+    
+def calculate(s, a, b):
+    # Same as basic calculator 1,2,3,4
+    stack, signs = [[]], [["+"]]
+    i, n = 0, len(s)
+    # Set up a dic for substitution
+    dic = {x:y for x, y in zip(a, b)}
+    while i < n:
+        if s[i] == " ":
+            i += 1
+            continue
+        # read and Merge the vars
+        if s[i].isalpha():
+            exp = Exp()
+            temp = s[i]
+            while i+1 < n and s[i+1].isalpha():
+                temp += s[i+1]
+                i += 1
+            if temp in dic:
+                exp.coef = dic[temp]
+            else:
+                exp.coef = 1
+                exp.vars = [temp]
+            mergeExp(stack, signs, exp)
+        # read and merge the nums
+        elif s[i].isdigit():
+            exp = Exp()
+            num = int(s[i])
+            while i+1 < n and s[i+1].isdigit():
+                num = num * 10 + int(s[i+1])
+                i += 1
+            exp.coef = num
+            mergeExp(stack, signs, exp)
+        # record the ops
+        elif s[i] in "+-*":
+            signs[-1].append(s[i])
+        # Add a new level
+        elif s[i] == "(":
+            stack.append([])
+            signs.append(["+"])
+        # Remove this level and merge it to previous level
+        elif s[i] == ")":
+            curLevel = getSum(stack.pop())
+            signs.pop()
+            mergeGroup(stack, signs, curLevel)
+        i += 1
+    # Get the summary of the basic level eventually
+    res = getSum(stack.pop())
+    return [exp.getVal() for exp in res]
+
+class Solution:
+    def basicCalculatorIV(self, expression: str, evalvars: List[str], evalints: List[int]) -> List[str]:
+        return calculate(expression, evalvars, evalints)
+
+if __name__ == "__main__":
+    # Basic Calculator - IV
+    # Test Cases:
+    # Input: expression = "e + 8 - a + 5", evalvars = ["e"], evalints = [1]
+    # Output: ["-1*a","14"]
+    solution = Solution() 
+    assert ["-1*a","14"] == solution.basicCalculatorIV(expression = "e + 8 - a + 5", evalvars = ["e"], evalints = [1])
+    print(solution.basicCalculatorIV(expression = "e + 8 - a + 5", evalvars = ["e"], evalints = [1]))
+
+    # Input: expression = "e - 8 + temperature - pressure", evalvars = ["e", "temperature"], evalints = [1, 12]
+    # Output: ["-1*pressure","5"]
+    assert ["-1*pressure","5"] == solution.basicCalculatorIV(expression = "e - 8 + temperature - pressure", evalvars = ["e", "temperature"], evalints = [1, 12])
+    print(solution.basicCalculatorIV(expression = "e - 8 + temperature - pressure", evalvars = ["e", "temperature"], evalints = [1, 12]))
 ```
 
 <br/>
@@ -12636,13 +13875,50 @@ class Solution:
 <br/>
 
 #### [LC-1597:Build Binary Expression Tree From Infix Expression](https://leetcode.com/problems/build-binary-expression-tree-from-infix-expression/)
-##### Solution Explanation
-```
-```
-##### Complexity Analysis
-```
-```
 ```python
+# Time:  O(n)
+# Space: O(n)
+
+# Definition for a binary tree node.
+class Node(object):
+    def __init__(self, val=" ", left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+
+class Solution(object):
+    def expTree(self, s):
+        """
+        :type s: str
+        :rtype: Node
+        """
+        def compute(operands, operators):
+            right, left = operands.pop(), operands.pop()
+            operands.append(Node(val=operators.pop(), left=left, right=right))
+
+        precedence = {'+':0, '-':0, '*':1, '/':1}
+        operands, operators, operand = [], [], 0
+        for i in xrange(len(s)):
+            if s[i].isdigit():
+                operand = operand*10 + int(s[i])
+                if i == len(s)-1 or not s[i+1].isdigit():
+                    operands.append(Node(val=str(operand)))
+                    operand = 0
+            elif s[i] == '(':
+                operators.append(s[i])
+            elif s[i] == ')':
+                while operators[-1] != '(':
+                    compute(operands, operators)
+                operators.pop()
+            elif s[i] in precedence:
+                while operators and operators[-1] in precedence and \
+                      precedence[operators[-1]] >= precedence[s[i]]:
+                    compute(operands, operators)
+                operators.append(s[i])
+        while operators:
+            compute(operands, operators)
+        return operands[-1]
 ```
 
 <br/>
@@ -12651,14 +13927,111 @@ class Solution:
 </div>
 <br/>
 
+
 #### [LC-106:Construct Binary Tree from Inorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
 ##### Solution Explanation
 ```
+# -----------------------------------
+# Approach 1 : Iterative Solution using Stack
+# -----------------------------------
+We illustrate the algorithm with an example. Consider inorder = [9,3,15,20,7], postorder = [9,15,7,20,3]. Since, we know that postorder traversal traverses a tree in the order left subtree -> right subtree -> root, and inorder traversal traverses a tree in the order left subtree -> root -> right subtree, 3 must be thre root of the tree, and values that come after (before) 3 in inorder must be in the right (left) subtree of 3. Repeating the above procedure recursively until each subtree consists of a single node, we finish constructing the whole tree. For example, the right subtree of the root 3 consists of values 15, 20, 7. Furthermore, since 20 comes right after 3 when traversing postorder from the right, it is the root of the right subtree of 3. Finally, since 15 (7) comes before (after) 20 in inorder, it is the left (right) child of 20. The same analysis applies to the left subtree of 3, and the binary tree is given by 3(9)(20(15)(7)).
+
+We can implement the above algorithm in an iterative fashion. To do this, we first construct a hashmap idx which maps a value to its inorder index. This will give us an O(1) look up of the inorder indices of values of a root and its child, so that we can decide if the child is a left child or right child of the root. Then we can construct the tree with the help of a stack. We iterate over postorder from the right and create a TreeNode node with the corresponding value val. If the head is null, we let head = node, and push head into the stack. Else, if the inorder index stack[-1] is smaller than that of val, we assign stack[-1].right = node, and push node into the stack. Otherwise, we pop from stack to until either stack is empty or the inorder index of stack[-1] is smaller than that of node. We assign u.left = node for the last popped node u from stack, and then push node to stack. After iterating over postorder, we return head.
+
+Time complexity: O(n), space complexity: O(n).
+
+# -----------------------------------
+# Approach 2 : Recursive Solution
+# -----------------------------------
+Algorithm
+----------
+Very similar to https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
+The last element of postorder is used in tree construction here.
+
+Time complexity: O(n), space complexity: O(n).
 ```
 ##### Complexity Analysis
 ```
+For both solutions:
+
+TC: O(N)
+SC: O(N)
 ```
 ```python
+# -----------------------------------
+# Approach 1 : Iterative Solution using Stack
+# -----------------------------------
+
+from typing import List
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def buildTree(self, inorder: List[int], postorder: List[int]) -> TreeNode:
+        """
+        :type inorder: List[int]
+        :type postorder: List[int]
+        :rtype: TreeNode
+        """
+        idx = {}
+        for i, val in enumerate(inorder):
+            idx[val] = i
+        
+        head = None
+        stack = []
+        for i in range(len(postorder)-1, -1, -1):
+            val = postorder[i]
+            if not head:
+                head = TreeNode(val)
+                stack.append(head)
+            else:
+                node = TreeNode(val)
+                if idx[val] > idx[stack[-1].val]:
+                    stack[-1].right = node
+                else:
+                    while stack and idx[stack[-1].val] > idx[val]:
+                        u = stack.pop()
+                    u.left = node
+                stack.append(node)
+        return head
+
+# -----------------------------------
+# Approach 2 : Recursive Solution
+# -----------------------------------
+
+from typing import List
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def helper(self, postorder, inorder, ps, pe, ist, ie):
+        if ist > ie or ps > pe:
+            return None
+        node = TreeNode(postorder[pe])
+        ix = self.cache[postorder[pe]]
+        offset = ix-ist
+        node.left = self.helper(postorder, inorder, ps, ps+offset-1, ist, ix-1)
+        node.right = self.helper(postorder, inorder, ps+offset, pe-1, ix+1, ie)
+        return node
+
+    def buildTree(self, inorder: List[int], postorder: List[int]) -> TreeNode:
+        """
+        :type inorder: List[int]
+        :type postorder: List[int]
+        :rtype: TreeNode
+        """
+        self.cache = {}
+        for idx,x in enumerate(inorder):
+            self.cache[x] = idx
+        return self.helper(postorder, inorder, 0, len(postorder)-1, 0, len(inorder)-1)
 ```
 
 <br/>
@@ -12670,11 +14043,96 @@ class Solution:
 #### [LC-108:Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
 ##### Solution Explanation
 ```
+# -----------------------------
+# Approach 1 : Recursive Solution
+# -----------------------------
+For a sorted array, the left half will be in the left subtree, middle value as the root, right half in the right subtree. This holds true for every node:
+
+[1, 2, 3, 4, 5, 6, 7] -> left: [1, 2, 3], root: 4, right: [5, 6, 7]
+[1, 2, 3] -> left: [1], root: 2, right: [3]
+[5, 6, 7] -> left: [5], root: 6, right: [7]
+
+Many of the approaches suggest slicing an array recursively and passing them.
+However, slicing the array is expensive. It is better to pass the left and right bounds into recursive calls instead.
 ```
 ##### Complexity Analysis
 ```
+TC: O(n)
+SC: O(n) in the case of skewed binary tree otherwise O(h) where h=height of the tree.
 ```
 ```python
+# -----------------------------
+# Approach 1 : Recursive Solution
+# -----------------------------
+#TC: O(N)
+#SC: O(N) in the case of skewed binary tree otherwise O(h) where h=height of the tree.
+
+from typing import List
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def sortedArrayToBST(self, nums: List[int]) -> TreeNode:
+        # Time: O(n)
+        # Space: O(n) in the case of skewed binary tree.
+        def convert(left, right):
+            if left > right:
+                return None
+            mid = (left + right) // 2
+            node = TreeNode(nums[mid])
+            node.left = convert(left, mid - 1)
+            node.right = convert(mid + 1, right)
+            return node
+        return convert(0, len(nums) - 1)
+
+# -----------------------------
+# Approach 2 : Iterative Solution
+# -----------------------------
+#TC: O(N)
+#SC: O(N)
+
+from collections import deque, namedtuple
+from typing import List
+
+SubArray = namedtuple('SubArray', ['start', 'stop', 'parent', 'is_left'])
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+
+class Solution:    
+    def sortedArrayToBST(self, nums: List[int]) -> TreeNode:
+        if not nums:
+            return None
+        
+        dummy = TreeNode(0)
+        worklist = deque([SubArray(start=0, stop=len(nums),
+                                   parent=dummy, is_left=True)])
+        while worklist:
+            sub_array = worklist.popleft()
+            if (sub_array.start < sub_array.stop):
+                mid = sub_array.start + (sub_array.stop - sub_array.start)//2
+                node = TreeNode(nums[mid])
+                worklist.append(SubArray(start=sub_array.start, stop=mid,
+                                         parent=node, is_left=True))
+                worklist.append(SubArray(start=mid+1, stop=sub_array.stop,
+                                         parent=node, is_left=False))
+            else:
+                node = None
+
+            if sub_array.is_left:
+                sub_array.parent.left = node
+            else:
+                sub_array.parent.right = node
+            
+        return dummy.left
 ```
 <br/>
 <div align="right">
@@ -12686,11 +14144,121 @@ class Solution:
 #### [LC-109:Convert Sorted List to Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/)
 ##### Solution Explanation
 ```
+# -----------------------------
+# Approach 1 : Top Down ( In-Order Traversal )
+# -----------------------------
+For the top-down method which starts from root, it is eaiser to understand: we find the mid point first and convert to a root, then place the left subtree, and finally place the right subtree.
+
+A trick here I think is interesting is using the "slow & fast pointers", which help us avoid converting the linked list to array first.
+
+The solution I have referred to is from @caikehe: https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/discuss/35474/Python-recursive-solution-with-detailed-comments-(operate-linked-list-directly).
+
+# -----------------------------
+# Approach 2 : Bottom Up ( Pre-Order Traversal )
+# -----------------------------
+Then I found I have difficulty in understanding what does "bottom-up" mean. 
+
+After writing the code and seeing the test cases, 
+I realize that it may be easier to understand "bottom-up" as "pre-order". Corresponding, "top-down" actually means 'in-order".
+
+Here is my code modified with reference to @caikehe: https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/discuss/35526/Python-solutions-(convert-to-array-first-top-down-approach-bottom-up-approach)
+
+As the code shows, we place the left subtree first, then root, and finally the right tree. Note that "bottom-up" does mean we deal with leave nodes first, but it may not be the smallest node.
+For example, run the code with given array [-10, -3, 0, 5, 9], we will get a tree as:
+```
+![lc-109-convert-sorted-list-to-binary-search-tree](./assets/lc-109-convert-sorted-list-to-binary-search-tree.PNG)
+```
+* The code will start from the range [0, 4] -> deal with the left part [0, 1], currently head= -10, 
+* then we continue to deal with the left part, finding the range change to [0, -1] since mid =0. 
+* Then we generate a new tree node -10, place the left child of node -10 to be None, move the head to -3. 
+* Then deal with the right part, with the range [1, 1] In this way, we place the left subtree.
+* Similar process for the right part.
 ```
 ##### Complexity Analysis
 ```
 ```
 ```python
+# -----------------------------
+# Approach 1 : Top Down ( In-Order Traversal )
+# -----------------------------
+
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def sortedListToBST(self, head: ListNode) -> TreeNode:
+        if not head: return None
+        if not head.next: return TreeNode(head.val)
+        
+        slow, fast = head, head.next.next 
+    
+        # Note the initialization part: slow = 0, fast = 2
+		# we do this to make the slower pointers 【stop before the mid point】
+        # -> slow + steps = n // 2 - 1; fast + 2*steps = 2 + n - 2 = n
+        # examples:
+        # n = 2m:   1, 2, 3, 4 -> A[2] = 3
+        #           slow -> (index) 1; fast -> null, exit the loop
+        #     
+        # n = 2m-1: 1, 2, 3, 4, 5 -> A[2] = 3
+        #           slow -> 1; fast -> 5, fast.next == null, exit the loop
+        
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        
+        tmp = slow.next
+        # get the previous half lists off
+        slow.next = None
+        root = TreeNode(tmp.val)
+        root.left = self.sortedListToBST(head)
+        root.right = self.sortedListToBST(tmp.next)
+        
+        return root	
+
+# -----------------------------
+# Approach 2 : Bottom Up ( Pre-Order Traversal )
+# -----------------------------
+	
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def sortedListToBST(self, head: ListNode) -> TreeNode:
+        l, p = 0, head
+        while p:
+            l += 1
+            p = p.next
+        
+        def convert(start, end):
+            if start > end:
+                return None
+            mid = (start + end) >> 1
+            l = convert(start, mid - 1)
+            nonlocal head
+            root = TreeNode(head.val)
+            root.left = l
+            head = head.next
+            root.right = convert(mid + 1, end)
+            return root
+        
+        return convert(0, l - 1)
 ```
 <br/>
 <div align="right">
@@ -12702,11 +14270,78 @@ class Solution:
 #### [LC-203:Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/)
 ##### Solution Explanation
 ```
+Before writing any code, it's good to make a list of edge cases that we need to consider. This is so that we can be certain that we're not overlooking anything while coming up with our algorithm, and that we're testing all special cases when we're ready to test. These are the edge cases that I came up with.
+
+1. The linked list is empty, i.e. the head node is None.
+2. Multiple nodes with the target value in a row.
+3. The head node has the target value.
+4. The head node, and any number of nodes immediately after it have the target value.
+5. All of the nodes have the target value.
+6. The last node has the target value.
+
+So with that, this is the algorithm I came up with.
+----------------------------------------------------
+Easy linked list traversal problem, without any smart ideas: just traverse list and do what is asked. Two small things which helps to simplify code:
+
+ 1. When traverse, always look at the next element in list, because if we already at element with value equal to val, we can not delete it, we need to go back somehow.
+ 2. Use dummy head to deal with case when head is equal to val.
+
+So, basically our algorithm looks like this: 
+ * we traverse our list and if value of next element is equal to val, we need to delete it, so we do start.next = start.next.next.
+ * Note, that in this case we do not move our pointers, because there can be more element equal to val.
+ * If value is not equal to val, we move to the next element.
+
+Complexity: time complexity is O(n) with only one pass, space complexity is O(1), because we do not use any additional memory except couple of variable.
 ```
 ##### Complexity Analysis
 ```
+TC: O(N)
+SC: O(1)
 ```
 ```python
+# ----------------------------------
+# Without using dummy node
+# ----------------------------------
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def removeElements(self, head: ListNode, val: int) -> ListNode:
+        
+        curr_node, prev_node = head, None
+        
+        while curr_node:
+            if curr_node.val == val:
+                # need to delete current node
+                if curr_node == head:
+                    curr_node = head = head.next
+                else:
+                    prev_node.next = curr_node.next
+                    curr_node = curr_node.next
+            else:
+                # go next
+                prev_node = curr_node
+                curr_node = curr_node.next
+
+        return head
+
+# ----------------------------------
+# Using dummy node
+# ----------------------------------
+class Solution:
+    def removeElements(self, head: ListNode, val: int) -> ListNode:
+        dummy = ListNode(-1)
+        dummy.next = head
+        start = dummy
+        while start.next:
+            if start.next.val == val:
+                start.next = start.next.next
+            else:
+                start = start.next         
+        return dummy.next   
 ```
 <br/>
 <div align="right">
@@ -12717,11 +14352,170 @@ class Solution:
 #### [LC-210:Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)
 ##### Solution Explanation
 ```
+# ----------------------------
+# Approach 1 - DFS
+# ----------------------------
+A few notes to better understand the DFS solution:
+
+* dic is the list of all nodes that point to current node
+* neigh is all the nodes that the current node points to
+* DFS started from all nodes that don't have edges pointing to them
+* For each node:
+  <> we remove current node from dic (list of originators) For example if 0 and 1 both point to 2, dic[2] = [0,1]. Iterating, we remove 0 first (dic[2] = 1), and so on.
+  <> If there are no originators, then add the node to the stack. This step means that everything from the current level has been traversed. We only explore 2 after we've explored 0 and 1.
+    [] Nodes are only added when all originators are explored
+    [] if 0->4, 1->4, 2->4, then dic [4] starts as [0, 1, 2]. stack starts as [0,1,2]. Only after [0,1,2] are explored is 4 added to stack.
+  <> Once all neighbors are traversed, nothing should get back to that node so the node is popped out of dic and appended to the result list
+    [] appending to result list appends in order (since you're starting from all nodes without anyone pting to them)
+    [] this is important as it is what is checked for cycles
+* in the loop case where let's say 0->1->2->3->1, dic[1] = [0,3]. After starting with our stack of [0], 0 will be removed from dic[1], however 3 will not.
+* Thus if dic is not empty, then a cycle occured and thus return []
+
+# ----------------------------
+# Approach 2 - Topological Sort ( Using Kahn's Algorithm and Tarjan's Algorithm )
+# ----------------------------
+
+There are two algorithms for topological-sort.
+        1. Kahn's Algorihm
+        Based on following main ideas that...
+        ・There are some vertices which does't have incoming edges in a DAG.
+        ・These vertices can be the first vertex where topological-sort can start.
+        ・After removing one of these vertices from the graph, the graph remains a DAG.
+        Processing flow: O(E + V)
+        #1 For every vertex, count the number of incoming edges(in-degree), and let S be the set of vertices whose value is zero. : O(E)
+        #2 Repeat the following until S is empty. : O(V)
+           Every time we take a vertex v out of S, 
+           we look at all the edges coming out of v and reduce the in-degree of the destination vertex by one.
+           At this time, If there happens some vertices whose in-degree is 0, we append them into S.
+
+       2. Tarjan's Algorihm: O(E + V)
+        Based on following main ideas that...
+        ・Starting From every vertex, we do dfs.
+        ・Through dfs, we add a vertex to the head of the ans on the way back.
 ```
 ##### Complexity Analysis
 ```
 ```
 ```python
+# ----------------------------
+# Approach 1 - DFS
+# ----------------------------
+# TC: O(|V| + |E|)
+# SC: O(|V| + |E|)
+from typing import List
+
+class Solution:
+    def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
+        # dic[i] is the indegree of the node i,  computing will be faster
+        dic  = [0 for i in xrange(numCourses)];
+        neigh = collections.defaultdict(set)
+        for i, j in prerequisites:
+            dic[i] += 1;
+            neigh[j].add(i)
+        stack  = [i for i in xrange(numCourses) if dic[i] == 0]
+        res = []
+        while stack:
+            node = stack.pop()
+            res.append(node)
+            for i in neigh[node]:
+                dic[i] -= 1
+                if dic[i] == 0:
+                    stack.append(i)
+        for i in xrange(numCourses):
+            if dic[i] > 0:
+                return []
+        return res
+
+
+# ----------------------------
+# Approach 2 - Topological Sort ( Using Kahn's Algorithm and Tarjan's Algorithm )
+# ----------------------------
+# Kahn's Algorihm
+# ----------------------------
+#
+# TC: O(|V| + |E|)
+# SC: O(|V| + |E|)
+from typing import List
+
+class Solution:
+    def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
+        """
+        There are two algorithms for topological-sort.
+        1. Kahn's Algorihm
+        Based on following main ideas that...
+        ・There are some vertices which does't have incoming edges in a DAG.
+        ・These vertices can be the first vertex where topological-sort can start.
+        ・After removing one of these vertices from the graph, the graph remains a DAG.
+        Processing flow: O(E + V)
+        #1 For every vertex, count the number of incoming edges(in-degree), and let S be the set of vertices whose value is zero. : O(E)
+        #2 Repeat the following until S is empty. : O(V)
+           Every time we take a vertex v out of S, 
+           we look at all the edges coming out of v and reduce the in-degree of the destination vertex by one.
+           At this time, If there happens some vertices whose in-degree is 0, we append them into S.
+        """	
+        degree = defaultdict(int)
+        adj_lst = defaultdict(list)
+        ans = []
+        for dest, start in prerequisites:
+            degree[dest] += 1
+            adj_lst[start].append(dest)
+        S = list()
+        for course in range(numCourses):
+            if degree[course] == 0:
+                S.append(course)
+        while S:
+            vertex = S.pop()
+            ans.append(vertex)
+            for dest in adj_lst[vertex]:
+                degree[dest] -= 1
+                if degree[dest] == 0:
+                    S.append(dest)
+        
+        return [] if len(ans) != numCourses else ans
+
+# ----------------------------
+# Tarjan's Algorihm
+# ----------------------------
+#
+# TC: O(|V| + |E|)
+# SC: O(|V| + |E|)
+from typing import List
+
+class Solution:
+    # Only in Tarjan's algorithm, use self.ans
+    def __init__(self):
+        self.ans = []
+
+    def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
+        """
+        2. Tarjan's Algorihm: O(E + V)
+        Based on following main ideas that...
+        ・Starting From every vertex, we do dfs.
+        ・Through dfs, we add a vertex to the head of the ans on the way back.  
+        """	
+        adj_lst = defaultdict(list)
+        # visited holds the vertices that were just passed through and not included in the ans.
+        visited = [False] * numCourses
+        # ended holds the vertices that were passed through and included in the ans.
+        ended = [False] * numCourses
+        
+        def dfs(start, visited, ended, adj_lst):
+            if not visited[start]:
+                visited[start] = True
+                for dest in adj_lst[start]:
+                    if visited[dest] and not ended[dest]:
+                        return 
+                    dfs(dest, visited, ended, adj_lst)
+                ended[start] = True
+                self.ans.append(start)
+        
+        for dest, start in prerequisites:
+            adj_lst[start].append(dest)
+            
+        for start in range(numCourses):
+            dfs(start, visited, ended, adj_lst)
+        
+        return [] if len(self.ans) != numCourses else list(reversed(self.ans))
 ```
 <br/>
 <div align="right">
@@ -12730,13 +14524,39 @@ class Solution:
 <br/>
 
 #### [LC-536:Construct Binary Tree from String](https://leetcode.com/problems/construct-binary-tree-from-string/)
-##### Solution Explanation
-```
-```
-##### Complexity Analysis
-```
-```
 ```python
+# Time:  O(n)
+# Space: O(h)
+
+# Definition for a binary tree node.
+class TreeNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
+
+class Solution(object):
+    def str2tree(self, s: str) -> TreeNode:
+        """
+        :type s: str
+        :rtype: TreeNode
+        """
+        def str2treeHelper(s, i):
+            start = i
+            if s[i] == '-': i += 1
+            while i < len(s) and s[i].isdigit(): i += 1
+            node = TreeNode(int(s[start:i]))
+            if i < len(s) and s[i] == '(':
+                i += 1
+                node.left, i = str2treeHelper(s, i)
+                i += 1
+            if i < len(s) and s[i] == '(':
+                i += 1
+                node.right, i = str2treeHelper(s, i)
+                i += 1
+            return node, i
+
+        return str2treeHelper(s, 0)[0] if s else None
 ```
 
 <br/>
@@ -12748,11 +14568,97 @@ class Solution:
 #### [LC-606:Construct String from Binary Tree](https://leetcode.com/problems/construct-string-from-binary-tree/)
 ##### Solution Explanation
 ```
+# ---------------------------------
+# Approach 1 : Recursive Solution
+# ---------------------------------
+We do this recursively.
+
+ * If the tree is empty, we return an empty string.
+ * We record each child as '(' + (string of child) + ')'
+ * If there is a right child but no left child, we still need to record '()' instead of empty string.
+
+# ---------------------------------
+# Approach 2 : Iterative Solution
+# ---------------------------------
+
 ```
 ##### Complexity Analysis
 ```
 ```
 ```python
+class TreeNode:
+   def __init__(self, data, left = None, right = None):
+      self.data = data
+      self.left = left
+      self.right = right
+def insert(temp,data):
+      que = []
+      que.append(temp)
+      while (len(que)):
+         temp = que[0]
+         que.pop(0)
+         if (not temp.left):
+            if data is not None:
+               temp.left = TreeNode(data)
+            else:
+               temp.left = TreeNode(0)
+            break
+         else:
+            que.append(temp.left)
+         if (not temp.right):
+            if data is not None:
+               temp.right = TreeNode(data)
+            else:
+               temp.right = TreeNode(0)
+            break
+         else:
+            que.append(temp.right)
+
+def make_tree(elements):
+   Tree = TreeNode(elements[0])
+   for element in elements[1:]:
+      insert(Tree, element)
+   return Tree
+
+
+class Solution:
+    # ---------------------------------
+    # Approach 1 : Recursive Solution
+    # ---------------------------------
+    def tree2strRecursive(self, t: TreeNode) -> str:
+        if not t: return ''
+        left = '({})'.format(self.tree2str(t.left)) if (t.left or t.right) else ''
+        right = '({})'.format(self.tree2str(t.right)) if t.right else ''
+        return '{}{}{}'.format(t.val, left, right)
+
+    # ---------------------------------
+    # Approach 2 : Iterative Solution
+    # ---------------------------------
+    def tree2strIterative(self,t):
+        if not t: return ""
+        stack = []
+        stack.append(t)
+        res = ""
+        while stack:
+            node = stack.pop()
+            if node == ")":
+                res += ")"
+                continue
+            res += "("+str(node.val)
+            if not node.left and  node.right:
+                res += "()"
+            if  node.right:
+                stack.append(")")
+                stack.append(node.right)
+            if  node.left:
+                stack.append(")")
+                stack.append(node.left)
+
+        return res[1:]
+if __name__ == "__main__":
+  ob = Solution()
+  root = make_tree([5,6,7,None,8])
+  print(ob.tree2strRecursive(root))
 ```
 
 <br/>
@@ -12764,11 +14670,80 @@ class Solution:
 #### [LC-617:Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/)
 ##### Solution Explanation
 ```
+# ---------------------------------
+# Approach 1 : Recursive Solution
+# ---------------------------------
+Let's create a recursive solution.
+
+ * If both trees are empty then we return empty.
+ * Otherwise, we will return a tree. The root value will be t1.val + t2.val, except these values are 0 if the tree is empty.
+ * The left child will be the merge of t1.left and t2.left, except these trees are empty if the parent is empty.
+ * The right child is similar.
+
+# ---------------------------------
+# Approach 2 : Iterative Solution
+# ---------------------------------
+
 ```
 ##### Complexity Analysis
 ```
 ```
 ```python
+# ---------------------------------
+# Approach 1 : Recursive Solution
+# ---------------------------------
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def mergeTrees(self, root1: TreeNode, root2: TreeNode) -> TreeNode:
+        if not t1 and not t2: return None
+        ans = TreeNode((t1.val if t1 else 0) + (t2.val if t2 else 0))
+        ans.left = self.mergeTrees(t1 and t1.left, t2 and t2.left)
+        ans.right = self.mergeTrees(t1 and t1.right, t2 and t2.right)
+        return ans
+
+
+        if not t1 or not t2: return t1 or t2
+        s = [(t1, t2)]
+        while s: 
+            n1, n2 = s.pop()
+            #nothing to add on
+            if not n2: continue
+            n1.val += n2.val
+            if not n1.right: n1.right = n2.right
+            else: s.append((n1.right, n2.right))
+            if not n1.left: n1.left = n2.left
+            else: s.append((n1.left, n2.left))
+        return t1
+
+# ---------------------------------
+# Approach 2 : Iterative Solution
+# ---------------------------------
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def mergeTrees(self, root1: TreeNode, root2: TreeNode) -> TreeNode:
+        if not t1 or not t2: return t1 or t2
+        s = [(t1, t2)]
+        while s: 
+            n1, n2 = s.pop()
+            #nothing to add on
+            if not n2: continue
+            n1.val += n2.val
+            if not n1.right: n1.right = n2.right
+            else: s.append((n1.right, n2.right))
+            if not n1.left: n1.left = n2.left
+            else: s.append((n1.left, n2.left))
+        return t1
 ```
 
 <br/>
@@ -12778,29 +14753,56 @@ class Solution:
 <br/>
 
 #### [LC-226:Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
-##### Solution Explanation
-```
-```
-##### Complexity Analysis
-```
-```
 ```python
-```
+# ---------------------------------
+# Approach 1 : Recursive Solution
+# ---------------------------------
 
-<br/>
-<div align="right">
-    <b><a href="#1-phone-screen">⬆️ Back to Top</a></b>
-</div>
-<br/>
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def invertTree(self, root: TreeNode) -> TreeNode:
+        """
+        :type root: TreeNode
+        :rtype: TreeNode
+        """
+        if root:
+            root.left,root.right = root.right, root.left
+            self.invertTree(root.left)
+            self.invertTree(root.right)
+        return root
 
-#### [LC-232:Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
-##### Solution Explanation
-```
-```
-##### Complexity Analysis
-```
-```
-```python
+# ---------------------------------
+# Approach 2 : Iterative Solution
+# ---------------------------------
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def invertTree(self, root: TreeNode) -> TreeNode:
+        """
+        :type root: TreeNode
+        :rtype: TreeNode
+        """
+        if not root or root.left==root.right==None: return root
+    
+        parent = [root]
+        while len(parent):
+            children = []
+            for node in parent:
+                node.left, node.right = node.right, node.left
+                if node.left: children.append(node.left)
+                if node.right: children.append(node.right)
+            parent = children
+        return root
 ```
 
 <br/>
@@ -12812,11 +14814,49 @@ class Solution:
 #### [LC-490:The Maze](https://leetcode.com/problems/the-maze/)
 ##### Solution Explanation
 ```
+Don’t over thinking about this question. The ball will only stop when it touch the wall. So we start from the given point.
+Pick one of four directions to move the ball from start until it touch the wall, then memorize the end point. 
+Start over again with different directions until we collect all end points for all four directions. 
+Those end points will be the start point for next round again. 
+If any end points is the detination return tree other wise return false
 ```
 ##### Complexity Analysis
 ```
+TC: O(mn)
+SC: O(mn)
 ```
 ```python
+from typing import List
+
+class Solution:
+
+    # DFS+BFS
+    def hasPath(self, maze: List[List[int]], start: List[int], destination: List[int]) -> bool:       
+        row, col = len(maze),len(maze[0])
+        queue = collections.deque([(start[0],start[1])])
+        visited = set()
+        dirs = [(-1,0),(0,-1),(1,0),(0,1)]
+        def neighbors(x,y):
+            temp=[]
+            used = set()
+            used.add((x,y))
+            for dx, dy in dirs:
+                nx,ny = x,y
+                while 0 <= nx+dx < row and 0 <= ny+dy < col and maze[nx+dx][ny+dy] == 0:
+                    nx+=dx
+                    ny+=dy
+                if (nx,ny) not in used:
+                    temp.append((nx, ny))
+            return temp
+            
+        while queue:
+            cell = queue.popleft()
+            if cell in visited: continue
+            if cell == (destination[0], destination[1]): return True
+            visited.add(cell)
+            for neighbor in neighbors(cell[0],cell[1]):
+                queue.append(neighbor)                
+        return False
 ```
 
 <br/>
@@ -12828,11 +14868,51 @@ class Solution:
 #### [LC-505:The Maze II](https://leetcode.com/problems/the-maze-ii/)
 ##### Solution Explanation
 ```
+The question is extended from [LC-490. The Maze]. This time ask to get shortest distance.
+
+Same method to get the end point plus need to record the distance. We use heap because heapq because when we need to pop from heapq, it will automaticlly pop the minimum value.
 ```
 ##### Complexity Analysis
 ```
+TC: O(mn)
+SC: O(mn)
 ```
 ```python
+import heapq
+from typing import List
+
+class Solution:
+
+    # DFS+BFS
+    def shortestDistance(self, maze: List[List[int]], start: List[int], destination: List[int]) -> int:      
+        start, destination = tuple(start), tuple(destination)
+        row,col = len(maze),len(maze[0])
+        def neighbors(maze, node):
+            temp = []
+            used = set()
+            used.add(node)
+            for dx, dy in [(-1, 0), (0, 1), (0, -1), (1, 0)]:
+                (x,y), dist = node, 0
+                while 0 <= x+dx < row and 0 <= y+dy < col and maze[x+dx][y+dy] == 0:
+                    x += dx
+                    y += dy
+                    dist += 1
+                if (x,y) not in used:
+                    temp.append((dist, (x,y)))
+            return temp
+
+        # min heap: the distance value has to be the first element
+        heap = [(0, start)]
+        visited = set()
+        while heap:
+            dist, node = heapq.heappop(heap)
+            if node in visited: continue
+            if node == destination:
+                return dist
+            visited.add(node)
+            for neighbor_dist, neighbor in neighbors(maze, node):
+                heapq.heappush(heap, (dist+neighbor_dist, neighbor))
+        return -1
 ```
 
 <br/>
@@ -12841,15 +14921,46 @@ class Solution:
 </div>
 <br/>
 
-
 #### [LC-499:The Maze III](https://leetcode.com/problems/the-maze-iii/)
-##### Solution Explanation
-```
-```
-##### Complexity Analysis
-```
-```
 ```python
+import heapq
+
+
+class Solution(object):
+    def findShortestWay(self, maze, ball, hole):
+        """
+        :type maze: List[List[int]]
+        :type ball: List[int]
+        :type hole: List[int]
+        :rtype: str
+        """
+        ball, hole = tuple(ball), tuple(hole)
+        dirs = {'u' : (-1, 0), 'r' : (0, 1), 'l' : (0, -1), 'd': (1, 0)}
+
+        def neighbors(maze, node):
+            for dir, vec in dirs.iteritems():
+                cur_node, dist = list(node), 0
+                while 0 <= cur_node[0]+vec[0] < len(maze) and \
+                      0 <= cur_node[1]+vec[1] < len(maze[0]) and \
+                      not maze[cur_node[0]+vec[0]][cur_node[1]+vec[1]]:
+                    cur_node[0] += vec[0]
+                    cur_node[1] += vec[1]
+                    dist += 1
+                    if tuple(cur_node) == hole:
+                        break
+                yield tuple(cur_node), dir, dist
+
+        heap = [(0, '', ball)]
+        visited = set()
+        while heap:
+            dist, path, node = heapq.heappop(heap)
+            if node in visited: continue
+            if node == hole: return path
+            visited.add(node)
+            for neighbor, dir, neighbor_dist in neighbors(maze, node):
+                heapq.heappush(heap, (dist+neighbor_dist, path+dir, neighbor))
+
+        return "impossible"
 ```
 
 <br/>
@@ -13000,6 +15111,65 @@ class Solution:
 ```
 ```
 ```python
+# DFS 
+# Approach: Iterate through each of the cell and if it is an island, do dfs to mark all adjacent islands, then increase the counter by 1. )
+# NOTE: w/o modifying the input
+from typing import List
+
+class Solution:
+    def numIslands(self, grid: List[List[str]]) -> int:
+        """
+        :type grid: List[List[str]]
+        :rtype: int
+        """
+        if not grid:
+            return 0
+        ans, visited = 0, set()
+        rows, columns = len(grid), len(grid[0])
+        
+        def dfs(row, column):
+            visited.add((row, column))
+            around = [(row-1, column), (row+1, column), (row, column-1), (row, column+1)]
+            for r, c in around:
+                if 0<=r<rows and 0<=c<columns and grid[r][c]=='1' and (r, c) not in visited:
+                    dfs(r,c)      
+                    
+        for row in range(rows):
+            for column in range(columns):
+                if grid[row][column]=='1' and (row, column) not in visited:
+                    dfs(row, column)
+                    ans += 1
+        return ans 
+
+# BFS
+from typing import List
+
+class Solution:
+    def numIslands(self, grid: List[List[str]]) -> int:
+        """
+        :type grid: List[List[str]]
+        :rtype: int
+        """
+        if not grid:
+            return 0
+        ans, seen = 0, set()
+        rows, columns = len(grid), len(grid[0])
+                    
+        for row in range(rows):
+            for column in range(columns):
+                if grid[row][column]=='1' and (row, column) not in seen:
+                    # bfs starts
+                    seen.add((row,column))
+                    queue = [(row, column)]
+                    for (r, c) in queue:
+                        around = [(r-1, c), (r+1, c), (r, c-1), (r, c+1)]
+                        for i, j in around:
+                            if 0<=i<rows and 0<=j<columns and grid[i][j]=='1' and (i, j) not in seen:
+                                    queue.append((i,j))
+                                    seen.add((i,j))
+                    # bfs ends
+                    ans += 1
+        return ans  
 ```
 
 <br/>
