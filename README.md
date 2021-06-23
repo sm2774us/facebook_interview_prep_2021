@@ -8448,42 +8448,37 @@ class Solution:
     # where, N is the number of nodes in the binary tree
     def lowestCommonAncestorIterative(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
         if not root: return None
-        pathp, pathq, path, stack = [], [], [], [root]
-        flagp, flagq = True, True
-        while flagp or flagq:
+        stack = [root]
+        parent = {root: None}
+        while p not in parent or q not in parent:
             node = stack.pop()
-            if node:
-                if node not in path[-1:]:
-                    path += node,
-                    if node == p:
-                        pathp = path.copy()
-                        flagp = False
-                    if node == q:
-                        pathq = path.copy()
-                        flagq = False
-                    stack += node, node.right, node.left
-                else:
-                    path.pop()
-        lca = None
-        for a, b in zip(pathp, pathq):
-            if a != b:
-                return lca
-            lca = a
-        return lca
+            if node.left:
+                parent[node.left] = node
+                stack.append(node.left)
+            if node.right:
+                parent[node.right] = node
+                stack.append(node.right)
+        ancestors = set()
+        while p:
+            ancestors.add(p)
+            p = parent[p]
+        while q not in ancestors:
+            q = parent[q]
+        return q
 
 class Test(unittest.TestCase):
     def test_lowestCommonAncestor(self) -> None:
         sol = Solution()
 
-        root = TreeNode(3)
-        root.left = TreeNode(5)
-        root.left.left = TreeNode(6)
-        root.left.right = TreeNode(2)
-        root.left.right.left = TreeNode(7)
-        root.left.right.right = TreeNode(4)
-        root.right = TreeNode(1)
-        root.right.left = TreeNode(0)
-        root.right.right = TreeNode(8)
+        #root = TreeNode(3)
+        #root.left = TreeNode(5)
+        #root.left.left = TreeNode(6)
+        #root.left.right = TreeNode(2)
+        #root.left.right.left = TreeNode(7)
+        #root.left.right.right = TreeNode(4)
+        #root.right = TreeNode(1)
+        #root.right.left = TreeNode(0)
+        #root.right.right = TreeNode(8)
         #self.assertEqual(3, sol.lowestCommonAncestorRecursive(root, root.left, root.right).val)
         #self.assertEqual(5, sol.lowestCommonAncestorRecursive(root, root.left, root.left.right.right).val)
         #self.assertEqual(3, sol.lowestCommonAncestorIterative(root, root.left, root.right).val)
