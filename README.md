@@ -54,126 +54,126 @@
 ## 1. Phone Screen:
 | No. | LC-#     | Title	                                                                                                 | url                                                                                        | Time                                                       | Space                 | Difficulty | Data_Structure | Algorithm                    | Premium    |
 | --- | -------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------- | --------------------- | ---------- | -------------- | ---------------------------- | ---------- |
-| 1   | 238      | [Product of Array Except Self](#lc-238product-of-array-except-self)                                       | https://leetcode.com/problems/product-of-array-except-self/                                | _O(n)_                                                     | _O(1)_                | Medium     | Array          |                              |            |
-| 2   | 1428     | [Leftmost Column with at Least a One](#lc-1428leftmost-column-with-at-least-a-one)                        | https://leetcode.com/problems/leftmost-column-with-at-least-a-one/                         | _O(R+C)_ or _O(N+M)_ [ RxC matrix or N*M matrix ]          | _O(1)_                | Medium     | Array/Matrix   | Binary Search                | 🔒         |
+| 1   | 238      | [Product of Array Except Self](https://github.com/sm2774us/facebook_interview_prep_2021#lc-238product-of-array-except-self)                                       | https://leetcode.com/problems/product-of-array-except-self/                                | _O(n)_                                                     | _O(1)_                | Medium     | Array          |                              |            |
+| 2   | 1428     | [Leftmost Column with at Least a One](https://github.com/sm2774us/facebook_interview_prep_2021#lc-1428leftmost-column-with-at-least-a-one)                        | https://leetcode.com/problems/leftmost-column-with-at-least-a-one/                         | _O(R+C)_ or _O(N+M)_ [ RxC matrix or N*M matrix ]          | _O(1)_                | Medium     | Array/Matrix   | Binary Search                | 🔒         |
 | 3   |          | [Leftmost Column Index of 1](#leftmost-column-index-of-1) { Similar to LC-1428 }                          | https://leetcode.com/discuss/interview-question/341247/facebook-leftmost-column-index-of-1 | _O(R*log(C)_ or _O(N*log(M))_ [ RxC matrix or N*M matrix ] | _O(1)_                | Medium     | Array/Matrix   | Binary Search                |            |
-| 4   | 240      | [Search a 2D Matrix II](#lc-240search-a-2d-matrix-ii)                                                     | https://leetcode.com/problems/search-a-2d-matrix-ii                                        | _O(M+N)_                                                   | _O(1)_                | Medium     | Array          |                              |            |
-| 5   | 759      | [Employee Free Time](#lc-759employee-free-time)                                                           | https://leetcode.com/problems/employee-free-time/                                          | _O(m * log(n))_                                            | _O(n)_                | Hard       | Heap/Priority Queue | Greedy                  | 🔒         |
+| 4   | 240      | [Search a 2D Matrix II](https://github.com/sm2774us/facebook_interview_prep_2021#lc-240search-a-2d-matrix-ii)                                                     | https://leetcode.com/problems/search-a-2d-matrix-ii                                        | _O(M+N)_                                                   | _O(1)_                | Medium     | Array          |                              |            |
+| 5   | 759      | [Employee Free Time](https://github.com/sm2774us/facebook_interview_prep_2021#lc-759employee-free-time)                                                           | https://leetcode.com/problems/employee-free-time/                                          | _O(m * log(n))_                                            | _O(n)_                | Hard       | Heap/Priority Queue | Greedy                  | 🔒         |
 | 6   |          | [Lowest Common Ancestor When Root Node Is Not Known-GeeksforGeeks](#lowest-common-ancestor-when-root-node-is-not-known-GeeksforGeeks) | https://www.geeksforgeeks.org/lowest-common-ancestor-in-a-binary-tree-set-2-using-parent-pointer/ | _O(h)_                                              | _O(1)_                | Medium     | Binary Tree    |                              |            |
-| 7   | 560      | [Subarray Sum Equals K](#lc-560subarray-sum-equals-k)                                                     | https://leetcode.com/problems/subarray-sum-equals-k/                                       | _O(n)_                                                     | _O(n)_                | Medium     | Array          | DP ; Prefix Sum              |            |
-| 8   | 138      | [Copy List with Random Pointer](#lc-138copy-list-with-random-pointer)                                     | https://leetcode.com/problems/copy-list-with-random-pointer/                               | _O(n)_                                                     | _O(1)_                | Medium     | Linked List    |                              |            |
-| 9   | 297      | [Serialize and Deserialize Binary Tree](#lc-297serialize-and-deserialize-binary-tree)                     | https://leetcode.com/problems/serialize-and-deserialize-binary-tree/                       | _O(n)_                                                     | _O(n)_                | Hard       | Tree           | Level Order Traversal ; DFS ; BFS |            |
-| 10  | 428      | [Serialize and Deserialize N-ary Tree](#lc-428serialize-and-deserialize-n-ary-tree)                       | https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree/                        | _O(n)_                                                     | _O(h)_                | Hard       | Tree           | Binary Serailzation ; DFS-Recursive ; BFS | 🔒  |
-| 11  | 139      | [Word Break](#lc-139word-break)                                                                           | https://leetcode.com/problems/word-break/                                                  | _O(n^2)_                                                   | _O(n)_                | Medium     |                | DP                           |            |
-| 12  | 140      | [Word Break II](#lc-140word-break-ii)                                                                     | https://leetcode.com/problems/word-break-ii/                                               | _O(n^2)_                                                   | _O(n^2)_              | Hard       |                | DP ; DFS                     |            |
-| 13  | 261      | [Graph Valid Tree](#lc-261graph-valid-tree)                                                               | https://leetcode.com/problems/graph-valid-tree/                                            | _O(\|V\| + \|E\|)_                                         | _O(\|V\| + \|E\|)_    | Medium     | Graph          | BFS ; DFS ; UnionFind        | 🔒         |
-| 14  | 98       | [Validate Binary Search Tree](#lc-98validate-binary-search-tree)                                          | https://leetcode.com/problems/validate-binary-search-tree/                                 | _O(N)_                                                     | _O(1)_                | Medium     | Tree           | Morris Traversal             |            |
+| 7   | 560      | [Subarray Sum Equals K](https://github.com/sm2774us/facebook_interview_prep_2021#lc-560subarray-sum-equals-k)                                                     | https://leetcode.com/problems/subarray-sum-equals-k/                                       | _O(n)_                                                     | _O(n)_                | Medium     | Array          | DP ; Prefix Sum              |            |
+| 8   | 138      | [Copy List with Random Pointer](https://github.com/sm2774us/facebook_interview_prep_2021#lc-138copy-list-with-random-pointer)                                     | https://leetcode.com/problems/copy-list-with-random-pointer/                               | _O(n)_                                                     | _O(1)_                | Medium     | Linked List    |                              |            |
+| 9   | 297      | [Serialize and Deserialize Binary Tree](https://github.com/sm2774us/facebook_interview_prep_2021#lc-297serialize-and-deserialize-binary-tree)                     | https://leetcode.com/problems/serialize-and-deserialize-binary-tree/                       | _O(n)_                                                     | _O(n)_                | Hard       | Tree           | Level Order Traversal ; DFS ; BFS |            |
+| 10  | 428      | [Serialize and Deserialize N-ary Tree](https://github.com/sm2774us/facebook_interview_prep_2021#lc-428serialize-and-deserialize-n-ary-tree)                       | https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree/                        | _O(n)_                                                     | _O(h)_                | Hard       | Tree           | Binary Serailzation ; DFS-Recursive ; BFS | 🔒  |
+| 11  | 139      | [Word Break](https://github.com/sm2774us/facebook_interview_prep_2021#lc-139word-break)                                                                           | https://leetcode.com/problems/word-break/                                                  | _O(n^2)_                                                   | _O(n)_                | Medium     |                | DP                           |            |
+| 12  | 140      | [Word Break II](https://github.com/sm2774us/facebook_interview_prep_2021#lc-140word-break-ii)                                                                     | https://leetcode.com/problems/word-break-ii/                                               | _O(n^2)_                                                   | _O(n^2)_              | Hard       |                | DP ; DFS                     |            |
+| 13  | 261      | [Graph Valid Tree](https://github.com/sm2774us/facebook_interview_prep_2021#lc-261graph-valid-tree)                                                               | https://leetcode.com/problems/graph-valid-tree/                                            | _O(\|V\| + \|E\|)_                                         | _O(\|V\| + \|E\|)_    | Medium     | Graph          | BFS ; DFS ; UnionFind        | 🔒         |
+| 14  | 98       | [Validate Binary Search Tree](https://github.com/sm2774us/facebook_interview_prep_2021#lc-98validate-binary-search-tree)                                          | https://leetcode.com/problems/validate-binary-search-tree/                                 | _O(N)_                                                     | _O(1)_                | Medium     | Tree           | Morris Traversal             |            |
 | 15  |          | [Google And Facebook:Validate Single Binary Tree](#google-and-facebookvalidate-single-binary-tree)     | https://leetcode.com/discuss/interview-question/347374/                                    | _O(N)_                                                     | _O(N)_                | Medium     | Tree           |                              |            |
-| 16  | 621      | [Task Scheduler](#lc-621task-schduler)                                                                    | https://leetcode.com/problems/task-scheduler/                                              | _O(N * n)_ where, N=number_of_tasks , n=cool_off_period    | _O(1)_                | Medium     | Heap/Priority Queue | Greedy                  |            |
+| 16  | 621      | [Task Scheduler](https://github.com/sm2774us/facebook_interview_prep_2021#lc-621task-schduler)                                                                    | https://leetcode.com/problems/task-scheduler/                                              | _O(N * n)_ where, N=number_of_tasks , n=cool_off_period    | _O(1)_                | Medium     | Heap/Priority Queue | Greedy                  |            |
 | 17  |          | [FB Phone Interview - Variant of Task Scheduler](#fb-phone-interviewtask-scheduler-variant)               | https://leetcode.com/discuss/interview-question/673575/Facebook-or-Phone-or-Task-Scheduler | _O(N)_                                                     | _O(N)_                | Medium     |                | Greedy                       |            |
-| 18  | 494      | [Target Sum](#lc-494target-sum)                                                                           | https://leetcode.com/problems/target-sum/                                                  | _O(|nums|*(Upperbound of Sum - Lowerbound of Sum))_        | _O(|nums|*(Upperbound of Sum - Lowerbound of Sum))_ | Medium | | DP                |            |
-| 19  | 22       | [Generate Parentheses](#lc-22generate-parenetheses)                                                       | https://leetcode.com/problems/generate-parentheses/                                        | _O( 4^n / (n^ 1/2) )_                                      | _O( 4^n / (n^ 1/2) )_  | Medium    |                | Backtracking ; Catalan Numbers |          |
-| 20  | 400      | [Nth Digit](#lc-400nth-digit)                                                                             | https://leetcode.com/problems/nth-digit/                                                   | _O(logn)_                                                  | _O(1)_                | Easy       |                | Binary Search                |            |
-| 21  | 380      | [Insert Delete GetRandom O(1)](#lc-380insert-delete-getrandom-o1)                                         | https://leetcode.com/problems/insert-delete-getrandom-o1/                                  | _O(1)_                                                     | _O(n)_                | Hard       |                |                              |            |
-| 22  | 381      | [Insert Delete GetRandom O(1) - Duplicates allowed](#lc-381insert-delete-getrandom-o1-duplicates-allowed) | https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed/               | _O(1)_                                                     | _O(n)_                | Hard       |                |                              |            |
-| 23  | 721      | [Accounts Merge](#lc-721accounts-merge)                                                                   | https://leetcode.com/problems/accounts-merge/                                              | _O(nlogn)_                                                 | _O(n)_                | Medium     |                | Union Find                   |            |
-| 24  | 408      | [Valid Word Abbreviation](#lc-408valid-word-abbreviation)                                                 | https://leetcode.com/problems/valid-word-abbreviation/                                     | _O(n)_                                                     | _O(1)_                | Easy       |                |                              | 🔒         |
-| 25  | 723      | [Candy Crush](#lc-723candy-crush)                                                                         | https://leetcode.com/problems/candy-crush/                                                 | _O((R * C)^2)_                                             | _O(1)_                | Medium     |                |                              |            |
-| 26  | 875      | [Koko Eating Bananas](#lc-875koko-eating-bananas)                                                         | https://leetcode.com/problems/koko-eating-bananas/                                         | _O(nlogr)_                                                 | _O(1)_                | Medium     |                |                              |            |
-| 27  | 199      | [Binary Tree Right Side View](#lc-199binary-tree-right-side-view)                                         | https://leetcode.com/problems/binary-tree-right-side-view/                                 | _O(n)_                                                     | _O(h)_                | Medium     |                |                              |            |
-| 28  | 93       | [Restore IP Addresses](#lc-93restore-ip-addresses)                                                        | https://leetcode.com/problems/restore-ip-addresses/                                       | _O(1)_                                                     | _O(1)_                | Medium     |                |                              |            |
-| 29  | 50       | [Pow(x, n)](#lc-50powx-n)                                                                                | https://leetcode.com/problems/powx-n/                                                      | _O(1)_                                                     | _O(1)_                | Medium     |                |                              |            |
-| 30  | 354      | [Russian Doll Envelopes](#lc-354russian-doll-envelopes)                                                   | https://leetcode.com/problems/russian-doll-envelopes/                                      | _O(nlogn)_                                                 | _O(1)_                | Hard       |                |                              |            |
-| 31  | 286      | [Walls and Gates](#lc-286walls-and-gates)                                                                 | https://leetcode.com/problems/walls-and-gates/                                             | _O(m * n)_                                                 | _O(g)_                | Medium     |                |                              | 🔒         |
-| 32  | 121      | [Best Time to Buy and Sell Stock](#lc-121best-time-to-buy-and-sell-stock)                                 | https://leetcode.com/problems/best-time-to-buy-and-sell-stock/                             | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
-| 33  | 515      | [Find Largest Value in Each Tree Row](#lc-515find-largest-value-in-each-tree-row)                         | https://leetcode.com/problems/find-largest-value-in-each-tree-row/                         | _O(n)_                                                     | _O(h)_                | Medium     |                |                              |            |
-| 34  | 415      | [Add Strings](#lc-415add-strings)                                                                         | https://leetcode.com/problems/add-strings/                                                 | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
-| 35  | 39       | [Combination Sum](#lc-39combination-sum)                                                                  | https://leetcode.com/problems/combination-sum/                                             | _O(k * n^k)_                                               | _O(k)_                | Medium     |                |                              |            |
-| 36  | 670      | [Maximum Swap](#lc-670maximum-swap)                                                                       | https://leetcode.com/problems/maximum-swap/                                               | _O(logn)_                                                  | _O(logn)_             | Medium     |                |                              |            |
+| 18  | 494      | [Target Sum](https://github.com/sm2774us/facebook_interview_prep_2021#lc-494target-sum)                                                                           | https://leetcode.com/problems/target-sum/                                                  | _O(|nums|*(Upperbound of Sum - Lowerbound of Sum))_        | _O(|nums|*(Upperbound of Sum - Lowerbound of Sum))_ | Medium | | DP                |            |
+| 19  | 22       | [Generate Parentheses](https://github.com/sm2774us/facebook_interview_prep_2021#lc-22generate-parenetheses)                                                       | https://leetcode.com/problems/generate-parentheses/                                        | _O( 4^n / (n^ 1/2) )_                                      | _O( 4^n / (n^ 1/2) )_  | Medium    |                | Backtracking ; Catalan Numbers |          |
+| 20  | 400      | [Nth Digit](https://github.com/sm2774us/facebook_interview_prep_2021#lc-400nth-digit)                                                                             | https://leetcode.com/problems/nth-digit/                                                   | _O(logn)_                                                  | _O(1)_                | Easy       |                | Binary Search                |            |
+| 21  | 380      | [Insert Delete GetRandom O(1)](https://github.com/sm2774us/facebook_interview_prep_2021#lc-380insert-delete-getrandom-o1)                                         | https://leetcode.com/problems/insert-delete-getrandom-o1/                                  | _O(1)_                                                     | _O(n)_                | Hard       |                |                              |            |
+| 22  | 381      | [Insert Delete GetRandom O(1) - Duplicates allowed](https://github.com/sm2774us/facebook_interview_prep_2021#lc-381insert-delete-getrandom-o1-duplicates-allowed) | https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed/               | _O(1)_                                                     | _O(n)_                | Hard       |                |                              |            |
+| 23  | 721      | [Accounts Merge](https://github.com/sm2774us/facebook_interview_prep_2021#lc-721accounts-merge)                                                                   | https://leetcode.com/problems/accounts-merge/                                              | _O(nlogn)_                                                 | _O(n)_                | Medium     |                | Union Find                   |            |
+| 24  | 408      | [Valid Word Abbreviation](https://github.com/sm2774us/facebook_interview_prep_2021#lc-408valid-word-abbreviation)                                                 | https://leetcode.com/problems/valid-word-abbreviation/                                     | _O(n)_                                                     | _O(1)_                | Easy       |                |                              | 🔒         |
+| 25  | 723      | [Candy Crush](https://github.com/sm2774us/facebook_interview_prep_2021#lc-723candy-crush)                                                                         | https://leetcode.com/problems/candy-crush/                                                 | _O((R * C)^2)_                                             | _O(1)_                | Medium     |                |                              |            |
+| 26  | 875      | [Koko Eating Bananas](https://github.com/sm2774us/facebook_interview_prep_2021#lc-875koko-eating-bananas)                                                         | https://leetcode.com/problems/koko-eating-bananas/                                         | _O(nlogr)_                                                 | _O(1)_                | Medium     |                |                              |            |
+| 27  | 199      | [Binary Tree Right Side View](https://github.com/sm2774us/facebook_interview_prep_2021#lc-199binary-tree-right-side-view)                                         | https://leetcode.com/problems/binary-tree-right-side-view/                                 | _O(n)_                                                     | _O(h)_                | Medium     |                |                              |            |
+| 28  | 93       | [Restore IP Addresses](https://github.com/sm2774us/facebook_interview_prep_2021#lc-93restore-ip-addresses)                                                        | https://leetcode.com/problems/restore-ip-addresses/                                       | _O(1)_                                                     | _O(1)_                | Medium     |                |                              |            |
+| 29  | 50       | [Pow(x, n)](https://github.com/sm2774us/facebook_interview_prep_2021#lc-50powx-n)                                                                                | https://leetcode.com/problems/powx-n/                                                      | _O(1)_                                                     | _O(1)_                | Medium     |                |                              |            |
+| 30  | 354      | [Russian Doll Envelopes](https://github.com/sm2774us/facebook_interview_prep_2021#lc-354russian-doll-envelopes)                                                   | https://leetcode.com/problems/russian-doll-envelopes/                                      | _O(nlogn)_                                                 | _O(1)_                | Hard       |                |                              |            |
+| 31  | 286      | [Walls and Gates](https://github.com/sm2774us/facebook_interview_prep_2021#lc-286walls-and-gates)                                                                 | https://leetcode.com/problems/walls-and-gates/                                             | _O(m * n)_                                                 | _O(g)_                | Medium     |                |                              | 🔒         |
+| 32  | 121      | [Best Time to Buy and Sell Stock](https://github.com/sm2774us/facebook_interview_prep_2021#lc-121best-time-to-buy-and-sell-stock)                                 | https://leetcode.com/problems/best-time-to-buy-and-sell-stock/                             | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
+| 33  | 515      | [Find Largest Value in Each Tree Row](https://github.com/sm2774us/facebook_interview_prep_2021#lc-515find-largest-value-in-each-tree-row)                         | https://leetcode.com/problems/find-largest-value-in-each-tree-row/                         | _O(n)_                                                     | _O(h)_                | Medium     |                |                              |            |
+| 34  | 415      | [Add Strings](https://github.com/sm2774us/facebook_interview_prep_2021#lc-415add-strings)                                                                         | https://leetcode.com/problems/add-strings/                                                 | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
+| 35  | 39       | [Combination Sum](https://github.com/sm2774us/facebook_interview_prep_2021#lc-39combination-sum)                                                                  | https://leetcode.com/problems/combination-sum/                                             | _O(k * n^k)_                                               | _O(k)_                | Medium     |                |                              |            |
+| 36  | 670      | [Maximum Swap](https://github.com/sm2774us/facebook_interview_prep_2021#lc-670maximum-swap)                                                                       | https://leetcode.com/problems/maximum-swap/                                               | _O(logn)_                                                  | _O(logn)_             | Medium     |                |                              |            |
 | 37  |          | [Facebook Onsite dot product of sparse vectors](#facebook-onsite-dot-product-of-two-sparse-vectors)       | https://leetcode.com/discuss/interview-question/124823/                                    | _O(h)_                                              | _O(1)_                | Medium     | Binary Tree    |                              |            |
-| 38  | 1570     | [Dot Product of Two Sparse Vectors](#lc-1570dot-product-of-two-sparse-vectors)                            | https://leetcode.com/problems/dot-product-of-two-sparse-vectors/                           | ctor: _O(n)_<br>dot_product: _O(min(n, m))_                | _O(n)_                | Medium     |                |                              | 🔒          |
-| 39  | 528      | [Random Pick with Weight](#lc-528random-pick-with-weight)                                                 | https://leetcode.com/problems/random-pick-with-weight/                                     | ctor: _O(n)_ <br> pick: _O(logn)_                          | _O(n)_                | Medium     |                |                              |            |
-| 40  | 438      | [Find All Anagrams in a String](#lc-438find-all-anagrams-in-a-string)                                     | https://leetcode.com/problems/find-all-anagrams-in-a-string/                               | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
-| 41  | 934      | [Shortest Bridge](#lc-934shortest-bridge)                                                                 | https://leetcode.com/problems/shortest-bridge/                                             | _O(n^2)_                                                   | _O(n^2)_              | Medium     |                | BFS, DFS                     |            |
-| 42  | 403      | [Frog Jump](#lc-403frog-jump)                                                                             | https://leetcode.com/problems/frog-jump/                                                   | _O(n^2)_                                                   | _O(n^2)_              | Hard       |                |                              |            |
-| 43  | 680      | [Valid Palindrome II](#lc-680valid-palindrome-II)                                                         | https://leetcode.com/problems/valid-palindrome-ii/                                         | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
-| 44  | 230      | [Kth Smallest Element in a BST](#lc-230kth-smallest-element-in-a-bst)                                     | https://leetcode.com/problems/kth-smallest-element-in-a-bst/                               | _O(max(h, k))_                                             | _O(min(h, k))_        | Medium     |                |                              |            | 
-| 45  | 523      | [Continuous Subarray Sum](#lc-523continuous-subarray-sum)                                                 | https://leetcode.com/problems/continuous-subarray-sum/                                    | _O(n)_                                                     | _O(k)_                | Medium     |                |                              |            |
+| 38  | 1570     | [Dot Product of Two Sparse Vectors](https://github.com/sm2774us/facebook_interview_prep_2021#lc-1570dot-product-of-two-sparse-vectors)                            | https://leetcode.com/problems/dot-product-of-two-sparse-vectors/                           | ctor: _O(n)_<br>dot_product: _O(min(n, m))_                | _O(n)_                | Medium     |                |                              | 🔒          |
+| 39  | 528      | [Random Pick with Weight](https://github.com/sm2774us/facebook_interview_prep_2021#lc-528random-pick-with-weight)                                                 | https://leetcode.com/problems/random-pick-with-weight/                                     | ctor: _O(n)_ <br> pick: _O(logn)_                          | _O(n)_                | Medium     |                |                              |            |
+| 40  | 438      | [Find All Anagrams in a String](https://github.com/sm2774us/facebook_interview_prep_2021#lc-438find-all-anagrams-in-a-string)                                     | https://leetcode.com/problems/find-all-anagrams-in-a-string/                               | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
+| 41  | 934      | [Shortest Bridge](https://github.com/sm2774us/facebook_interview_prep_2021#lc-934shortest-bridge)                                                                 | https://leetcode.com/problems/shortest-bridge/                                             | _O(n^2)_                                                   | _O(n^2)_              | Medium     |                | BFS, DFS                     |            |
+| 42  | 403      | [Frog Jump](https://github.com/sm2774us/facebook_interview_prep_2021#lc-403frog-jump)                                                                             | https://leetcode.com/problems/frog-jump/                                                   | _O(n^2)_                                                   | _O(n^2)_              | Hard       |                |                              |            |
+| 43  | 680      | [Valid Palindrome II](https://github.com/sm2774us/facebook_interview_prep_2021#lc-680valid-palindrome-II)                                                         | https://leetcode.com/problems/valid-palindrome-ii/                                         | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
+| 44  | 230      | [Kth Smallest Element in a BST](https://github.com/sm2774us/facebook_interview_prep_2021#lc-230kth-smallest-element-in-a-bst)                                     | https://leetcode.com/problems/kth-smallest-element-in-a-bst/                               | _O(max(h, k))_                                             | _O(min(h, k))_        | Medium     |                |                              |            | 
+| 45  | 523      | [Continuous Subarray Sum](https://github.com/sm2774us/facebook_interview_prep_2021#lc-523continuous-subarray-sum)                                                 | https://leetcode.com/problems/continuous-subarray-sum/                                    | _O(n)_                                                     | _O(k)_                | Medium     |                |                              |            |
 | 46  |          | [Facebook OnSite Randomly generate mines on a grid](#facebook-onsite-randomly-generate-mines-on-a-grid)   | https://leetcode.com/discuss/interview-question/algorithms/124759                          | _O(k*m*n)_                                                 | _O(m*n)_              | Medium     |                | Reservoir Sampling           |            |
-| 47  | 953      | [Verifying an Alien Dictionary](#lc-953verifying-an-alien-dictionary)                                     | https://leetcode.com/problems/verifying-an-alien-dictionary/                               | _O(n * l)_                                                 | _O(1)_                | Easy       |                |                              |            |
-| 48  | 269      | [Alien Dictionary](#lc-269alien-dictionary)                                                               | https://leetcode.com/problems/alien-dictionary/                                            | _O(n)_                                                     | _O(1)_                | Hard       |                | Topological Sort ; BFS ; DFS | 🔒         |
-| 49  | 207      | [Course Schedule](#lc-207course-schedule)                                                                 | https://leetcode.com/problems/course-schedule/                                             | _O(\|V\| + \|E\|)_                                         | _O(\|E\|)_            | Medium     |                | Topological Sort             |            |
-| 50  | 986      | [Interval List Intersections](#lc-49interval-list-intersections)                                          | https://leetcode.com/problems/interval-list-intersections/                                 | _O(m + n)_                                                 | _O(1)_                | Medium     |                |                              |            |
-| 51  | 1249     | [Minimum Remove to Make Valid Parentheses](#lc-1249minimum-remove-to-make-valid-parentheses)              | https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/                    | _O(n)_                                                     | _O(1)_                | Medium     |                | Stack                        |            |
-| 52  | 66       | [Plus One](#lc-66plus-one)                                                                                | https://leetcode.com/problems/plus-one/                                                    | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
+| 47  | 953      | [Verifying an Alien Dictionary](https://github.com/sm2774us/facebook_interview_prep_2021#lc-953verifying-an-alien-dictionary)                                     | https://leetcode.com/problems/verifying-an-alien-dictionary/                               | _O(n * l)_                                                 | _O(1)_                | Easy       |                |                              |            |
+| 48  | 269      | [Alien Dictionary](https://github.com/sm2774us/facebook_interview_prep_2021#lc-269alien-dictionary)                                                               | https://leetcode.com/problems/alien-dictionary/                                            | _O(n)_                                                     | _O(1)_                | Hard       |                | Topological Sort ; BFS ; DFS | 🔒         |
+| 49  | 207      | [Course Schedule](https://github.com/sm2774us/facebook_interview_prep_2021#lc-207course-schedule)                                                                 | https://leetcode.com/problems/course-schedule/                                             | _O(\|V\| + \|E\|)_                                         | _O(\|E\|)_            | Medium     |                | Topological Sort             |            |
+| 50  | 986      | [Interval List Intersections](https://github.com/sm2774us/facebook_interview_prep_2021#lc-49interval-list-intersections)                                          | https://leetcode.com/problems/interval-list-intersections/                                 | _O(m + n)_                                                 | _O(1)_                | Medium     |                |                              |            |
+| 51  | 1249     | [Minimum Remove to Make Valid Parentheses](https://github.com/sm2774us/facebook_interview_prep_2021#lc-1249minimum-remove-to-make-valid-parentheses)              | https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/                    | _O(n)_                                                     | _O(1)_                | Medium     |                | Stack                        |            |
+| 52  | 66       | [Plus One](https://github.com/sm2774us/facebook_interview_prep_2021#lc-66plus-one)                                                                                | https://leetcode.com/problems/plus-one/                                                    | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
 | 53  |          | [Find an index of maximum occurring element with equal probability](#find-an-index-of-maximum-occurring-element-with-equal-probability-GeeksforGeeks) | https://www.geeksforgeeks.org/find-index-maximum-occurring-element-equal-probability/      | _O(n)_                       | _O(n)_                | Medium     |                |                              |            |
-| 54  | 938      | [Range Sum of BST](#lc-938range-sum-of-bst)                                                               | https://leetcode.com/problems/range-sum-of-bst/                                            | _O(n)_                                                     | _O(h)_                | Medium     |                | DFS                          |            |
-| 55  | 323      | [Number of Connected Components in an Undirected Graph](#lc-323number-of-connected-components-in-an-undirected-graph/) | https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/ | _O(n)_                                              | _O(n)_                | Medium     |                | Union Find                   | 🔒          |
+| 54  | 938      | [Range Sum of BST](https://github.com/sm2774us/facebook_interview_prep_2021#lc-938range-sum-of-bst)                                                               | https://leetcode.com/problems/range-sum-of-bst/                                            | _O(n)_                                                     | _O(h)_                | Medium     |                | DFS                          |            |
+| 55  | 323      | [Number of Connected Components in an Undirected Graph](https://github.com/sm2774us/facebook_interview_prep_2021#lc-323number-of-connected-components-in-an-undirected-graph/) | https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/ | _O(n)_                                              | _O(n)_                | Medium     |                | Union Find                   | 🔒          |
 | 56  |          | [Facebook Phone Connected Components in Graph](#facebook-phone-connected-components-in-graph)             | https://leetcode.com/discuss/interview-question/982506/Facebook-or-Phone-or-Connected-Components-in-Graph/798145                                        |                       | Medium     |                | BFS                          |            |
-| 57  | 67       | [Add Binary](#lc-67add-binary)                                                                            | https://leetcode.com/problems/add-binary/                                                  | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
-| 58  | 125      | [Valid Palindrome](#lc-125valid-palindrome)                                                               | https://leetcode.com/problems/valid-palindrome/                                            | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
-| 59  | 371      | [Sum of Two Integer](#lc-371sum-of-two-integers)                                                          | https://leetcode.com/problems/sum-of-two-integers/                                         | _O(1)_                                                     | _O(1)_                | Medium     |                |                              |            |
-| 60  | 989      | [Add to Array-Form of Integer](#lc-989add-to-array-form-of-integer)                                       | https://leetcode.com/problems/add-to-array-form-of-integer/                                | _O(n + logk)_                                              | _O(1)_                | Easy       |                |                              |            |
-| 61  | 66       | [Plus One](#lc-66plus-one)                                                                                | https://leetcode.com/problems/plus-one/                                                    | _O(n)_                                                     | _O(1)_                | Easy       | Linked List    |                              |            |
-| 62  | 2        | [Add Two Numbers](#lc-2add-two-numbers)                                                                   | https://leetcode.com/problems/add-two-numbers/                                             | _O(n)_                                                     | _O(1)_                | Medium     | Linked List    |                              |            |
-| 63  | 445      | [Add Two Numbers II](#lc-445add-two-numbers-ii)                                                           | https://leetcode.com/problems/add-two-numbers-ii/                                          | _O(m + n)_                                                 | _O(m + n)_            | Medium     | Limked List    |                              |            |
-| 64  | 236      | [Lowest Common Ancestor of a Binary Tree](#lc-236lowest-common-ancestor-of-a-binary-tree)                 | https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/                     | _O(n)_                                                     | _O(h)_                | Medium     |                |                              |            |
-| 65  | 866      | [Smallest Subtree with all the Deepest Nodes](#lc-866smallest-subtree-with-all-the-deepest-nodes)         | https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/                 | _O(n)_                                                     | _O(h)_                | Medium     |                | DFS                          |            |
-| 66  | 257      | [Binary Tree Paths](#lc-257binary-tree-paths)                                                             | https://leetcode.com/problems/binary-tree-paths/                                           | _O(n * h)_                                                 | _O(h)_                | Easy       |                |                              |            |
-| 67  | 76       | [Minimum Window Substring](#lc-76minimum-window-substring)                                                | https://leetcode.com/problems/minimum-window-substring/                                    | _O(n)_                                                     | _O(k)_                | Hard       |                |                              |            |
+| 57  | 67       | [Add Binary](https://github.com/sm2774us/facebook_interview_prep_2021#lc-67add-binary)                                                                            | https://leetcode.com/problems/add-binary/                                                  | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
+| 58  | 125      | [Valid Palindrome](https://github.com/sm2774us/facebook_interview_prep_2021#lc-125valid-palindrome)                                                               | https://leetcode.com/problems/valid-palindrome/                                            | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
+| 59  | 371      | [Sum of Two Integer](https://github.com/sm2774us/facebook_interview_prep_2021#lc-371sum-of-two-integers)                                                          | https://leetcode.com/problems/sum-of-two-integers/                                         | _O(1)_                                                     | _O(1)_                | Medium     |                |                              |            |
+| 60  | 989      | [Add to Array-Form of Integer](https://github.com/sm2774us/facebook_interview_prep_2021#lc-989add-to-array-form-of-integer)                                       | https://leetcode.com/problems/add-to-array-form-of-integer/                                | _O(n + logk)_                                              | _O(1)_                | Easy       |                |                              |            |
+| 61  | 66       | [Plus One](https://github.com/sm2774us/facebook_interview_prep_2021#lc-66plus-one)                                                                                | https://leetcode.com/problems/plus-one/                                                    | _O(n)_                                                     | _O(1)_                | Easy       | Linked List    |                              |            |
+| 62  | 2        | [Add Two Numbers](https://github.com/sm2774us/facebook_interview_prep_2021#lc-2add-two-numbers)                                                                   | https://leetcode.com/problems/add-two-numbers/                                             | _O(n)_                                                     | _O(1)_                | Medium     | Linked List    |                              |            |
+| 63  | 445      | [Add Two Numbers II](https://github.com/sm2774us/facebook_interview_prep_2021#lc-445add-two-numbers-ii)                                                           | https://leetcode.com/problems/add-two-numbers-ii/                                          | _O(m + n)_                                                 | _O(m + n)_            | Medium     | Limked List    |                              |            |
+| 64  | 236      | [Lowest Common Ancestor of a Binary Tree](https://github.com/sm2774us/facebook_interview_prep_2021#lc-236lowest-common-ancestor-of-a-binary-tree)                 | https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/                     | _O(n)_                                                     | _O(h)_                | Medium     |                |                              |            |
+| 65  | 866      | [Smallest Subtree with all the Deepest Nodes](https://github.com/sm2774us/facebook_interview_prep_2021#lc-866smallest-subtree-with-all-the-deepest-nodes)         | https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/                 | _O(n)_                                                     | _O(h)_                | Medium     |                | DFS                          |            |
+| 66  | 257      | [Binary Tree Paths](https://github.com/sm2774us/facebook_interview_prep_2021#lc-257binary-tree-paths)                                                             | https://leetcode.com/problems/binary-tree-paths/                                           | _O(n * h)_                                                 | _O(h)_                | Easy       |                |                              |            |
+| 67  | 76       | [Minimum Window Substring](https://github.com/sm2774us/facebook_interview_prep_2021#lc-76minimum-window-substring)                                                | https://leetcode.com/problems/minimum-window-substring/                                    | _O(n)_                                                     | _O(k)_                | Hard       |                |                              |            |
 | 68  |          | [Google Remove Duplicates from Unsorted Array](#google-remove-duplicates-from-unsorted-array)             | https://leetcode.com/discuss/interview-question/168757/Google%3A-Remove-Duplicates-from-Unsorted-Array |                                                |                       | Hard       |                |                              |            |
-| 69  | 287      | [Find the Duplicate Number](#lc-287find-the-duplicate-number)                                             | https://leetcode.com/problems/find-the-duplicate-number/                                   | _O(n)_                                                     | _O(1)_                | Hard       |                | Binary Search, Floyd's Cycle Detection |  |
+| 69  | 287      | [Find the Duplicate Number](https://github.com/sm2774us/facebook_interview_prep_2021#lc-287find-the-duplicate-number)                                             | https://leetcode.com/problems/find-the-duplicate-number/                                   | _O(n)_                                                     | _O(1)_                | Hard       |                | Binary Search, Floyd's Cycle Detection |  |
 | 70  |          | [Remove duplicates from an unsorted linked list-GeeksforGeeks](#remove-duplicates-from-an-unsorted-linked-list-geeksforgeeks) http://www.geeksforgeeks.org/remove-duplicates-from-an-unsorted-linked-list/ | _O(n)_                                                 | _O(1)_                | Easy       |                |                              |            |
-| 71  | 83       | [Remove Duplicates from Sorted List](#lc-83remove-duplicates-from-sorted-list)                            | https://leetcode.com/problems/remove-duplicates-from-sorted-list/                          | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
-| 72  | 26       | [Remove Duplicates from Sorted Array](#lc-26remove-duplicates-from-sorted-array)                          | https://leetcode.com/problems/remove-duplicates-from-sorted-array/                         | _O(n)_                                                     | _O(1)_                | Easy       |                | Two Pointers                 |            |
-| 73  | 53       | [Maximum Subarray](#lc-53maximum-subarray)                                                                | https://leetcode.com/problems/maximum-subarray/                                            | _O(n)_                                                     | _O(1)_                | Medium     |                | `Kadane's Algorithm`         |            |
-| 74  | 20       | [Valid Parentheses](#lc-20valid-parenetheses)                                                             | https://leetcode.com/problems/valid-parentheses/                                           | _O(n)_                                                     | _O(n)_                | Easy       |                |                              |            |
-| 75  | 56       | [Merge Intervals](#lc-56merge-intervals)                                                                  | https://leetcode.com/problems/merge-intervals/                                             | _O(nlogn)_                                                 | _O(1)_                | Hard       |                |                              |            |
-| 76  | 133      | [Clone Graph](#lc-133clone-graph)                                                                         | https://leetcode.com/problems/clone-graph/                                                 | _O(n)_                                                     | _O(n)_                | Medium     |                |                              |            |
+| 71  | 83       | [Remove Duplicates from Sorted List](https://github.com/sm2774us/facebook_interview_prep_2021#lc-83remove-duplicates-from-sorted-list)                            | https://leetcode.com/problems/remove-duplicates-from-sorted-list/                          | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
+| 72  | 26       | [Remove Duplicates from Sorted Array](https://github.com/sm2774us/facebook_interview_prep_2021#lc-26remove-duplicates-from-sorted-array)                          | https://leetcode.com/problems/remove-duplicates-from-sorted-array/                         | _O(n)_                                                     | _O(1)_                | Easy       |                | Two Pointers                 |            |
+| 73  | 53       | [Maximum Subarray](https://github.com/sm2774us/facebook_interview_prep_2021#lc-53maximum-subarray)                                                                | https://leetcode.com/problems/maximum-subarray/                                            | _O(n)_                                                     | _O(1)_                | Medium     |                | `Kadane's Algorithm`         |            |
+| 74  | 20       | [Valid Parentheses](https://github.com/sm2774us/facebook_interview_prep_2021#lc-20valid-parenetheses)                                                             | https://leetcode.com/problems/valid-parentheses/                                           | _O(n)_                                                     | _O(n)_                | Easy       |                |                              |            |
+| 75  | 56       | [Merge Intervals](https://github.com/sm2774us/facebook_interview_prep_2021#lc-56merge-intervals)                                                                  | https://leetcode.com/problems/merge-intervals/                                             | _O(nlogn)_                                                 | _O(1)_                | Hard       |                |                              |            |
+| 76  | 133      | [Clone Graph](https://github.com/sm2774us/facebook_interview_prep_2021#lc-133clone-graph)                                                                         | https://leetcode.com/problems/clone-graph/                                                 | _O(n)_                                                     | _O(n)_                | Medium     |                |                              |            |
 | 77  |          | [Facebook Onsite Generate Random Max Index](#facebook-onsite-generate-random-max-index)                   | https://leetcode.com/discuss/interview-question/451431/facebook-onsite-generate-random-max-index |                                                      |                       | Medium     |                |                              |            |
 | 78  |          | [Facebook Interview Question Minimum number of people to spread a message](#facebook-interview-question-minimum-number-of-people-to-spread-a-message) | https://leetcode.com/discuss/interview-question/124827/Find-minimum-number-of-people-to-reach-to-spread-a-message-across-all-people-in-twitter/ |  |  | Medium  | | | |
 | 79  |          | [Facebook Phone Interview Question Given a directed graph remove return minimum of edges to keep all paths](#facebook-phone-interview-question-given-a-directed-graph-remove-return-minimum-of-edges-to-keep-all-paths) | https://leetcode.com/discuss/interview-question/630806/facebook-phone-transitive-reduction-factorial-trailing-zeroes |  |  | Medium | | | |
 | 80  |          | [Facebook Phone screen Shortest Path with Obstacles](#facebook-phone-screen-shortest-path-with-obstacles) | https://leetcode.com/discuss/interview-question/301192/Facebook-phone-screen-Shortest-Path-with-Obstacles/283312 |                                      |                       | Medium     |                |                              |            |
-| 81  | 785      | [Is Graph Bipartite](#lc-785is-graph-bipartite)                                                           | https://leetcode.com/problems/is-graph-bipartite/                                          | _O(\|V\| + \|E\|)_                                         | _O(\|V\| + \|E\|)_    | Medium     |                |                              |            |
-| 82  | 886      | [Possible Bipartition](#lc-886possible-bipartition)                                                       | https://leetcode.com/problems/possible-bipartition/                                        | _O(\|V\| + \|E\|)_                                         | _O(\|V\| + \|E\|)_    | Medium     |                |                              |            |
-| 83  | 72       | [Edit Distance](#lc-72edit-distance)                                                                      | https://leetcode.com/problems/edit-distance/                                               | _O(m * n)_                                                 | _O(m + n)_            | Hard       |                |                              |            |
-| 84  | 91       | [Decode Ways](#lc-91decode-ways)                                                                          | https://leetcode.com/problems/decode-ways/                                                 | _O(n)_                                                     | _O(1)_                | Medium     |                |                              |            |
-| 85  | 75       | [Sort Colors](#lc-75sort-colors)                                                                          | https://leetcode.com/problems/sort-colors/                                                 | _O(n)_                                                     | _O(1)_                | Medium     |                | Tri Partition                |            |
-| 86  | 172      | [Factorial Trailing Zeroes](#lc-172factorial-trailing-zeroes)                                             | https://leetcode.com/problems/factorial-trailing-zeroes/                                   | _O(1)_                                                     | _O(1)_                | Easy       |                |                              |            |
-| 87  | 273      | [Integer to English Words](#lc-273integer-to-english-words)                                               | https://leetcode.com/problems/integer-to-english-words/                                    | _O(1)_                                                     | _O(1)_                | Hard       |                |                              |            |
+| 81  | 785      | [Is Graph Bipartite](https://github.com/sm2774us/facebook_interview_prep_2021#lc-785is-graph-bipartite)                                                           | https://leetcode.com/problems/is-graph-bipartite/                                          | _O(\|V\| + \|E\|)_                                         | _O(\|V\| + \|E\|)_    | Medium     |                |                              |            |
+| 82  | 886      | [Possible Bipartition](https://github.com/sm2774us/facebook_interview_prep_2021#lc-886possible-bipartition)                                                       | https://leetcode.com/problems/possible-bipartition/                                        | _O(\|V\| + \|E\|)_                                         | _O(\|V\| + \|E\|)_    | Medium     |                |                              |            |
+| 83  | 72       | [Edit Distance](https://github.com/sm2774us/facebook_interview_prep_2021#lc-72edit-distance)                                                                      | https://leetcode.com/problems/edit-distance/                                               | _O(m * n)_                                                 | _O(m + n)_            | Hard       |                |                              |            |
+| 84  | 91       | [Decode Ways](https://github.com/sm2774us/facebook_interview_prep_2021#lc-91decode-ways)                                                                          | https://leetcode.com/problems/decode-ways/                                                 | _O(n)_                                                     | _O(1)_                | Medium     |                |                              |            |
+| 85  | 75       | [Sort Colors](https://github.com/sm2774us/facebook_interview_prep_2021#lc-75sort-colors)                                                                          | https://leetcode.com/problems/sort-colors/                                                 | _O(n)_                                                     | _O(1)_                | Medium     |                | Tri Partition                |            |
+| 86  | 172      | [Factorial Trailing Zeroes](https://github.com/sm2774us/facebook_interview_prep_2021#lc-172factorial-trailing-zeroes)                                             | https://leetcode.com/problems/factorial-trailing-zeroes/                                   | _O(1)_                                                     | _O(1)_                | Easy       |                |                              |            |
+| 87  | 273      | [Integer to English Words](https://github.com/sm2774us/facebook_interview_prep_2021#lc-273integer-to-english-words)                                               | https://leetcode.com/problems/integer-to-english-words/                                    | _O(1)_                                                     | _O(1)_                | Hard       |                |                              |            |
 | 88  |          | [English Words to Integer](#english-words-to-integer)                                                     | https://leetcode.com/discuss/interview-question/633508/amazon-onsite-english-words-to-integer |                                                         |                       | Easy       |                |                              |            |
-| 89  | 12       | [Integer to Roman](#lc-12integer-to-roman)                                                                | https://leetcode.com/problems/integer-to-roman/                                            | _O(n)_                                                     | _O(1)_                | Medium     |                |                              |            |
-| 90  | 13       | [Roman to Integer](#lc-13roman-to-integer)                                                                | https://leetcode.com/problems/roman-to-integer/                                            | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
-| 91  | 426      | [Convert Binary Search Tree to Sorted Doubly Linked List](#lc-426convert-binary-search-tree-to-sorted-doubly-linked-list) | https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list | _O(1)_                                          | _O(1)_                |            |                |                              | 🔒          |
-| 92  | 173      | [Binary Search Tree Iterator](#lc-172binary-search-tree-iterator)                                         | https://leetcode.com/problems/binary-search-tree-iterator/                                 | _O(1)_, amortized                                          | _O(h)_                | Medium     |                | Design                       |            |
-| 93  | 208      | [Implement Trie (Prefix Tree)](#lc-208implement-trie-prefix-tree)                                         | https://leetcode.com/problems/implement-trie-prefix-tree/                                  | _O(n)_                                                     | _O(1)_                | Medium     |                | Design                       |            |
-| 94  | 347      | [Top K Frequent Elements](#lc-347top-k-frequent-elements)                                                 | https://leetcode.com/problems/top-k-frequent-elements/                                     | _O(n)_                                                     | _O(n)_                | Medium     |                | Heap, Bucket Sort            |            |
-| 95  | 839      | [Similar String Groups](#lc-839similar-string-groups)                                                     | https://leetcode.com/problems/similar-string-groups/                                       | _O(n^2 * l)_                                               | _O(n)_                | Hard       |                | Union Find                   |            |
-| 96  | 102      | [Binary Tree Level Order Traversal](#lc-102binary-tree-level-order-traversal)                             | https://leetcode.com/problems/binary-tree-level-order-traversal/                           | _O(n)_                                                     | _O(n)_                | Easy       |                | BFS ; DFS                    |            |
-| 97  | 708      | [Insert into a Sorted Circular Linked List](#lc-708insert-into-a-sorted-circular-linked-list)             | https://leetcode.com/problems/insert-into-a-sorted-circular-linked-list/                   | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
-| 98  | 691      | [Stickers to Spell Word](#lc-691stickers-to-spell-word)                                                   | https://leetcode.com/problems/stickers-to-spell-word/                                      | _O(T * S^T)_                                               | _O(T * S^T)_          | Hard       |                | Backtracking, Memoization    |            |
-| 99  | 977      | [Squares of a Sorted Array](#lc-977squares-of-a-sorted-array)                                             | https://leetcode.com/problems/squares-of-a-sorted-array/                                   | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
-| 100 | 232      | [Implement Queue using Stacks](#lc-232implement-queue-using-stacks)                                       | https://leetcode.com/problems/implement-queue-using-stacks/                                | _O(1), amortized_                                          | _O(n)_                | Easy       |                | Design                       |            |
-| 101 | 329      | [Longest Increasing Path in a Matrix](#lc-329longest-increasing-path-in-a-matrix)                         | https://leetcode.com/problems/longest-increasing-path-in-a-matrix/                         | _O(m * n)_                                                 | _O(m * n)_            | Hard       |                | DFS, Topological Sort        |            |
-| 102 | 224      | [Basic Calculator](#lc-224basic-calculator)                                                               | https://leetcode.com/problems/basic-calculator/                                            | _O(n)_                                                     | _O(n)_                | Hard       |                |                              |            |
-| 103 | 227      | [Basic Calculator II](#lc-227basic-calculator-ii)                                                         | https://leetcode.com/problems/basic-calculator-ii/                                         | _O(n)_                                                     | _O(n)_                | Medium     |                |                              |            |
-| 104 | 772      | [Basic Calculator III](#lc-772basic-calculator-iii)                                                       | https://leetcode.com/problems/basic-calculator-iii/                                        | _O(n)_                                                     | _O(n)_                | Hard       |                |                              | 🔒          |
-| 105 | 770      | [Basic Calculator IV](#lc-770basic-calculator-iv)                                                         | https://leetcode.com/problems/basic-calculator-iv/                                         | add: _O(d * t)_<br> sub: _O(d * t)_<br> mul: _O(d * t^2)_<br> eval: _O(d * t)_ <br> to_list: _O(d * tlogt)_ | _O(e + d * t)_ | Hard | | | |
-| 106 | 1597     | [Build Binary Expression Tree From Infix Expression](#lc-1597build-binary-tree-from-infix-expression)     | https://leetcode.com/problems/build-binary-expression-tree-from-infix-expression/          | _O(n)_                                                     | _O(n)_                | Medium     |                |                              | 🔒, variant of [Basic Calculator III](https://leetcode.com/problems/basic-calculator-iii/) |
-| 107 | 106      | [Construct Binary Tree from Inorder and Postorder Traversal](#lc-106construct-binary-tree-from-inorder-and-postorder-traversal) | https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/) | _O(n)_                               | _O(n)_                | Medium     |                |                              |            |
-| 108 | 108      | [Convert Sorted Array to Binary Search Tree](#lc-106convert-sorted-array-to-binary-search-tree)           | https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/                  | _O(n)_                                                     | _O(logn)_             | Medium     |                |                              |            |
-| 109 | 109      | [Convert Sorted List to Binary Search Tree](#lc-108convert-sorted-list-to-binary-search-tree)             | https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/                   | _O(n)_                                                     | _O(logn)_             | Medium     |                |                              |            |
-| 110 | 203      | [Remove Linked List Elements](#lc-203remove-linked-list-elements)                                         | https://leetcode.com/problems/remove-linked-list-elements/                                 | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
-| 111 | 210      | [Course Schedule II](#lc-210course-schedule-ii)                                                           | https://leetcode.com/problems/course-schedule-ii/                                          | _O(\|V\| + \|E\|)_                                         | _O(\|E\|)_            | Medium     |                | Topological Sort             |            |
-| 112 | 536      | [Construct Binary Tree from String](#lc-536construct-binary-tree-from-string)                             | https://leetcode.com/problems/construct-binary-tree-from-string/                           | _O(n)_                                                     | _O(h)_                | Medium     |                |                              | 🔒          |
-| 113 | 606      | [Construct String from Binary Tree](#lc-606construct-string-from-binary-tree)                             | https://leetcode.com/problems/construct-string-from-binary-tree/)                          | _O(n)_                                                     | _O(h)_                | Easy       |                |                              |            |
-| 114 | 617      | [Merge Two Binary Trees](#lc-617merge-two-binary-trees)                                                   | https://leetcode.com/problems/merge-two-binary-trees/                                      | _O(n)_                                                     | _O(h)_                | Easy       |                |                              |            |
-| 115 | 226      | [Invert Binary Tree](#lc-226invert-binary-tree)                                                           | https://leetcode.com/problems/invert-binary-tree/                                          | _O(n)_                                                     | _O(h)_, _O(w)_        | Easy       |                |                              |            |
-| 116 | 490      | [The Maze](#lc-490the-maze)                                                                               | https://leetcode.com/problems/the-maze/                                                    | _O(max(r, c) * w)_                                         | _O(w)_                | Medium     |                |                              |            |
-| 117 | 505      | [The Maze II](#lc-505the-maze-ii)                                                                         | https://leetcode.com/problems/the-maze-ii/                                                 | _O(max(r, c) * wlogw)_                                     | _O(w)_                | Medium     |                |                              |            |
-| 118 | 499      | [The Maze III](#lc-499the-maze-iii)                                                                       | https://leetcode.com/problems/the-maze-iii/                                                | _O(max(r, c) * wlogw)_                                     | _O(w^2)_              | Hard       |                |                              |            |
-| 129 | 1233     | [Remove Sub-Folders from Filesystem](#lc-1233remove-sub-folders-from-filesystem)                          | https://leetcode.com/problems/remove-sub-folders-from-the-filesystem/                      | _O(n)_                                                     | _O(t)_                | Medium     |                | Trie                         |            |
-| 120 | 200      | [Number of Islands](#lc-200number-of-islands)                                                             | https://leetcode.com/problems/number-of-islands/                                           | _O(m * n)_                                                 | _O(m * n)_            | Medium     |                | BFS, DFS, Union Find         |            |
+| 89  | 12       | [Integer to Roman](https://github.com/sm2774us/facebook_interview_prep_2021#lc-12integer-to-roman)                                                                | https://leetcode.com/problems/integer-to-roman/                                            | _O(n)_                                                     | _O(1)_                | Medium     |                |                              |            |
+| 90  | 13       | [Roman to Integer](https://github.com/sm2774us/facebook_interview_prep_2021#lc-13roman-to-integer)                                                                | https://leetcode.com/problems/roman-to-integer/                                            | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
+| 91  | 426      | [Convert Binary Search Tree to Sorted Doubly Linked List](https://github.com/sm2774us/facebook_interview_prep_2021#lc-426convert-binary-search-tree-to-sorted-doubly-linked-list) | https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list | _O(1)_                                          | _O(1)_                |            |                |                              | 🔒          |
+| 92  | 173      | [Binary Search Tree Iterator](https://github.com/sm2774us/facebook_interview_prep_2021#lc-172binary-search-tree-iterator)                                         | https://leetcode.com/problems/binary-search-tree-iterator/                                 | _O(1)_, amortized                                          | _O(h)_                | Medium     |                | Design                       |            |
+| 93  | 208      | [Implement Trie (Prefix Tree)](https://github.com/sm2774us/facebook_interview_prep_2021#lc-208implement-trie-prefix-tree)                                         | https://leetcode.com/problems/implement-trie-prefix-tree/                                  | _O(n)_                                                     | _O(1)_                | Medium     |                | Design                       |            |
+| 94  | 347      | [Top K Frequent Elements](https://github.com/sm2774us/facebook_interview_prep_2021#lc-347top-k-frequent-elements)                                                 | https://leetcode.com/problems/top-k-frequent-elements/                                     | _O(n)_                                                     | _O(n)_                | Medium     |                | Heap, Bucket Sort            |            |
+| 95  | 839      | [Similar String Groups](https://github.com/sm2774us/facebook_interview_prep_2021#lc-839similar-string-groups)                                                     | https://leetcode.com/problems/similar-string-groups/                                       | _O(n^2 * l)_                                               | _O(n)_                | Hard       |                | Union Find                   |            |
+| 96  | 102      | [Binary Tree Level Order Traversal](https://github.com/sm2774us/facebook_interview_prep_2021#lc-102binary-tree-level-order-traversal)                             | https://leetcode.com/problems/binary-tree-level-order-traversal/                           | _O(n)_                                                     | _O(n)_                | Easy       |                | BFS ; DFS                    |            |
+| 97  | 708      | [Insert into a Sorted Circular Linked List](https://github.com/sm2774us/facebook_interview_prep_2021#lc-708insert-into-a-sorted-circular-linked-list)             | https://leetcode.com/problems/insert-into-a-sorted-circular-linked-list/                   | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
+| 98  | 691      | [Stickers to Spell Word](https://github.com/sm2774us/facebook_interview_prep_2021#lc-691stickers-to-spell-word)                                                   | https://leetcode.com/problems/stickers-to-spell-word/                                      | _O(T * S^T)_                                               | _O(T * S^T)_          | Hard       |                | Backtracking, Memoization    |            |
+| 99  | 977      | [Squares of a Sorted Array](https://github.com/sm2774us/facebook_interview_prep_2021#lc-977squares-of-a-sorted-array)                                             | https://leetcode.com/problems/squares-of-a-sorted-array/                                   | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
+| 100 | 232      | [Implement Queue using Stacks](https://github.com/sm2774us/facebook_interview_prep_2021#lc-232implement-queue-using-stacks)                                       | https://leetcode.com/problems/implement-queue-using-stacks/                                | _O(1), amortized_                                          | _O(n)_                | Easy       |                | Design                       |            |
+| 101 | 329      | [Longest Increasing Path in a Matrix](https://github.com/sm2774us/facebook_interview_prep_2021#lc-329longest-increasing-path-in-a-matrix)                         | https://leetcode.com/problems/longest-increasing-path-in-a-matrix/                         | _O(m * n)_                                                 | _O(m * n)_            | Hard       |                | DFS, Topological Sort        |            |
+| 102 | 224      | [Basic Calculator](https://github.com/sm2774us/facebook_interview_prep_2021#lc-224basic-calculator)                                                               | https://leetcode.com/problems/basic-calculator/                                            | _O(n)_                                                     | _O(n)_                | Hard       |                |                              |            |
+| 103 | 227      | [Basic Calculator II](https://github.com/sm2774us/facebook_interview_prep_2021#lc-227basic-calculator-ii)                                                         | https://leetcode.com/problems/basic-calculator-ii/                                         | _O(n)_                                                     | _O(n)_                | Medium     |                |                              |            |
+| 104 | 772      | [Basic Calculator III](https://github.com/sm2774us/facebook_interview_prep_2021#lc-772basic-calculator-iii)                                                       | https://leetcode.com/problems/basic-calculator-iii/                                        | _O(n)_                                                     | _O(n)_                | Hard       |                |                              | 🔒          |
+| 105 | 770      | [Basic Calculator IV](https://github.com/sm2774us/facebook_interview_prep_2021#lc-770basic-calculator-iv)                                                         | https://leetcode.com/problems/basic-calculator-iv/                                         | add: _O(d * t)_<br> sub: _O(d * t)_<br> mul: _O(d * t^2)_<br> eval: _O(d * t)_ <br> to_list: _O(d * tlogt)_ | _O(e + d * t)_ | Hard | | | |
+| 106 | 1597     | [Build Binary Expression Tree From Infix Expression](https://github.com/sm2774us/facebook_interview_prep_2021#lc-1597build-binary-tree-from-infix-expression)     | https://leetcode.com/problems/build-binary-expression-tree-from-infix-expression/          | _O(n)_                                                     | _O(n)_                | Medium     |                |                              | 🔒, variant of [Basic Calculator III](https://leetcode.com/problems/basic-calculator-iii/) |
+| 107 | 106      | [Construct Binary Tree from Inorder and Postorder Traversal](https://github.com/sm2774us/facebook_interview_prep_2021#lc-106construct-binary-tree-from-inorder-and-postorder-traversal) | https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/) | _O(n)_                               | _O(n)_                | Medium     |                |                              |            |
+| 108 | 108      | [Convert Sorted Array to Binary Search Tree](https://github.com/sm2774us/facebook_interview_prep_2021#lc-106convert-sorted-array-to-binary-search-tree)           | https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/                  | _O(n)_                                                     | _O(logn)_             | Medium     |                |                              |            |
+| 109 | 109      | [Convert Sorted List to Binary Search Tree](https://github.com/sm2774us/facebook_interview_prep_2021#lc-108convert-sorted-list-to-binary-search-tree)             | https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/                   | _O(n)_                                                     | _O(logn)_             | Medium     |                |                              |            |
+| 110 | 203      | [Remove Linked List Elements](https://github.com/sm2774us/facebook_interview_prep_2021#lc-203remove-linked-list-elements)                                         | https://leetcode.com/problems/remove-linked-list-elements/                                 | _O(n)_                                                     | _O(1)_                | Easy       |                |                              |            |
+| 111 | 210      | [Course Schedule II](https://github.com/sm2774us/facebook_interview_prep_2021#lc-210course-schedule-ii)                                                           | https://leetcode.com/problems/course-schedule-ii/                                          | _O(\|V\| + \|E\|)_                                         | _O(\|E\|)_            | Medium     |                | Topological Sort             |            |
+| 112 | 536      | [Construct Binary Tree from String](https://github.com/sm2774us/facebook_interview_prep_2021#lc-536construct-binary-tree-from-string)                             | https://leetcode.com/problems/construct-binary-tree-from-string/                           | _O(n)_                                                     | _O(h)_                | Medium     |                |                              | 🔒          |
+| 113 | 606      | [Construct String from Binary Tree](https://github.com/sm2774us/facebook_interview_prep_2021#lc-606construct-string-from-binary-tree)                             | https://leetcode.com/problems/construct-string-from-binary-tree/)                          | _O(n)_                                                     | _O(h)_                | Easy       |                |                              |            |
+| 114 | 617      | [Merge Two Binary Trees](https://github.com/sm2774us/facebook_interview_prep_2021#lc-617merge-two-binary-trees)                                                   | https://leetcode.com/problems/merge-two-binary-trees/                                      | _O(n)_                                                     | _O(h)_                | Easy       |                |                              |            |
+| 115 | 226      | [Invert Binary Tree](https://github.com/sm2774us/facebook_interview_prep_2021#lc-226invert-binary-tree)                                                           | https://leetcode.com/problems/invert-binary-tree/                                          | _O(n)_                                                     | _O(h)_, _O(w)_        | Easy       |                |                              |            |
+| 116 | 490      | [The Maze](https://github.com/sm2774us/facebook_interview_prep_2021#lc-490the-maze)                                                                               | https://leetcode.com/problems/the-maze/                                                    | _O(max(r, c) * w)_                                         | _O(w)_                | Medium     |                |                              |            |
+| 117 | 505      | [The Maze II](https://github.com/sm2774us/facebook_interview_prep_2021#lc-505the-maze-ii)                                                                         | https://leetcode.com/problems/the-maze-ii/                                                 | _O(max(r, c) * wlogw)_                                     | _O(w)_                | Medium     |                |                              |            |
+| 118 | 499      | [The Maze III](https://github.com/sm2774us/facebook_interview_prep_2021#lc-499the-maze-iii)                                                                       | https://leetcode.com/problems/the-maze-iii/                                                | _O(max(r, c) * wlogw)_                                     | _O(w^2)_              | Hard       |                |                              |            |
+| 129 | 1233     | [Remove Sub-Folders from Filesystem](https://github.com/sm2774us/facebook_interview_prep_2021#lc-1233remove-sub-folders-from-filesystem)                          | https://leetcode.com/problems/remove-sub-folders-from-the-filesystem/                      | _O(n)_                                                     | _O(t)_                | Medium     |                | Trie                         |            |
+| 120 | 200      | [Number of Islands](https://github.com/sm2774us/facebook_interview_prep_2021#lc-200number-of-islands)                                                             | https://leetcode.com/problems/number-of-islands/                                           | _O(m * n)_                                                 | _O(m * n)_            | Medium     |                | BFS, DFS, Union Find         |            |
 
 #### [LC-238:Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
 ##### Solution Explanation
@@ -2117,9 +2117,9 @@ for j = i -1, i-2, ..., 0,
 	     dp[i].append(j)
 Use DFS to reconstruct all possible segmentations from the end to the start.
 ```
-![lc-140-word-break-ii-image-1](./assets/lc-140-word-break-ii-image-1.png)
-![lc-140-word-break-ii-image-2](./assets/lc-140-word-break-ii-image-2.png)
-![lc-140-word-break-ii-image-3](./assets/lc-140-word-break-ii-image-3.png)
+![lc-140-word-break-ii-image-1](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-140-word-break-ii-image-1.png)
+![lc-140-word-break-ii-image-2](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-140-word-break-ii-image-2.png)
+![lc-140-word-break-ii-image-3](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-140-word-break-ii-image-3.png)
 ##### Interview Notes
 ```
 Approach 1 is for comparison purposes only.
@@ -2551,7 +2551,7 @@ class Solution:
 ##### Learning Points
 > The in degree and out degree is defined for a Directed graph.
 >
-> ![Indegree-and-Outdegree-Directed-Graph](./assets/indegree-and-outdegree-for-a-directed-graph.gif)
+> ![Indegree-and-Outdegree-Directed-Graph](https://github.com/sm2774us/facebook_interview_prep_2021/assets/indegree-and-outdegree-for-a-directed-graph.gif)
 > For a directed graph ![equation](https://latex.codecogs.com/png.image?\dpi{150}%20G=(V(G),E(G)))
 > and a vertex ![equation](https://latex.codecogs.com/png.image?\dpi{150}%20x1%20\in%20V(G)),
 > the **Out-Degree** of x1 refers to the number of arcs incident from x1.
@@ -3086,7 +3086,7 @@ Algorithm Explanation: https://leetcode.com/problems/target-sum/discuss/455024/D
 # --------------------------------------
 Algorithm Explanation: https://ygongdev.github.io/blog/categories/leetcode/leetcode-494-target-sum
 ```
-![lc-494-target-sum-complexity-analysis-image](./assets/lc-494-target-sum-complexity-analysis.PNG)
+![lc-494-target-sum-complexity-analysis-image](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-494-target-sum-complexity-analysis.PNG)
 ##### Complexity Analysis:
 ```
 # --------------------------------------
@@ -3190,7 +3190,7 @@ class Solution:
 
 ####  [LC-22:Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
 ##### Problem Description:
-![lc-22-problem-description-image](./assets/lc-22-problem-description-image.png)
+![lc-22-problem-description-image](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-22-problem-description-image.png)
 ##### Learning Points (Catalan Numbers):
 ```
 A famous ancient question in this context is:
@@ -3229,7 +3229,7 @@ We put “(” in first. In total there are n “(”. We can keep adding “(�
 Then we start adding “)” in. To keep the resulting string well-formed, we only add in “)” 
 when the number of existing “(” exceeds the number of “)” in the current string:
 ```
-![lc-22-generate-parentheses-image-1](./assets/lc-22-generate-parentheses-image-1.jpeg)
+![lc-22-generate-parentheses-image-1](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-22-generate-parentheses-image-1.jpeg)
 ```
 When current string length == 2*n, we got an answer. Therefore we record it, 
 and return to previous step to search for other possible combinations.
@@ -3242,7 +3242,7 @@ At least I struggled for a while.
 I didn’t give up. In the end, I successfully get this tree, which clearly shows how the program goes.
 It turned out, back tracking is just DFS, or in my opinion, traverse a tree:
 ```
-![lc-22-generate-parentheses-image-2](./assets/lc-22-generate-parentheses-image-2.jpeg)
+![lc-22-generate-parentheses-image-2](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-22-generate-parentheses-image-2.jpeg)
 ```
 Note that the tree is not full, because our two if-cases cut some of the tree branches.
 ```
@@ -3884,7 +3884,7 @@ Output:
 [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[110,0,0,0,114],[210,0,0,0,214],[310,0,0,113,314],[410,0,0,213,414],[610,211,112,313,614],[710,311,412,613,714],[810,411,512,713,1014]]
 Explanation:
 ```
-![lc-723-candy-crush-problem-description](./assets/lc-723-candy-crush-problem-description.png)
+![lc-723-candy-crush-problem-description](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-723-candy-crush-problem-description.png)
 ```
 Note:
 -----------------
@@ -4192,7 +4192,7 @@ one already put a dot that leaves only 3 possibilities for the next dot to be pl
 The first dot has only 3 available slots as well.
 it's enough to check just 3×3×3=27. ==> O(1)		
 ```
-![lc-93-restore-ip-addresses-image-1](./assets/lc-93-restore-ip-addresses-image-1.png)
+![lc-93-restore-ip-addresses-image-1](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-93-restore-ip-addresses-image-1.png)
 ##### Complexity Analysis:
 ```
 # --------------------------------------
@@ -4336,7 +4336,7 @@ Final note 2: I've found explaining stuff in a simple way (at least I think it's
 # Solution-2 : Math based solution - Recursive
 #
 ```
-![lc-50-pow_x_n-image-1](./assets/lc-50-pow_x_n-image-1.png)
+![lc-50-pow_x_n-image-1](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-50-pow_x_n-image-1.png)
 ##### Complexity Analysis:
 ```
 ```
@@ -4836,13 +4836,13 @@ class Solution:
 > 1. Strings (the current problem). Use schoolbook digit-by-digit addition. Note, that to fit into constant space is not possible 
 > for languages with immutable strings, for example, for Java and Python. Here are two examples:
 > 
->  * [Add Binary](https://leetcode.com/problems/add-binary/) [Refer to Solution](#lc-67add-binary): sum two binary strings.
+>  * [Add Binary](https://leetcode.com/problems/add-binary/) [Refer to Solution](https://github.com/sm2774us/facebook_interview_prep_2021#lc-67add-binary): sum two binary strings.
 > 
 >  * [Add Strings](https://leetcode.com/problems/add-strings/): sum two non-negative numbers in a string representation without converting them to integers directly.
 >
 > 2. Integers. Usually, the interviewer would ask you to implement a sum without using + and - operators. Use bit manipulation approach. Here is an example:
 >
->  * [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) [Refer to Solution](#lc-371sum-of-two-integers): Sum two integers without using + and - operators.
+>  * [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) [Refer to Solution](https://github.com/sm2774us/facebook_interview_prep_2021#lc-371sum-of-two-integers): Sum two integers without using + and - operators.
 >
 > 3. Arrays. The same textbook addition. Here is an example:
 >
@@ -4850,11 +4850,11 @@ class Solution:
 >
 > 4. Linked Lists. Sentinel Head + Textbook Addition. Here are some examples:
 >
->  * [Plus One](https://leetcode.com/problems/plus-one/) [Refer to Solution](#lc-66plus-one).
+>  * [Plus One](https://leetcode.com/problems/plus-one/) [Refer to Solution](https://github.com/sm2774us/facebook_interview_prep_2021#lc-66plus-one).
 >
->  * [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) [Refer to Solution](#lc-2add-two-numbers).
+>  * [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) [Refer to Solution](https://github.com/sm2774us/facebook_interview_prep_2021#lc-2add-two-numbers).
 >
->  * [Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii/) [Refer to Solution](#lc-445add-two-numbers-ii).
+>  * [Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii/) [Refer to Solution](https://github.com/sm2774us/facebook_interview_prep_2021#lc-445add-two-numbers-ii).
 >
 > 
 ```
@@ -4884,15 +4884,15 @@ Algorithm
 
 * Reverse the result, convert it to a string, and return that string.
 ```
-![lc-415-add-two-strings-1](./assets/lc-140-word-break-ii-image-1.PNG)
-![lc-415-add-two-strings-2](./assets/lc-140-word-break-ii-image-2.PNG)
-![lc-415-add-two-strings-3](./assets/lc-140-word-break-ii-image-3.PNG)
-![lc-415-add-two-strings-4](./assets/lc-140-word-break-ii-image-4.PNG)
-![lc-415-add-two-strings-5](./assets/lc-140-word-break-ii-image-5.PNG)
-![lc-415-add-two-strings-6](./assets/lc-140-word-break-ii-image-6.PNG)
+![lc-415-add-two-strings-1](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-140-word-break-ii-image-1.PNG)
+![lc-415-add-two-strings-2](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-140-word-break-ii-image-2.PNG)
+![lc-415-add-two-strings-3](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-140-word-break-ii-image-3.PNG)
+![lc-415-add-two-strings-4](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-140-word-break-ii-image-4.PNG)
+![lc-415-add-two-strings-5](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-140-word-break-ii-image-5.PNG)
+![lc-415-add-two-strings-6](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-140-word-break-ii-image-6.PNG)
 ```
 ##### Complexity Analysis:
-![lc-415-complexity-analysis](./assets/lc-415-complexity-analysis.PNG)
+![lc-415-complexity-analysis](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-415-complexity-analysis.PNG)
 ```python
 class Solution:
     def addStrings(self, num1: str, num2: str) -> str:
@@ -5394,8 +5394,8 @@ class SparseVector:
 # Approach-1 : Alias Method
 # --------------------------------------
 ```
-![lc-528-random-pick-with-weight-soution-explanation-1](./assets/lc-528-random-pick-with-weight-soution-explanation-1.PNG)
-![lc-528-random-pick-with-weight-soution-explanation-2](./assets/lc-528-random-pick-with-weight-soution-explanation-2.PNG)
+![lc-528-random-pick-with-weight-soution-explanation-1](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-528-random-pick-with-weight-soution-explanation-1.PNG)
+![lc-528-random-pick-with-weight-soution-explanation-2](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-528-random-pick-with-weight-soution-explanation-2.PNG)
 ```
 # --------------------------------------
 # Approach-2 : CDF (Cumulative Density Function) of our input PDF (Probability Density Function)
@@ -5899,7 +5899,7 @@ There are two general strategies to traverse a tree:
 On the following figure the nodes are numerated in the order you visit them,
 please follow 1-2-3-4-5 to compare different strategies.
 
-![lc-230-kth-smallest-elements-in-a-BST-DS_and_Algo-learning-points-1](./assets/lc-230-kth-smallest-elements-in-a-BST-DS_and_Algo-learning-points-1.png)
+![lc-230-kth-smallest-elements-in-a-BST-DS_and_Algo-learning-points-1](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-230-kth-smallest-elements-in-a-BST-DS_and_Algo-learning-points-1.png)
 ##### Python3 Learning Points
 Introduced with [PEP 255](https://www.python.org/dev/peps/pep-0255), generator functions are a special kind of function  that 
 return a [lazy iterator](https://en.wikipedia.org/wiki/Lazy_evaluation).
@@ -5918,7 +5918,7 @@ It's a very straightforward approach with O(k) time complexity.
 The idea is to build an inorder traversal of BST which is an array sorted in the ascending order.
 Now the answer is the (k - 1)th element of this array.
 ```
-![lc-230-kth-smallest-elements-in-a-BST-image-2](./assets/lc-230-kth-smallest-elements-in-a-BST-image-2.png)
+![lc-230-kth-smallest-elements-in-a-BST-image-2](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-230-kth-smallest-elements-in-a-BST-image-2.png)
 ```
 
 # --------------------------------------
@@ -6025,7 +6025,7 @@ class Solution:
 
 #### [LC-523:Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/)
 ##### Basic Math Prerequisite (Modular Arithmetic)
-![Mod_Arithmetic](./assets/Mod_Arithmetic.PNG)
+![Mod_Arithmetic](https://github.com/sm2774us/facebook_interview_prep_2021/assets/Mod_Arithmetic.PNG)
 [What is Modular Arithmetic](https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/what-is-modular-arithmetic)
 ##### Math Explanation:
 ```
@@ -6097,8 +6097,8 @@ class Solution:
 You are given a m*n grid. You are asked to generate k mines on this grid randomly. Each cell should have equal probability of k / m*n of being chosen.
 ```
 ##### Reservoir Sampling Explained:
-![Reservoir-Sampling-Explanation : Part-1](./assets/Reservoir-Sampling-Explanation-part-1.PNG)
-![Reservoir-Sampling-Explanation : Part-2](./assets/Reservoir-Sampling-Explanation-part-2.PNG)
+![Reservoir-Sampling-Explanation : Part-1](https://github.com/sm2774us/facebook_interview_prep_2021/assets/Reservoir-Sampling-Explanation-part-1.PNG)
+![Reservoir-Sampling-Explanation : Part-2](https://github.com/sm2774us/facebook_interview_prep_2021/assets/Reservoir-Sampling-Explanation-part-2.PNG)
 [Reservoir Sampling](https://www.youtube.com/watch?v=A1iwzSew5QY)
 ##### Solution Explanation:
 ```
@@ -6905,7 +6905,7 @@ We use two pointers, i and j, to virtually manage "discarding" A[0] or B[0] repe
 # --------------------------------------
 
 ```
-![lc-986-interval-list-intersections-solution-visualization](./assets/lc-986-interval-list-intersections-solution-visualization.png)
+![lc-986-interval-list-intersections-solution-visualization](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-986-interval-list-intersections-solution-visualization.png)
 ##### Complexity Analysis:
 ```
 For both solutions:
@@ -7047,7 +7047,7 @@ class Solution:
 <br/>
 
 #### [LC-66:Plus One](https://leetcode.com/problems/plus-one/)
-##### [Refer to Solution](#lc-66plus-one)
+##### [Refer to Solution](https://github.com/sm2774us/facebook_interview_prep_2021#lc-66plus-one)
 
 <br/>
 <div align="right">
@@ -7116,7 +7116,7 @@ if __name__ == '__main__':
 
 #### [LC-938:Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/)
 ##### Problem Description:
-![lc-938-range-sum-of-bst-problem-description](./assets/lc-938-range-sum-of-bst-problem-description.PNG)
+![lc-938-range-sum-of-bst-problem-description](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-938-range-sum-of-bst-problem-description.PNG)
 ##### Solution Explanation:
 ```
 # --------------------------------
@@ -8049,9 +8049,9 @@ carry  0+1+1=2             0+3+9=12              1+1+1 = 3
 cur     2%10=2             12%10=2               3%10 = 3
 carry  2//10 =0             12//10=1             3//10 = 0 
 ```
-![lc-2-add-two-numbers-algo-visualization](./assets/lc-2-add-two-numbers-algo-visualization.PNG)
-![lc-2-add-two-numbers-algorithm](./assets/lc-2-add-two-numbers-algorithm.PNG)
-![lc-2-add-two-numbers-test-cases](./assets/lc-2-add-two-numbers-test-cases.PNG)
+![lc-2-add-two-numbers-algo-visualization](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-2-add-two-numbers-algo-visualization.PNG)
+![lc-2-add-two-numbers-algorithm](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-2-add-two-numbers-algorithm.PNG)
+![lc-2-add-two-numbers-test-cases](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-2-add-two-numbers-test-cases.PNG)
 ##### Complexity Analysis:
 ```
 Time Complexity: O(max(m,n)+1)
@@ -8259,15 +8259,15 @@ Algorithm
 
 Let us look at a sample tree and we search for the lowest common ancestor of two nodes 9 and 11 in the tree.
 ```
-![lc-236-lowest-common-ancestor-of-a-binary-tree-1](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-1.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-2](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-2.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-3](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-3.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-4](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-4.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-5](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-5.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-6](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-6.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-7](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-7.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-8](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-8.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-9](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-9.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-1](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-1.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-2](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-2.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-3](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-3.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-4](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-4.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-5](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-5.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-6](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-6.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-7](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-7.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-8](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-8.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-9](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-9.PNG)
 ```
 Following is the sequence of nodes that are followed in the recursion:
 
@@ -8301,27 +8301,27 @@ Algorithm
 > Whenever both `p` and `q` are found, `LCA_index` would be pointing to an index in the stack which would contain all the common ancestors between `p` and `q`. 
 > And the `LCA_index` element has the lowest ancestor common between `p` and `q`.
 >
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-1](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-1.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-2](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-2.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-3](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-3.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-4](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-4.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-5](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-5.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-6](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-6.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-7](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-7.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-8](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-8.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-9](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-9.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-10](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-10.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-11](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-11.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-12](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-12.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-13](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-13.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-14](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-14.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-15](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-15.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-16](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-16.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-17](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-17.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-18](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-18.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-19](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-19.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-20](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-20.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-21](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-21.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-1](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-1.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-2](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-2.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-3](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-3.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-4](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-4.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-5](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-5.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-6](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-6.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-7](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-7.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-8](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-8.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-9](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-9.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-10](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-10.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-11](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-11.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-12](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-12.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-13](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-13.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-14](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-14.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-15](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-15.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-16](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-16.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-17](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-17.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-18](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-18.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-19](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-19.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-20](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-20.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-21](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-21.PNG)
 ##### Complexity Analysis:
 ```
 #-----------------------------------
@@ -9014,7 +9014,7 @@ if __name__ == '__main__':
 
 #### [LC-287:Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
 ##### Problem Prerequisites:
-![Floyd's Cycle Detection Algorithm][./assets/proof-of-floyd's-cycle-detection-algorithm.PNG)
+![Floyd's Cycle Detection Algorithm][https://github.com/sm2774us/facebook_interview_prep_2021/assets/proof-of-floyd's-cycle-detection-algorithm.PNG)
 > Pigeonhole principle:
 >
 > ---
@@ -9040,8 +9040,8 @@ if __name__ == '__main__':
 # Approach 1: Floyd's cycle-finding algorithm
 #-----------------------------------
 ```
-![lc-287-find-the-duplicate-number-1](./assets/lc-287-find-the-duplicate-number-1.PNG)
-![lc-287-find-the-duplicate-number-2](./assets/lc-287-find-the-duplicate-number-2.PNG)
+![lc-287-find-the-duplicate-number-1](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-287-find-the-duplicate-number-1.PNG)
+![lc-287-find-the-duplicate-number-2](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-287-find-the-duplicate-number-2.PNG)
 [Similar to - LeetCode : Problem 142 - Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)
 ```
 References:
@@ -9052,7 +9052,7 @@ Pigeonhole Principle: https://en.wikipedia.org/wiki/Pigeonhole_principle
 # Approach 2: Binary Search
 #-----------------------------------
 ```
-![lc-287-find-the-duplicate-number-3](./assets/lc-287-find-the-duplicate-number-3.PNG)
+![lc-287-find-the-duplicate-number-3](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-287-find-the-duplicate-number-3.PNG)
 ##### Complexity Analysis:
 ```
 #-----------------------------------
@@ -10383,7 +10383,7 @@ class Test(unittest.TestCase):
 
 #### [Facebook Phone Interview Question Given a directed graph remove return minimum of edges to keep all paths](https://leetcode.com/discuss/interview-question/630806/facebook-phone-transitive-reduction-factorial-trailing-zeroes)
 ##### AKA - Transitive reduction
-![Given-a-directed-graph-remove-return-minimum-of-edges-to-keep-all-path](./assets/Given-a-directed-graph-remove-return-minimum-of-edges-to-keep-all-path.PNG)
+![Given-a-directed-graph-remove-return-minimum-of-edges-to-keep-all-path](https://github.com/sm2774us/facebook_interview_prep_2021/assets/Given-a-directed-graph-remove-return-minimum-of-edges-to-keep-all-path.PNG)
 ##### Solution Explanation:
 ```
 Transitive reduction:
@@ -10584,7 +10584,7 @@ A graph is bipartite if the nodes can be partitioned into two independent sets A
 
 Return true if and only if it is bipartite.
 ```
-![lc-785-is-graph-bipartite-test-case-example-1](./assets/lc-785-is-graph-bipartite-test-case-example-1.PNG)
+![lc-785-is-graph-bipartite-test-case-example-1](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-785-is-graph-bipartite-test-case-example-1.PNG)
 ##### Solution Explanation:
 ```
 # ----------------------------------------------
@@ -11676,8 +11676,8 @@ class Solution:
 ##### Also asked at FB - Phone Screen
 [https://leetcode.com/discuss/interview-question/algorithms/125088/facebook-phone-screen-convert-a-bst-into-a-doubly-linked-list](https://leetcode.com/discuss/interview-question/algorithms/125088/facebook-phone-screen-convert-a-bst-into-a-doubly-linked-list)
 ##### Visualization
-![lc-426-convert-binary-search-tree-to-sorted-doubly-linked-list-1](./assets/lc-426-convert-binary-search-tree-to-sorted-doubly-linked-list-1.PNG)
-![lc-426-convert-binary-search-tree-to-sorted-doubly-linked-list-2](./assets/lc-426-convert-binary-search-tree-to-sorted-doubly-linked-list-2.PNG)
+![lc-426-convert-binary-search-tree-to-sorted-doubly-linked-list-1](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-426-convert-binary-search-tree-to-sorted-doubly-linked-list-1.PNG)
+![lc-426-convert-binary-search-tree-to-sorted-doubly-linked-list-2](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-426-convert-binary-search-tree-to-sorted-doubly-linked-list-2.PNG)
 ##### Solution Explanation
 ```
 Hint
@@ -12526,7 +12526,7 @@ dp[s] = min(1+dp[reduced_s]) for all stickers,
 here reduced_s is a new string after certain sticker applied
 Optimization: If the target can be spelled out by a group of stickers, at least one of them has to contain character target[0]. So I explicitly require next sticker containing target[0], which significantly reduced the search space.
 ```
-![lc-691-stickers-to-spell-word-understanding-dp-solution](./assets/lc-691-stickers-to-spell-word-understanding-dp-solution.PNG)
+![lc-691-stickers-to-spell-word-understanding-dp-solution](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-691-stickers-to-spell-word-understanding-dp-solution.PNG)
 ```
 # --------------------------------------
 # Approach-3 : DP + Bit Manipulation
@@ -12963,7 +12963,7 @@ with immutable data structures.
    
    so now if we pop from output we get 1 and then 2 which is what we want
 ```
-![lc-232-implement-queue-using-stacks](./assets/lc-232-implement-queue-using-stacks.PNG)
+![lc-232-implement-queue-using-stacks](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-232-implement-queue-using-stacks.PNG)
 ##### Complexity Analysis
 ```
 ```
@@ -13027,7 +13027,7 @@ param_4 = obj.empty()
 
 #### [LC-329:Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/)
 ##### Kahn's Algorithm
-![kahns-algorithm-python](./assets/kahns-algorithm-python.PNG)
+![kahns-algorithm-python](https://github.com/sm2774us/facebook_interview_prep_2021/assets/kahns-algorithm-python.PNG)
 ```
 Detecting Circle in a Directed graph
 --------------------------------------
@@ -14096,7 +14096,7 @@ Here is my code modified with reference to @caikehe: https://leetcode.com/proble
 As the code shows, we place the left subtree first, then root, and finally the right tree. Note that "bottom-up" does mean we deal with leave nodes first, but it may not be the smallest node.
 For example, run the code with given array [-10, -3, 0, 5, 9], we will get a tree as:
 ```
-![lc-109-convert-sorted-list-to-binary-search-tree](./assets/lc-109-convert-sorted-list-to-binary-search-tree.PNG)
+![lc-109-convert-sorted-list-to-binary-search-tree](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-109-convert-sorted-list-to-binary-search-tree.PNG)
 ```
 * The code will start from the range [0, 4] -> deal with the left part [0, 1], currently head= -10, 
 * then we continue to deal with the left part, finding the range change to [0, -1] since mid =0. 
