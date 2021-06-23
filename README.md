@@ -11467,15 +11467,15 @@ class Solution:
                 # slice notation returns a list, also 0 returns an empty list
                 return to19[n-1:n]
             if n < 100:
-                return [tens[n/10-2]] + words(n%10)
+                return [tens[n//10-2]] + words(n%10)
             if n < 1000:
-                return [to19[n/100-1]] + ['Hundred'] + words(n%100)
+                return [to19[n//100-1]] + ['Hundred'] + words(n%100)
             # enumerate(tuple,1) starts the index from 1 instead of 0
             for p, w in enumerate(('Thousand', 'Million', 'Billion'), 1):
                 if n < 1000**(p+1):
                     # division into 3 digits and then solving as I explained above
                     # [word divided by num](list returned by recursion) + appropriate placeholder + [word modulo num](list returned by recursion)
-                    return words(n/1000**p) + [w] + words(n%1000**p)
+                    return words(n//1000**p) + [w] + words(n%1000**p)
         # if the list is not empty return the list otherwise return the string "Zero"
         # clever use of python or short circuit
         return ' '.join(words(num)) or 'Zero'
