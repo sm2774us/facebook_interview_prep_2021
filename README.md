@@ -8233,7 +8233,7 @@ class Solution:
 
 #### [LC-236:Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
 ##### Video Explanation
-![Lowest Common Ancestor](https://www.youtube.com/watch?v=py3R23aAPCA)
+[Lowest Common Ancestor](https://www.youtube.com/watch?v=py3R23aAPCA)
 ##### Solution Explanation:
 ```
 #-----------------------------------
@@ -8438,6 +8438,7 @@ import collections
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
         # BFS iterative
+        if not root: return None
         
         queue = collections.deque([root])
         parent = {}
@@ -8477,7 +8478,8 @@ from collections import deque
 
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
-        to_explore = deque([(root, 0)])
+        if not root: return None
+		to_explore = deque([(root, 0)])
         
         found = 0
         lca_candidate = None
