@@ -8350,6 +8350,7 @@ Space Complexity : O(N). In the worst case the space utilized by stack would be 
 ```
 ```python
 import collections
+from typing import Optional
 
 import unittest
 
@@ -8358,6 +8359,67 @@ class TreeNode:
         self.val = x
         self.left = None
         self.right = None
+
+    @staticmethod
+    def from_str(s: str) -> Optional['TreeNode']:
+        stack = collections.deque()
+        val_len = 0
+        is_left_subtree_empty = False
+        for i in range(len(s)):
+            if s[i] != '(' and s[i] != ')':
+                val_len += 1
+                continue
+            if val_len:
+                node = TreeNode(int(s[i - val_len:i]))
+                if stack:
+                    stack_peek = stack[-1]
+                    if is_left_subtree_empty:
+                        stack_peek.right = node
+                        is_left_subtree_empty = False
+                    else:
+                        if stack_peek.left is None:
+                            stack_peek.left = node
+                        else:
+                            stack_peek.right = node
+                stack.append(node)
+                val_len = 0
+            if s[i] == ')':
+                if s[i - 1] == '(':
+                    is_left_subtree_empty = True
+                else:
+                    stack.pop()
+        return stack[0] if stack else None
+
+    def __str__(self):
+        s = ""
+        if self is None:
+            return s
+        visited = set()
+        stack = collections.deque()
+        stack.append(self)
+        while stack:
+            node = stack[-1]
+            if node in visited:
+                s += ')'
+                stack.pop()
+                continue
+            s += f"({node.val}"
+            if node.left is None and node.right:
+                s += "()"
+            if node.right:
+                stack.append(node.right)
+            if node.left:
+                stack.append(node.left)
+            visited.add(node)
+        if len(s) == 3:
+            # If there is only one root node, the return value should be filled with a pair of parentheses, otherwise it will be parsed as None when reading the string
+            return s[1:-1] + "()"
+        else:
+            # Remove the parentheses at the beginning and end
+            return s[1:-1]
+
+    def __repr__(self):
+        return self.__str__()
 
 class Solution:
     #-----------------------------------
@@ -8422,10 +8484,20 @@ class Test(unittest.TestCase):
         root.right = TreeNode(1)
         root.right.left = TreeNode(0)
         root.right.right = TreeNode(8)
+        #self.assertEqual(3, sol.lowestCommonAncestorRecursive(root, root.left, root.right).val)
+        #self.assertEqual(5, sol.lowestCommonAncestorRecursive(root, root.left, root.left.right.right).val)
+        #self.assertEqual(3, sol.lowestCommonAncestorIterative(root, root.left, root.right).val)
+        #self.assertEqual(5, sol.lowestCommonAncestorIterative(root, root.left, root.left.right.right).val)
+
+        root = TreeNode.from_str("3(5(6)(2(7)(4)))(1(0)(8))")
         self.assertEqual(3, sol.lowestCommonAncestorRecursive(root, root.left, root.right).val)
-        self.assertEqual(5, sol.lowestCommonAncestorRecursive(root, root.left, root.left.right.right).val)
         self.assertEqual(3, sol.lowestCommonAncestorIterative(root, root.left, root.right).val)
+        root = TreeNode.from_str("3(5(6)(2(7)(4)))(1(0)(8))")
+        self.assertEqual(5, sol.lowestCommonAncestorRecursive(root, root.left, root.left.right.right).val)
         self.assertEqual(5, sol.lowestCommonAncestorIterative(root, root.left, root.left.right.right).val)
+        root = TreeNode.from_str("1(2)")
+        self.assertEqual(1, sol.lowestCommonAncestorRecursive(root, root, root.left).val)
+        self.assertEqual(1, sol.lowestCommonAncestorIterative(root, root, root.left).val)
 
 if __name__ == "__main__":
     unittest.main()
