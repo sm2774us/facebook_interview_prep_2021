@@ -8297,24 +8297,6 @@ Algorithm
 3. Once we have found both p and q, we get all the ancestors for p using the parent dictionary and add to a set called ancestors.
 4. Similarly, we traverse through ancestors for node q. If the ancestor is present in the ancestors set for p, this means this is the first ancestor common between p and q (while traversing upwards) and hence this is the LCA node.
 
-#-----------------------------------
-# Approach 3: Iterative without parent pointers
-#-----------------------------------
-Intuition
------------------------------------
-In the previous approach, we come across the LCA during the backtracking process. We can get rid of the backtracking process itself.
-In this approach we always have a pointer to the probable LCA and the moment we find both the nodes we return the pointer as the answer.
-
-Algorithm
------------------------------------
-1. Start with root node.
-2. Put the (root, root_state) on to the stack. root_state defines whether one of the children or both children of root are left for traversal.
-3. While the stack is not empty, peek into the top element of the stack represented as (parent_node, parent_state).
-4. Before traversing any of the child nodes of parent_node we check if the parent_node itself is one of p or q.
-5. First time we find either of p or q, set a boolean flag called one_node_found to True. Also start keeping track of the lowest common ancestors by keeping a note of the top index of the stack in the variable LCA_index. Since all the current elements of the stack are ancestors of the node we just found.
-6. The second time parent_node == p or parent_node == q it means we have found both the nodes and we can return the LCA node.
-7. Whenever we visit a child of a parent_node we push the (parent_node, updated_parent_state) onto the stack. We update the state of the parent since a child/branch has been visited/processed and accordingly the state changes.
-8. A node finally gets popped off from the stack when the state becomes BOTH_DONE implying both left and right subtrees have been pushed onto the stack and processed. If one_node_found is True then we need to check if the top node being popped could be one of the ancestors of the found node. In that case we need to reduce LCA_index by one. Since one of the ancestors was popped off.```
 ```
 > Whenever both `p` and `q` are found, `LCA_index` would be pointing to an index in the stack which would contain all the common ancestors between `p` and `q`. 
 > And the `LCA_index` element has the lowest ancestor common between `p` and `q`.
@@ -8367,140 +8349,86 @@ Time Complexity : O(N), where N is the number of nodes in the binary tree. In th
 Space Complexity : O(N). In the worst case the space utilized by stack would be NN since the height of a skewed binary tree could be NN.
 ```
 ```python
-# There's a design that needs to think about:
-#
-# For lowestCommonAncestor(node,p,q), what if p and q do not both exist? what it will return?
-# The solution is as the author did: if only one of them exists, say p, then it will return p ( which is Lowest Ancestor of p; -> nothing to do with LCA !)
-# if non of them exists, it will return None
-#
-# For me, I feel code in this way delivers the idea more clearly:
-#
-#
-#-----------------------------------
-# Approach 1: Recursive Approach (DFS)
-#-----------------------------------
-# TC: O(N)
-# SC: O(N)
-# where, N is the number of nodes in the binary tree
-#
-
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
-class Solution:
-    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
-        def findLowestAncestor(root, p, q): 
-            '''
-                return: TreeNode,
-                    it can be LOWEST ancestor of: p, or q, or both.
-                        if it's lowest ancestor of only p -> it should be p itself
-                        if it's lowest ancestor of only q -> it should be q itself
-            '''
-            if not root: return None
-            if root == p or root == q:
-                return root
-            left_LA = findLowestAncestor(root.left,p,q)
-            right_LA = findLowestAncestor(root.right,p,q)    
-            
-            if left_LA and right_LA:
-                return root
-            if left_LA and not right_LA:
-                return left_LA
-            if right_LA and not left_LA:
-                return right_LA
-            
-        # This function is just 'LA', not necessary to be 'LCA';
-        # but, because in this problem,  p and q are guranteed in the tree
-        # what we get will be LA of both p and q, i.e. LCA.
-        LCA =  findLowestAncestor(root, p, q)
-        return LCA
-
-#-----------------------------------
-# Approach 2: Iterative using parent pointers (BFS)
-#-----------------------------------
-# TC: O(N)
-# SC: O(N)
-# where, N is the number of nodes in the binary tree
-#
 import collections
 
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+import unittest
+
+class TreeNode:
+    def __init__(self, x: int):
+        self.val = x
+        self.left = None
+        self.right = None
 
 class Solution:
-    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
-        # BFS iterative
-        if not root: return None
-        
-        queue = collections.deque([root])
-        parent = {}
-        parent[root] = None
-        # BFS until find all p and q's ancestors
-        while queue and not(p in parent and q in parent):
-            node = queue.popleft()
-            if node.left:
-                parent[node.left] = node
-                queue.append(node.left)
-            if node.right:
-                parent[node.right] = node
-                queue.append(node.right)
-        
-        # find the lowest ancestor
-        # 1. find all ancestros for p
-        node = p
-        ancestors_p = set()
-        while node:
-            ancestors_p.add(node)
-            node = parent[node]
-        
-        # 2. find earliest appearance of common ancestors from q, which is the lowest common ancestor
-        node = q
-        while node not in ancestors_p:
-            node = parent[node]
-        
-        return node
-#-----------------------------------
-# Approach 3: Iterative without parent pointers
-#-----------------------------------
-# TC: O(N)
-# SC: O(N)
-# where, N is the number of nodes in the binary tree
-#
-from collections import deque
+    #-----------------------------------
+    # Approach 1: Recursive Approach
+    #-----------------------------------
+    # TC: O(N)
+    # SC: O(N)
+    # where, N is the number of nodes in the binary tree
+    def lowestCommonAncestorRecursive(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        """
+        :type root: TreeNode
+        :type p: TreeNode
+        :type q: TreeNode
+        :rtype: TreeNode
+        """
+        if root in (None, p, q): return root
+        left, right = (self.lowestCommonAncestorRecursive(kid, p, q)
+                       for kid in (root.left, root.right))
+        return root if left and right else left or right
 
-class Solution:
-    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+    #-----------------------------------
+    # Approach 1: Iterative Approach
+    #-----------------------------------
+    # TC: O(N)
+    # SC: O(N)
+    # where, N is the number of nodes in the binary tree
+    def lowestCommonAncestorIterative(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
         if not root: return None
-		to_explore = deque([(root, 0)])
-        
-        found = 0
-        lca_candidate = None
-        while to_explore:
-            node, visited = to_explore.pop()
-            
-            if not node: 
-                continue
-            elif visited == 2:
-                lca_candidate = lca_candidate - 1 if lca_candidate == len(to_explore) else lca_candidate
-            elif visited == 0 and (node == p or node == q):
-                found += 1
-                lca_candidate = len(to_explore) if lca_candidate is None else lca_candidate
-                to_explore.append((node, visited + 1))
-                to_explore.append((node.left if visited == 0 else node.right, 0))
-            else:
-                to_explore.append((node, visited + 1))
-                to_explore.append((node.left if visited == 0 else node.right, 0))
-                
-            if found == 2:
-                return to_explore[lca_candidate][0]
+        pathp, pathq, path, stack = [], [], [], [root]
+        flagp, flagq = True, True
+        while flagp or flagq:
+            node = stack.pop()
+            if node:
+                if node not in path[-1:]:
+                    path += node,
+                    if node == p:
+                        pathp = path.copy()
+                        flagp = False
+                    if node == q:
+                        pathq = path.copy()
+                        flagq = False
+                    stack += node, node.right, node.left
+                else:
+                    path.pop()
+        lca = None
+        for a, b in zip(pathp, pathq):
+            if a != b:
+                return lca
+            lca = a
+        return lca
+
+class Test(unittest.TestCase):
+    def test_lowestCommonAncestor(self) -> None:
+        sol = Solution()
+
+        root = TreeNode(3)
+        root.left = TreeNode(5)
+        root.left.left = TreeNode(6)
+        root.left.right = TreeNode(2)
+        root.left.right.left = TreeNode(7)
+        root.left.right.right = TreeNode(4)
+        root.right = TreeNode(1)
+        root.right.left = TreeNode(0)
+        root.right.right = TreeNode(8)
+        self.assertEqual(3, sol.lowestCommonAncestorRecursive(root, root.left, root.right).val)
+        self.assertEqual(5, sol.lowestCommonAncestorRecursive(root, root.left, root.left.right.right).val)
+        self.assertEqual(3, sol.lowestCommonAncestorIterative(root, root.left, root.right).val)
+        self.assertEqual(5, sol.lowestCommonAncestorIterative(root, root.left, root.left.right.right).val)
+
+if __name__ == "__main__":
+    unittest.main()
 ```
 
 <br/>
