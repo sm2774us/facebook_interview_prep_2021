@@ -2117,9 +2117,9 @@ for j = i -1, i-2, ..., 0,
 	     dp[i].append(j)
 Use DFS to reconstruct all possible segmentations from the end to the start.
 ```
-![lc-140-word-break-ii-image-1](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-140-word-break-ii-image-1.png)
-![lc-140-word-break-ii-image-2](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-140-word-break-ii-image-2.png)
-![lc-140-word-break-ii-image-3](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-140-word-break-ii-image-3.png)
+![lc-140-word-break-ii-image-1](./assets/lc-140-word-break-ii-image-1.png)
+![lc-140-word-break-ii-image-2](./assets/lc-140-word-break-ii-image-2.png)
+![lc-140-word-break-ii-image-3](./assets/lc-140-word-break-ii-image-3.png)
 ##### Interview Notes
 ```
 Approach 1 is for comparison purposes only.
@@ -2551,7 +2551,7 @@ class Solution:
 ##### Learning Points
 > The in degree and out degree is defined for a Directed graph.
 >
-> ![Indegree-and-Outdegree-Directed-Graph](https://github.com/sm2774us/facebook_interview_prep_2021/assets/indegree-and-outdegree-for-a-directed-graph.gif)
+> ![Indegree-and-Outdegree-Directed-Graph](./assets/indegree-and-outdegree-for-a-directed-graph.gif)
 > For a directed graph ![equation](https://latex.codecogs.com/png.image?\dpi{150}%20G=(V(G),E(G)))
 > and a vertex ![equation](https://latex.codecogs.com/png.image?\dpi{150}%20x1%20\in%20V(G)),
 > the **Out-Degree** of x1 refers to the number of arcs incident from x1.
@@ -3086,7 +3086,7 @@ Algorithm Explanation: https://leetcode.com/problems/target-sum/discuss/455024/D
 # --------------------------------------
 Algorithm Explanation: https://ygongdev.github.io/blog/categories/leetcode/leetcode-494-target-sum
 ```
-![lc-494-target-sum-complexity-analysis-image](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-494-target-sum-complexity-analysis.PNG)
+![lc-494-target-sum-complexity-analysis-image](./assets/lc-494-target-sum-complexity-analysis.PNG)
 ##### Complexity Analysis:
 ```
 # --------------------------------------
@@ -3190,7 +3190,7 @@ class Solution:
 
 ####  [LC-22:Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
 ##### Problem Description:
-![lc-22-problem-description-image](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-22-problem-description-image.png)
+![lc-22-problem-description-image](./assets/lc-22-problem-description-image.png)
 ##### Learning Points (Catalan Numbers):
 ```
 A famous ancient question in this context is:
@@ -3229,7 +3229,7 @@ We put “(” in first. In total there are n “(”. We can keep adding “(�
 Then we start adding “)” in. To keep the resulting string well-formed, we only add in “)” 
 when the number of existing “(” exceeds the number of “)” in the current string:
 ```
-![lc-22-generate-parentheses-image-1](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-22-generate-parentheses-image-1.jpeg)
+![lc-22-generate-parentheses-image-1](./assets/lc-22-generate-parentheses-image-1.jpeg)
 ```
 When current string length == 2*n, we got an answer. Therefore we record it, 
 and return to previous step to search for other possible combinations.
@@ -3242,7 +3242,7 @@ At least I struggled for a while.
 I didn’t give up. In the end, I successfully get this tree, which clearly shows how the program goes.
 It turned out, back tracking is just DFS, or in my opinion, traverse a tree:
 ```
-![lc-22-generate-parentheses-image-2](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-22-generate-parentheses-image-2.jpeg)
+![lc-22-generate-parentheses-image-2](./assets/lc-22-generate-parentheses-image-2.jpeg)
 ```
 Note that the tree is not full, because our two if-cases cut some of the tree branches.
 ```
@@ -3884,7 +3884,7 @@ Output:
 [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[110,0,0,0,114],[210,0,0,0,214],[310,0,0,113,314],[410,0,0,213,414],[610,211,112,313,614],[710,311,412,613,714],[810,411,512,713,1014]]
 Explanation:
 ```
-![lc-723-candy-crush-problem-description](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-723-candy-crush-problem-description.png)
+![lc-723-candy-crush-problem-description](./assets/lc-723-candy-crush-problem-description.png)
 ```
 Note:
 -----------------
@@ -4192,7 +4192,7 @@ one already put a dot that leaves only 3 possibilities for the next dot to be pl
 The first dot has only 3 available slots as well.
 it's enough to check just 3×3×3=27. ==> O(1)		
 ```
-![lc-93-restore-ip-addresses-image-1](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-93-restore-ip-addresses-image-1.png)
+![lc-93-restore-ip-addresses-image-1](./assets/lc-93-restore-ip-addresses-image-1.png)
 ##### Complexity Analysis:
 ```
 # --------------------------------------
@@ -4336,7 +4336,7 @@ Final note 2: I've found explaining stuff in a simple way (at least I think it's
 # Solution-2 : Math based solution - Recursive
 #
 ```
-![lc-50-pow_x_n-image-1](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-50-pow_x_n-image-1.png)
+![lc-50-pow_x_n-image-1](./assets/lc-50-pow_x_n-image-1.png)
 ##### Complexity Analysis:
 ```
 ```
@@ -4884,15 +4884,15 @@ Algorithm
 
 * Reverse the result, convert it to a string, and return that string.
 ```
-![lc-415-add-two-strings-1](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-140-word-break-ii-image-1.PNG)
-![lc-415-add-two-strings-2](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-140-word-break-ii-image-2.PNG)
-![lc-415-add-two-strings-3](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-140-word-break-ii-image-3.PNG)
-![lc-415-add-two-strings-4](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-140-word-break-ii-image-4.PNG)
-![lc-415-add-two-strings-5](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-140-word-break-ii-image-5.PNG)
-![lc-415-add-two-strings-6](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-140-word-break-ii-image-6.PNG)
+![lc-415-add-two-strings-1](./assets/lc-140-word-break-ii-image-1.PNG)
+![lc-415-add-two-strings-2](./assets/lc-140-word-break-ii-image-2.PNG)
+![lc-415-add-two-strings-3](./assets/lc-140-word-break-ii-image-3.PNG)
+![lc-415-add-two-strings-4](./assets/lc-140-word-break-ii-image-4.PNG)
+![lc-415-add-two-strings-5](./assets/lc-140-word-break-ii-image-5.PNG)
+![lc-415-add-two-strings-6](./assets/lc-140-word-break-ii-image-6.PNG)
 ```
 ##### Complexity Analysis:
-![lc-415-complexity-analysis](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-415-complexity-analysis.PNG)
+![lc-415-complexity-analysis](./assets/lc-415-complexity-analysis.PNG)
 ```python
 class Solution:
     def addStrings(self, num1: str, num2: str) -> str:
@@ -5394,8 +5394,8 @@ class SparseVector:
 # Approach-1 : Alias Method
 # --------------------------------------
 ```
-![lc-528-random-pick-with-weight-soution-explanation-1](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-528-random-pick-with-weight-soution-explanation-1.PNG)
-![lc-528-random-pick-with-weight-soution-explanation-2](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-528-random-pick-with-weight-soution-explanation-2.PNG)
+![lc-528-random-pick-with-weight-soution-explanation-1](./assets/lc-528-random-pick-with-weight-soution-explanation-1.PNG)
+![lc-528-random-pick-with-weight-soution-explanation-2](./assets/lc-528-random-pick-with-weight-soution-explanation-2.PNG)
 ```
 # --------------------------------------
 # Approach-2 : CDF (Cumulative Density Function) of our input PDF (Probability Density Function)
@@ -5899,7 +5899,7 @@ There are two general strategies to traverse a tree:
 On the following figure the nodes are numerated in the order you visit them,
 please follow 1-2-3-4-5 to compare different strategies.
 
-![lc-230-kth-smallest-elements-in-a-BST-DS_and_Algo-learning-points-1](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-230-kth-smallest-elements-in-a-BST-DS_and_Algo-learning-points-1.png)
+![lc-230-kth-smallest-elements-in-a-BST-DS_and_Algo-learning-points-1](./assets/lc-230-kth-smallest-elements-in-a-BST-DS_and_Algo-learning-points-1.png)
 ##### Python3 Learning Points
 Introduced with [PEP 255](https://www.python.org/dev/peps/pep-0255), generator functions are a special kind of function  that 
 return a [lazy iterator](https://en.wikipedia.org/wiki/Lazy_evaluation).
@@ -5918,7 +5918,7 @@ It's a very straightforward approach with O(k) time complexity.
 The idea is to build an inorder traversal of BST which is an array sorted in the ascending order.
 Now the answer is the (k - 1)th element of this array.
 ```
-![lc-230-kth-smallest-elements-in-a-BST-image-2](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-230-kth-smallest-elements-in-a-BST-image-2.png)
+![lc-230-kth-smallest-elements-in-a-BST-image-2](./assets/lc-230-kth-smallest-elements-in-a-BST-image-2.png)
 ```
 
 # --------------------------------------
@@ -6025,7 +6025,7 @@ class Solution:
 
 #### [LC-523:Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/)
 ##### Basic Math Prerequisite (Modular Arithmetic)
-![Mod_Arithmetic](https://github.com/sm2774us/facebook_interview_prep_2021/assets/Mod_Arithmetic.PNG)
+![Mod_Arithmetic](./assets/Mod_Arithmetic.PNG)
 [What is Modular Arithmetic](https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/what-is-modular-arithmetic)
 ##### Math Explanation:
 ```
@@ -6097,8 +6097,8 @@ class Solution:
 You are given a m*n grid. You are asked to generate k mines on this grid randomly. Each cell should have equal probability of k / m*n of being chosen.
 ```
 ##### Reservoir Sampling Explained:
-![Reservoir-Sampling-Explanation : Part-1](https://github.com/sm2774us/facebook_interview_prep_2021/assets/Reservoir-Sampling-Explanation-part-1.PNG)
-![Reservoir-Sampling-Explanation : Part-2](https://github.com/sm2774us/facebook_interview_prep_2021/assets/Reservoir-Sampling-Explanation-part-2.PNG)
+![Reservoir-Sampling-Explanation : Part-1](./assets/Reservoir-Sampling-Explanation-part-1.PNG)
+![Reservoir-Sampling-Explanation : Part-2](./assets/Reservoir-Sampling-Explanation-part-2.PNG)
 [Reservoir Sampling](https://www.youtube.com/watch?v=A1iwzSew5QY)
 ##### Solution Explanation:
 ```
@@ -6905,7 +6905,7 @@ We use two pointers, i and j, to virtually manage "discarding" A[0] or B[0] repe
 # --------------------------------------
 
 ```
-![lc-986-interval-list-intersections-solution-visualization](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-986-interval-list-intersections-solution-visualization.png)
+![lc-986-interval-list-intersections-solution-visualization](./assets/lc-986-interval-list-intersections-solution-visualization.png)
 ##### Complexity Analysis:
 ```
 For both solutions:
@@ -7116,7 +7116,7 @@ if __name__ == '__main__':
 
 #### [LC-938:Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/)
 ##### Problem Description:
-![lc-938-range-sum-of-bst-problem-description](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-938-range-sum-of-bst-problem-description.PNG)
+![lc-938-range-sum-of-bst-problem-description](./assets/lc-938-range-sum-of-bst-problem-description.PNG)
 ##### Solution Explanation:
 ```
 # --------------------------------
@@ -8049,9 +8049,9 @@ carry  0+1+1=2             0+3+9=12              1+1+1 = 3
 cur     2%10=2             12%10=2               3%10 = 3
 carry  2//10 =0             12//10=1             3//10 = 0 
 ```
-![lc-2-add-two-numbers-algo-visualization](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-2-add-two-numbers-algo-visualization.PNG)
-![lc-2-add-two-numbers-algorithm](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-2-add-two-numbers-algorithm.PNG)
-![lc-2-add-two-numbers-test-cases](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-2-add-two-numbers-test-cases.PNG)
+![lc-2-add-two-numbers-algo-visualization](./assets/lc-2-add-two-numbers-algo-visualization.PNG)
+![lc-2-add-two-numbers-algorithm](./assets/lc-2-add-two-numbers-algorithm.PNG)
+![lc-2-add-two-numbers-test-cases](./assets/lc-2-add-two-numbers-test-cases.PNG)
 ##### Complexity Analysis:
 ```
 Time Complexity: O(max(m,n)+1)
@@ -8259,15 +8259,15 @@ Algorithm
 
 Let us look at a sample tree and we search for the lowest common ancestor of two nodes 9 and 11 in the tree.
 ```
-![lc-236-lowest-common-ancestor-of-a-binary-tree-1](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-1.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-2](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-2.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-3](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-3.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-4](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-4.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-5](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-5.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-6](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-6.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-7](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-7.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-8](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-8.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-9](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-9.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-1](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-1.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-2](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-2.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-3](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-3.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-4](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-4.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-5](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-5.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-6](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-6.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-7](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-7.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-8](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-8.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-9](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-9.PNG)
 ```
 Following is the sequence of nodes that are followed in the recursion:
 
@@ -8301,27 +8301,27 @@ Algorithm
 > Whenever both `p` and `q` are found, `LCA_index` would be pointing to an index in the stack which would contain all the common ancestors between `p` and `q`. 
 > And the `LCA_index` element has the lowest ancestor common between `p` and `q`.
 >
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-1](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-1.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-2](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-2.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-3](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-3.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-4](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-4.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-5](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-5.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-6](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-6.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-7](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-7.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-8](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-8.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-9](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-9.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-10](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-10.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-11](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-11.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-12](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-12.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-13](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-13.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-14](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-14.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-15](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-15.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-16](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-16.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-17](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-17.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-18](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-18.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-19](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-19.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-20](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-20.PNG)
-![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-21](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-21.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-1](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-1.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-2](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-2.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-3](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-3.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-4](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-4.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-5](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-5.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-6](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-6.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-7](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-7.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-8](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-8.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-9](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-9.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-10](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-10.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-11](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-11.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-12](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-12.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-13](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-13.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-14](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-14.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-15](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-15.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-16](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-16.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-17](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-17.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-18](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-18.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-19](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-19.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-20](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-20.PNG)
+![lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-21](./assets/lc-236-lowest-common-ancestor-of-a-binary-tree-sol3-21.PNG)
 ##### Complexity Analysis:
 ```
 #-----------------------------------
@@ -9014,7 +9014,7 @@ if __name__ == '__main__':
 
 #### [LC-287:Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
 ##### Problem Prerequisites:
-![Floyd's Cycle Detection Algorithm][https://github.com/sm2774us/facebook_interview_prep_2021/assets/proof-of-floyd's-cycle-detection-algorithm.PNG)
+![Floyd's Cycle Detection Algorithm][./assets/proof-of-floyd's-cycle-detection-algorithm.PNG)
 > Pigeonhole principle:
 >
 > ---
@@ -9040,8 +9040,8 @@ if __name__ == '__main__':
 # Approach 1: Floyd's cycle-finding algorithm
 #-----------------------------------
 ```
-![lc-287-find-the-duplicate-number-1](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-287-find-the-duplicate-number-1.PNG)
-![lc-287-find-the-duplicate-number-2](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-287-find-the-duplicate-number-2.PNG)
+![lc-287-find-the-duplicate-number-1](./assets/lc-287-find-the-duplicate-number-1.PNG)
+![lc-287-find-the-duplicate-number-2](./assets/lc-287-find-the-duplicate-number-2.PNG)
 [Similar to - LeetCode : Problem 142 - Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)
 ```
 References:
@@ -9052,7 +9052,7 @@ Pigeonhole Principle: https://en.wikipedia.org/wiki/Pigeonhole_principle
 # Approach 2: Binary Search
 #-----------------------------------
 ```
-![lc-287-find-the-duplicate-number-3](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-287-find-the-duplicate-number-3.PNG)
+![lc-287-find-the-duplicate-number-3](./assets/lc-287-find-the-duplicate-number-3.PNG)
 ##### Complexity Analysis:
 ```
 #-----------------------------------
@@ -10383,7 +10383,7 @@ class Test(unittest.TestCase):
 
 #### [Facebook Phone Interview Question Given a directed graph remove return minimum of edges to keep all paths](https://leetcode.com/discuss/interview-question/630806/facebook-phone-transitive-reduction-factorial-trailing-zeroes)
 ##### AKA - Transitive reduction
-![Given-a-directed-graph-remove-return-minimum-of-edges-to-keep-all-path](https://github.com/sm2774us/facebook_interview_prep_2021/assets/Given-a-directed-graph-remove-return-minimum-of-edges-to-keep-all-path.PNG)
+![Given-a-directed-graph-remove-return-minimum-of-edges-to-keep-all-path](./assets/Given-a-directed-graph-remove-return-minimum-of-edges-to-keep-all-path.PNG)
 ##### Solution Explanation:
 ```
 Transitive reduction:
@@ -10584,7 +10584,7 @@ A graph is bipartite if the nodes can be partitioned into two independent sets A
 
 Return true if and only if it is bipartite.
 ```
-![lc-785-is-graph-bipartite-test-case-example-1](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-785-is-graph-bipartite-test-case-example-1.PNG)
+![lc-785-is-graph-bipartite-test-case-example-1](./assets/lc-785-is-graph-bipartite-test-case-example-1.PNG)
 ##### Solution Explanation:
 ```
 # ----------------------------------------------
@@ -11676,8 +11676,8 @@ class Solution:
 ##### Also asked at FB - Phone Screen
 [https://leetcode.com/discuss/interview-question/algorithms/125088/facebook-phone-screen-convert-a-bst-into-a-doubly-linked-list](https://leetcode.com/discuss/interview-question/algorithms/125088/facebook-phone-screen-convert-a-bst-into-a-doubly-linked-list)
 ##### Visualization
-![lc-426-convert-binary-search-tree-to-sorted-doubly-linked-list-1](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-426-convert-binary-search-tree-to-sorted-doubly-linked-list-1.PNG)
-![lc-426-convert-binary-search-tree-to-sorted-doubly-linked-list-2](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-426-convert-binary-search-tree-to-sorted-doubly-linked-list-2.PNG)
+![lc-426-convert-binary-search-tree-to-sorted-doubly-linked-list-1](./assets/lc-426-convert-binary-search-tree-to-sorted-doubly-linked-list-1.PNG)
+![lc-426-convert-binary-search-tree-to-sorted-doubly-linked-list-2](./assets/lc-426-convert-binary-search-tree-to-sorted-doubly-linked-list-2.PNG)
 ##### Solution Explanation
 ```
 Hint
@@ -12526,7 +12526,7 @@ dp[s] = min(1+dp[reduced_s]) for all stickers,
 here reduced_s is a new string after certain sticker applied
 Optimization: If the target can be spelled out by a group of stickers, at least one of them has to contain character target[0]. So I explicitly require next sticker containing target[0], which significantly reduced the search space.
 ```
-![lc-691-stickers-to-spell-word-understanding-dp-solution](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-691-stickers-to-spell-word-understanding-dp-solution.PNG)
+![lc-691-stickers-to-spell-word-understanding-dp-solution](./assets/lc-691-stickers-to-spell-word-understanding-dp-solution.PNG)
 ```
 # --------------------------------------
 # Approach-3 : DP + Bit Manipulation
@@ -12963,7 +12963,7 @@ with immutable data structures.
    
    so now if we pop from output we get 1 and then 2 which is what we want
 ```
-![lc-232-implement-queue-using-stacks](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-232-implement-queue-using-stacks.PNG)
+![lc-232-implement-queue-using-stacks](./assets/lc-232-implement-queue-using-stacks.PNG)
 ##### Complexity Analysis
 ```
 ```
@@ -13027,7 +13027,7 @@ param_4 = obj.empty()
 
 #### [LC-329:Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/)
 ##### Kahn's Algorithm
-![kahns-algorithm-python](https://github.com/sm2774us/facebook_interview_prep_2021/assets/kahns-algorithm-python.PNG)
+![kahns-algorithm-python](./assets/kahns-algorithm-python.PNG)
 ```
 Detecting Circle in a Directed graph
 --------------------------------------
@@ -14096,7 +14096,7 @@ Here is my code modified with reference to @caikehe: https://leetcode.com/proble
 As the code shows, we place the left subtree first, then root, and finally the right tree. Note that "bottom-up" does mean we deal with leave nodes first, but it may not be the smallest node.
 For example, run the code with given array [-10, -3, 0, 5, 9], we will get a tree as:
 ```
-![lc-109-convert-sorted-list-to-binary-search-tree](https://github.com/sm2774us/facebook_interview_prep_2021/assets/lc-109-convert-sorted-list-to-binary-search-tree.PNG)
+![lc-109-convert-sorted-list-to-binary-search-tree](./assets/lc-109-convert-sorted-list-to-binary-search-tree.PNG)
 ```
 * The code will start from the range [0, 4] -> deal with the left part [0, 1], currently head= -10, 
 * then we continue to deal with the left part, finding the range change to [0, -1] since mid =0. 
