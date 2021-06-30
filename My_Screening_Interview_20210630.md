@@ -27,7 +27,7 @@ defined by its upper left corner `(row1, col1)` and lower right corner `(row2, c
 >>> from typing import List
 >>> class NumMatrix(object):
       # TC: O(M*N)
-	  # SC: O(1)
+      # SC: O(1)
       def __init__(self, matrix: List[List[int]]):
           if matrix is None or not matrix:
               return
@@ -56,7 +56,7 @@ self.sums[row1-1][col1-1] = 8
 ```
  
 #### [More Elegant Solution](https://leetcode.com/problems/range-sum-query-2d-immutable/discuss/1204283/Python-short-dp-explained)
-```
+```python
 from itertools import product
 from functools import lru_cache
 from typing import List
